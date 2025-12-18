@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Ear Implants | Envoy Medical - Proven Hearing Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(225deg, #f8fafc 0%, #ffffff 100%);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 45, 116, 0.05);
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2.5rem;
+            padding: 3rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        .section-accent {
+            width: 80px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-cols: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-cols: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="professionals.html" class="hover:text-blue-600 transition-colors">Professionals</a>
+                <a href="#types" class="hover:text-blue-600 transition-colors">Implant Types</a>
+                <a href="#esteem" class="hover:text-blue-600 transition-colors">Esteem®</a>
+                <a href="#contact" class="btn-primary py-3 px-6 text-xs">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <span class="text-xs font-black uppercase tracking-[0.4em] brand-text-navy mb-6 block">Proven Clinical
+                    History</span>
+                <h1 class="text-5xl lg:text-9xl font-black text-slate-900 leading-[0.9] mb-10 tracking-tighter">
+                    Middle Ear <br><span class="brand-text-navy">Implants</span>
+                </h1>
+                <p class="text-xl lg:text-3xl text-slate-500 leading-relaxed max-w-2xl font-medium mb-12">
+                    A safe and effective alternative to traditional hearing aids for the right patients, with a history
+                    spanning decades.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="#types" class="btn-primary text-lg">Explore Technology</a>
+                    <a href="https://www.envoymedical.com/contact-us"
+                        class="px-10 py-5 rounded-2xl border-2 border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-all text-center">Speak
+                        with a Specialist</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introductory Educational Section -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="glass-card p-16 border border-slate-100 shadow-2xl">
+                    <h2 class="text-4xl font-black text-slate-900 mb-8 tracking-tight">How They Work</h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-6">
+                        Middle ear implants are surgically implanted devices designed to assist or replace the
+                        vibrations of the <strong>ossicular chain</strong>—the three tiny bones (hammer, anvil, and
+                        stirrup) that naturally transmit sound.
+                    </p>
+                    <p class="text-lg text-slate-500 leading-relaxed">
+                        By interacting directly with these structures, they provide a more natural hearing experience
+                        for patients who haven't found success with traditional amplification.
+                    </p>
+                </div>
+                <div>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Candidate
+                        Profile</span>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6">Who are they for?</h3>
+                    <p class="text-slate-500 mb-10 leading-relaxed text-lg italic">
+                        "While relatively unknown, middle ear implants have existed for decades with a long history of
+                        being both safe and effective for the right patients."
+                    </p>
+                    <div class="flex items-center p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                        <i class="fas fa-info-circle text-blue-600 text-2xl mr-6"></i>
+                        <p class="text-sm font-medium text-blue-900">Medical consultation is essential to determine if
+                            you are a candidate for a middle ear implant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Implants Comparison -->
+    <section id="types" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <div class="section-accent mx-auto"></div>
+                <h2 class="text-4xl lg:text-7xl font-black text-slate-900 tracking-tighter">Types of Middle Ear Implants
+                </h2>
+            </div>
+
+            <div class="comparison-grid">
+                <!-- Passive (PMEI) -->
+                <div class="feature-card">
+                    <div class="text-[10px] font-black uppercase tracking-widest text-slate-300 mb-6 block">Category A
+                    </div>
+                    <div class="w-16 h-16 bg-slate-100 rounded-2xl mb-8 flex items-center justify-center">
+                        <i class="fas fa-link text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6 tracking-tight">Passive (PMEI)</h3>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        Designed to bridge or replace parts of the ossicular chain that have been damaged by trauma or
+                        disease.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center text-sm font-bold text-slate-600"><i
+                                class="fas fa-check-circle text-blue-600 mr-3"></i> No external components</li>
+                        <li class="flex items-center text-sm font-bold text-slate-600"><i
+                                class="fas fa-check-circle text-blue-600 mr-3"></i> No internal electronics</li>
+                        <li class="flex items-center text-sm font-bold text-slate-600"><i
+                                class="fas fa-check-circle text-blue-600 mr-3"></i> Primary for Conductive Hearing Loss
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Active (AMEI) -->
+                <div class="feature-card border-blue-200 bg-white ring-4 ring-blue-50/50">
+                    <div class="text-[10px] font-black uppercase tracking-widest text-blue-400 mb-6 block">Category B
+                    </div>
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl mb-8 flex items-center justify-center">
+                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6 tracking-tight">Active (AMEI)</h3>
+                    <p class="text-slate-500 mb-8 leading-relaxed">
+                        Improve hearing by directly stimulating middle ear structures using advanced electronic
+                        components.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center text-sm font-bold text-slate-600"><i
+                                class="fas fa-check-circle text-blue-600 mr-3"></i> Electronic stimulation</li>
+                        <li class="flex items-center text-sm font-bold text-slate-600"><i
+                                class="fas fa-check-circle text-blue-600 mr-3"></i> Addressing Mixed/Sensorineural Loss
+                        </li>
+                        <li class="flex items-center text-sm font-bold text-slate-600"><i
+                                class="fas fa-check-circle text-blue-600 mr-3"></i> Fully or Partially Implanted options
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Gold Standard: Esteem FI-AMEI -->
+    <section id="esteem" class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="brand-bg-navy rounded-[5rem] p-16 lg:p-32 text-white relative flex flex-col items-center text-center">
+                <div class="absolute top-0 right-0 p-12 opacity-5">
+                    <i class="fas fa-medal text-[20rem]"></i>
+                </div>
+                <div class="max-w-3xl relative z-10">
+                    <span class="text-xs font-black uppercase tracking-[0.4em] text-blue-300 mb-8 block">Premier
+                        Technology</span>
+                    <h2 class="text-4xl lg:text-7xl font-black mb-10 tracking-tighter">Esteem® FI-AMEI</h2>
+                    <p class="text-xl lg:text-2xl text-blue-100/80 mb-16 leading-relaxed">
+                        The Esteem is the world's first and only FDA-approved <strong>fully*</strong> implanted active
+                        middle ear implant. Designed for adults with moderate to severe sensorineural hearing loss.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-10 text-left mb-16">
+                        <div class="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
+                            <h4 class="font-bold text-white mb-4">No External Parts</h4>
+                            <p class="text-sm text-blue-100/60 leading-relaxed">Once activated, it does not require an
+                                external programmer for daily use.</p>
+                        </div>
+                        <div class="bg-white/10 p-8 rounded-3xl border border-white/10 backdrop-blur-md">
+                            <h4 class="font-bold text-white mb-4">Worry-Free Living</h4>
+                            <p class="text-sm text-blue-100/60 leading-relaxed">Waterproof and always active. No
+                                batteries to change or daily maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Blog/Education Section -->
+    <section class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Education &
+                        Community</span>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Trending on Our Blogs</h2>
+                </div>
+                <a href="https://www.envoymedical.com/sounding-board" class="btn-primary py-3 px-8 text-xs">VISIT
+                    SOUNDING BOARD</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <div class="feature-card group cursor-pointer">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">Safety
+                        and Success: Decades of Middle Ear Implants</h3>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed italic">"A look into the long-term clinical
+                        data that supports this proven hearing category."</p>
+                    <i class="fas fa-arrow-right brand-text-navy group-hover:translate-x-2 transition-transform"></i>
+                </div>
+                <!-- Blog 2 -->
+                <div class="feature-card group cursor-pointer">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">
+                        Choosing the Right Path: PMEI vs AMEI</h3>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed italic">"Which technology is right for your
+                        type of hearing loss? We break down the differences."</p>
+                    <i class="fas fa-arrow-right brand-text-navy group-hover:translate-x-2 transition-transform"></i>
+                </div>
+                <!-- Blog 3 -->
+                <div class="feature-card group cursor-pointer">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors">
+                        Navigating MRI Compatibility</h3>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed italic">"Important safety considerations for
+                        implant recipients undergoing medical imaging."</p>
+                    <i class="fas fa-arrow-right brand-text-navy group-hover:translate-x-2 transition-transform"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MRI & Safety Disclaimer -->
+    <section class="py-12 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center space-x-4 mb-4">
+                <div class="p-2 bg-slate-900 text-white rounded-lg"><i class="fas fa-exclamation-triangle"></i></div>
+                <h4 class="font-black text-sm uppercase tracking-widest text-slate-900">Safety Information</h4>
+            </div>
+            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold leading-loose mb-10 max-w-4xl">
+                MRI suitability varies for individuals with a middle ear implant. Some implants are "MRI conditional"
+                while others are not suitable for MRI testing.
+                *Once activated, the external Esteem Personal Programmer is not required for daily use. Please review
+                complete Instructions for Use for all safety information.
+            </p>
+            <div class="flex flex-wrap gap-8">
+                <a href="https://www.envoymedical.com/safety-information"
+                    class="text-blue-600 font-bold hover:underline text-xs">Safety Information</a>
+                <a href="#" class="text-blue-600 font-bold hover:underline text-xs">MRI Compatibility (PDF)</a>
+                <a href="https://www.envoymedical.com/help-center"
+                    class="text-blue-600 font-bold hover:underline text-xs">Help Center</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer -->
+    <footer class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 mb-20">
+                <div>
+                    <div class="font-black text-3xl tracking-tighter text-blue-300 mb-8">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed mb-10 max-w-md">
+                        Pioneering the future of hearing through innovative, fully implanted solutions designed to
+                        restore nature's way of hearing.
+                    </p>
+                    <div class="flex space-x-6 text-2xl">
+                        <i class="fab fa-linkedin hover:text-blue-400 cursor-pointer transition-colors"></i>
+                        <i class="fab fa-facebook hover:text-blue-400 cursor-pointer transition-colors"></i>
+                        <i class="fab fa-twitter hover:text-blue-400 cursor-pointer transition-colors"></i>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black text-sm uppercase tracking-widest text-slate-500 mb-8">Contact Our Team</h4>
+                    <div class="grid sm:grid-cols-2 gap-10">
+                        <div>
+                            <p class="text-xs font-black text-blue-300 uppercase mb-2">Sales Inquiry</p>
+                            <p class="text-xl font-bold italic">1-877-900-3277</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-blue-300 uppercase mb-2">Customer Service</p>
+                            <p class="text-xl font-bold italic">1-800-460-7531</p>
+                        </div>
+                    </div>
+                    <button id="contact" class="btn-primary mt-12 w-full lg:w-auto">Contact Us Form</button>
+                </div>
+            </div>
+            <div
+                class="pt-10 border-t border-white/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">© 2025 Envoy Medical Inc. All
+                    Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#"
+                        class="text-[10px] text-slate-500 uppercase tracking-widest hover:text-white transition-colors">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-[10px] text-slate-500 uppercase tracking-widest hover:text-white transition-colors">Terms
+                        of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
