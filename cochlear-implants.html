@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cochlear Implants (Acclaim) | Envoy Medical - The Future of Hearing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: radial-gradient(circle, var(--brand-accent) 0%, transparent 70%);
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 3rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 45, 116, 0.05);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        .badge-investigational {
+            display: inline-block;
+            background: #fff3db;
+            color: #b45309;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid #fcd34d;
+            margin-bottom: 2rem;
+        }
+
+        .step-indicator {
+            width: 48px;
+            height: 48px;
+            background: var(--brand-navy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 45, 116, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="middle-ear-implants.html" class="hover:text-blue-600 transition-colors">Middle Ear Implants</a>
+                <a href="#how-it-works" class="hover:text-blue-600 transition-colors">Technology</a>
+                <a href="#clinical-trials" class="hover:text-blue-600 transition-colors">Clinical Trials</a>
+                <a href="#contact" class="btn-primary py-3 px-6 text-xs">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-pattern"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div class="badge-investigational shadow-sm">
+                <i class="fas fa-flask mr-2"></i> Investigational Device
+            </div>
+            <h1 class="text-5xl lg:text-9xl font-black text-slate-900 leading-[0.9] mb-10 tracking-tighter">
+                Acclaim® <br><span class="brand-text-navy">Cochlear Implant</span>
+            </h1>
+            <p class="text-xl lg:text-3xl text-slate-500 leading-relaxed max-w-3xl mx-auto font-medium mb-12">
+                Pioneering the world's first fully implanted cochlear implant*—designed to function with no external
+                microphone or speech processor.
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="#how-it-works" class="btn-primary text-lg">How It Works</a>
+                <a href="#clinical-trials"
+                    class="px-10 py-5 rounded-2xl border-2 border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-all">Learn
+                    About Clinical Trials</a>
+            </div>
+            <p class="mt-8 text-xs text-slate-400 font-medium max-w-lg mx-auto italic">
+                *The Acclaim® is an investigational device. Limited by Federal (or US) law to investigational use.
+            </p>
+        </div>
+    </header>
+
+    <!-- Statistics Section (Restored) -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="glass-card p-12 text-center border-l-8 border-blue-600 bg-white shadow-xl">
+                    <div class="text-6xl lg:text-8xl font-black text-brand-navy mb-6"
+                        style="background: -webkit-linear-gradient(45deg, #002d74, #0056b3); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        2.8M</div>
+                    <p class="text-xl font-bold text-slate-800 mb-4">Adults in the U.S.</p>
+                    <p class="text-slate-500">May be eligible for cochlear implants because hearing aids are no longer
+                        sufficient.</p>
+                </div>
+                <div class="glass-card p-12 text-center border-l-8 border-cyan-400 bg-white shadow-xl">
+                    <div class="text-6xl lg:text-8xl font-black text-brand-navy mb-6"
+                        style="background: -webkit-linear-gradient(45deg, #002d74, #0056b3); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                        ~5-8%</div>
+                    <p class="text-xl font-bold text-slate-800 mb-4">Receiving Treatment</p>
+                    <p class="text-slate-500">Of those eligible actually receive a cochlear implant, leaving millions
+                        underserved.</p>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Are Your Hearing Aids No Longer Helping You Hear?
+                </h2>
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+                    If you answered yes, then a cochlear implant may help improve your ability to hear and reconnect
+                    with the world around you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is a Cochlear Implant (Restored) -->
+    <section class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span
+                        class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Education</span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-8">What Is a Cochlear
+                        Implant?</h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-6">
+                        A cochlear implant is an electronic medical device that replaces the function of the damaged
+                        inner ear. Unlike hearing aids, which make sounds louder, cochlear implants do the work of
+                        damaged parts of the inner ear (cochlea) to provide sound signals to the brain.
+                    </p>
+                    <div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                        <h4 class="font-bold text-slate-900 mb-4">Traditional Components</h4>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex items-start"><i
+                                    class="fas fa-circle text-[6px] mt-2 mr-3 text-blue-500"></i>
+                                <strong>External:</strong> Microphone, speech processor, and transmitter.
+                            </li>
+                            <li class="flex items-start"><i
+                                    class="fas fa-circle text-[6px] mt-2 mr-3 text-blue-500"></i>
+                                <strong>Internal:</strong> Receiver-stimulator and electrode array.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Generic CI Image Placeholder or Illustration -->
+                    <div
+                        class="bg-white rounded-[3rem] p-4 shadow-2xl skew-y-3 transform hover:skew-y-0 transition-all duration-500">
+                        <img src="https://placehold.co/600x600/f8fafc/cbd5e1?text=Standard+Cochlear+Implant"
+                            alt="Standard Cochlear Implant" class="rounded-[2.5rem] w-full object-cover aspect-square">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Innovation Gap -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">The
+                        Challenge</span>
+                    <h2 class="text-4xl font-black text-slate-900 mb-8 tracking-tight">Breaking Free from External
+                        Hardware</h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-6">
+                        Traditional cochlear implants have restored hearing for thousands, but they come with a
+                        compromise: the need to wear external processors and microphones on the ear.
+                    </p>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                        This external hardware can limit lifestyle activities, create stigma, and restrict hearing to
+                        only when the device is worn.
+                    </p>
+                    <div class="flex items-center space-x-4 text-slate-900 font-bold">
+                        <i class="fas fa-times-circle text-red-500 text-xl"></i>
+                        <span>No Sleeping with Device</span>
+                    </div>
+                </div>
+                <div class="glass-card p-12 border border-blue-100 bg-blue-50/50">
+                    <span class="text-xs font-black uppercase tracking-widest text-blue-600 mb-4 block">The Acclaim
+                        Solution</span>
+                    <h3 class="text-3xl font-black text-slate-900 mb-8">Fully Implanted Freedom</h3>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        The Acclaim is designed to be fully internal. By leveraging our proven sensor technology, it
+                        uses the ear's own anatomy to capture sound, eliminating the need for any external components
+                        during daily use.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-slate-700 font-semibold"><i
+                                class="fas fa-check-circle text-green-500 mr-3"></i> 24/7 Hearing Capability</li>
+                        <li class="flex items-center text-slate-700 font-semibold"><i
+                                class="fas fa-check-circle text-green-500 mr-3"></i> Use Natural Ear Anatomy</li>
+                        <li class="flex items-center text-slate-700 font-semibold"><i
+                                class="fas fa-check-circle text-green-500 mr-3"></i> True Invisibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualizer: How Acclaim Works -->
+    <section id="how-it-works" class="py-32 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fas fa-wave-square text-[40rem] absolute -right-40 top-20"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-24">
+                <span class="text-xs font-black uppercase tracking-widest text-blue-400 mb-4 block">Technology</span>
+                <h2 class="text-4xl lg:text-7xl font-black mb-10 tracking-tighter">How Acclaim® Works</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Step 1 -->
+                <div class="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm">
+                    <div class="step-indicator">1</div>
+                    <h3 class="text-2xl font-bold mb-4">Sensor</h3>
+                    <p class="text-blue-100/70 leading-relaxed">
+                        The piezoelectric sensor is attached to the ossicles. It picks up vibrations from the eardrum,
+                        utilizing the natural acoustics of the outer ear.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div
+                    class="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm md:translate-y-12 transition-transform">
+                    <div class="step-indicator">2</div>
+                    <h3 class="text-2xl font-bold mb-4">Processor</h3>
+                    <p class="text-blue-100/70 leading-relaxed">
+                        An implanted sound processor filters and converts these mechanical vibrations into digital
+                        electrical signals, customized to the patient's needs.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white/5 p-10 rounded-[3rem] border border-white/10 backdrop-blur-sm">
+                    <div class="step-indicator">3</div>
+                    <h3 class="text-2xl font-bold mb-4">Electrode Array</h3>
+                    <p class="text-blue-100/70 leading-relaxed">
+                        The signals are transmitted to the cochlea via an electrode array, directly stimulating the
+                        auditory nerve and bypassing damaged hair cells.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section (Restored) -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black text-slate-900 mb-6">Comparing Solutions</h2>
+                <p class="text-xl text-slate-500">Understanding the difference between the Esteem® and a Cochlear
+                    Implant.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Esteem Card -->
+                <div
+                    class="bg-slate-50 rounded-[3rem] p-12 border border-slate-100 hover:border-blue-200 transition-colors group">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4">Esteem® FI-AMEI</h3>
+                    <div class="h-1 w-20 bg-slate-300 group-hover:bg-blue-600 transition-colors mb-8 rounded-full">
+                    </div>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-slate-900">Type</strong>
+                                <span class="text-slate-500">Fully Implanted Active Middle Ear Implant</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-slate-900">Target Loss</strong>
+                                <span class="text-slate-500">Moderate to Severe Sensorineural Hearing Loss</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-600 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-slate-900">Indication</strong>
+                                <span class="text-slate-500">Use when hearing aids do not provide adequate benefit but
+                                    loss is not profound.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mt-10">
+                        <a href="professionals.html" class="text-blue-600 font-bold hover:underline">Learn more about
+                            Esteem <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- CI Card -->
+                <div class="bg-slate-900 rounded-[3rem] p-12 text-white shadow-2xl transform md:-translate-y-4">
+                    <div
+                        class="inline-block py-1 px-3 bg-blue-600 rounded-full text-[10px] font-bold uppercase tracking-wide mb-6">
+                        Discussed on this page</div>
+                    <h3 class="text-2xl font-black text-white mb-4">Cochlear Implant</h3>
+                    <div class="h-1 w-20 bg-blue-500 mb-8 rounded-full"></div>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-white">Type</strong>
+                                <span class="text-slate-400">Inner Ear Implant</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-white">Target Loss</strong>
+                                <span class="text-slate-400">Moderate to Profound Sensorineural Hearing Loss</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <strong class="block text-white">Indication</strong>
+                                <span class="text-slate-400">Use when hearing aids provide limited or no benefit for
+                                    speech understanding.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Trials & Eligibility -->
+    <section id="clinical-trials" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-4xl font-black text-slate-900 mb-8 tracking-tight">Advancing the Science</h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                        The Acclaim Cochlear Implant is currently an investigational device. We are actively conducting
+                        clinical studies to validate its safety and efficacy.
+                    </p>
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl">
+                        <h4 class="font-bold text-amber-900 mb-2">Target Population</h4>
+                        <p class="text-sm text-amber-800 leading-relaxed">
+                            Adults with moderate to profound sensorineural hearing loss who may benefit from cochlear
+                            implantation.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-slate-50 rounded-[3rem] p-12 border border-slate-100 text-center">
+                    <h3 class="text-2xl font-black text-slate-900 mb-6">Stay Updated</h3>
+                    <p class="text-slate-500 mb-10">
+                        Interested in learning more about our progress or potential clinical trial opportunities?
+                    </p>
+                    <button class="btn-primary w-full shadow-xl">Join Our Interest List</button>
+                    <p class="mt-6 text-[10px] text-slate-400 uppercase tracking-widest">
+                        Participation is subject to strict eligibility criteria.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Disclaimer Footer -->
+    <footer class="py-20 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-10">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-4 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest font-bold mb-4">© 2025 Envoy Medical Inc.
+                        All Rights Reserved.</p>
+                    <div class="flex space-x-4 text-slate-400">
+                        <a href="#" class="text-[10px] hover:text-slate-900 uppercase tracking-widest">Privacy</a>
+                        <a href="#" class="text-[10px] hover:text-slate-900 uppercase tracking-widest">Terms</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="p-6 bg-white border border-slate-200 rounded-2xl">
+                        <div class="flex items-center mb-4 text-amber-600">
+                            <i class="fas fa-exclamation-triangle mr-3"></i>
+                            <span class="font-bold text-xs uppercase tracking-widest">Regulatory Status</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 leading-relaxed">
+                            CAUTION: The Acclaim® Cochlear Implant is an investigational device. Limited by Federal (or
+                            United States) law to investigational use. It is not available for sale. The safety and
+                            effectiveness of this device have not been established.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
