@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoy Medical - Advocacy Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+        }
+
+        .brand-bg {
+            background-color: var(--brand-navy);
+        }
+
+        .brand-text {
+            color: var(--brand-navy);
+        }
+
+        .brand-black {
+            color: var(--brand-grey);
+        }
+
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+        }
+
+        .hero-image {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
+                url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #001a4d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(0, 45, 116, 0.3);
+        }
+
+        .btn-secondary {
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f8fafc;
+            border-color: #cbd5e1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero-split overflow-hidden">
+        <!-- Text Content -->
+        <div class="flex items-center justify-center p-8 lg:p-24 bg-white">
+            <div class="max-w-xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span
+                        class="px-3 py-1 brand-bg text-white text-[10px] font-black uppercase tracking-[0.2em] rounded">Legislative
+                        Advocacy</span>
+                    <span class="h-px w-8 bg-slate-200"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Medicare Reform</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-4xl lg:text-6xl font-extrabold brand-black leading-[1.1] mb-8 tracking-tight">
+                    The Hearing Device Coverage Clarification Act
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-xl text-slate-500 leading-relaxed mb-12">
+                    Advocating for 40 million Americans to gain access to breakthrough hearing technology currently
+                    excluded by outdated Medicare classifications.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-16">
+                    <a href="#" class="btn-primary px-10 py-5 text-white rounded-xl font-bold text-center">
+                        Support H.R. 1921
+                    </a>
+                    <a href="#" class="btn-secondary px-10 py-5 text-slate-600 rounded-xl font-bold text-center">
+                        View Press Release
+                    </a>
+                </div>
+
+                <!-- Advocate Social Proof -->
+                <div class="flex items-center space-x-4 pt-8 border-t border-slate-50">
+                    <div class="flex -space-x-3">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop"
+                            class="w-10 h-10 rounded-full border-2 border-white shadow-sm" alt="Advocate">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop"
+                            class="w-10 h-10 rounded-full border-2 border-white shadow-sm" alt="Advocate">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop"
+                            class="w-10 h-10 rounded-full border-2 border-white shadow-sm" alt="Advocate">
+                    </div>
+                    <p class="text-xs font-medium text-slate-400">
+                        Join the movement in <br><span class="brand-text font-bold">The 119th Congress Session</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Image -->
+        <div class="hidden lg:block hero-image relative">
+            <!-- Subtle Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent"></div>
+        </div>
+    </header>
+
+</body>
+
+</html>

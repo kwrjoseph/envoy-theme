@@ -1,0 +1,375 @@
+<!-- Original URL: https://www.envoymedical.com/the-sounding-board -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sounding Board | Blog | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Blog Card Styling */
+        .blog-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 45, 116, 0.1);
+            border-color: var(--brand-navy);
+        }
+
+        .blog-image-placeholder {
+            width: 100%;
+            height: 240px;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
+                <a href="patients-testimonials.html" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="about.html" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Envoy Medical
+                        Blog</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    The Sounding <span class="brand-text-navy italic font-serif">Board</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    Insights into hearing loss, patient stories, and updates on our innovative hearing technologies.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Filter/Categories (Visual Only) -->
+            <div class="flex flex-wrap gap-4 mb-16">
+                <button
+                    class="px-6 py-2 bg-slate-900 text-white rounded-full text-xs font-bold uppercase tracking-wide">All
+                    Posts</button>
+                <button
+                    class="px-6 py-2 bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors rounded-full text-xs font-bold uppercase tracking-wide">Hearing
+                    Health</button>
+                <button
+                    class="px-6 py-2 bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors rounded-full text-xs font-bold uppercase tracking-wide">Patient
+                    Stories</button>
+                <button
+                    class="px-6 py-2 bg-slate-100 text-slate-500 hover:bg-slate-200 transition-colors rounded-full text-xs font-bold uppercase tracking-wide">Innovation</button>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Hearing
+                                Health</span>
+                            <span class="ml-3 text-xs text-slate-400 font-medium">Dec 12, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">Navigating the Holidays with
+                            Hearing Loss</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Patient
+                                Stories</span>
+                            <span class="ml-3 text-xs text-slate-400 font-medium">Nov 28, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">Sarah's Journey to Better
+                            Hearing</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Innovation</span>
+                            <span class="ml-3 text-xs text-slate-400 font-medium">Nov 15, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">The Future of Middle Ear
+                            Implants</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Hearing
+                                Health</span>
+                            <span class="ml-3 text-xs text-slate-400 font-medium">Oct 30, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">Understanding Your Audiogram
+                        </h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Company
+                                News</span>
+                            <span class="ml-3 text-xs text-slate-400 font-medium">Oct 12, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">Envoy Medical at AAO-HNSF 2024
+                        </h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                            consequuntur magni dolores.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card">
+                    <div class="blog-image-placeholder">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="mb-4">
+                            <span
+                                class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">Lifestyle</span>
+                            <span class="ml-3 text-xs text-slate-400 font-medium">Sep 22, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">Music and Hearing Implants</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            voluptatum deleniti.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+                            Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-20">
+                <nav class="flex items-center space-x-2">
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 text-slate-400 cursor-not-allowed"><i
+                            class="fas fa-chevron-left"></i></span>
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white font-bold">1</span>
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer font-bold">2</span>
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer font-bold">3</span>
+                    <span
+                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors cursor-pointer"><i
+                            class="fas fa-chevron-right"></i></span>
+                </nav>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

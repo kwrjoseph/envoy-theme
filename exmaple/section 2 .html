@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoy Medical - Esteem Components</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .brand-bg {
+            background-color: var(--brand-navy);
+        }
+
+        .brand-text {
+            color: var(--brand-navy);
+        }
+
+        .comp-section {
+            padding: 100px 0;
+            background-color: #ffffff;
+        }
+
+        .component-step {
+            position: relative;
+            padding-left: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .component-step::before {
+            content: "";
+            position: absolute;
+            left: 11px;
+            top: 2.5rem;
+            bottom: -1.5rem;
+            width: 2px;
+            background-color: #f1f5f9;
+        }
+
+        .component-step:last-child::before {
+            display: none;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border: 2px solid var(--brand-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 900;
+            color: var(--brand-navy);
+            z-index: 10;
+        }
+
+        .visual-frame {
+            background: radial-gradient(circle at center, #f8fafc 0%, #ffffff 100%);
+            border-radius: 3.5rem;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
+        }
+
+        .badge-soft {
+            background-color: rgba(0, 45, 116, 0.05);
+            color: var(--brand-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="comp-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                <!-- Content Column -->
+                <div class="space-y-10">
+                    <div>
+                        <div class="inline-flex items-center px-3 py-1 badge-soft rounded-lg mb-6">
+                            <span class="text-[10px] font-black uppercase tracking-widest">System Architecture</span>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-black text-slate-900 leading-tight tracking-tight">
+                            The Esteem Implant has <span class="brand-text">three</span> implanted components
+                        </h2>
+                    </div>
+
+                    <div class="space-y-12">
+                        <!-- Component 1 -->
+                        <div class="component-step">
+                            <div class="step-number">1</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-3">Piezoelectric Sensor</h3>
+                            <p class="text-base text-slate-500 leading-relaxed">
+                                Positioned on the incus bone. When the eardrum vibrates, the sensor flexes and converts
+                                these vibrations into electrical signals, sending them to the Sound Processor,
+                                effectively replacing a traditional microphone.
+                            </p>
+                        </div>
+
+                        <!-- Component 2 -->
+                        <div class="component-step">
+                            <div class="step-number">2</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-3">Sound Processor</h3>
+                            <p class="text-base text-slate-500 leading-relaxed">
+                                Located within the temporal bone under the scalp. It receives the electrical signals and
+                                shapes them according to the unique hearing loss, before transmitting them to the
+                                Driver.
+                            </p>
+                        </div>
+
+                        <!-- Component 3 -->
+                        <div class="component-step">
+                            <div class="step-number">3</div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-3">Piezoelectric Driver</h3>
+                            <p class="text-base text-slate-500 leading-relaxed">
+                                Translates these customized signals into intensified vibrations. These vibrations are
+                                transferred to the inner ear, where the cochlea cells are stimulated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image/Visual Column -->
+                <div
+                    class="visual-frame aspect-square lg:aspect-auto lg:h-[700px] relative p-12 flex items-center justify-center">
+                    <!-- Technical Diagram Placeholder -->
+                    <div
+                        class="w-full h-full border-2 border-dashed border-slate-200 rounded-[2.5rem] flex flex-col items-center justify-center text-center p-10 bg-white/50">
+                        <div class="w-24 h-24 brand-bg/5 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-microchip brand-text text-4xl opacity-20"></i>
+                        </div>
+                        <h4 class="text-sm font-black brand-text uppercase tracking-widest mb-4">Anatomical Device
+                            Placement</h4>
+                        <p class="text-xs text-slate-400 max-w-xs leading-relaxed">
+                            Visual illustration demonstrating the placement of the Sensor (Incus), Sound Processor
+                            (Temporal Bone), and Driver (Inner Ear).
+                        </p>
+
+                        <!-- Callout Elements -->
+                        <div
+                            class="absolute top-20 right-20 flex items-center space-x-3 bg-white p-3 rounded-xl shadow-sm border border-slate-50">
+                            <div class="w-2 h-2 rounded-full brand-bg"></div>
+                            <span class="text-[10px] font-bold uppercase brand-grey">Temporal Bone</span>
+                        </div>
+
+                        <div
+                            class="absolute bottom-20 left-20 flex items-center space-x-3 bg-white p-3 rounded-xl shadow-sm border border-slate-50">
+                            <div class="w-2 h-2 rounded-full brand-bg"></div>
+                            <span class="text-[10px] font-bold uppercase brand-grey">Inner Ear</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Note -->
+            <div class="mt-20 pt-10 border-t border-slate-50">
+                <p class="text-[10px] font-medium text-slate-400 uppercase tracking-[0.2em] italic text-center">
+                    *Nature’s Microphone™ technology relies on the anatomical eardrum for natural sound capture.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

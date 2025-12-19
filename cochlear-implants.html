@@ -1,7 +1,6 @@
 <!-- Original Source URL: https://www.envoymedical.com/cochlear-implants -->
 <!DOCTYPE html>
 <html lang="en">
-<!-- Original Page: https://www.envoymedical.com/cochlear-implants -->
 
 <head>
     <meta charset="UTF-8">
@@ -149,13 +148,19 @@
                     class="px-10 py-5 rounded-2xl border-2 border-slate-200 text-slate-600 font-bold hover:bg-slate-50 transition-all">Learn
                     About Clinical Trials</a>
             </div>
+            <!-- Regulatory Badge -->
+            <div class="mt-12 inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg border border-blue-100">
+                <i class="fas fa-award text-blue-600"></i>
+                <span class="text-xs font-bold text-blue-800 uppercase tracking-wider">FDA Breakthrough Device
+                    Designation</span>
+            </div>
             <p class="mt-8 text-xs text-slate-400 font-medium max-w-lg mx-auto italic">
                 *The Acclaim® is an investigational device. Limited by Federal (or US) law to investigational use.
             </p>
         </div>
     </header>
 
-    <!-- Statistics Section (Restored) -->
+    <!-- Statistics Section -->
     <section class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-2 gap-12">
@@ -187,7 +192,7 @@
         </div>
     </section>
 
-    <!-- What is a Cochlear Implant (Restored) -->
+    <!-- What is a Cochlear Implant -->
     <section class="py-32 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-20 items-center">
@@ -216,11 +221,19 @@
                     </div>
                 </div>
                 <div class="relative">
-                    <!-- Generic CI Image Placeholder or Illustration -->
                     <div
-                        class="bg-white rounded-[3rem] p-4 shadow-2xl skew-y-3 transform hover:skew-y-0 transition-all duration-500">
-                        <img src="https://placehold.co/600x600/f8fafc/cbd5e1?text=Standard+Cochlear+Implant"
-                            alt="Standard Cochlear Implant" class="rounded-[2.5rem] w-full object-cover aspect-square">
+                        class="bg-white rounded-[3rem] p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-500">
+                        <div
+                            class="aspect-square bg-slate-100 rounded-[2rem] flex items-center justify-center relative overflow-hidden group">
+                            <i
+                                class="fas fa-ear-listen text-9xl text-slate-200 group-hover:scale-110 transition-transform duration-700"></i>
+                            <div
+                                class="absolute inset-0 bg-blue-600/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <span
+                                    class="bg-white py-2 px-6 rounded-full font-bold text-brand-navy shadow-lg">Traditional
+                                    CI Diagram</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,8 +258,11 @@
                         only when the device is worn.
                     </p>
                     <div class="flex items-center space-x-4 text-slate-900 font-bold">
-                        <i class="fas fa-times-circle text-red-500 text-xl"></i>
-                        <span>No Sleeping with Device</span>
+                        <i class="fas fa-bed text-slate-400 text-xl"></i>
+                        <span class="opacity-50 line-through">Sleeping with Device</span>
+                        <div class="w-px h-6 bg-slate-300 mx-4"></div>
+                        <i class="fas fa-water text-slate-400 text-xl"></i>
+                        <span class="opacity-50 line-through">Swimming</span>
                     </div>
                 </div>
                 <div class="glass-card p-12 border border-blue-100 bg-blue-50/50">
@@ -315,7 +331,7 @@
         </div>
     </section>
 
-    <!-- Comparison Section (Restored) -->
+    <!-- Comparison Section -->
     <section class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20">
@@ -367,7 +383,7 @@
                     <div
                         class="inline-block py-1 px-3 bg-blue-600 rounded-full text-[10px] font-bold uppercase tracking-wide mb-6">
                         Discussed on this page</div>
-                    <h3 class="text-2xl font-black text-white mb-4">Cochlear Implant</h3>
+                    <h3 class="text-2xl font-black text-white mb-4">Acclaim® Cochlear Implant</h3>
                     <div class="h-1 w-20 bg-blue-500 mb-8 rounded-full"></div>
 
                     <ul class="space-y-6">
@@ -375,22 +391,22 @@
                             <i class="fas fa-check text-blue-400 mt-1 mr-4"></i>
                             <div>
                                 <strong class="block text-white">Type</strong>
-                                <span class="text-slate-400">Inner Ear Implant</span>
+                                <span class="text-slate-400">Fully Implanted Cochlear Implant (Investigational)</span>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-blue-400 mt-1 mr-4"></i>
                             <div>
                                 <strong class="block text-white">Target Loss</strong>
-                                <span class="text-slate-400">Moderate to Profound Sensorineural Hearing Loss</span>
+                                <span class="text-slate-400">Severe to Profound Sensorineural Hearing Loss</span>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-blue-400 mt-1 mr-4"></i>
                             <div>
                                 <strong class="block text-white">Indication</strong>
-                                <span class="text-slate-400">Use when hearing aids provide limited or no benefit for
-                                    speech understanding.</span>
+                                <span class="text-slate-400">For those who struggle to understand speech even with
+                                    powerful hearing aids.</span>
                             </div>
                         </li>
                     </ul>

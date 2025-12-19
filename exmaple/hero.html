@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoy Medical - Acclaim® Cochlear Implant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .brand-bg {
+            background-color: var(--brand-navy);
+        }
+
+        .brand-text {
+            color: var(--brand-navy);
+        }
+
+        .hero-centered {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            background-color: #f8fafc;
+        }
+
+        /* Subtle Medical Texture Background */
+        .hero-bg-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)),
+                url('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .content-wrap {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            padding: 0 24px;
+        }
+
+        .cta-primary {
+            background-color: var(--brand-navy);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 45, 116, 0.2);
+            filter: brightness(1.1);
+        }
+
+        .cta-secondary {
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .cta-secondary:hover {
+            background-color: #fff;
+            border-color: var(--brand-navy);
+            color: var(--brand-navy);
+        }
+
+        /* Float animation for subtle movement */
+        @keyframes subtleFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: subtleFloat 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero-centered">
+        <div class="hero-bg-overlay"></div>
+
+        <div class="content-wrap">
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center px-4 py-1.5 bg-white border border-slate-200 rounded-full mb-10 shadow-sm">
+                <span class="w-2 h-2 rounded-full brand-bg mr-3 animate-pulse"></span>
+                <span class="text-[11px] font-bold uppercase tracking-[0.2em] brand-text">Investigational
+                    Breakthrough</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 leading-tight mb-8 tracking-tight">
+                Acclaim® <span class="brand-text">Cochlear Implant</span>
+            </h1>
+
+            <!-- Main Narrative -->
+            <div class="space-y-6 mb-12">
+                <p class="text-xl md:text-2xl text-slate-500 leading-relaxed font-medium">
+                    Envoy Medical is developing and has recently received FDA review to begin a pivotal clinical study
+                    for a new first-of-it's kind, fully implanted cochlear implant, the Acclaim Cochlear Implant.
+                </p>
+                <p class="text-lg md:text-xl text-slate-400 leading-relaxed">
+                    If approved by the Food and Drug Administration (FDA), it may lead to a shift from partially
+                    implanted cochlear implants to fully implanted cochlear implants.
+                </p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#" class="cta-primary text-white px-10 py-5 rounded-2xl font-bold text-lg w-full sm:w-auto">
+                    View Clinical Study
+                </a>
+                <a href="#"
+                    class="cta-secondary text-slate-600 px-10 py-5 rounded-2xl font-bold text-lg w-full sm:w-auto">
+                    Request Information
+                </a>
+            </div>
+
+            <!-- Caution Note -->
+            <div class="pt-8 border-t border-slate-200/60 inline-block">
+                <p
+                    class="text-[10px] text-red-600 font-bold tracking-widest uppercase flex items-center justify-center">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    CAUTION: Investigational device. Limited by federal (or United States) law to investigational use.
+                </p>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50 animate-float">
+        </div>
+        <div class="absolute -top-12 -right-12 w-64 h-64 bg-slate-100 rounded-full blur-3xl opacity-50 animate-float"
+            style="animation-delay: -3s;"></div>
+    </section>
+
+</body>
+
+</html>

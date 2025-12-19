@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!-- Source URL: https://www.envoymedical.com/forms -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Resources | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Form Elements */
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            color: var(--brand-navy);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--brand-navy);
+            box-shadow: 0 0 0 3px rgba(0, 45, 116, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--brand-navy);
+            font-size: 0.875rem;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">
+                <a href="index.html" class="brand-text-navy no-underline">ENVOY MEDICAL</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="index.html" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="forms.html" class="brand-text-navy">FORMS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Resources</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    Forms & <br><span class="brand-text-navy italic font-serif">Information</span>
+                </h1>
+                <p class="text-xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    Access important patient forms, insurance verification documents, and medical provider resources.
+                    Submit your information securely below.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Forms Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <!-- Patient Intake Form -->
+                <div>
+                    <h2 class="text-3xl font-black text-slate-900 mb-8 font-serif">Start Your Journey</h2>
+                    <p class="text-slate-500 mb-10">Please fill out the form below to request more information or
+                        schedule a consultation with a provider near you.</p>
+
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" placeholder="Jane">
+                            </div>
+                            <div>
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="jane.doe@example.com">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-input" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div>
+                            <label class="form-label">Who is this for?</label>
+                            <select class="form-input">
+                                <option>Myself</option>
+                                <option>A Loved One</option>
+                                <option>Patient (I am a Provider)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="form-label">Message</label>
+                            <textarea class="form-input h-32 resize-none"
+                                placeholder="Tell us about your hearing journey..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full sm:w-auto">Submit Request</button>
+                    </form>
+                </div>
+
+                <!-- Downloadable Resources -->
+                <div class="bg-slate-50 p-12 rounded-[3rem] h-fit">
+                    <h3 class="text-2xl font-black text-slate-900 mb-8">Downloadable Packets</h3>
+                    <div class="space-y-4">
+                        <a href="#"
+                            class="flex items-center p-6 bg-white rounded-2xl hover:shadow-lg transition-all border border-slate-100 group">
+                            <div
+                                class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <i class="fas fa-file-pdf text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">New Patient Guide</h4>
+                                <p class="text-xs text-slate-400">PDF, 2.4 MB</p>
+                            </div>
+                            <i class="fas fa-download ml-auto text-slate-300 group-hover:text-blue-600"></i>
+                        </a>
+
+                        <a href="#"
+                            class="flex items-center p-6 bg-white rounded-2xl hover:shadow-lg transition-all border border-slate-100 group">
+                            <div
+                                class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <i class="fas fa-file-medical text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Insurance Info</h4>
+                                <p class="text-xs text-slate-400">PDF, 1.1 MB</p>
+                            </div>
+                            <i class="fas fa-download ml-auto text-slate-300 group-hover:text-blue-600"></i>
+                        </a>
+
+                        <a href="#"
+                            class="flex items-center p-6 bg-white rounded-2xl hover:shadow-lg transition-all border border-slate-100 group">
+                            <div
+                                class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <i class="fas fa-clipboard-list text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Pre-Visit Checklist</h4>
+                                <p class="text-xs text-slate-400">PDF, 0.8 MB</p>
+                            </div>
+                            <i class="fas fa-download ml-auto text-slate-300 group-hover:text-blue-600"></i>
+                        </a>
+                    </div>
+
+                    <div class="mt-12">
+                        <h4 class="font-bold text-slate-900 mb-4">Need Assistance?</h4>
+                        <p class="text-slate-500 text-sm mb-6">Our patient support team is available to help you
+                            complete these forms.</p>
+                        <a href="contact.html" class="text-blue-600 font-bold text-sm hover:underline">Contact Support
+                            →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <div class="font-black text-xl brand-text-navy tracking-tighter">ENVOY MEDICAL</div>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

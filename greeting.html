@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Source URL: https://www.envoymedical.com/greeting -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 3rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (Simplified) -->
+    <nav class="absolute top-0 w-full z-50 p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <div class="hero-pattern"></div>
+        <div class="max-w-3xl px-6 relative z-10">
+            <div class="inline-flex items-center space-x-3 mb-8 justify-center">
+                <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Welcome</span>
+                <div class="w-12 h-px bg-slate-200"></div>
+            </div>
+            <h1 class="text-6xl lg:text-8xl font-black text-slate-900 leading-[0.95] mb-8 tracking-tighter">
+                Hello.
+            </h1>
+            <p class="text-2xl text-slate-500 leading-relaxed mb-12 font-medium">
+                Thank you for visiting Envoy Medical. We are dedicated to providing innovative hearing solutions that
+                restore the joy of sound.
+            </p>
+            <a href="index.html" class="btn-primary text-xl">
+                Explore Our Solutions
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

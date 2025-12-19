@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- Source URL: https://www.envoymedical.com/404 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .error-container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .huge-text {
+            font-size: 12rem;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--brand-light-blue);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            letter-spacing: -0.05em;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="huge-text">404</div>
+
+    <div class="error-container px-6">
+        <h1 class="text-4xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">Page Not Found</h1>
+        <p class="text-xl text-slate-500 max-w-lg mx-auto leading-relaxed">
+            We couldn't listen to that request. The page you are looking for might have been removed or is temporarily
+            unavailable.
+        </p>
+        <a href="index.html" class="btn-primary">
+            Return Home
+        </a>
+    </div>
+
+</body>
+
+</html>

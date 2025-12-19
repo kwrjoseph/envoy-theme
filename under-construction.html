@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Source URL: https://www.envoymedical.com/construction -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .construction-icon {
+            font-size: 5rem;
+            color: var(--brand-navy);
+            margin-bottom: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-20px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 3rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="px-6 max-w-2xl mx-auto">
+        <i class="fas fa-hard-hat construction-icon"></i>
+        <h1 class="text-4xl lg:text-6xl font-black text-slate-900 mb-8 tracking-tight">Under Construction</h1>
+        <p class="text-lg text-slate-500 leading-relaxed mb-6">
+            We are currently building something remarkable. This page is being updated to provide you with a better
+            experience.
+        </p>
+        <div class="w-16 h-1 bg-slate-200 mx-auto rounded-full"></div>
+        <a href="index.html" class="btn-primary">
+            Back to Home
+        </a>
+    </div>
+
+</body>
+
+</html>

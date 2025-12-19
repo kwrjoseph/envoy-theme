@@ -1,0 +1,462 @@
+<!-- Source URL: https://www.envoymedical.com/esteem -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Esteem® Fully Implanted Active Middle Ear Implant | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Interactive Elements */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        .section-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+
+        /* Custom list style */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .check-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--brand-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="brand-text-navy transition-colors">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="professionals.html" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Fully Implanted
+                        Active Middle Ear Implant (FI-AMEI)</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-8xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    The <span class="brand-text-navy italic font-serif">Esteem®</span><br>Implant
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    The first and only FDA-approved, fully implanted, active middle ear implant. Invisible hearing
+                    without external components.
+                </p>
+                <p class="text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed">
+                    Designed for adults with moderate to severe sensorineural hearing loss who desire a unique, 24/7
+                    hearing solution that uses the ear's natural anatomy.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#how-it-works" class="btn-primary text-xl">How It Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction / What is Esteem -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="bg-blue-50 rounded-[4rem] p-12 relative z-0">
+                        <!-- Placeholder for Device Image -->
+                        <div
+                            class="aspect-square bg-white/50 rounded-3xl flex items-center justify-center text-center p-8 border border-blue-100">
+                            <div class="text-slate-300">
+                                <i class="fas fa-ear-listen text-6xl mb-4"></i>
+                                <p class="font-medium">Esteem Device Implant Diagram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-accent"></div>
+                    <h2 class="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight mb-8">Totally Invisible.
+                        <br>Fully Internal.
+                    </h2>
+                    <p class="text-xl text-slate-500 mb-8 leading-relaxed font-medium">
+                        The Esteem device is different. It is invisible. You don't wear it; you live with it.
+                    </p>
+                    <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                        Unlike hearing aids or cochlear implants, the Esteem is fully implanted under the skin. It
+                        eliminates the artificial microphone found in other devices, instead using your own eardrum to
+                        capture sound naturally. This innovative design reduces the background noise and acoustic
+                        feedback often associated with traditional hearing aids.
+                    </p>
+
+                    <ul class="text-lg text-slate-600 space-y-4 check-list font-medium">
+                        <li>**No external components** to put on or take off.</li>
+                        <li>**Maintenance-free** daily life—no cleaning or battery changing.</li>
+                        <li>**Waterproof**: Swim, shower, and exercise freely.</li>
+                        <li>**Natural Sound**: Uses the ear canal and eardrum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Components -->
+    <section id="how-it-works" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <div class="section-accent mx-auto"></div>
+                <h2 class="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">How it Works</h2>
+                <p class="text-xl text-slate-500 mt-6 max-w-2xl mx-auto">
+                    The Esteem system uses three fully implanted components to mechanically stimulate the middle ear,
+                    bypassing the damaged parts of the cochlea.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Sensor -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-wave-square text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">1. The Sensor</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium mb-4">
+                        The piezoelectric sensor is attached to the incus (anvil) bone. It picks up the physical
+                        vibrations from the eardrum.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mt-auto">
+                        By using the eardrum as a microphone, it preserves the ear's natural ability to localize sound
+                        and filter noise.
+                    </p>
+                </div>
+                <!-- Sound Processor -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-microchip text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">2. The Sound Processor</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium mb-4">
+                        Implanted behind the ear, this device filters, processes, and amplifies the electrical signals
+                        from the sensor.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mt-auto">
+                        It houses the battery, which lasts approximately 4.5 to 9 years depending on usage.
+                    </p>
+                </div>
+                <!-- Driver -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-volume-high text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">3. The Driver</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium mb-4">
+                        Attached to the stapes (stirrup) bone, the piezoelectric driver converts the confirmed
+                        electrical signals back into mechanical vibrations.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mt-auto">
+                        These intensified vibrations are delivered directly to the inner ear, allowing for clear,
+                        natural sound perception.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits / Lifestyle -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="section-accent"></div>
+                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-8">Live Life
+                        Uninterrupted</h2>
+                    <p class="text-lg text-slate-500 mb-8 leading-relaxed">
+                        Because the Esteem is fully implanted, it offers freedoms that traditional hearing aids cannot.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-2xl flex-shrink-0 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-swimmer text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg mb-2">Waterproof</h4>
+                                <p class="text-slate-500">The device is waterproof. Go swimming, take a shower, or enjoy
+                                    water sports without worrying about your hearing device.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-2xl flex-shrink-0 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-moon text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg mb-2">Hearing 24/7</h4>
+                                <p class="text-slate-500">Hear your children at night, your alarm clock in the morning,
+                                    and everything in between. It's always on (unless you turn it off).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-2xl flex-shrink-0 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-mobile-screen text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-lg mb-2">Personal Programmer</h4>
+                                <p class="text-slate-500">You receive a Personal Programmer to adjust volume, switch
+                                    between settings, or turn the device off.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="bg-slate-50 rounded-[4rem] p-12">
+                        <!-- Placeholder for lifestyle image -->
+                        <div
+                            class="aspect-[4/5] bg-white/50 rounded-3xl flex items-center justify-center text-center p-8 border border-slate-200">
+                            <div class="text-slate-300">
+                                <i class="fas fa-user-check text-6xl mb-4"></i>
+                                <p class="font-medium">Active Lifestyle Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility / Is it Right for You -->
+    <section class="py-32 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-blue-900/20 blur-3xl rounded-full translate-x-1/2"></div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-6xl font-black mb-8 tracking-tight">Is Esteem Right for You?</h2>
+                <p class="text-xl text-blue-100 mb-12 leading-relaxed max-w-3xl mx-auto">
+                    The Esteem implant is a prescription device. Candidacy is determined by a certified hearing
+                    specialist, but generalized criteria include:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Criteria List -->
+                <div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-10">
+                    <h3 class="text-2xl font-bold mb-6 text-white">General Candidacy Criteria</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-blue-400 text-xl mt-1"></i>
+                            <span class="text-blue-50 font-medium">Adults 18 years of age or older.</span>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-blue-400 text-xl mt-1"></i>
+                            <span class="text-blue-50 font-medium">Stable moderate to severe sensorineural hearing loss
+                                in both ears.</span>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-blue-400 text-xl mt-1"></i>
+                            <span class="text-blue-50 font-medium">Unaided word recognition score of 40% or
+                                better.</span>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-blue-400 text-xl mt-1"></i>
+                            <span class="text-blue-50 font-medium">At least 30 days of experience with appropriately fit
+                                hearing aids.</span>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <i class="fas fa-check-circle text-blue-400 text-xl mt-1"></i>
+                            <span class="text-blue-50 font-medium">Normally functioning Eustachian tube and middle ear
+                                anatomy.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Call to Action Block -->
+                <div
+                    class="flex flex-col justify-center text-center md:text-left bg-blue-600 rounded-3xl p-10 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-black mb-4">Take the Next Step</h3>
+                        <p class="text-blue-100 mb-8 text-lg">
+                            The best way to know if you are a candidate is to schedule a consultation with an Envoy
+                            Medical Certified Center.
+                        </p>
+                        <a href="#"
+                            class="btn-primary bg-white text-blue-900 hover:bg-blue-50 w-full md:w-auto text-center block">Find
+                            a Professional</a>
+                    </div>
+                    <i class="fas fa-user-doctor absolute -bottom-10 -right-10 text-9xl text-blue-500 opacity-50"></i>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-16 text-center max-w-2xl mx-auto">
+                Important Safety Information: Implantation of the Esteem® system involves surgery and risks associated
+                with surgery and general anesthesia. The Esteem® device is not for everyone. Please consult your
+                physician to learn more about the risks and benefits.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

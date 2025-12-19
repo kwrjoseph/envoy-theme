@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Hearing Solutions Company | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Interactive Elements */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        /* Form Styling */
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--brand-navy);
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(0, 45, 116, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--brand-navy);
+            font-size: 0.9rem;
+        }
+
+        .section-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Get in Touch</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    Contact <span class="brand-text-navy italic font-serif">Envoy Medical</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    We are dedicated to developing innovative hearing solutions. Please use the information below or the
+                    form to get in touch with us.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div>
+                    <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-xl">
+                        <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Send us a Message</h3>
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">First Name *</label>
+                                    <input type="text" class="form-input" required>
+                                </div>
+                                <div>
+                                    <label class="form-label">Last Name *</label>
+                                    <input type="text" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-input" required>
+                                </div>
+                                <div>
+                                    <label class="form-label">Phone</label>
+                                    <input type="tel" class="form-input">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-label">I am interested in... *</label>
+                                <select class="form-input" required>
+                                    <option value="" disabled selected>Please select an option</option>
+                                    <option value="esteem">The Esteem® FI-AMEI</option>
+                                    <option value="support">Assistance with an Esteem® device</option>
+                                    <option value="professional">Healthcare professional inquiries</option>
+                                    <option value="specialist">Help finding a hearing specialist</option>
+                                    <option value="general">General inquiries</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label">Message</label>
+                                <textarea class="form-input h-32 resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Orientation Info -->
+                <div class="space-y-12">
+                    <!-- General -->
+                    <div class="feature-card">
+                        <div class="mb-6 w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-headset text-xl brand-text-navy"></i>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 mb-4">General Inquiries</h3>
+                        <div class="space-y-2 text-slate-500 font-medium">
+                            <p class="flex items-center"><i class="fas fa-phone w-6 text-blue-500"></i> 877-900-EARS
+                                (3277)</p>
+                            <p class="flex items-center"><i class="fas fa-envelope w-6 text-blue-500"></i>
+                                info@envoymedical.com</p>
+                        </div>
+                    </div>
+
+                    <!-- Headquarters -->
+                    <div class="feature-card">
+                        <div class="mb-6 w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-building text-xl brand-text-navy"></i>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 mb-4">Corporate Headquarters</h3>
+                        <address class="not-italic text-slate-500 font-medium leading-relaxed">
+                            Envoy Medical Corporation<br>
+                            4875 White Bear Parkway<br>
+                            White Bear Lake, MN 55110
+                        </address>
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <a href="https://maps.google.com/?q=4875+White+Bear+Parkway+White+Bear+Lake,+MN+55110"
+                                target="_blank" class="text-blue-600 font-bold text-sm hover:underline">Get Directions
+                                <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Investor & Media -->
+                    <div class="feature-card">
+                        <div class="mb-6 w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-newspaper text-xl brand-text-navy"></i>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 mb-4">Investor & Media Relations</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wide mb-2">Investor
+                                    Relations</h4>
+                                <p class="text-slate-500 text-sm font-medium"><i
+                                        class="fas fa-phone w-6 text-blue-500"></i> 651-361-8043</p>
+                                <p class="text-slate-500 text-sm font-medium"><i
+                                        class="fas fa-envelope w-6 text-blue-500"></i>
+                                    InvestorRelations@EnvoyMedical.com</p>
+                            </div>
+                            <div class="pt-4 border-t border-slate-100">
+                                <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wide mb-2">Media
+                                    Inquiries</h4>
+                                <p class="text-slate-500 text-sm font-medium">Contact: Anne Donohoe</p>
+                                <p class="text-slate-500 text-sm font-medium"><i
+                                        class="fas fa-envelope w-6 text-blue-500"></i> Envoy@kcsa.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

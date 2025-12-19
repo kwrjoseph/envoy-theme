@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!-- Original URL: https://www-envoymedical-com.sandbox.hs-sites.com/advocacy -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocacy | Envoy Medical - Fighting for Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        .brand-text {
+            color: var(--brand-navy);
+        }
+
+        /* Hero Section Styling */
+        .hero-advocacy {
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 140px 0 100px;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-color: #f1f5f9;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Module/Card Styling */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 40px -15px rgba(0, 45, 116, 0.08);
+            border-color: var(--brand-navy);
+        }
+
+        .icon-box {
+            width: 56px;
+            height: 56px;
+            background-color: rgba(0, 45, 116, 0.05);
+            color: var(--brand-navy);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Section Headings */
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .line-accent {
+            height: 4px;
+            width: 48px;
+            background-color: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA Styling */
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        /* Technology Spotlight Module */
+        .tech-spotlight {
+            background-color: var(--brand-navy);
+            border-radius: 3.5rem;
+            color: white;
+            padding: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spotlight-ornament {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html"
+                class="font-black text-2xl tracking-tighter brand-text-navy hover:opacity-80 transition-opacity">ENVOY
+                MEDICAL</a>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="brand-text-navy">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="professionals.html" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-advocacy mt-10">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center space-x-3 mb-6">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text">Advocacy & Access</span>
+                    <div class="w-10 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-4xl lg:text-7xl font-black text-slate-900 leading-[1.05] mb-8 tracking-tighter">
+                    Fighting for <br><span class="brand-text">Patient Access.</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-10 font-medium">
+                    We are dedicated to modernizing Medicare coverage to ensure that millions of Americans have access
+                    to the latest fully implanted hearing technologies.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#act-now"
+                        class="btn-primary text-white px-10 py-5 rounded-2xl font-bold text-lg text-center">
+                        Take Action Today
+                    </a>
+                    <a href="#understanding-the-issue"
+                        class="bg-white border-2 border-slate-100 text-slate-600 px-10 py-5 rounded-2xl font-bold text-lg text-center hover:bg-slate-50 transition-all">
+                        Learn The Issue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="understanding-the-issue" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-header text-center lg:text-left">
+                <div class="line-accent mx-auto lg:mx-0"></div>
+                <h2 class="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">The Coverage Gap</h2>
+                <p class="text-lg text-slate-500 mt-4 max-w-2xl">
+                    Current Medicare policies restrict access to innovative hearing solutions, classifying them as
+                    hearing aids rather than prosthetics.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Point 1 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-file-medical-alt"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Outdated Classification</h3>
+                    <p class="text-sm leading-relaxed text-slate-500">
+                        The Centers for Medicare & Medicaid Services (CMS) currently classifies our fully implanted
+                        Esteem® device as a hearing aid, which is statutorily excluded from coverage.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Prosthetic vs. Aid</h3>
+                    <p class="text-sm leading-relaxed text-slate-500">
+                        We argue that fully implanted active middle ear devices should be classified as prosthetics,
+                        which are covered benefits under the Social Security Act.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-users-slash"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Access Denied</h3>
+                    <p class="text-sm leading-relaxed text-slate-500">
+                        This classification prevents millions of seniors from accessing potentially life-changing
+                        technology that could improve their health and cognitive function.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legislative Spotlight (The Solution) -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="tech-spotlight">
+                <div class="spotlight-ornament"></div>
+                <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                    <div>
+                        <h2 class="text-3xl lg:text-5xl font-black mb-8 leading-tight">The Hearing Device
+                            <br>Coverage Clarification Act
+                        </h2>
+                        <p class="text-lg text-blue-100 mb-10 leading-relaxed">
+                            We are advocating for the passage of H.R. 1921 and S. 983. This legislation clarifies that
+                            fully implanted active middle ear devices are prosthetics.
+                        </p>
+                        <ul class="space-y-4 text-blue-50 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Modernizes Medicare policy</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Unlocks access for millions</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Fosters innovation in hearing tech</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20">
+                        <div class="text-center">
+                            <i class="fas fa-landmark text-6xl mb-6 text-blue-300"></i>
+                            <h4 class="text-xl font-bold mb-4 uppercase tracking-widest text-blue-200">Legislative
+                                Solution
+                            </h4>
+                            <p class="text-sm leading-relaxed">
+                                By reclassifying these devices, we can align coverage with the technological reality of
+                                fully implanted prosthetics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text -->
+                <div>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text mb-4 block">Why It
+                        Matters</span>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6">A Public Health Crisis</h3>
+                    <p class="text-slate-500 mb-6 leading-relaxed">
+                        Hearing loss is the third most prevalent chronic health condition in the U.S. Untreated hearing
+                        loss is linked to serious comorbidities, including:
+                    </p>
+                    <ul class="space-y-3 text-slate-500 font-medium mb-8">
+                        <li class="flex items-center"><i class="fas fa-exclamation-circle text-orange-500 mr-3"></i>
+                            Cognitive Decline & Dementia</li>
+                        <li class="flex items-center"><i class="fas fa-exclamation-circle text-orange-500 mr-3"></i>
+                            Social Isolation & Depression</li>
+                        <li class="flex items-center"><i class="fas fa-exclamation-circle text-orange-500 mr-3"></i>
+                            Increased Risk of Falls</li>
+                    </ul>
+                    <a href="hearing-loss.html" class="brand-text font-bold flex items-center group">
+                        LEARN MORE ABOUT HEARING LOSS <i
+                            class="fas fa-arrow-right ml-3 text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <!-- Statistic Card -->
+                <div class="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 text-center">
+                    <i class="fas fa-users text-5xl text-blue-200 mb-6"></i>
+                    <h3 class="text-5xl font-black text-slate-900 mb-4">40 Million</h3>
+                    <p class="text-slate-500 font-medium text-lg">
+                        Americans suffer from disabling hearing loss. Access to effective treatment is more critical
+                        than ever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Step: Contact Reps -->
+    <section id="act-now" class="py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl lg:text-5xl font-black text-slate-900 mb-8">Make Your Voice Heard</h2>
+            <p class="text-xl text-slate-500 mb-12 max-w-2xl mx-auto">
+                Join us in urging Congress to pass the Hearing Device Coverage Clarification Act. Your voice can help
+                open the door to better hearing health for seniors.
+            </p>
+            <div class="bg-slate-900 text-white rounded-[2.5rem] p-12 text-left relative shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Contact Your Representative</h4>
+                        <p class="text-sm text-slate-400 mb-6">
+                            We've made it easy. Download our template letter or find your representative's contact
+                            information to share your support for H.R. 1921 and S. 983.
+                        </p>
+                        <div
+                            class="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-blue-400">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Letter Template Available</span>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button
+                            class="bg-white text-slate-900 px-12 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all">
+                            Find Your Rep
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="careers.html" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="privacy-policy.html" class="hover:text-blue-600 transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="accessibility.html" class="hover:text-blue-600 transition-colors">Accessibility</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

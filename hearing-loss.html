@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!-- Source URL: https://www.envoymedical.com/hearing-loss -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearing Loss | Hearing Alternatives | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Interactive Elements */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        /* Tabs Styling */
+        .tab-btn {
+            padding: 1rem 2rem;
+            font-weight: 700;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background-color: var(--brand-navy);
+            color: white;
+        }
+
+        .tab-btn:not(.active):hover {
+            background-color: var(--brand-light-blue);
+            color: var(--brand-navy);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+
+        /* Floating CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+            box-shadow: 0 20px 40px rgba(0, 45, 116, 0.3);
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating CTA -->
+    <a href="#" class="floating-cta btn-primary px-8 py-4 text-lg hidden lg:inline-flex">
+        Take Control of Your Hearing
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="#" class="brand-text-navy">HEARING LOSS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="index.html" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Hearing
+                        Alternatives</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-8xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    The <br><span class="brand-text-navy italic font-serif">Remarkable Ear</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    The ear is remarkable. Its parts work together in perfect harmony to convert sound waves to
+                    mechanical signals and then to electrical signals that your brain perceives as sound.
+                </p>
+                <p class="text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed">
+                    Unfortunately, some individuals have ears that don’t function optimally. Hearing loss can affect one
+                    ear or both ears and can stem from various causes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#how-hearing-works" class="btn-primary text-xl">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- How Hearing Works -->
+    <section id="how-hearing-works" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <div class="section-accent mx-auto"></div>
+                <h2 class="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">How Hearing Works</h2>
+                <p class="text-xl text-slate-500 mt-6 max-w-2xl mx-auto">Sound travels through the ear in three distinct
+                    phases. The brain interprets the sound waves as they travel through the ear.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Outer Ear -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-ear-low text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">Outer Ear</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">
+                        The visible outer part (the pinna) and the ear canal.
+                    </p>
+                </div>
+                <!-- Middle Ear -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-microphone-lines text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">Middle Ear</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">
+                        Includes the eardrum and three tiny bones (hammer, anvil, and stirrup), which as a connected
+                        component comprise the ossicles.
+                    </p>
+                </div>
+                <!-- Inner Ear -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-wave-square text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">Inner Ear</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">
+                        The snail-shaped cochlea and the hearing nerve, as well as semicircular canals that help us with
+                        balance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-20 p-12 bg-slate-50 rounded-[4rem] text-center max-w-4xl mx-auto">
+                <p class="text-lg text-slate-600 leading-relaxed italic font-medium">
+                    Each of these components of the ear performs a critical function in transmitting sound. Natural
+                    hearing relies on the components functioning together. If there is a malfunction anywhere in these
+                    phases, hearing loss may be experienced.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Degrees of Loss -->
+    <section id="degrees-of-loss" class="py-32 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span
+                        class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Classification</span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 mb-8 tracking-tight">Four Degrees <br>of
+                        Hearing Loss</h2>
+                    <p class="text-lg text-slate-500 mb-12">
+                        Hearing loss is not the same for everyone. It is typically categorized into four distinct
+                        degrees.
+                    </p>
+                    <div class="space-y-6">
+                        <div
+                            class="flex items-center space-x-6 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center font-black text-blue-600">
+                                01</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Mild</h4>
+                                <p class="text-sm text-slate-500">Ability to hear parts of speech, but difficulty with
+                                    softer sounds.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center space-x-6 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center font-black text-blue-600">
+                                02</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Moderate</h4>
+                                <p class="text-sm text-slate-500">Struggle to hear speech at a normal level.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center space-x-6 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center font-black text-blue-600">
+                                03</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Severe</h4>
+                                <p class="text-sm text-slate-500">Inability to hear most speech at normal levels;
+                                    ability to hear loud sounds.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center space-x-6 bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center font-black text-blue-600">
+                                04</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Profound</h4>
+                                <p class="text-sm text-slate-500">Inability to hear any normal speech; ability to only
+                                    hear very loud sounds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white p-12 rounded-[4rem] relative z-10 border border-slate-100 shadow-2xl">
+                        <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Diagnosis & Causes</h3>
+                        <p class="text-slate-500 mb-10 leading-relaxed text-lg font-medium">
+                            Hearing loss can affect one ear or both ears and can stem from various causes. Natural
+                            hearing relies on all components functioning together.
+                        </p>
+                        <div class="bg-blue-50 p-8 rounded-3xl text-sm font-medium text-slate-600">
+                            <p class="mb-4">Common factors identified include:</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                    Natural aging adults</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                    Exposure to loud noise</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                    Genetic factors</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blue-600 mr-2"></i>
+                                    Head trauma</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types of Loss (Tabs) -->
+    <section id="types-of-loss" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Medical
+                    Types</span>
+                <h2 class="text-4xl lg:text-7xl font-black text-slate-900 tracking-tight">Types of Hearing Loss</h2>
+                <p class="text-xl text-slate-500 mt-6 max-w-2xl mx-auto">Four types of hearing loss have been
+                    identified, and in most cases, each type is treatable.</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 px-4">
+                <button onclick="switchTab('sensorineural')" id="tab-btn-sensorineural"
+                    class="tab-btn active">Sensorineural</button>
+                <button onclick="switchTab('conductive')" id="tab-btn-conductive" class="tab-btn">Conductive</button>
+                <button onclick="switchTab('mixed')" id="tab-btn-mixed" class="tab-btn">Mixed</button>
+                <button onclick="switchTab('unique')" id="tab-btn-unique" class="tab-btn">Unique Diagnoses</button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Sensorineural -->
+                <div id="tab-sensorineural"
+                    class="tab-content active bg-slate-50 p-12 rounded-[4rem] border border-slate-100">
+                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Sensorineural Hearing Loss</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-8 font-medium">
+                        Nerve-related (sensorineural) hearing loss is the most common type of hearing loss. It is caused
+                        when tiny hair cells in the cochlea are damaged or degraded, and don’t effectively transmit
+                        sound impulses to the brain.
+                    </p>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
+                        Sensorineural hearing loss often occurs in aging adults, but can also be caused by genetics,
+                        head trauma or exposure to loud noise. Previously, patients with this type of hearing loss only
+                        had two options: hearing aids or cochlear implants.
+                    </p>
+                    <div class="flex items-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                        <i class="fas fa-lightbulb text-3xl text-blue-600 mr-6"></i>
+                        <p class="text-base font-bold text-slate-900">Envoy Medical's Esteem® is specifically designed
+                            for people with moderate-to-severe sensorineural hearing loss.</p>
+                    </div>
+                </div>
+
+                <!-- Conductive -->
+                <div id="tab-conductive" class="tab-content bg-slate-50 p-12 rounded-[4rem] border border-slate-100">
+                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Conductive Hearing Loss</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
+                        When the outer or middle ear malfunctions, limiting sound transmission, it results in conductive
+                        hearing loss. Common solutions for this condition include bone-anchored devices, surgically
+                        implanted osseointegrated devices or bone conduction surgery.
+                    </p>
+                    <div class="flex items-center p-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
+                        <i class="fas fa-circle-info text-3xl text-blue-500 mr-6"></i>
+                        <p class="text-base font-bold text-slate-900">Consult with a hearing professional to see if your
+                            conductive loss can be corrected surgically.</p>
+                    </div>
+                </div>
+
+                <!-- Mixed -->
+                <div id="tab-mixed" class="tab-content bg-slate-50 p-12 rounded-[4rem] border border-slate-100">
+                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Mixed Hearing Loss</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
+                        Mixed hearing loss is a combination of both sensorineural and conductive hearing loss. It’s
+                        caused by malfunctions in both the inner and the outer or middle ear. Audiologists typically
+                        recommend taking care of the conductive (above) component first. However, we recommend
+                        consulting with a hearing professional for an accurate diagnosis and treatment plan.
+                    </p>
+                </div>
+
+                <!-- Unique -->
+                <div id="tab-unique" class="tab-content bg-slate-50 p-12 rounded-[4rem] border border-slate-100">
+                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Unique Diagnoses</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-12 font-medium">
+                        In rare cases, none of the typical diagnoses apply, such as: Missing or severed hearing nerve,
+                        or Auditory Neuropathy Spectrum Disorder, where sound enters the ear normally but damage to the
+                        inner ear or hearing nerve prevents the brain from organizing it in a way that can be
+                        understood.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="btn-primary w-full sm:w-auto text-lg">NOT SURE WHAT TYPE OF LOSS YOU
+                            HAVE?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span
+                        class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Education</span>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Trending on Our Blogs</h2>
+                </div>
+                <a href="#" class="btn-primary py-3 px-8 text-xs">VIEW ALL POSTS</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <div class="feature-card group cursor-pointer bg-white">
+                    <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4 block">November 22,
+                        2025</span>
+                    <h3
+                        class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors font-serif">
+                        Look at These Numbers: Hearing Loss, Chronic Disease and Your Choice</h3>
+                    <p class="text-sm text-slate-400 mb-6 italic">By Envoy Medical Staff Member</p>
+                    <div class="flex items-center text-xs font-black brand-text-navy tracking-widest uppercase">
+                        #EMPOWERMENT <i
+                            class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div class="feature-card group cursor-pointer bg-white">
+                    <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4 block">October 11,
+                        2025</span>
+                    <h3
+                        class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors font-serif">
+                        Fall into Hearing Safety: Why Autumn Noise Deserves Your Attention</h3>
+                    <p class="text-sm text-slate-400 mb-6 italic">By Envoy Medical Staff Member</p>
+                    <div class="flex items-center text-xs font-black brand-text-navy tracking-widest uppercase">
+                        #EARSAFETY <i
+                            class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div class="feature-card group cursor-pointer bg-white">
+                    <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-4 block">September 13,
+                        2025</span>
+                    <h3
+                        class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors font-serif">
+                        Facing Hearing Loss: Support, Stigma, and Strength</h3>
+                    <p class="text-sm text-slate-400 mb-6 italic">By Envoy Medical Staff Member</p>
+                    <div class="flex items-center text-xs font-black brand-text-navy tracking-widest uppercase">
+                        #EMPOWERMENT <i
+                            class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('tab-' + tabId).classList.add('active');
+            document.getElementById('tab-btn-' + tabId).classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<!-- Original URL: https://www.envoymedical.com/acclaim-cochlear-implant -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acclaim® Cochlear Implant | Fully Implanted | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Interactive Elements */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--brand-navy);
+            border: 2px solid var(--brand-navy);
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--brand-light-blue);
+            transform: translateY(-2px);
+        }
+
+        .section-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .caution-banner {
+            background: #fff3cd;
+            color: #856404;
+            text-align: center;
+            padding: 0.75rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ffeeba;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html"
+                class="font-black text-2xl tracking-tighter brand-text-navy hover:opacity-80 transition-opacity">ENVOY
+                MEDICAL</a>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="brand-text-navy">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-10">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span
+                        class="px-3 py-1 bg-blue-100/80 text-blue-700 text-[10px] font-black uppercase tracking-[0.2em] rounded">Investigational
+                        Device</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    The Acclaim® <br><span class="brand-text-navy italic font-serif">Cochlear Implant</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    Reimagining how we treat severe to profound hearing loss. A fully implanted cochlear implant
+                    designed for 24/7 hearing.
+                </p>
+
+                <!-- Regulatory Caution -->
+                <div class="bg-amber-50 border-l-4 border-amber-400 p-6 mb-10 rounded-r-xl max-w-2xl">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-triangle text-amber-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-amber-700 font-bold">CAUTION: Investigational Device</p>
+                            <p class="text-sm text-amber-700 mt-1">
+                                Limited by Federal (or United States) law to investigational use.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#clinical-trial" class="btn-primary">Learn About The Clinical Trial</a>
+                    <a href="#how-it-works" class="btn-secondary">How It Works</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <div class="section-accent mx-auto"></div>
+                <h2 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">No Externals. <br>Just
+                    Hearing.</h2>
+                <p class="text-xl text-slate-500 mt-6 max-w-3xl mx-auto">
+                    The Acclaim® Cochlear Implant is designed to be the first-of-its-kind fully implanted cochlear
+                    implant. Unlike traditional cochlear implants, it requires no external audio processor, microphone,
+                    or magnet.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Benefit 1 -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-ear-listen text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">Natural Sound Capture</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">
+                        Designed to use the ear's natural anatomy to capture sound, leveraging the pinna and ear canal
+                        just like natural hearing.
+                    </p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-infinity text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">24/7 Hearing</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">
+                        Hear around the clock. Sleep, shower, and swim without removing any device. Designed for true
+                        continuous hearing functionality.
+                    </p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="feature-card">
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-eye-slash text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-6 font-serif">Invisible Hearing®</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">
+                        Nothing to wear on the ear. Nothing to lose. A fully discreet solution that restores confidence
+                        along with hearing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="how-it-works" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span
+                        class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Technology</span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 mb-8 tracking-tight">Innovative <br>Sensor
+                        Technology</h2>
+                    <p class="text-lg text-slate-500 mb-6 leading-relaxed">
+                        The groundbreaking innovation behind the Acclaim is our proprietary **Sensor Technology**.
+                    </p>
+                    <p class="text-lg text-slate-500 mb-12 leading-relaxed">
+                        Instead of an external microphone, the Acclaim uses a sensor implanted in the middle ear to
+                        detect vibrations from the incus (anvil) bone. This allows the device to leverage the outer
+                        ear's natural sound-collecting capabilities.
+                    </p>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                                <span class="text-blue-600 font-black text-xs">01</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-slate-900">Sound Enters Naturally</h4>
+                                <p class="text-sm text-slate-500 mt-1">Sound waves travel through the ear canal and
+                                    vibrate the eardrum and hearing bones.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                                <span class="text-blue-600 font-black text-xs">02</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-slate-900">Sensor Detection</h4>
+                                <p class="text-sm text-slate-500 mt-1">The implanted sensor detects these mechanical
+                                    vibrations and converts them into electrical signals.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div
+                                class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                                <span class="text-blue-600 font-black text-xs">03</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-slate-900">Cochlear Stimulation</h4>
+                                <p class="text-sm text-slate-500 mt-1">The processor sends impulses to the electrode
+                                    array in the cochlea, stimulating the hearing nerve.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div
+                        class="bg-white p-12 rounded-[4rem] relative z-10 border border-slate-100 shadow-2xl overflow-hidden group">
+                        <!-- Abstract representation of the device/ear since we don't have the image -->
+                        <div
+                            class="aspect-square bg-slate-100 rounded-3xl flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-slate-100 opacity-50"></div>
+                            <i
+                                class="fas fa-ear-listen text-9xl text-slate-200 group-hover:scale-110 transition-transform duration-700"></i>
+                            <div class="absolute bottom-10 left-10 right-10">
+                                <div class="bg-white/90 backdrop-blur p-6 rounded-2xl shadow-lg">
+                                    <p class="font-serif italic text-slate-600 text-center">"Leveraging the ear's
+                                        natural anatomy for a better hearing experience."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Trial / CTA -->
+    <section id="clinical-trial" class="py-32 bg-brand-navy relative overflow-hidden">
+        <div class="absolute inset-0 bg-[#001f52] opacity-50"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <span
+                class="inline-block py-2 px-4 rounded-full bg-blue-500/20 text-blue-200 text-xs font-bold uppercase tracking-widest mb-8 border border-blue-400/30">Pivotal
+                Study Now Enrolling</span>
+            <h2 class="text-4xl lg:text-6xl font-black text-white mb-8 tracking-tight">Acclaim® Cochlear
+                Implant<br>Clinical Trial</h2>
+            <p class="text-xl text-blue-100 mb-12 leading-relaxed max-w-2xl mx-auto">
+                Envoy Medical is currently conducting a pivotal clinical trial for the Acclaim Cochlear Implant at
+                select sites across the United States.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#" class="bg-white text-[#002d74] btn-primary hover:bg-blue-50">Am I A Candidate?</a>
+                <a href="#"
+                    class="border-2 border-white text-white btn-secondary hover:bg-white/10 hover:text-white">Find a
+                    Clinical Site</a>
+            </div>
+            <p class="mt-12 text-sm text-blue-300/60 max-w-lg mx-auto">
+                Caution: Investigational Device. Limited by Federal (or United States) law to investigational use.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

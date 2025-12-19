@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Original Page: https://www.envoymedical.com/news -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Press Releases | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+            padding: 160px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at top right, #e0f2fe 0%, transparent 60%);
+            opacity: 0.6;
+        }
+
+        /* Card Styling */
+        .news-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -5px rgba(0, 45, 116, 0.1);
+            border-color: var(--brand-navy);
+        }
+
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .cat-clinical {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .cat-corporate {
+            background: #f3e8ff;
+            color: #6b21a8;
+        }
+
+        .cat-finance {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .cat-ip {
+            background: #ffedd5;
+            color: #9a3412;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--brand-navy);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: auto;
+            transition: color 0.2s;
+        }
+
+        .btn-link:hover {
+            color: var(--brand-accent);
+        }
+
+        .featured-card {
+            background: var(--brand-navy);
+            color: white;
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="middle-ear-implants.html" class="hover:text-blue-600 transition-colors">Middle Ear Implants</a>
+                <a href="cochlear-implants.html" class="hover:text-blue-600 transition-colors">Cochlear Implants</a>
+                <a href="#press-releases" class="hover:text-blue-600 transition-colors">Press Releases</a>
+                <a href="#contact"
+                    class="px-5 py-2.5 rounded-xl bg-slate-900 text-white text-xs hover:bg-slate-800 transition-all">Media
+                    Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <div class="hero-pattern"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <span class="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Press Room</span>
+            <h1 class="text-5xl lg:text-7xl font-black text-slate-900 tracking-tighter mb-8 font-serif">News & Updates
+            </h1>
+            <p class="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                Stay informed about Envoy Medical's mission to revolutionize hearing health, our latest clinical
+                milestones, and corporate announcements.
+            </p>
+        </div>
+    </header>
+
+    <!-- Featured News -->
+    <section class="pb-16 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="featured-card shadow-2xl">
+                <div class="grid lg:grid-cols-2">
+                    <div class="p-12 lg:p-16 flex flex-col justify-center relative z-10">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <span
+                                class="bg-blue-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Featured</span>
+                            <span class="text-blue-200 text-sm font-medium">December 18, 2025</span>
+                        </div>
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6 font-serif leading-tight">
+                            Envoy Medical Reaches Enrollment Midpoint in Acclaim® Cochlear Implant Pivotal Study
+                        </h2>
+                        <p class="text-blue-100 leading-relaxed mb-8 text-lg">
+                            A major milestone for the fully implanted Acclaim® CI. The company also announced the
+                            completion of the first set of device activations in the final stage of the study.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center text-white font-bold hover:text-blue-200 transition-colors">
+                            Read Full Release <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="relative min-h-[300px] bg-blue-900">
+                        <div
+                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-40 mix-blend-overlay">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#002d74]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <section id="press-releases" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h3 class="text-2xl font-black text-slate-900">Latest Press Releases</h3>
+                <div class="hidden md:flex space-x-2">
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white border border-slate-200 text-xs font-bold text-slate-600 hover:border-slate-400">All</button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-transparent border border-transparent text-xs font-bold text-slate-400 hover:text-slate-600">Clinical</button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-transparent border border-transparent text-xs font-bold text-slate-400 hover:text-slate-600">Corporate</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- News Item 1 -->
+                <div class="news-card">
+                    <div class="flex justify-between items-start">
+                        <span class="category-badge cat-ip">Intellectual Property</span>
+                        <span class="text-xs text-slate-400 font-medium">Dec 2025</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">
+                        Envoy Medical Granted 40th U.S. Patent
+                    </h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        The company continues to expand its robust intellectual property portfolio with a new patent
+                        grant, solidifying its leadership in implantable hearing tech.
+                    </p>
+                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-card">
+                    <div class="flex justify-between items-start">
+                        <span class="category-badge cat-ip">Intellectual Property</span>
+                        <span class="text-xs text-slate-400 font-medium">Nov 2025</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">
+                        Patent Secured for Innovative CI System with Removable Sensor
+                    </h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        New patent covers a unique cochlear implant system design featuring a removable earplug sensor
+                        and an implanted battery unit.
+                    </p>
+                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-card">
+                    <div class="flex justify-between items-start">
+                        <span class="category-badge cat-ip">Intellectual Property</span>
+                        <span class="text-xs text-slate-400 font-medium">Oct 16, 2025</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">
+                        Australian Patent Granted for Enhanced Signal-to-Noise Ratio
+                    </h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        International coverage expands with Australian Patent No. 2022229818, focusing on signal
+                        processing technology.
+                    </p>
+                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="news-card">
+                    <div class="flex justify-between items-start">
+                        <span class="category-badge cat-finance">Finance</span>
+                        <span class="text-xs text-slate-400 font-medium">Sep 2025</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">
+                        Envoy Medical Raises $2.5 Million in Registered Direct Offering
+                    </h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        Successful capital raise to support ongoing operations and the pivotal clinical trial of the
+                        Acclaim® Cochlear Implant.
+                    </p>
+                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="news-card">
+                    <div class="flex justify-between items-start">
+                        <span class="category-badge cat-corporate">Reimbursement</span>
+                        <span class="text-xs text-slate-400 font-medium">July 2025</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">
+                        New CPT Codes for Active Middle Ear Implants Now Effective
+                    </h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        New coding structures expected to facilitate better access and reimbursement pathways for the
+                        Esteem® device.
+                    </p>
+                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+
+                <!-- News Item 6 -->
+                <div class="news-card">
+                    <div class="flex justify-between items-start">
+                        <span class="category-badge cat-finance">Finance</span>
+                        <span class="text-xs text-slate-400 font-medium">May 2025</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">
+                        Q1 2025 Results: $10M Funding Secured
+                    </h4>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                        Quarterly update highlights significant funding achievements and the enrollment of the first 10
+                        participants in the Acclaim study.
+                    </p>
+                    <a href="#" class="btn-link">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-16 flex justify-center space-x-2">
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-600 text-white font-bold">1</span>
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-500 font-bold cursor-pointer">2</span>
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-500 font-bold cursor-pointer">3</span>
+                <span
+                    class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-slate-200 text-slate-500 font-bold cursor-pointer"><i
+                        class="fas fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Contact -->
+    <section id="contact" class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black text-slate-900 mb-6">Media Inquiries</h2>
+            <p class="text-lg text-slate-500 mb-10">
+                For press kits, interview requests, or investor relations questions, please reach out to our corporate
+                communications team.
+            </p>
+            <div class="bg-blue-50 p-8 rounded-3xl inline-flex flex-col md:flex-row items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-sm">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text-left">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Email Us</span>
+                        <a href="mailto:investors@envoymedical.com"
+                            class="text-slate-900 font-bold hover:text-blue-600">investors@envoymedical.com</a>
+                    </div>
+                </div>
+                <div class="w-px h-12 bg-blue-200 hidden md:block"></div>
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-sm">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="text-left">
+                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Call Us</span>
+                        <a href="tel:651-361-8000" class="text-slate-900 font-bold hover:text-blue-600">651-361-8000</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-[10px] uppercase tracking-widest font-bold text-slate-400 mb-4 md:mb-0">
+                © 2025 Envoy Medical Inc.
+            </div>
+            <div class="flex space-x-6 text-slate-400">
+                <a href="#" class="hover:text-blue-600 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-blue-600 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-blue-600 transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

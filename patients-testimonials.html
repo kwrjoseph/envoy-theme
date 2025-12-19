@@ -1,0 +1,303 @@
+<!-- Original URL: https://www.envoymedical.com/patients-testimonials -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Testimonials | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Card Styling */
+        .testimonial-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0, 45, 116, 0.1);
+            border-color: var(--brand-navy);
+        }
+
+        .quote-icon {
+            font-size: 2rem;
+            color: var(--brand-light-blue);
+            margin-bottom: 1rem;
+        }
+
+        .avatar-placeholder {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--brand-grey);
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Real Stories</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    Patient <span class="brand-text-navy italic font-serif">Testimonials</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    Discover how Envoy Medical's innovative hearing solutions have transformed the lives of people
+                    around the world.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Testimonials Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon text-blue-100"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris."
+                    </p>
+                    <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+                        <div class="avatar-placeholder">JP</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Jane P.</h4>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Esteem Recipient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon text-blue-100"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum."
+                    </p>
+                    <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+                        <div class="avatar-placeholder">MD</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Michael D.</h4>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Esteem Recipient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon text-blue-100"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                        beatae vitae dicta sunt explicabo."
+                    </p>
+                    <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+                        <div class="avatar-placeholder">SAR</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Sarah R.</h4>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Esteem Recipient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon text-blue-100"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                        qui dolorem ipsum quia dolor sit amet."
+                    </p>
+                    <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+                        <div class="avatar-placeholder">RB</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Robert B.</h4>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Family Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon text-blue-100"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident."
+                    </p>
+                    <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+                        <div class="avatar-placeholder">EL</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Emily L.</h4>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Esteem Recipient</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon text-blue-100"></i>
+                    <p class="text-slate-600 leading-relaxed mb-6 flex-grow">
+                        "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                        est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                        voluptas assumenda est."
+                    </p>
+                    <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+                        <div class="avatar-placeholder">DT</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">David T.</h4>
+                            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">Esteem Recipient</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)<br>
+                        Customer Service: 1-800-460-7531<br>
+                        Email: customerservice@envoymedical.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Products Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Important Safety Information</a>
+                        </li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Help Center</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Investor</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

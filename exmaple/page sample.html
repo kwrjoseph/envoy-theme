@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoy Medical - For Hearing Health Professionals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-bg {
+            background-color: var(--brand-navy);
+        }
+
+        .brand-text {
+            color: var(--brand-navy);
+        }
+
+        /* Hero Section Styling */
+        .hero-professional {
+            position: relative;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-color: #f1f5f9;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Module/Card Styling */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 40px -15px rgba(0, 45, 116, 0.08);
+            border-color: var(--brand-navy);
+        }
+
+        .icon-box {
+            width: 56px;
+            height: 56px;
+            background-color: rgba(0, 45, 116, 0.05);
+            color: var(--brand-navy);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Section Headings */
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .line-accent {
+            height: 4px;
+            width: 48px;
+            background-color: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA Styling */
+        .btn-primary {
+            background-color: var(--brand-navy);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        /* Technology Spotlight Module */
+        .tech-spotlight {
+            background-color: var(--brand-navy);
+            border-radius: 3.5rem;
+            color: white;
+            padding: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spotlight-ornament {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-professional">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center space-x-3 mb-6">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text">Healthcare Professional
+                        Portal</span>
+                    <div class="w-10 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-4xl lg:text-7xl font-black text-slate-900 leading-[1.05] mb-8 tracking-tighter">
+                    Set Your Practice <br><span class="brand-text">Apart.</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-10 font-medium">
+                    Partner with Envoy Medical to disrupt the status quo and provide your patients with innovative,
+                    fully implanted hearing solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#partner"
+                        class="btn-primary text-white px-10 py-5 rounded-2xl font-bold text-lg text-center">
+                        Partner With Us
+                    </a>
+                    <a href="#solutions"
+                        class="bg-white border-2 border-slate-100 text-slate-600 px-10 py-5 rounded-2xl font-bold text-lg text-center hover:bg-slate-50 transition-colors">
+                        Explore Solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="solutions" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="section-header text-center lg:text-left">
+                <div class="line-accent mx-auto lg:mx-0"></div>
+                <h2 class="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">Expand Your Hearing Solutions
+                </h2>
+                <p class="text-lg text-slate-500 mt-4 max-w-2xl">
+                    We arm our partners with unique resources, tools, and products to help patients while growing their
+                    clinical practice.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Point 1 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-microscope"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Evidence-Based</h3>
+                    <p class="text-sm leading-relaxed text-slate-500">
+                        Our technologies are supported by robust clinical data and decades of experience in the hearing
+                        health landscape.
+                    </p>
+                </div>
+                <!-- Point 2 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Seamless Integration</h3>
+                    <p class="text-sm leading-relaxed text-slate-500">
+                        Designed to integrate seamlessly into your existing patient journey, from initial candidacy to
+                        long-term follow-up.
+                    </p>
+                </div>
+                <!-- Point 3 -->
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fas fa-smile-beam"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-4">Patient Satisfaction</h3>
+                    <p class="text-sm leading-relaxed text-slate-500">
+                        Build and maintain high patient satisfaction levels by offering true 24/7 hearing freedom and
+                        invisibility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Spotlight (The Gold Standard) -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="tech-spotlight">
+                <div class="spotlight-ornament"></div>
+                <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                    <div>
+                        <h2 class="text-3xl lg:text-5xl font-black mb-8 leading-tight">The Gold Standard in
+                            <br>Implantable Microphones</h2>
+                        <p class="text-lg text-blue-100 mb-10 leading-relaxed">
+                            Leaders in both the otology and audiology fields agree that our piezoelectric sensor
+                            technology represents the pinnacle of implantable microphone design.
+                        </p>
+                        <ul class="space-y-4 text-blue-50 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Leverages natural ear anatomy</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Eliminates external component distortion</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i> Minimal
+                                maintenance required</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20">
+                        <div class="text-center">
+                            <i class="fas fa-wave-square text-6xl mb-6 text-blue-300"></i>
+                            <h4 class="text-xl font-bold mb-4 uppercase tracking-widest text-blue-200">Sensor Technology
+                            </h4>
+                            <p class="text-sm leading-relaxed">Our proprietary technology uses the eardrum as a
+                                microphone, preserving the integrity of incoming sound naturally.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Pillars for Professionals -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Esteem Section -->
+                <div class="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Esteem® FI-AMEI</h3>
+                    <p class="text-slate-500 mb-8">
+                        The world's first and only FDA-approved completely internal hearing device for adults with
+                        moderate to severe sensorineural hearing loss.
+                    </p>
+                    <a href="#" class="brand-text font-bold flex items-center group">
+                        VIEW CLINICAL RESULTS <i
+                            class="fas fa-arrow-right ml-3 text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Acclaim Section -->
+                <div class="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 relative overflow-hidden">
+                    <div
+                        class="absolute top-8 right-8 px-3 py-1 bg-blue-100 text-blue-700 text-[9px] font-black uppercase tracking-widest rounded">
+                        Investigational</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Acclaim® Cochlear Implant</h3>
+                    <p class="text-slate-500 mb-8">
+                        Our first-of-its-kind fully implanted cochlear implant is currently undergoing a pivotal
+                        clinical study at centers of excellence across the U.S.
+                    </p>
+                    <a href="#" class="brand-text font-bold flex items-center group">
+                        PIVOTAL TRIAL SITES <i
+                            class="fas fa-arrow-right ml-3 text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Call to Action -->
+    <section id="partner" class="py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl lg:text-5xl font-black text-slate-900 mb-8">Join Our Best-in-Class Provider Network</h2>
+            <p class="text-xl text-slate-500 mb-12 max-w-2xl mx-auto">
+                Envoy Medical hand-picks audiologists and surgeons who are dedicated to excellence. If you are a
+                healthcare professional offering hearing products, we would like to explore partnering with you.
+            </p>
+            <div class="bg-slate-900 text-white rounded-[2.5rem] p-12 text-left relative shadow-2xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h4 class="text-xl font-bold mb-4">Become a Certified Center</h4>
+                        <p class="text-sm text-slate-400 mb-6">Eligible partners receive comprehensive training,
+                            clinical resources, and are qualified to participate in the continuum of hearing loss
+                            solutions.</p>
+                        <div
+                            class="flex items-center space-x-2 text-[10px] font-black uppercase tracking-widest text-blue-400">
+                            <i class="fas fa-award"></i>
+                            <span>Certification Training Available</span>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button
+                            class="bg-white text-slate-900 px-12 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footnote -->
+    <footer class="py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] text-slate-400 font-medium uppercase tracking-[0.2em] italic">
+                *Once activated, the external Esteem Personal Programmer is not required for daily use. <br>
+                Acclaim® is an investigational device. Limited by Federal (or US) law to investigational use.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
