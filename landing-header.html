@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Header - Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Landing Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html"
+                class="font-black text-2xl tracking-tighter brand-text-navy hover:opacity-80 transition-opacity">ENVOY
+                MEDICAL</a>
+
+            <div class="flex items-center space-x-6">
+                <!-- Phone Number CTA -->
+                <div class="hidden sm:flex flex-col items-end">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-1">Talk
+                        to an expert</span>
+                    <a href="tel:888-999-0000"
+                        class="brand-text-navy font-bold text-lg hover:text-blue-600 transition-colors">888.999.0000</a>
+                </div>
+
+                <!-- Primary Action -->
+                <a href="contact.html"
+                    class="brand-bg-navy text-white px-6 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/10">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed nav -->
+    <div class="h-20"></div>
+
+    <!-- Dummy content to show fixed header in action -->
+    <div class="bg-slate-50 min-h-screen p-12 text-center">
+        <h1 class="text-4xl font-black brand-text-navy mb-4">Minimal Landing Header</h1>
+        <p class="text-slate-500 max-w-2xl mx-auto">This header is designed to remove navigation friction and keep
+            potential patients focused on the conversion goal.</p>
+    </div>
+
+</body>
+
+</html>
