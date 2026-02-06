@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- Source URL: https://www.envoymedical.com/implanted-options -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implanted Options | Hearing Solutions | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        .brand-border-navy {
+            border-color: var(--brand-navy);
+        }
+
+        .brand-border-navy {
+            border-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: var(--brand-light-blue);
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Feature Cards */
+        .option-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2.5rem;
+            padding: 3rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        .section-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+
+        /* Stat Grid */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 2rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(0, 45, 116, 0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy uppercase">
+                <a href="index.html">Envoy Medical</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="fully-implanted-technology.html" class="hover:text-blue-600 transition-colors">FULLY IMPLANTED
+                    TECH</a>
+                <a href="#" class="brand-text-navy">IMPLANTED OPTIONS</a>
+                <a href="forms.html" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="under-construction.html" class="hover:text-blue-600 transition-colors">COMPANY</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section mt-20">
+        <div class="hero-pattern hidden lg:block"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-3 mb-8">
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Surgical
+                        Solutions</span>
+                    <div class="w-12 h-px bg-slate-200"></div>
+                </div>
+                <h1 class="text-5xl lg:text-8xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                    Implantable <br><span class="brand-text-navy italic font-serif">Hearing Options</span>
+                </h1>
+                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                    Various surgically implanted solutions exist to help treat hearing loss. The best choice depends on
+                    the type and severity of the loss.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#options" class="btn-primary text-xl">View Options</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Primary Options Section -->
+    <section id="options" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <div class="section-accent mx-auto"></div>
+                <h2 class="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight">Primary Implant Options</h2>
+                <p class="text-xl text-slate-500 mt-6 max-w-2xl mx-auto">Explore our featured surgical solutions for
+                    hearing restoration.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- MEI -->
+                <div class="option-card border-4 brand-border-navy shadow-2xl relative p-12 z-10">
+                    <div
+                        class="absolute -top-4 -right-4 brand-bg-navy text-white text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-lg z-20">
+                        Featured Solution</div>
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-drum text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6 font-serif">Middle Ear Implants (MEI)</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed font-medium mb-10">
+                        Directly stimulate the middle ear structures. These have a long history of safety and
+                        effectiveness but remain a relatively unknown option for many patients.
+                    </p>
+                    <div class="mt-auto">
+                        <a href="middle-ear-implants.html" class="btn-primary w-full text-lg">Learn about Middle Ear
+                            Implants</a>
+                    </div>
+                </div>
+
+                <!-- CI -->
+                <div class="option-card border-4 brand-border-navy shadow-2xl relative p-12 z-10">
+                    <div
+                        class="absolute -top-4 -right-4 brand-bg-navy text-white text-xs font-black px-6 py-2 rounded-full uppercase tracking-widest shadow-lg z-20">
+                        Featured Solution</div>
+                    <div class="mb-8 w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-bolt text-2xl brand-text-navy"></i>
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6 font-serif">Cochlear Implants (CI)</h3>
+                    <p class="text-lg text-slate-500 leading-relaxed font-medium mb-10">
+                        Bypass damaged portions of the inner ear and directly stimulate the auditory nerve using
+                        electrical signals. Ideal for severe to profound sensorineural loss.
+                    </p>
+                    <div class="mt-auto">
+                        <a href="cochlear-implants.html" class="btn-primary w-full text-lg">Learn about Cochlear
+                            Implants</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Bone Conduction Section -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="max-w-4xl mx-auto bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center gap-8 opacity-60">
+                <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-skull text-2xl text-slate-400"></i>
+                </div>
+                <div>
+                    <h4 class="text-xl font-black text-slate-400 font-serif mb-2">Other Considerations: Bone Conduction
+                    </h4>
+                    <p class="text-sm text-slate-400 italic">
+                        Bone conduction implants transmit sound vibrations directly to the inner ear via the skull.
+                        Typical for conductive loss, mixed loss, or single-sided deafness. <strong>Please note: This
+                            option is not currently offered by Envoy Medical.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Risks / JAMA Section -->
+    <section class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Medical
+                        Research</span>
+                    <h2 class="text-4xl lg:text-5xl font-black text-slate-900 mb-8 tracking-tight">Why Treatment
+                        <br>Cannot Wait
+                    </h2>
+                    <p class="text-lg text-slate-500 mb-12">
+                        Untreated hearing loss is not just an "inconsequential part of aging." Research has shown
+                        significant links between untreated loss and major health risks.
+                    </p>
+
+                    <div class="grid gap-6">
+                        <div class="stat-card flex items-center space-x-6">
+                            <div class="text-4xl font-black text-blue-600">52%</div>
+                            <div class="text-sm font-bold text-slate-900 uppercase tracking-widest leading-tight">
+                                Greater Risk <br>of Dementia</div>
+                        </div>
+                        <div class="stat-card flex items-center space-x-6">
+                            <div class="text-4xl font-black text-blue-600">41%</div>
+                            <div class="text-sm font-bold text-slate-900 uppercase tracking-widest leading-tight">Higher
+                                Risk <br>of Depression</div>
+                        </div>
+                        <div class="stat-card flex items-center space-x-6">
+                            <div class="text-4xl font-black text-blue-600">30%</div>
+                            <div class="text-sm font-bold text-slate-900 uppercase tracking-widest leading-tight">
+                                Increased Risk <br>of Falls</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-12 rounded-[4rem] border border-slate-100 shadow-2xl relative">
+                    <i class="fas fa-quote-left text-6xl text-blue-50/50 absolute top-10 right-10"></i>
+                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif leading-tight">
+                        "Hearing loss is not just about missing a few words. It changes how your brain works."
+                    </h3>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-slate-200 rounded-full"></div>
+                        <div>
+                            <p class="font-bold text-slate-900">Frank Lin, MD, PhD</p>
+                            <p class="text-xs text-slate-400 uppercase font-black tracking-widest">Johns Hopkins
+                                University</p>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-slate-500 italic">
+                        According to recent JAMA reports, timely intervention with hearing technology is a critical
+                        component of healthy aging.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span
+                        class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Education</span>
+                    <h2 class="text-4xl font-black text-slate-900 tracking-tight">Related Articles</h2>
+                </div>
+                <a href="news.html" class="btn-primary py-3 px-8 text-xs">VIEW ALL POSTS</a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <div
+                    class="stat-card group cursor-pointer border border-transparent hover:border-blue-100 hover:shadow-xl transition-all h-full flex flex-col">
+                    <h3
+                        class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors font-serif">
+                        Look at These Numbers: Hearing Loss, Chronic Disease and Your Choice
+                    </h3>
+                    <div class="mt-auto flex items-center text-xs font-black brand-text-navy tracking-widest uppercase">
+                        READ MORE <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Blog 2 -->
+                <div
+                    class="stat-card group cursor-pointer border border-transparent hover:border-blue-100 hover:shadow-xl transition-all h-full flex flex-col">
+                    <h3
+                        class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors font-serif">
+                        Fall into Hearing Safety: Why Autumn Noise Deserves Your Attention
+                    </h3>
+                    <div class="mt-auto flex items-center text-xs font-black brand-text-navy tracking-widest uppercase">
+                        READ MORE <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Blog 3 -->
+                <div
+                    class="stat-card group cursor-pointer border border-transparent hover:border-blue-100 hover:shadow-xl transition-all h-full flex flex-col">
+                    <h3
+                        class="text-xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors font-serif">
+                        Facing Hearing Loss: Support, Stigma, and Strength
+                    </h3>
+                    <div class="mt-auto flex items-center text-xs font-black brand-text-navy tracking-widest uppercase">
+                        READ MORE <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="safety-information.html" class="hover:text-blue-600 transition-colors">Safety
+                                Information</a></li>
+                        <li><a href="forms.html" class="hover:text-blue-600 transition-colors">Patient Forms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Company</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Legal</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="privacy-policy.html" class="hover:text-blue-600 transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation.</p>
+                <div class="flex space-x-6 mt-6 md:mt-0">
+                    <i class="fab fa-facebook-f text-slate-400"></i>
+                    <i class="fab fa-linkedin-in text-slate-400"></i>
+                    <i class="fab fa-twitter text-slate-400"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

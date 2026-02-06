@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully Implanted Hearing Technology | Envoy Medical</title>
+    <meta name="description"
+        content="Discover the future of hearing technology with Envoy Medical's fully implanted solutions. Learn about internal sensing and life without external gear.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Hero Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #002d74 0%, #001a4d 100%);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 71% 50%, rgba(240, 247, 255, 0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .hero-image-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-image-container img {
+            border-radius: 3rem;
+            box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--brand-navy);
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-light-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 1.15rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section-accent {
+            width: 60px;
+            height: 4px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glass Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2.5rem;
+            padding: 2.5rem;
+        }
+
+        .comparison-card {
+            background: white;
+            border-radius: 2.5rem;
+            border: 1px solid #f1f5f9;
+            transition: all 0.4s ease;
+        }
+
+        .comparison-card:hover {
+            box-shadow: 0 40px 60px -20px rgba(0, 45, 116, 0.1);
+            border-color: var(--brand-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-black text-2xl tracking-tighter brand-text-navy cursor-pointer">ENVOY MEDICAL</div>
+            <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
+                <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="implanted-options.html" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
+                <a href="#" class="brand-text-navy font-black">FULLY IMPLANTED TECH</a>
+                <a href="acclaim-pivotal.html" class="hover:text-blue-600 transition-colors">ACCLAIM PIVOTAL</a>
+                <a href="forms.html" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+            </div>
+            <div class="md:hidden text-2xl brand-text-navy">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="max-w-4xl">
+                    <div class="inline-flex items-center space-x-3 mb-8">
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] text-blue-300">Technology
+                            Pillar</span>
+                        <div class="w-12 h-px bg-white/20"></div>
+                    </div>
+                    <h1 class="text-6xl lg:text-8xl font-black mb-10 tracking-tighter leading-[0.9]">
+                        Hearing <br><span class="gradient-text italic font-serif">Without Limits.</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-blue-100/80 leading-relaxed mb-12 max-w-2xl font-medium">
+                        The Acclaim® Cochlear Implant is designed to be the first-of-its-kind fully implanted system,
+                        allowing for 24/7 hearing that is as invisible as it is natural.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="#science" class="btn-primary text-lg">Explore the Science</a>
+                        <a href="acclaim-pivotal.html" class="btn-outline text-lg">Learn about the Study</a>
+                    </div>
+                </div>
+                <div class="hero-image-container hidden lg:block">
+                    <img src="/Users/kjoseph/.gemini/antigravity/brain/36eedc9e-e7b8-4745-9dee-525ae0f055e5/fully_implanted_hero_vibe_1767973193009.png"
+                        alt="The Future of Hearing" class="w-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Statistics/Quick Facts -->
+    <section class="py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="text-center">
+                    <div class="text-4xl font-black brand-text-navy mb-2">24/7</div>
+                    <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">HEARING ACCESS</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black brand-text-navy mb-2">100%</div>
+                    <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">FULLY IMPLANTED</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black brand-text-navy mb-2">0</div>
+                    <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">EXTERNAL COMPONENTS
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-black brand-text-navy mb-2">∞</div>
+                    <div class="text-[10px] font-black uppercase tracking-widest text-slate-400">LIFESTYLE FREEDOM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Evolution of Hearing -->
+    <section class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <div class="section-accent"></div>
+                    <h2 class="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight mb-8">The Evolution of
+                        <br><span class="brand-text-navy italic font-serif">Hearing Technology</span>
+                    </h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                        For decades, cochlear implants have relied on external hardware—microphones, processors, and
+                        batteries worn on the ear or head. While effective, these external components can limit life's
+                        most precious moments.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-6 p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm shrink-0">
+                                <span class="text-xl font-black text-slate-300">01</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2">Traditional Era</h4>
+                                <p class="text-sm text-slate-500">External gear required. Removed for sleep, showers,
+                                    and many physical activities.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6 p-6 rounded-3xl bg-blue-50 border border-blue-100">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-brand-navy flex items-center justify-center shadow-sm shrink-0">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold brand-text-navy mb-2">The Fully Implanted Era</h4>
+                                <p class="text-sm text-slate-600">The Acclaim® CI is designed to be completely internal,
+                                    using your ear's natural architecture as part of the system.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative lg:ml-10">
+                    <div class="absolute inset-0 bg-blue-100 rounded-[4rem] rotate-3 scale-95 opacity-50"></div>
+                    <div class="relative bg-white p-12 rounded-[4rem] shadow-2xl border border-slate-100 text-center">
+                        <i class="fas fa-ear-deaf text-[10rem] text-blue-50 mb-10"></i>
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 italic font-serif">Invisible Innovation</h3>
+                        <p class="text-slate-500 max-w-xs mx-auto">No external hardware means you can finally forget
+                            about your hearing device and just listen to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Science of Internal Sensing -->
+    <section id="science" class="py-32 brand-bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pattern-grid-lg text-white"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mb-20">
+                <div class="w-20 h-1 bg-blue-400 mb-8"></div>
+                <h2 class="text-4xl lg:text-6xl font-black text-white tracking-tight leading-tight">The Science of
+                    <br><span class="text-blue-300 italic font-serif">Internal Sensing</span>
+                </h2>
+                <p class="text-xl text-blue-100/70 mt-8 leading-relaxed">
+                    Most cochlear implants use external microphones. Envoy Medical's breakthrough technology uses an
+                    implanted **piezoelectric sensor** that captures sound exactly where nature intended.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="glass-card">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-8">
+                        <i class="fas fa-wave-square text-2xl text-blue-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Piezoelectric Tech</h4>
+                    <p class="text-blue-100/60 leading-relaxed text-sm">
+                        The sensor translates mechanical vibrations from the ear bone into electrical signals, similar
+                        to how a record player's needle works.
+                    </p>
+                </div>
+                <div class="glass-card">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-8">
+                        <i class="fas fa-ear-listen text-2xl text-blue-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Natural Anatomy</h4>
+                    <p class="text-blue-100/60 leading-relaxed text-sm">
+                        By using the ear itself, the system preserves the natural directionality and filtering effects
+                        of your own ear shape.
+                    </p>
+                </div>
+                <div class="glass-card">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-8">
+                        <i class="fas fa-battery-full text-2xl text-blue-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Deeply Integrated</h4>
+                    <p class="text-blue-100/60 leading-relaxed text-sm">
+                        An internal battery provides power for daily use, recharged wirelessly while you relax or sleep.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Benefits -->
+    <section class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-8">Life Without <br><span
+                        class="brand-text-navy italic font-serif">External Gear</span></h2>
+                <p class="text-lg text-slate-500">Experience moments that were previously complicated or impossible with
+                    traditional processors.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100">
+                    <i class="fas fa-shower text-3xl brand-text-navy mb-8"></i>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Water Freedom</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Shower, swim, and enjoy water activities without
+                        ever removing your hearing. True water resistance because it's under the skin.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100">
+                    <i class="fas fa-bed text-3xl brand-text-navy mb-8"></i>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Seamless Sleep</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Hear the smoke alarm, your family, or the morning
+                        birds. No more silence as soon as the external gear comes off for bed.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100">
+                    <i class="fas fa-bicycle text-3xl brand-text-navy mb-8"></i>
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Active Lifestyle</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Helmets, glasses, and strenuous sweat no longer
+                        interfere with your hearing or the stability of a processor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Path to Treatment -->
+    <section class="py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="brand-bg-navy rounded-[4rem] p-12 lg:p-24 text-white text-center relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                </div>
+                <h2 class="text-4xl lg:text-6xl font-black mb-8 relative z-10">Be Part of the <br><span
+                        class="text-blue-300 italic font-serif">Innovation.</span></h2>
+                <p class="text-xl text-blue-100/80 mb-12 max-w-2xl mx-auto relative z-10">
+                    Envoy Medical is currently conducting the Acclaim® Pivotal Study for this groundbreaking technology.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
+                    <a href="acclaim-pivotal.html" class="btn-primary text-xl">View Study Details</a>
+                    <a href="forms.html" class="btn-outline text-xl">Speak with a Specialist</a>
+                </div>
+                <p class="mt-12 text-blue-200/50 text-[10px] uppercase font-bold tracking-widest relative z-10">Caution:
+                    Investigational device. Limited by federal law to investigational use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-4 gap-16 mb-20 text-sm">
+                <div>
+                    <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br><br>
+                        Main: 1-651 361-8000<br>
+                        Sales: 1-877-900-EARS (3277)
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Pillars</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="fully-implanted-technology.html" class="text-blue-600">Fully Implanted Tech</a>
+                        </li>
+                        <li><a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">Hearing Loss
+                                Hub</a></li>
+                        <li><a href="implanted-options.html" class="hover:text-blue-600 transition-colors">Treatment
+                                Options</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Resources</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="acclaim-pivotal.html" class="hover:text-blue-600 transition-colors">Study
+                                Overview</a></li>
+                        <li><a href="forms.html" class="hover:text-blue-600 transition-colors">Patient Forms</a></li>
+                        <li><a href="under-construction.html" class="hover:text-blue-600 transition-colors">Investor
+                                Relations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8">Contact</h4>
+                    <ul class="space-y-4 font-bold text-slate-500">
+                        <li><a href="under-construction.html" class="hover:text-blue-600 transition-colors">About
+                                Envoy</a></li>
+                        <li><a href="forms.html" class="hover:text-blue-600 transition-colors">Connect with Us</a></li>
+                        <li><a href="under-construction.html" class="hover:text-blue-600 transition-colors">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">© 2024 Envoy Medical
+                    Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-linkedin-in text-lg"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                            class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

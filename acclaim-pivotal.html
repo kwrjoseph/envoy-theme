@@ -45,9 +45,12 @@
         /* Hero Styling */
         .hero-section {
             background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-            padding: 120px 0 80px;
+            padding: 160px 0 100px;
             position: relative;
             overflow: hidden;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
         }
 
         .hero-pattern {
@@ -59,6 +62,17 @@
             background: var(--brand-light-blue);
             clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
             z-index: 0;
+        }
+
+        .hero-image-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-image-container img {
+            border-radius: 3rem;
+            box-shadow: 0 40px 80px -20px rgba(0, 45, 116, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.8);
         }
 
         /* Interactive Elements */
@@ -147,11 +161,12 @@
             <div class="font-black text-2xl tracking-tighter brand-text-navy cursor-pointer">ENVOY MEDICAL</div>
             <div class="hidden md:flex items-center space-x-8 font-semibold text-[10px] uppercase tracking-widest">
                 <a href="hearing-loss.html" class="hover:text-blue-600 transition-colors">HEARING LOSS</a>
+                <a href="fully-implanted-technology.html" class="hover:text-blue-600 transition-colors">FULLY IMPLANTED
+                    TECH</a>
+                <a href="implanted-options.html" class="hover:text-blue-600 transition-colors">IMPLANTED OPTIONS</a>
                 <a href="#" class="brand-text-navy font-black">ACCLAIM PIVOTAL</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">PATIENTS</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">PROFESSIONALS</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">COMPANY</a>
-                <a href="#" class="hover:text-blue-600 transition-colors">INVESTORS</a>
+                <a href="forms.html" class="hover:text-blue-600 transition-colors">PATIENTS</a>
+                <a href="under-construction.html" class="hover:text-blue-600 transition-colors">COMPANY</a>
             </div>
             <div class="md:hidden text-2xl brand-text-navy">
                 <i class="fas fa-bars"></i>
@@ -162,24 +177,30 @@
     <!-- Hero Section -->
     <header class="hero-section mt-20">
         <div class="hero-pattern hidden lg:block"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="max-w-4xl">
-                <div class="inline-flex items-center space-x-3 mb-8">
-                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Clinical
-                        Trial</span>
-                    <div class="w-12 h-px bg-slate-200"></div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">NCT06699797</span>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="max-w-4xl">
+                    <div class="inline-flex items-center space-x-3 mb-8">
+                        <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy">Clinical
+                            Trial</span>
+                        <div class="w-12 h-px bg-slate-200"></div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">NCT06699797</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
+                        The Acclaim® <br><span class="brand-text-navy italic font-serif">Pivotal Study</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
+                        Envoy Medical recently received FDA review to begin a pivotal clinical study for the
+                        first-of-its-kind, fully implanted cochlear implant.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-10">
+                        <a href="#study-details" class="btn-primary text-lg">Study Overview</a>
+                        <a href="#eligibility" class="btn-secondary text-lg">Check Eligibility</a>
+                    </div>
                 </div>
-                <h1 class="text-5xl lg:text-7xl font-black text-slate-900 leading-[0.95] mb-10 tracking-tighter">
-                    The Acclaim® <br><span class="brand-text-navy italic font-serif">Pivotal Study</span>
-                </h1>
-                <p class="text-xl lg:text-2xl text-slate-500 leading-relaxed mb-6 font-medium max-w-2xl">
-                    Evaluating the safety and effectiveness of the fully implanted Acclaim® Cochlear Implant for adults
-                    with severe to profound hearing loss.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 mt-10">
-                    <a href="#study-details" class="btn-primary text-lg">Study Overview</a>
-                    <a href="#eligibility" class="btn-secondary text-lg">Check Eligibility</a>
+                <div class="hero-image-container hidden lg:block">
+                    <img src="/Users/kjoseph/.gemini/antigravity/brain/36eedc9e-e7b8-4745-9dee-525ae0f055e5/acclaim_pivotal_study_hero_1767973348110.png"
+                        alt="Clinical Research" class="w-full">
                 </div>
             </div>
         </div>
@@ -254,66 +275,93 @@
             </div>
 
             <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Eligibility Card -->
                 <div id="eligibility"
                     class="col-span-1 lg:col-span-2 bg-white rounded-[3rem] p-12 shadow-sm border border-slate-100">
-                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Eligibility Criteria</h3>
-                    <p class="text-lg text-slate-500 mb-8">
-                        To participate in this study, candidates must meet specific medical and audiological
-                        requirements. Key criteria include:
-                    </p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <ul class="text-lg text-slate-600 font-medium check-list space-y-4">
-                            <li>18 years of age or older</li>
-                            <li>Diagnosis of severe to profound sensorineural hearing loss</li>
-                            <li>Bilateral (both ears) hearing loss</li>
-                        </ul>
-                        <ul class="text-lg text-slate-600 font-medium check-list space-y-4">
-                            <li>Limited benefit from appropriately fitted hearing aids</li>
-                            <li>English speaking and able to complete testing</li>
-                            <li>Willingness to comply with study protocol</li>
-                        </ul>
-                    </div>
-                    <div class="mt-12 p-6 bg-blue-50 rounded-2xl flex items-start space-x-4">
-                        <i class="fas fa-info-circle text-blue-600 text-xl mt-1"></i>
-                        <p class="text-sm text-blue-800 leading-relaxed">
-                            <strong>Note:</strong> Additional inclusion and exclusion criteria apply. A thorough
-                            evaluation by a study physician and audiologist is required to determine final eligibility.
-                        </p>
+                    <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">Clinical Trial Participation</h3>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Inclusion
+                                Criteria</h4>
+                            <ul class="text-lg text-slate-600 font-medium check-list space-y-4">
+                                <li>18 years of age or older</li>
+                                <li>Became deaf after learning to speak (post-lingual)</li>
+                                <li>Bilaterally symmetric moderate to profound hearing loss</li>
+                                <li>Used hearing aids in both ears for at least 30 days</li>
+                                <li>Limited benefit from appropriately fitted hearing aids</li>
+                                <li>English speaking and able to follow study rules</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Exclusion
+                                Criteria</h4>
+                            <ul class="text-lg text-slate-600 font-medium space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-times text-red-400 mt-1 mr-3 text-sm"></i>
+                                    <span>Prior cochlear implant in either ear</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times text-red-400 mt-1 mr-3 text-sm"></i>
+                                    <span>Ear bone abnormalities or middle ear disease</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times text-red-400 mt-1 mr-3 text-sm"></i>
+                                    <span>Hearing loss for 20 or more years</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times text-red-400 mt-1 mr-3 text-sm"></i>
+                                    <span>Need for MRI or radiation treatment during study</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-times text-red-400 mt-1 mr-3 text-sm"></i>
+                                    <span>Pregnancy</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Study Info Card -->
-                <div class="bg-brand-navy rounded-[3rem] p-12 text-white relative overflow-hidden group">
+                <!-- Study Info Card (Updated Modern Look) -->
+                <div class="rounded-[3rem] p-12 text-white relative overflow-hidden group shadow-2xl"
+                    style="background: linear-gradient(165deg, var(--brand-navy) 0%, #0046b3 100%);">
                     <div
-                        class="absolute top-0 right-0 p-32 bg-blue-500 rounded-full blur-3xl opacity-20 -mr-16 -mt-16 transition-all group-hover:opacity-30">
+                        class="absolute top-0 right-0 p-32 bg-blue-400 rounded-full blur-3xl opacity-20 -mr-16 -mt-16 transition-all group-hover:opacity-30">
                     </div>
 
-                    <h3 class="text-2xl font-black mb-6 relative z-10">Study Information</h3>
+                    <h3 class="text-4xl font-black mb-10 relative z-10 tracking-tight leading-none">Study<br>Information
+                    </h3>
 
-                    <div class="space-y-8 relative z-10">
+                    <div class="space-y-10 relative z-10">
                         <div>
                             <span
-                                class="text-xs font-bold text-blue-200 uppercase tracking-widest block mb-2">Duration</span>
-                            <p class="text-lg font-medium">Approx. 2 years post-activation follow-up</p>
+                                class="text-[10px] font-black text-blue-300 uppercase tracking-[0.3em] block mb-3">Duration</span>
+                            <p class="text-lg font-bold leading-tight">Approx. 2 years post-activation follow-up</p>
                         </div>
                         <div>
                             <span
-                                class="text-xs font-bold text-blue-200 uppercase tracking-widest block mb-2">Locations</span>
-                            <p class="text-lg font-medium">Various clinical centers across the United States</p>
+                                class="text-[10px] font-black text-blue-300 uppercase tracking-[0.3em] block mb-3">Locations</span>
+                            <p class="text-base font-bold leading-snug text-blue-50">
+                                AZ, CA, FL, MN, OH, OK, SC
+                            </p>
+                            <p class="text-[10px] uppercase font-black tracking-widest mt-3 text-blue-200">7 Recruiting
+                                Centers</p>
                         </div>
                         <div>
                             <span
-                                class="text-xs font-bold text-blue-200 uppercase tracking-widest block mb-2">Cost</span>
-                            <p class="text-lg font-medium">Study device and procedure costs are typically covered by the
-                                study sponsor.</p>
+                                class="text-[10px] font-black text-blue-300 uppercase tracking-[0.3em] block mb-3">Cost</span>
+                            <p class="text-lg font-bold leading-tight">Qualified participants receive the device and
+                                procedure at no cost.</p>
                         </div>
                     </div>
 
-                    <a href="#"
-                        class="mt-12 w-full bg-white text-brand-navy py-4 rounded-xl font-bold flex items-center justify-center hover:bg-blue-50 transition-colors">
-                        Find a Center <i class="fas fa-arrow-right ml-3"></i>
-                    </a>
+                    <div class="mt-12 pt-8 border-t border-white/10 relative z-10">
+                        <div class="flex items-center space-x-3 text-blue-200">
+                            <i class="fas fa-shield-check text-xl"></i>
+                            <div class="text-[10px] font-black uppercase tracking-widest">
+                                IRB Approved <br>
+                                <span class="text-white">Feb 04, 2025</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -328,10 +376,10 @@
                 may be a candidate for the Acclaim Pivotal Study.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#" class="btn-primary text-xl shadow-xl shadow-blue-900/10">Contact a Specialist</a>
-                <a href="#"
+                <a href="forms.html" class="btn-primary text-xl shadow-xl shadow-blue-900/10">Contact a Specialist</a>
+                <a href="implanted-options.html"
                     class="px-8 py-5 rounded-2xl font-bold text-slate-500 hover:text-brand-navy transition-colors">View
-                    All Clinical Trials</a>
+                    All Implant Options</a>
             </div>
 
             <p class="mt-16 text-xs text-slate-400 max-w-3xl mx-auto leading-relaxed">
