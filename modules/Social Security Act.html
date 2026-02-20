@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hearing Device Coverage Clarification Act | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy {
+            color: var(--brand-navy);
+        }
+
+        .brand-bg-navy {
+            background-color: var(--brand-navy);
+        }
+
+        /* Card Styling */
+        .feature-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 40px -15px rgba(0, 45, 116, 0.08);
+            border-color: var(--brand-navy);
+        }
+
+        .icon-box {
+            width: 56px;
+            height: 56px;
+            background-color: rgba(0, 45, 116, 0.05);
+            color: var(--brand-navy);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .line-accent {
+            height: 4px;
+            width: 48px;
+            background-color: var(--brand-navy);
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-navy);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--brand-navy);
+            color: white;
+            transition: all 0.3s ease;
+            border: 2px solid var(--brand-navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(0, 45, 116, 0.3);
+        }
+
+        /* Navy spotlight module */
+        .spotlight-module {
+            background-color: var(--brand-navy);
+            border-radius: 3.5rem;
+            color: white;
+            padding: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .spotlight-module {
+                padding: 2.5rem;
+                border-radius: 2rem;
+            }
+        }
+
+        .spotlight-ornament {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+        }
+
+        /* Action link hover */
+        .action-link {
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .action-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 45, 116, 0.12);
+            border-color: var(--brand-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Section Intro -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <div class="line-accent"></div>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy mb-4 block">Advocacy
+                        & Legislation</span>
+                    <h2 class="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight mb-6">
+                        The Hearing Device <span class="brand-text-navy">Coverage Clarification Act</span>
+                    </h2>
+                    <p class="text-lg text-slate-500 leading-relaxed mb-6">
+                        The Social Security Act of 1965 excluded hearing aids from Medicare and Medicaid
+                        coverage. The FDA recognizes the <strong class="text-slate-700">Esteem® fully*
+                            implanted active middle ear implant (FI-AMEI)</strong> as a prosthetic —
+                        but CMS still classifies it as a hearing aid.
+                    </p>
+                    <p class="text-base text-slate-400 leading-relaxed mb-8">
+                        This classification prevents individuals with hearing loss from accessing an
+                        alternative solution that could transform their quality of life.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#how-to-help"
+                            class="btn-primary text-white px-8 py-4 rounded-full font-bold text-base text-center">
+                            How You Can Help
+                        </a>
+                        <a href="https://www.envoymedical.com/news/hearing-device-coverage-clarification-act-reintroduced-in-house-and-senate?hsLang=en"
+                            class="bg-white border-2 border-slate-200 text-slate-600 px-8 py-4 rounded-full font-bold text-base text-center hover:bg-slate-50 transition-all inline-flex items-center justify-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Press Release
+                        </a>
+                    </div>
+                </div>
+                <!-- Three key points -->
+                <div class="space-y-5">
+                    <div class="flex items-start space-x-5 bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <div
+                            class="w-12 h-12 bg-white rounded-2xl flex-shrink-0 flex items-center justify-center brand-text-navy shadow-sm text-lg">
+                            <i class="fas fa-file-medical-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-1">Outdated Classification</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">CMS classifies the Esteem® as a
+                                hearing aid, excluding it from Medicare coverage under the 1965 Act.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-5 bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <div
+                            class="w-12 h-12 bg-white rounded-2xl flex-shrink-0 flex items-center justify-center brand-text-navy shadow-sm text-lg">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-1">The Challenge</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Breakthrough hearing technologies are
+                                unavailable to Medicare beneficiaries, hindering innovation and competition.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-5 bg-slate-50 p-6 rounded-3xl border border-slate-100">
+                        <div
+                            class="w-12 h-12 bg-white rounded-2xl flex-shrink-0 flex items-center justify-center brand-text-navy shadow-sm text-lg">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-1">The Vision</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">This legislation would provide access
+                                to solutions for nearly 40 million Americans with disabling hearing loss.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legislative Spotlight -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="spotlight-module">
+                <div class="spotlight-ornament"></div>
+                <div class="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                    <div>
+                        <h3 class="text-3xl lg:text-5xl font-black mb-8 leading-tight">H.R. 1921 &amp;
+                            <br>S. 983
+                        </h3>
+                        <p class="text-lg text-blue-100 mb-10 leading-relaxed">
+                            The <em>Hearing Device Coverage Clarification Act</em> would clarify that fully
+                            implanted active middle ear devices are Medicare-covered prosthetics — not
+                            hearing aids.
+                        </p>
+                        <ul class="space-y-4 text-blue-50 font-medium">
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Modernizes Medicare hearing device policy</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Unlocks access for millions of seniors</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle mr-3 text-blue-400"></i>
+                                Fosters innovation and competition</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20">
+                        <div class="text-center">
+                            <i class="fas fa-landmark text-6xl mb-6 text-blue-300"></i>
+                            <h4 class="text-xl font-bold mb-4 uppercase tracking-widest text-blue-200">The
+                                Ask</h4>
+                            <p class="text-sm leading-relaxed mb-6">
+                                Ask your representatives to co-sponsor the Hearing Device Coverage
+                                Clarification Act.
+                            </p>
+                            <a href="https://www.congress.gov/bill/119th-congress/house-bill/1921"
+                                class="inline-block bg-white text-[#002d74] px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:bg-blue-50 text-sm">
+                                View H.R. 1921 on Congress.gov
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How You Can Help -->
+    <section id="how-to-help" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-[10px] font-black uppercase tracking-[0.3em] brand-text-navy mb-4 block">Take
+                        Action</span>
+                    <h3 class="text-3xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tight">How You
+                        Can Help</h3>
+                    <p class="text-lg text-slate-500 mb-6 leading-relaxed">
+                        Anyone can help support this bill by contacting their representatives to make them
+                        aware of this bill and share how the inability to access this type of technology
+                        affects you, your health, and your quality of life — or how it affects those you
+                        love who live with hearing loss.
+                    </p>
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 mb-8">
+                        <p class="brand-text-navy font-bold mb-2 text-lg">Your Message:</p>
+                        <p class="text-slate-600 italic leading-relaxed">
+                            Ask your representatives to co-sponsor
+                            <a href="https://www.congress.gov/bill/119th-congress/house-bill/1921"
+                                class="font-black underline underline-offset-4 brand-text-navy">H.R. 1921
+                                The Hearing Device Coverage Clarification Act</a>.
+                        </p>
+                    </div>
+                    <a href="https://2hs3o.share.hsforms.com/27x4ZrzEJTfKmSwjm86rjQg"
+                        class="btn-secondary inline-flex items-center px-10 py-5 rounded-full font-bold text-lg">
+                        <i class="fas fa-envelope-open-text mr-3"></i> Get Letter Templates
+                    </a>
+                </div>
+                <!-- Statistic Card -->
+                <div class="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 text-center">
+                    <i class="fas fa-users text-5xl text-blue-200 mb-6"></i>
+                    <h3 class="text-5xl font-black text-slate-900 mb-4">40 Million</h3>
+                    <p class="text-slate-500 font-medium text-lg mb-8">
+                        Americans suffer from disabling hearing loss. Access to effective treatment is more
+                        critical than ever.
+                    </p>
+                    <div class="h-px bg-slate-200 mb-8"></div>
+                    <p class="text-sm text-slate-400 italic">
+                        If you would like to help support this bill, we will send you instructions and
+                        letter templates so you can easily contact your representative.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advocacy Resources -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="line-accent mx-auto"></div>
+                <h3 class="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">Advocacy Resources
+                </h3>
+                <p class="text-lg text-slate-500 mt-4 max-w-2xl mx-auto">
+                    Advocacy can take many forms and participation is always voluntary. The resources below
+                    support individuals who would like to learn more or engage in advocacy efforts.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Sample Letter -->
+                <div class="feature-card items-center text-center">
+                    <div class="icon-box mx-auto"><i class="fas fa-file-signature"></i></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Sample Advocacy Letter</h4>
+                    <p class="text-sm mb-8 flex-grow text-slate-500">Use this sample letter to contact your
+                        representatives about H.R. 1921 / S. 983.</p>
+                    <div class="w-full space-y-3 mt-auto">
+                        <a href="https://www.envoymedical.com/hubfs/Advocacy/Sample%20Letter%20Template%20-%20Advocacy%20021726F.pdf"
+                            target="_blank"
+                            class="block w-full btn-secondary px-4 py-3 rounded-full font-bold text-sm text-center">View
+                            Letter</a>
+                        <a href="https://www.envoymedical.com/hubfs/Advocacy/Sample%20Letter%20Template%20-%20Advocacy%20021726F.pdf"
+                            download target="_blank"
+                            class="block w-full bg-white border-2 border-[#002d74] text-[#002d74] px-4 py-3 rounded-full font-bold text-sm hover:bg-blue-50 transition-all text-center">Download
+                            PDF</a>
+                    </div>
+                </div>
+
+                <!-- Call Script -->
+                <div class="feature-card items-center text-center">
+                    <div class="icon-box mx-auto"><i class="fas fa-comments"></i></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Sample Call Script</h4>
+                    <p class="text-sm mb-8 flex-grow text-slate-500">Talking points guide for speaking with
+                        congressional offices about the Clarification Act.</p>
+                    <div class="w-full mt-auto">
+                        <a href="https://www.envoymedical.com/hubfs/Advocacy/Call%20Script%20to%20Congressmans%20office%20Final%20021726.pdf"
+                            target="_blank"
+                            class="block w-full btn-primary px-4 py-3 rounded-full font-bold text-sm text-center">View
+                            Script</a>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="feature-card items-center text-center">
+                    <div class="icon-box mx-auto"><i class="fas fa-info-circle"></i></div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-4">Additional Information</h4>
+                    <ul class="text-sm mb-8 flex-grow text-left text-slate-500 space-y-3 w-full">
+                        <li class="flex items-start"><i
+                                class="fas fa-check-circle text-blue-600 mr-2 mt-0.5 text-xs"></i>
+                            Difference between implants & hearing aids</li>
+                        <li class="flex items-start"><i
+                                class="fas fa-check-circle text-blue-600 mr-2 mt-0.5 text-xs"></i>
+                            FDA and Medicare Coverage Details</li>
+                        <li class="flex items-start"><i
+                                class="fas fa-check-circle text-blue-600 mr-2 mt-0.5 text-xs"></i>
+                            Clarification Act Overview</li>
+                    </ul>
+                    <div class="w-full mt-auto">
+                        <button class="w-full btn-primary px-4 py-3 rounded-full font-bold text-sm">Learn
+                            More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Staying Informed + Notice -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-3xl p-10 border border-slate-100">
+                    <h4 class="text-xl font-black text-slate-900 mb-4">Staying Informed</h4>
+                    <p class="text-slate-500 leading-relaxed">
+                        Advocacy updates and legislative changes will be posted here <em>as needed</em>.
+                        Follow us for the latest information on the Hearing Device Coverage Clarification
+                        Act.
+                    </p>
+                </div>
+                <div class="bg-white rounded-3xl p-10 border border-slate-100 flex items-start space-x-5">
+                    <div class="text-slate-400 text-3xl flex-shrink-0 mt-1"><i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="text-sm text-slate-500">
+                        <p class="font-bold text-slate-700 text-base mb-3">Important Notice</p>
+                        <ul class="space-y-2 list-disc pl-5">
+                            <li>Resources are for informational purposes only <em>and not intended as legal,
+                                    reimbursement, or medical advice.</em></li>
+                            <li>Reimbursement and coverage decisions vary and are subject to change.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Find Your Representatives -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h3 class="text-3xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tight">Find Your
+                Representatives</h3>
+            <p class="text-lg text-slate-500 mb-12 max-w-2xl mx-auto">
+                Visit the links below to find out who your U.S. Senators and Representatives are and how
+                to reach them.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <a href="https://www.senate.gov/senators/senators-contact.htm"
+                    class="action-link flex items-center justify-between p-8 bg-slate-50 border border-slate-200 rounded-3xl group">
+                    <div class="flex items-center">
+                        <div
+                            class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#002d74] shadow-sm mr-5 group-hover:bg-[#002d74] group-hover:text-white transition-all text-xl">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="font-bold text-slate-900 text-lg block">US Senators</span>
+                            <span class="text-xs text-slate-400 font-medium">senate.gov</span>
+                        </div>
+                    </div>
+                    <i
+                        class="fas fa-arrow-right text-slate-300 group-hover:text-[#002d74] translate-x-0 group-hover:translate-x-1 transition-all text-lg"></i>
+                </a>
+
+                <a href="https://www.house.gov/representatives/find-your-representative"
+                    class="action-link flex items-center justify-between p-8 bg-slate-50 border border-slate-200 rounded-3xl group">
+                    <div class="flex items-center">
+                        <div
+                            class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-[#002d74] shadow-sm mr-5 group-hover:bg-[#002d74] group-hover:text-white transition-all text-xl">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="font-bold text-slate-900 text-lg block">US Representatives</span>
+                            <span class="text-xs text-slate-400 font-medium">house.gov</span>
+                        </div>
+                    </div>
+                    <i
+                        class="fas fa-arrow-right text-slate-300 group-hover:text-[#002d74] translate-x-0 group-hover:translate-x-1 transition-all text-lg"></i>
+                </a>
+            </div>
+
+            <div class="mt-12 flex justify-center">
+                <div
+                    class="px-6 py-2 bg-slate-100 rounded-full text-[10px] font-black text-slate-400 uppercase tracking-[0.3em]">
+                    119th Congress
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footnote -->
+    <div class="py-10 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-[10px] text-slate-400 font-medium uppercase tracking-wider leading-relaxed">
+                *Once activated, the external Esteem Personal Programmer is not required for daily use.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
