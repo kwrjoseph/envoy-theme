@@ -1,0 +1,87 @@
+{% if module.layout == 'layout-one' %}
+<!-- Newsletter Section Start -->
+<div class="newsletter-section section section-padding position-relative {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="newsletter-content">
+          <h2 class="title">{{ module.newsletter_title }}</h2>
+          <p>{{ module.newsletter_desc }}}</p>
+          <div class="newsletter-form">
+            {% form
+                                  form_to_use="{{ module.newsletter_from.form_id }}"
+                                  response_response_type="{{ module.newsletter_from.response_type }}"
+                                  response_message="{{ module.newsletter_from.message }}"
+                                  response_redirect_id="{{ module.newsletter_from.redirect_id }}"
+                                  response_redirect_url="{{module.newsletter_from.redirect_url}}"
+                                  gotowebinar_webinar_key="{{ module.newsletter_from.gotowebinar_webinar_key }}"
+                                %}
+          </div>
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="4">shape 3</span>
+          </div>
+          <div class="shape shape-2 scene">
+            <span data-depth="4">
+              {% if module.shape_image_one.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+              {% if module.shape_image_one.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+              <img src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-3 scene">
+            <span data-depth="4">
+              {% if module.shape_image_two.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+              {% if module.shape_image_two.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+              <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Newsletter Section End -->
+{% else %}
+<!-- Newsletter Section Start -->
+<div class="newsletter-section section section-padding position-relative {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="newsletter-content light-color {{ module.section_title_class }}">
+          <h2 class="title fz-48">{{ module.newsletter_title }}</h2>
+          <p>{{ module.newsletter_desc }}</p>
+          <div class="newsletter-form">
+            {% form
+              form_to_use="{{ module.newsletter_from.form_id }}"
+              response_response_type="{{ module.newsletter_from.response_type }}"
+              response_message="{{ module.newsletter_from.message }}"
+              response_redirect_id="{{ module.newsletter_from.redirect_id }}"
+              response_redirect_url="{{module.newsletter_from.redirect_url}}"
+              gotowebinar_webinar_key="{{ module.newsletter_from.gotowebinar_webinar_key }}"
+            %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Newsletter Section End -->
+{% endif %}

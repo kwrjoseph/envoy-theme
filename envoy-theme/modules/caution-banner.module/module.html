@@ -1,0 +1,28 @@
+{# Caution Banner Module #}
+
+{% if module.style == "amber" %}
+  {% set bg_class = "bg-amber-50" %}
+  {% set border_class = "border-amber-400" %}
+  {% set icon_class = "text-amber-400" %}
+{% elif module.style == "red" %}
+  {% set bg_class = "bg-red-50" %}
+  {% set border_class = "border-red-400" %}
+  {% set icon_class = "text-red-400" %}
+{% elif module.style == "blue" %}
+  {% set bg_class = "bg-blue-50" %}
+  {% set border_class = "border-blue-400" %}
+  {% set icon_class = "text-blue-400" %}
+{% endif %}
+
+<div{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %} class="max-w-5xl mx-auto px-6 py-10">
+  <div class="{{ bg_class }} border-l-4 {{ border_class }} p-6 rounded-r-xl">
+    <div class="flex items-start">
+      <div class="flex-shrink-0">
+        <i class="{{ module.icon_class }} {{ icon_class }}"></i>
+      </div>
+      <div class="ml-3">
+        {{ module.banner_text }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,361 @@
+[ {
+  "id" : "7f554ca7-004a-7630-3cfc-b42b10f671f8",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "6244020f-8f21-2ce2-451a-6cb6802f6c4a",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "ba30fa9a-31c3-dd5b-9a2b-69e56fcf7513",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "cae158ec-bc46-b09c-afbc-4088c61ef728",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "The guys behind the curtains"
+}, {
+  "id" : "82281d53-5c47-1f59-047f-ca6b67f5485d",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Whose <span> Inspirations</span> You Love"
+}, {
+  "id" : "ebe2764b-90cc-3657-eb49-71cc8fe40b29",
+  "name" : "team_item",
+  "display_width" : null,
+  "label" : "team-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "d0c00b8d-c8cf-6b4b-e7f7-0e3448363786",
+    "name" : "team_image",
+    "display_width" : null,
+    "label" : "team-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "59107bda-b4db-705d-13a0-96852da15823",
+    "name" : "team_social",
+    "display_width" : null,
+    "label" : "team-social",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "b5c84d5f-b683-2ff5-4608-388f985c8548",
+      "name" : "social_icon",
+      "display_width" : null,
+      "label" : "social-icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<i class=\"fab fa-facebook-f\"></i>"
+    }, {
+      "id" : "c1823b88-aab6-d6ab-3a36-3ef9c6314143",
+      "name" : "social_link",
+      "display_width" : null,
+      "label" : "social-link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "06bf52ff-095c-7833-fde1-73ff3c858d4a",
+      "name" : "aria_label",
+      "display_width" : null,
+      "label" : "aria-label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "social_icon" : "<i class=\"fab fa-facebook-f\"></i>",
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "id" : "daa259aa-176d-cf48-14be-3da349b5cab9",
+    "name" : "team_member_name",
+    "display_width" : null,
+    "label" : "team-member-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Merrie Lewis"
+  }, {
+    "id" : "d096f132-faf7-fc79-6574-c40bafe36eca",
+    "name" : "position",
+    "display_width" : null,
+    "label" : "position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "General Director"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "team_social" : {
+      "social_icon" : "<i class=\"fab fa-facebook-f\"></i>",
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "team_member_name" : "Merrie Lewis",
+    "position" : "General Director"
+  }
+}, {
+  "id" : "25acbae1-8d1a-2757-6d64-ef43030903da",
+  "name" : "team_item_four_column",
+  "display_width" : null,
+  "label" : "team-item-four-column",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "df2e8952-3fad-c672-5a38-2d1a0d73390a",
+    "name" : "team_image",
+    "display_width" : null,
+    "label" : "team-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "94f62d48-74cc-1618-26a5-f7676c1d2350",
+    "name" : "team_social",
+    "display_width" : null,
+    "label" : "team-social",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "403a70ae-13ae-e78e-26d0-792f6a457494",
+      "name" : "social_icon",
+      "display_width" : null,
+      "label" : "social-icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<i class=\"fab fa-facebook-f\"></i>"
+    }, {
+      "id" : "1c3a662d-33bf-15d6-ed4c-c25babab1eb4",
+      "name" : "social_link",
+      "display_width" : null,
+      "label" : "social-link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "576730df-468b-165f-5467-237b1dc331d3",
+      "name" : "aria_label",
+      "display_width" : null,
+      "label" : "aria-label",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "social_icon" : "<i class=\"fab fa-facebook-f\"></i>",
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  }, {
+    "id" : "bbfed131-cf51-611d-5fac-a9d40b863a85",
+    "name" : "team_member_name",
+    "display_width" : null,
+    "label" : "team-member-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Merrie Lewis"
+  }, {
+    "id" : "00596f8c-3e1e-ba0c-7ce7-a709be6fe5d3",
+    "name" : "position",
+    "display_width" : null,
+    "label" : "position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "General Director"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "team_social" : {
+      "social_icon" : "<i class=\"fab fa-facebook-f\"></i>",
+      "social_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    },
+    "team_member_name" : "Merrie Lewis",
+    "position" : "General Director"
+  }
+} ]

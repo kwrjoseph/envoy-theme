@@ -1,0 +1,5 @@
+License Details: 
+
+ThmeForest License: https://themeforest.net/licenses
+
+HubSpot: https://developers.hubspot.com/docs/cms/building-blocks/themes#theme-json

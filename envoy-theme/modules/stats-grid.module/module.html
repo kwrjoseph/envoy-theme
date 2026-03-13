@@ -1,0 +1,29 @@
+{# Stats Grid Module #}
+
+{% set bg_classes = {
+  "white": "bg-white",
+  "light": "bg-slate-50",
+  "navy": "brand-bg-navy"
+} %}
+
+{% set is_dark = module.bg_color == "navy" %}
+
+<section
+  class="{{ bg_classes[module.bg_color] }} py-16 lg:py-24"
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for stat in module.stats %}
+        <div class="text-center">
+          <div class="font-black text-5xl lg:text-6xl tracking-tighter mb-2 {% if is_dark %}gradient-text{% else %}text-brand-navy{% endif %}">
+            {{ stat.stat_number }}{% if stat.stat_suffix %}{{ stat.stat_suffix }}{% endif %}
+          </div>
+          <p class="text-sm lg:text-base {% if is_dark %}text-slate-300{% else %}text-slate-600{% endif %}">
+            {{ stat.stat_description }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

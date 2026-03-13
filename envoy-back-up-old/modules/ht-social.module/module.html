@@ -1,0 +1,47 @@
+{% if module.layout == 'layout-one' %}
+<!-- Header Social Start -->
+<div class="header-social d-none d-sm-flex">
+  {% for item in module.social_group %}
+    {% set href = item.social_link.url.href %}
+    {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+    {% endif %}
+    {% set rel = [] %}
+    {% if item.social_link.no_follow %}
+      {% do rel.append("nofollow") %}
+    {% endif %}
+    {% if item.social_link.open_in_new_tab %}
+      {% do rel.append("noopener") %}
+    {% endif %}
+    <a href="{{ href }}"
+      {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+      >
+      {{ item.social_icon }}
+    </a>
+  {% endfor %}
+</div>
+<!-- Header Social End -->
+{% else %}
+<div class="footer-social-inline {{ module.social_class }}">
+  {% for item in module.social_group %}
+  {% set href = item.social_link.url.href %}
+	{% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+	{% endif %}
+	{% set rel = [] %}
+	{% if item.social_link.no_follow %}
+		{% do rel.append("nofollow") %}
+	{% endif %}
+	{% if item.social_link.open_in_new_tab %}
+		{% do rel.append("noopener") %}
+	{% endif %}
+	<a href="{{ href }}"
+		{% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+		{% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+		>
+		{{ item.social_icon }}
+	</a>
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,298 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Success Story
+  screenshotPath: ../images/template-previews/success-story.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-one', 
+        section_class = '',
+        section_bg_color = '#f5f5f5',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Success Story'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Video Section Start #}
+  {% dnd_section %}
+    {% module  %}
+    {% dnd_module "module_163101592431314" path="../modules/success-video", label="success-video"
+
+    section_class = '',
+    section_bg_color = '#f5f5f5',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_subtitle = 'Success story',
+    section_title = 'The biggest turning point in my life: <br class="d-none d-md-block"> Wonderful choice.',
+      video_popup_link = { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/watch?v=eS9Qm4AOOBY'},},
+      video_banner_image = { 
+            'alt': 'Video Banner Image',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/Video/success-story-poster-image.jpg') 
+          },
+
+          play_icon = { 
+        'alt': 'Video Icon',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/icons/icon-youtube-play.png') 
+      }
+
+    %}
+
+
+    {% end_dnd_module %}
+
+  {% end_dnd_section %}
+  {# Video Section End #}
+
+  {# Success Quote Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16310716083806" path="../modules/success-quote", label="success-quote" 
+    section_class = '',
+    quote_title = 'I learned one thing about online education is that
+    <span>highly motivated individuals</span>
+    always find a way to tackle the challenge in the most creative and flexible way.',
+    quote_content = '<p>At MaxCoach, we put ourselves in learners’ shoes to understand what they want and need, to build handy options for their education and guide them to a better version of themselves. We do the hard work to pave the ways for innovative higher education with advanced delivery modalities.</p>
+    <p>From high school students, tertiary pupils, graduates or post-graduate learners, learners of any levels can easily find a suitable online program for themselves. It’s now convenient than the past to take an online course for improving the degree, becoming working professionals or pursuing a better job with valid certification… MaxCoach offers a wide range of online options for students around the globe. </p>'
+
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Success Quote Section End #}
+
+  {# Success Faq Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_163107582586816" path="../modules/success-faq", label="success-faq"
+    section_class = '',
+    faq_left_image = { 
+          'alt': 'faq image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/faq/success-story-image-01.jpg') 
+        },
+    faq_right_image = { 
+      'alt': 'faq image',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/faq/success-story-image-02.jpg') 
+    },
+
+    faq_item = [
+      {
+        'faq_icon' : '<i class="far fa-long-arrow-right"></i>',
+        'faq_title' : 'What are the reasons for learners to choose distant learning (e-learning) over the traditional method?',
+        'faq_check_icon' : '<i class="far fa-check"></i>',
+        'faq_content' : '<p>FLEXIBILITY – Work, family, degree—it’s all possible.</p>
+        <p>Convenience – Study on your time schedule, no commute, stackable programs lead to certificates and degrees.</p>
+        <p>Proven Modality – More than 5 million students take one or more distance education courses each year.</p>'
+      },
+      {
+        'faq_icon' : '<i class="far fa-long-arrow-right"></i>',
+        'faq_title' : 'What makes MaxCoach different from others? Is that the equipment or the tutor?',
+        'faq_check_icon' : '<i class="far fa-check"></i>',
+        'faq_content' : '<p>New Relationships and Networking Opportunities – Learn alongside students who offer diverse levels of experience and perspective. Students enroll from all corners of the world contributing to a rich classroom environment.</p>'
+      },
+      {
+        'faq_icon' : '<i class="far fa-long-arrow-right"></i>',
+        'faq_title' : 'Which kind of opportunities is opened up to me when I take the lead?',
+        'faq_check_icon' : '<i class="far fa-check"></i>',
+        'faq_content' : 'Career Advancement and Entrepreneurial Opportunities – Advance your career with additional credentials or degrees.
+
+        Quality of Instruction – University of Illinois faculty are among the most accomplished scholars in the world.
+
+        Academic Excellence – Online degree seekers earn the same degree as U of I campus-based degree seeking students.'
+      }
+    ]
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Success Faq Section End #}
+  {% module  %}
+  {# Recent Course Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164630001643311" path="../modules/Home Course", label="Home Course"
+    layout = 'layout-six', 
+    section_class = '',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_title = 'Recent Courses',
+    course_item = [
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'course_thumb' : { 
+              'alt': 'timeline image',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/courses/370/course-1.jpg') 
+            },
+        'course_price' : '$40<span>.00</span>',
+        'course_title' : 'Learning to Write as a Professional Author',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '20 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '51 Students'
+
+          }
+        ],
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'course_thumb' : { 
+              'alt': 'timeline image',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/courses/370/course-2.jpg') 
+            },
+        'course_price' : '$0<span>.00</span>',
+        'course_title' : 'Customer-centric Info-Tech Strategies',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '23 Lessons'
+          }
+        ],
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'course_thumb' : { 
+              'alt': 'timeline image',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/courses/370/course-3.jpg') 
+            },
+        'course_price' : '$19<span>.00</span>',
+        'course_title' : 'Learning to Write as a Professional Author',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '16 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '57 Students'
+          }
+        ],
+      }
+    ]
+
+    
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Recent Course Section End #}
+
+
+    {# Gallery Section Start #}
+    {% dnd_section %}
+      {% dnd_module "module_163099409357830" path="../modules/gallery", label="gallery"
+      section_class = '',
+      gallery_item = [
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-01.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-02.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-03.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-04.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-05.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-06.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-07.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        }
+      ]
+
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Gallery Section End #}
+
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

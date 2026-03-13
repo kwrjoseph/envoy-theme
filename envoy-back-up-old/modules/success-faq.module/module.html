@@ -1,0 +1,68 @@
+<!-- Success Faq Section Start -->
+<div class="success-faq-section section section-padding-top {{ module.section_class }}">
+  <div class="container">
+    <div class="row max-mb-n30">
+      <div class="col-lg-8 col-md-8 max-mb-30">
+        <div class="success-faq-image">
+          {% if module.faq_left_image.src %}
+            {% set sizeAttrs = 'width="{{ module.faq_left_image.width }}" height="{{ module.faq_left_image.height }}"' %}
+            {% if module.faq_left_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.faq_left_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.faq_left_image.max_width }}" height="{{ module.faq_left_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+             {% set loadingAttr = module.faq_left_image.loading != 'disabled' ? 'loading="{{ module.faq_left_image.loading }}"' : '' %}
+            <img src="{{ module.faq_left_image.src }}" alt="{{ module.faq_left_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 max-mb-30">
+        <div class="success-faq-image">
+          {% if module.faq_right_image.src %}
+          {% set sizeAttrs = 'width="{{ module.faq_right_image.width }}" height="{{ module.faq_right_image.height }}"' %}
+          {% if module.faq_right_image.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+          {% elif module.faq_right_image.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.faq_right_image.max_width }}" height="{{ module.faq_right_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+           {% set loadingAttr = module.faq_right_image.loading != 'disabled' ? 'loading="{{ module.faq_right_image.loading }}"' : '' %}
+          <img src="{{ module.faq_right_image.src }}" alt="{{ module.faq_right_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="success-faq-area">
+          {% for item in module.faq_item %}
+            <div class="single-success-faq">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="success-faq-heading">
+                  <div class="icon">
+                    {{ item.faq_icon }}
+                  </div>
+                  <div class="text-wrap">
+                    <h4>{{ item.faq_title }}</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="success-faq-content">
+                  <div class="icon">
+                   {{ item.faq_check_icon }}
+                  </div>
+                  <div class="text-wrap">
+                    {{ item.faq_content }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Success Faq Section End -->

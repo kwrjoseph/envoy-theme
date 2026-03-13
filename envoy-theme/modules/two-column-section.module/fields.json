@@ -1,0 +1,189 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'about' for #about links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "id": "section_title",
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": "",
+    "help_text": "Optional title shown centered above the two-column grid."
+  },
+  {
+    "id": "title",
+    "name": "title",
+    "label": "Title",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": "Section Title"
+  },
+  {
+    "id": "description",
+    "name": "description",
+    "label": "Description",
+    "type": "richtext",
+    "required": false,
+    "locked": false,
+    "default": "<p>Add your section description here. This rich text field supports formatting, links, and more.</p>"
+  },
+  {
+    "id": "image",
+    "name": "image",
+    "label": "Image",
+    "type": "image",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": null,
+      "loading": "lazy"
+    }
+  },
+  {
+    "id": "layout",
+    "name": "layout",
+    "label": "Layout",
+    "type": "choice",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "image-right",
+        "Image Right"
+      ],
+      [
+        "image-left",
+        "Image Left"
+      ]
+    ],
+    "default": "image-right"
+  },
+  {
+    "id": "bg_color",
+    "name": "bg_color",
+    "label": "Background Color",
+    "type": "choice",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "white",
+        "White"
+      ],
+      [
+        "light",
+        "Light Gray"
+      ]
+    ],
+    "default": "white"
+  },
+  {
+    "id": "show_features",
+    "name": "show_features",
+    "label": "Show Features",
+    "type": "boolean",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "default": false
+  },
+  {
+    "id": "features_title",
+    "name": "features_title",
+    "label": "Features Title",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": ""
+  },
+  {
+    "id": "features",
+    "name": "features",
+    "label": "Features",
+    "type": "group",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 0,
+      "sorting_label_field": "feature_text"
+    },
+    "children": [
+      {
+        "id": "icon_class",
+        "name": "icon_class",
+        "label": "Icon Class",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "default": "fas fa-check-circle",
+        "help_text": "Font Awesome icon class (e.g. 'fas fa-check-circle', 'fas fa-star')"
+      },
+      {
+        "id": "feature_text",
+        "name": "feature_text",
+        "label": "Feature Text",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "default": "Feature item"
+      }
+    ]
+  },
+  {
+    "id": "button_text",
+    "name": "button_text",
+    "label": "Button Text",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": ""
+  },
+  {
+    "id": "button_link",
+    "name": "button_link",
+    "label": "Button Link",
+    "type": "link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT"
+    ],
+    "default": {
+      "url": {
+        "type": "EXTERNAL",
+        "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "numbered_steps",
+    "name": "numbered_steps",
+    "label": "Numbered Steps",
+    "type": "boolean",
+    "required": false,
+    "locked": false,
+    "display": "toggle",
+    "default": false,
+    "help_text": "If enabled, shows numbered badges (01, 02, 03) instead of icons for each feature."
+  }
+]

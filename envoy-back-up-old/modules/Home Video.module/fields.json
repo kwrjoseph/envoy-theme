@@ -1,0 +1,215 @@
+[ {
+  "id" : "221c3560-60d6-d692-abe9-c96b7c1e52fe",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "ba34e89b-5fbf-fca3-a53b-5fab2ccb29f1",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "fb6286eb-9f04-2534-a696-9387bcb9ff7f",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "498f7ecf-7a59-9d26-1240-cc4e9098ef01",
+  "name" : "video_popup_link",
+  "display_width" : null,
+  "label" : "video_popup_link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "5703226a-f867-b2c5-e4d2-31dd9369d92e",
+  "name" : "video_banner_image",
+  "display_width" : null,
+  "label" : "video_banner_image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "bb6bd58f-b816-1314-0277-c999eec6623b",
+  "name" : "video_icon",
+  "display_width" : null,
+  "label" : "video_icon",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "fddaa416-338f-9933-3149-a9c4106cf726",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape_image_one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "eae48df7-d288-d9d3-d668-78397babc18c",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape_image_two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "d5a08682-f56a-efbd-ac7c-bf690e4ad4a5",
+  "name" : "shape_image_three",
+  "display_width" : null,
+  "label" : "shape_image_three",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "0caf6879-7945-1ed7-ed56-bc87abd4e978",
+  "name" : "about_subtitle",
+  "display_width" : null,
+  "label" : "about-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "how we work"
+}, {
+  "id" : "7b48cbd8-fc59-33e4-9890-1f768da294d6",
+  "name" : "about_title",
+  "display_width" : null,
+  "label" : "about-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Upgrade Your Skills <span>Upgrade Your Life</span>"
+}, {
+  "id" : "65eb7c7a-20e4-b105-ec33-6c7694627d99",
+  "name" : "about_desc_text",
+  "display_width" : null,
+  "label" : "about-desc-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "38b50924-d6cd-14cd-dd8a-37064707a602",
+  "name" : "about_link",
+  "display_width" : null,
+  "label" : "about_link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "78b4462f-4a21-6da0-6025-df179ed41662",
+  "name" : "about_link_text",
+  "display_width" : null,
+  "label" : "about-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<mark>Download free guidebook <i class=\"far fa-long-arrow-right\"></i></mark>"
+}, {
+  "id" : "9bc64494-00e3-62da-5c53-159ddeeaa49f",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+} ]

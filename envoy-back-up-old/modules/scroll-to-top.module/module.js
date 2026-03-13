@@ -1,0 +1,26 @@
+    /*--
+        Scroll Up
+    -----------------------------------*/
+    function scrollToTop() {
+        var $scrollUp = $('#scroll-top'),
+            $lastScrollTop = 0,
+            $window = $(window);
+        $window.on('scroll', function () {
+            var st = $(this).scrollTop();
+            if (st > $lastScrollTop) {
+                $scrollUp.removeClass('show');
+            } else {
+                if ($window.scrollTop() > 200) {
+                    $scrollUp.addClass('show');
+                } else {
+                    $scrollUp.removeClass('show');
+                }
+            }
+            $lastScrollTop = st;
+        });
+
+        $scrollUp.on('click', function () {
+            $('html, body').animate({scrollTop: 0}, 600);
+        });
+    }
+    scrollToTop();

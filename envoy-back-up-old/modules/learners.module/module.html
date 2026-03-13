@@ -1,0 +1,59 @@
+<!-- Learners Section Start -->
+        <div class="learners-section section section-padding {{ module.section_class }}">
+            <div class="container">
+                <!-- Section Title Start -->
+                <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+                    <span class="sub-title">{{ module.section_subtitle }}</span>
+                    <h2 class="title">{{ module.section_title }}</h2>
+                </div>
+                <!-- Section Title End -->
+
+                <!-- Feature Wrapper Start -->
+                <div class="row row-30 row-cols-xl-3 row-cols-sm-2 row-cols-1 max-mb-n30">
+                    {% for item in module.feature_item_group %}
+                    <!-- Feature Start (Icon Box) -->
+                    <div class="col max-mb-30" data-aos="{{ item.feature_animation_name }}">
+                        {% set href = item.feature_link.url.href %}
+                        {% if item.feature_link.url.type is equalto "EMAIL_ADDRESS" %}
+                          {% set href = "mailto:" + href %}
+                        {% endif %}
+                        {% set rel = [] %}
+                        {% if item.feature_link.no_follow %}
+                          {% do rel.append("nofollow") %}
+                        {% endif %}
+                        {% if item.feature_link.open_in_new_tab %}
+                          {% do rel.append("noopener") %}
+                        {% endif %}
+                        <a class="icon-box icon-box-left text-left" href="{{ href }}"
+                          {% if item.feature_link.open_in_new_tab %}target="_blank"{% endif %}
+                          {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                          >
+                          <div class="icon">
+                                {% if item.feature_icon.src %}
+                                  {% set sizeAttrs = 'width="{{ item.feature_icon.width }}" height="{{ item.feature_icon.height }}"' %}
+                                  {% if item.feature_icon.size_type == 'auto' %}
+                                    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                  {% elif item.feature_icon.size_type == 'auto_custom_max' %}
+                                    {% set sizeAttrs = 'width="{{ item.feature_icon.max_width }}" height="{{ item.feature_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                  {% endif %}
+                                   {% set loadingAttr = item.feature_icon.loading != 'disabled' ? 'loading="{{ item.feature_icon.loading }}"' : '' %}
+                                  <img src="{{ item.feature_icon.src }}" alt="{{ item.feature_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                {% endif %}
+                            </div>
+                            <div class="content">
+                                <h3 class="title">{{ item.feature_title }}</h3>
+                                <div class="desc">
+                                    <p>{{ item.feature_desc }}</p>
+                                </div>
+                                <span class="link">{{ item.featuer_link_text }} {{ item.feature_link_icon }}</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Feature Start (Icon Box) -->
+                  {% endfor %}
+
+                </div>
+                <!-- Feature Wrapper End -->
+            </div>
+        </div>
+        <!-- Learners Section End -->

@@ -1,0 +1,140 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Homepage
+  screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO — Full-width dark immersive ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_hero"
+        path='../modules/hero-banner'
+        label='Homepage Hero'
+        title='Hear Life as You Should'
+        subtitle='<p>The world&rsquo;s first and only fully implanted hearing devices. No external components. No daily maintenance. Just invisible, true 24/7 hearing.</p>'
+        primary_button_text='Get Started'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "/getting-the-esteem"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Learn More'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/hearing-loss"}, "open_in_new_tab": false, "no_follow": false}
+        theme='dark'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Statistics Bar ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_stats"
+        path='../modules/stats-grid'
+        label='Hearing Loss Statistics'
+        stats=[{"value": "15%", "label": "of American adults (37.5 million) report some trouble hearing", "icon_class": "fas fa-users"}, {"value": "<1 in 3", "label": "adults aged 70+ who could benefit have used hearing aids", "icon_class": "fas fa-ear-deaf"}, {"value": "Only 5%", "label": "of eligible cochlear implant candidates actually use them", "icon_class": "fas fa-microchip"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Hearing Loss Education ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_hearing_loss"
+        path='../modules/two-column-section'
+        label='Hearing Loss Education'
+        title='Are You Experiencing Hearing Loss?'
+        description='<p>Hearing loss affects millions of people, yet many wait years before seeking treatment. Understanding your options is the first step toward better hearing and a fuller life.</p><p>Whether it&rsquo;s difficulty following conversations, turning up the TV, or missing sounds you once enjoyed&mdash;there are solutions designed specifically for you.</p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='Learn About Hearing Loss'
+        button_link={"url": {"type": "EXTERNAL", "href": "/hearing-loss"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Explore Your Options ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_options"
+        path='../modules/feature-cards'
+        label='Explore Your Options'
+        section_title='Explore Your Options'
+        section_subtitle='Understanding the full spectrum of hearing solutions helps you make the best choice for your lifestyle.'
+        columns='4'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-headphones", "card_title": "Hearing Aids", "description": "<p>External devices that amplify sound. Available in many styles but require daily insertion, battery management, and maintenance.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/hearing-loss"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-link", "card_title": "Middle Ear Implants", "description": "<p>Surgically placed devices that work with the middle ear structures. Options range from passive implants to fully implanted active devices.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/middle-ear-implants"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-bone", "card_title": "Bone Conduction", "description": "<p>Devices that transmit sound through bone vibration, bypassing the outer and middle ear. Suitable for specific types of hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/implanted-options"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-microchip", "card_title": "Cochlear Implants", "description": "<p>Electronic devices for severe hearing loss that bypass damaged hair cells to stimulate the auditory nerve directly.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/cochlear-implants"}, "open_in_new_tab": false, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Esteem Spotlight ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_esteem"
+        path='../modules/two-column-section'
+        label='Esteem Spotlight'
+        section_title='Featured Technology'
+        title='The Esteem&reg; FI-AMEI'
+        description='<p>The world&rsquo;s first and only FDA-approved fully implanted active middle ear hearing device. No external components. No daily maintenance. Waterproof. Always on.</p><p>The Esteem uses your own eardrum as a natural microphone, preserving the way nature intended you to hear.</p>'
+        layout='image-left'
+        bg_color='white'
+        show_features=false
+        button_text='Explore the Esteem'
+        button_link={"url": {"type": "EXTERNAL", "href": "/esteem"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Key Benefits ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_benefits"
+        path='../modules/glass-cards'
+        label='Key Benefits'
+        section_title='Why Fully Implanted?'
+        section_subtitle='Experience hearing freedom like never before with technology that works with your body, not against it.'
+        columns='3'
+        cards=[{"icon_class": "fas fa-eye-slash", "title": "Completely Invisible", "description": "<p>Nothing in your ear canal, nothing behind your ear, nothing to see. Hear with confidence in every situation.</p>"}, {"icon_class": "fas fa-clock", "title": "24/7 Hearing", "description": "<p>Wake up hearing. Sleep hearing. Shower hearing. The Esteem is always on, providing continuous access to sound.</p>"}, {"icon_class": "fas fa-water", "title": "Waterproof", "description": "<p>Swim, shower, and sweat without worry. Fully submersible up to 33 feet for a truly unrestricted lifestyle.</p>"}, {"icon_class": "fas fa-battery-full", "title": "No Daily Maintenance", "description": "<p>No batteries to change, no devices to insert or remove, no cleaning. The implant battery lasts for years.</p>"}, {"icon_class": "fas fa-headphones", "title": "Use Any Audio Device", "description": "<p>Enjoy headphones, earbuds, and Bluetooth accessories naturally without interference or special adapters.</p>"}, {"icon_class": "fas fa-shield-halved", "title": "MR Conditional", "description": "<p>Compatible with 1.5T and 3.0T MRI systems, ensuring you can receive essential medical imaging when needed.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Patient Testimonials ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_testimonials"
+        path='../modules/testimonial-cards'
+        label='Patient Testimonials'
+        section_title='Hear from People Like You'
+        testimonials=[{"quote": "The Esteem has given me back the ability to hear my grandchildren, enjoy music, and feel safe in my home. It truly changed my life.", "author_name": "Ashley", "author_title": "Esteem recipient since 2011"}, {"quote": "I can swim, travel, and live my retirement to the fullest. No more worrying about batteries or devices falling out.", "author_name": "Jeannine Young", "author_title": "Esteem recipient since 2010"}, {"quote": "Having bilateral Esteems means I hear in full stereo, all day, every day. The quality of life improvement is beyond what I imagined.", "author_name": "Amy Pajula", "author_title": "Bilateral Esteem recipient"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Trending Blog Posts ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_blog"
+        path='../modules/blog-cards'
+        label='Trending Blog Posts'
+        section_title='Trending on Our Blogs'
+        columns='3'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Final CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "home_cta"
+        path='../modules/cta-section'
+        label='Homepage CTA'
+        title='Ready to Hear Life Differently?'
+        subtitle='Take the first step toward invisible, maintenance-free hearing. Connect with our team to learn if a fully implanted hearing device is right for you.'
+        primary_button_text='Get Started'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "/getting-the-esteem"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Find a Provider'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

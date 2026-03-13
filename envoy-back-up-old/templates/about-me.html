@@ -1,0 +1,399 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About Me
+  screenshotPath: ../images/template-previews/about-me.jpg
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--home p-0', label='Main section' %}
+
+  {# Breadcrumb section #}
+  {% dnd_section %}
+    {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+    layout = 'layout-one',
+    section_class = '',
+    section_bg_color = '#f5f5f5',
+    breadcrumb_group = [
+        {
+            'breadcrumb_class' : '',
+            'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './home'}},
+            'breadcrumb_text' : 'Home'
+        },
+        {
+            'breadcrumb_class' : 'current',
+            'breadcrumb_text' : 'About me'
+        }
+    ]
+
+
+    %}
+    
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# End Breadcrumb section #}
+
+  {# Feature Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164612505899622" path="../modules/Feature", label="Feature" 
+    layout = 'layout-one',
+    section_class = 'section-padding-bottom-160',
+    section_bg_color = '#f5f5f5',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_subtitle = 'Education for everyone',
+    section_title = 'Online <span>Coaching Lessons</span> For Remote Learning.',
+    feature_item_group = [
+      {
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'icon_class' : '',
+        'feature_image' : { 
+            'alt': 'icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/svg/linea/linea-basic-flag2.svg') 
+        },
+        'feature_title' : 'Life Mentoring',
+        'feature_desc' : 'Get some soul healing and guidance for your future career and vocational directions.',
+        'link_text' : 'Start here',
+        'link_icon' : '<i class="far fa-long-arrow-right"></i>'
+      },
+      {
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'icon_class' : '',
+        'feature_image' : { 
+            'alt': 'icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/svg/linea/linea-basic-gear.svg') 
+        },
+        'feature_title' : 'Self Development',
+        'feature_desc' : 'Develop skills for career of various majors including computer science & language competence.',
+        'link_text' : 'Discover now',
+        'link_icon' : '<i class="far fa-long-arrow-right"></i>'
+      },
+      {
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'icon_class' : '',
+        'feature_image' : { 
+            'alt': 'icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/svg/linea/linea-basic-life-buoy.svg') 
+        },
+        'feature_title' : 'Ask Consultancy',
+        'feature_desc' : 'Make a reservation with our special consultant to learn whats best for your dream career.',
+        'link_text' : 'Get Free Quote',
+        'link_icon' : '<i class="far fa-long-arrow-right"></i>'
+      },
+      {
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+        'icon_class' : '',
+        'feature_image' : { 
+            'alt': 'icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/svg/linea/linea-basic-display.svg') 
+        },
+        'feature_title' : 'Remote Learning',
+        'feature_desc' : 'Learn from anywhere in the world on desktop, tablet or mobile phone with an Internet connection.',
+        'link_text' : 'Start now',
+        'link_icon' : '<i class="far fa-long-arrow-right"></i>'
+      }
+    ]
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Feature Section End #}
+
+  {# Video Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16462164159286" path="../modules/video-sectione-one", label="video-sectione-one" 
+    layout = 'layout-two',
+    section_class = '',
+    section_bg_color = '#f5f5f5',
+    video_popup_link = { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/watch?v=eS9Qm4AOOBY'},},
+    animation_name = 'fade-up',
+    video_banner_image = { 
+        'alt': 'video banner image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/about/about-me/about-me-popup-video-poster.jpg') 
+      },
+      video_icon = { 
+        'alt': 'play btn icon',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/icons/icon-youtube-play.png') 
+      },
+      animate_shape_one = { 
+        'alt': 'shape image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/shape-2.svg') 
+      },
+      animate_shape_two = { 
+        'alt': 'shape image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/shape-3.png') 
+      },
+      animate_shape_three = { 
+        'alt': 'shape image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/shape-1.png') 
+      },
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Video Section End #}
+
+  {# Testimonial Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164620988466684" path="../modules/Testimonial", label="Testimonial",
+    layout = 'layout-five', 
+    section_class = '',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_subtitle = 'equip yourself with the power of education',
+    section_title = 'Learn the secrets to <span>Life Success</span>, <br class="d-none d-md-block">these people have got the key.​',
+    testimonial_item = [
+      {
+        'author_thumb' : { 
+          'alt': 'author thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/testimonial/70/testimonial-1.jpg') 
+        },
+        'author_rating' : [
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          }
+        ],
+        'author_name' : 'Luvic Dubble',
+        'author_position' : '/ Private Tutor',
+        'testimonial_text' : 'I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.'
+      },
+      {
+        'author_thumb' : { 
+          'alt': 'author thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/testimonial/70/testimonial-2.jpg') 
+        },
+        'author_rating' : [
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          }
+        ],
+        'author_name' : 'Florence Themes',
+        'author_position' : '/ Multimedia Admin',
+        'testimonial_text' : 'I am a very strict person so I require everything to be organized and neat. Then, I will be able to make things right and shine. MaxCoach guys just got me.'
+      },
+      {
+        'author_thumb' : { 
+          'alt': 'author thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/testimonial/70/testimonial-3.jpg') 
+        },
+        'author_rating' : [
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          }
+        ],
+        'author_name' : 'Mina Hollace',
+        'author_position' : '/ Freelancer',
+        'testimonial_text' : 'I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.'
+      },
+      {
+        'author_thumb' : { 
+          'alt': 'author thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/testimonial/70/testimonial-4.jpg') 
+        },
+        'author_rating' : [
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          },
+          {
+            'testimonial_author_rating' : '<span class="fa fa-star"></span>'
+          }
+        ],
+        'author_name' : 'Madley Pondor',
+        'author_position' : '/ IT Specialist',
+        'testimonial_text' : 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.'
+      }
+    ]
+    
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Testimonial Section End #}
+
+  {# Brand Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_162928786002957" path="../modules/brand", label="brand"
+    
+    section_class = 'pt-0 section-padding-bottom',
+    animation_name = '',
+    brand_item = [
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-01.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-02.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-03.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-04.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-05.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-06.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-07.png') 
+        },
+      }
+    ]
+
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Brand Section End #}
+
+  {# Funfact Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16461349054582" path="../modules/Funfact", label="Funfact" 
+    layout = 'layout-five',
+    section_class = 'section-padding',
+    section_bg_color = '#f5f7fa',
+    funfact_item_group = [
+      {
+        'funfact_animation_name' : 'fade-up',
+        'counter_number' : '<span class="counter">1.926</span>',
+        'counter_title' : 'Finished Sessions'
+      },
+      {
+        'funfact_animation_name' : 'fade-up',
+        'counter_number' : '<span class="counter">3.092</span>+',
+        'counter_title' : 'Online Enrollment'
+      },
+      {
+        'funfact_animation_name' : 'fade-up',
+        'counter_number' : '<span class="counter">200</span>',
+        'counter_title' : 'Subjects Taught'
+      },
+      {
+        'funfact_animation_name' : 'fade-up',
+        'counter_number' : '<span class="counter">100</span>%',
+        'counter_title' : 'Satisfaction rate'
+      }
+    ]
+    
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Funfact Section End #}
+
+  {# Newsletter Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164619298538613" path="../modules/Newsletter", label="Newsletter"
+    layout = 'layout-one',
+    section_class = '',
+    newsletter_title = 'Sign up for our <span>Newsletters</span>',
+    newsletter_desc = 'Enter your email address to register to our newsletter subscription <br class="d-none d-md-block" />delivered on a regular basis!',
+    shape_image_one = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-1.png') 
+        },
+    shape_image_two = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+        },
+    
+    %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Newsletter Section End #}
+
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

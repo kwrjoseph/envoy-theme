@@ -1,0 +1,92 @@
+{% set bg_class = "bg-white" %}
+{% if module.bg_color == "light" %}
+  {% set bg_class = "bg-slate-50" %}
+{% endif %}
+
+<section {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %} class="{{ bg_class }} py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-6">
+
+    {% if module.section_title %}
+    <div class="text-center mb-16">
+      <h2 class="font-black text-3xl lg:text-4xl tracking-tighter text-navy-900">
+        {{ module.section_title }}
+      </h2>
+    </div>
+    {% endif %}
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center {% if module.layout == 'image-left' %}direction-reverse{% endif %}">
+
+      {# Content Column #}
+      <div class="{% if module.layout == 'image-left' %}lg:order-2{% else %}lg:order-1{% endif %}">
+        {# Accent Line #}
+        <div class="w-[60px] h-1 bg-navy-900 mb-6"></div>
+
+        {% if module.title %}
+        <h3 class="font-black text-3xl lg:text-4xl tracking-tighter text-navy-900 mb-6">
+          {{ module.title }}
+        </h3>
+        {% endif %}
+
+        {% if module.description %}
+        <div class="prose prose-lg text-slate-600 mb-8">
+          {{ module.description }}
+        </div>
+        {% endif %}
+
+        {% if module.show_features and module.features %}
+        <div class="mb-8">
+          {% if module.features_title %}
+          <h4 class="font-bold text-lg text-navy-900 mb-4">{{ module.features_title }}</h4>
+          {% endif %}
+          <ul class="space-y-4">
+            {% for feature in module.features %}
+            <li class="flex items-start gap-3">
+              {% if module.numbered_steps %}
+                <span class="flex-shrink-0 w-8 h-8 bg-navy-900 text-white text-xs font-bold rounded-full flex items-center justify-center">
+                  {{ "%02d"|format(loop.index) }}
+                </span>
+              {% else %}
+                <i class="{{ feature.icon_class }} text-navy-900 text-lg mt-1 flex-shrink-0"></i>
+              {% endif %}
+              <span class="text-slate-700 font-medium">{{ feature.feature_text }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        {% if module.button_text %}
+          {% set href = module.button_link.url.href %}
+          {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" ~ href %}
+          {% endif %}
+          <a href="{{ href }}"
+            class="inline-flex items-center px-8 py-4 bg-navy-900 text-white font-bold rounded-full hover:bg-navy-800 transition-all duration-300"
+            {% if module.button_link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+            {{ module.button_text }}
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        {% endif %}
+      </div>
+
+      {# Image Column #}
+      <div class="{% if module.layout == 'image-left' %}lg:order-1{% else %}lg:order-2{% endif %}">
+        {% if module.image.src %}
+          <img src="{{ module.image.src }}"
+            alt="{{ module.image.alt || 'Section image' }}"
+            {% if module.image.width %}width="{{ module.image.width }}"{% endif %}
+            {% if module.image.height %}height="{{ module.image.height }}"{% endif %}
+            loading="{{ module.image.loading || 'lazy' }}"
+            class="w-full rounded-2xl shadow-lg">
+        {% else %}
+          <div class="w-full aspect-[4/3] bg-slate-200 rounded-2xl flex items-center justify-center">
+            <svg class="w-16 h-16 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>

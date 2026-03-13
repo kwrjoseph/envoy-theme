@@ -1,0 +1,25 @@
+[ {
+  "id" : "ce2c3616-69b1-a8d9-369a-a2b5b71dab1b",
+  "name" : "arrow_top_icon",
+  "display_width" : null,
+  "label" : "arrow-top-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"arrow-top fal fa-long-arrow-up\"></i>"
+}, {
+  "id" : "d8ec1553-a0ec-cb9a-5839-e88936341c8c",
+  "name" : "arrow_bottom_icon",
+  "display_width" : null,
+  "label" : "arrow-bottom-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"arrow-bottom fal fa-long-arrow-up\"></i>"
+} ]

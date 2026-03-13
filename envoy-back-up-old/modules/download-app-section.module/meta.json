@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:App%20Store",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 54367472437,
+  "label" : "download-app-section",
+  "is_available_for_new_content" : true
+}

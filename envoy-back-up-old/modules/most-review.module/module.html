@@ -1,0 +1,160 @@
+<!-- Teaching Section Start -->
+        <div class="teaching-section section section-padding-top section-padding-bottom-70 {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-8">
+                        <div class="testimonial-area mb-md-50 mb-sm-30 mb-xs-30">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <!-- Static Testimonial Start -->
+                                    <div class="static-testimonial">
+                                        <div class="testimonial-image">
+                                            {% if module.testimonial_card.testimonial_image.src %}
+                                              {% set sizeAttrs = 'width="{{ module.testimonial_card.testimonial_image.width }}" height="{{ module.testimonial_card.testimonial_image.height }}"' %}
+                                              {% if module.testimonial_card.testimonial_image.size_type == 'auto' %}
+                                                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                              {% elif module.testimonial_card.testimonial_image.size_type == 'auto_custom_max' %}
+                                                {% set sizeAttrs = 'width="{{ module.testimonial_card.testimonial_image.max_width }}" height="{{ module.testimonial_card.testimonial_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                              {% endif %}
+                                               {% set loadingAttr = module.testimonial_card.testimonial_image.loading != 'disabled' ? 'loading="{{ module.testimonial_card.testimonial_image.loading }}"' : '' %}
+                                              <img src="{{ module.testimonial_card.testimonial_image.src }}" alt="{{ module.testimonial_card.testimonial_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                            {% endif %}
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>{{ module.testimonial_card.testimonial_desc }}</p>
+                                        </div>
+                                        <div class="author-info">
+                                            <div class="cite">
+                                                <h6 class="name">{{ module.testimonial_card.testi_author_name }}</h6>
+                                                <span class="position">{{ module.testimonial_card.testi_author_position }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Static Testimonial End -->
+                                    <div class="testimonial-modern-heading">
+                                        <h2 class="title">{{ module.testi_heading }}</h2>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pr-100 pr-md-15 pr-sm-15 pr-xs-15">
+                                    <div class="testimonial-rating-area">
+                                        <div class="rating-number">
+                                            <h2>{{ module.testi_rating_number }}</h2>
+                                        </div>
+                                        <div class="testimonial-rating">
+                                          {% for item in module.rate_icon %}
+                                            <span class="{{ item.rating_icon }}"></span>
+                                          {% endfor %}
+                                        </div>
+                                        <div class="rating-content">
+                                            <p>{{ module.rating_content }}</p>
+                                        </div>
+                                    </div>
+                                    <!-- Static Testimonial Start -->
+                                    <div class="static-testimonial">
+                                        <div class="testimonial-image">
+                                            {% if module.testimonial_card_two.testimonial_image.src %}
+                                              {% set sizeAttrs = 'width="{{ module.testimonial_card_two.testimonial_image.width }}" height="{{ module.testimonial_card_two.testimonial_image.height }}"' %}
+                                              {% if module.testimonial_card_two.testimonial_image.size_type == 'auto' %}
+                                                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                              {% elif module.testimonial_card_two.testimonial_image.size_type == 'auto_custom_max' %}
+                                                {% set sizeAttrs = 'width="{{ module.testimonial_card_two.testimonial_image.max_width }}" height="{{ module.testimonial_card_two.testimonial_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                              {% endif %}
+                                               {% set loadingAttr = module.testimonial_card_two.testimonial_image.loading != 'disabled' ? 'loading="{{ module.testimonial_card_two.testimonial_image.loading }}"' : '' %}
+                                              <img src="{{ module.testimonial_card_two.testimonial_image.src }}" alt="{{ module.testimonial_card_two.testimonial_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                            {% endif %}
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>{{ module.testimonial_card_two.testimonial_desc }}</p>
+                                        </div>
+                                        <div class="author-info">
+                                            <div class="cite">
+                                                <h6 class="name">{{ module.testimonial_card_two.testi_author_name }}</h6>
+                                                <span class="position">{{ module.testimonial_card_two.testi_author_position }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Static Testimonial End -->
+                                </div>
+                            </div>
+
+                            <!-- Animation Shape Start -->
+                            <div class="shape shape-1 scene">
+                                <span data-depth="3">
+                                    {% if module.shape_image_one.src %}
+                                      {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+                                      {% if module.shape_image_one.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                      {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                      {% endif %}
+                                       {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+                                      <img class="svgInject" src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                    {% endif %}
+                                </span>
+                            </div>
+                            <div class="shape shape-2 scene">
+                                <span data-depth="-3">
+                                  {% if module.shape_image_two.src %}
+                                    {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+                                    {% if module.shape_image_two.size_type == 'auto' %}
+                                      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                    {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+                                      {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                    {% endif %}
+                                     {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+                                    <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                  {% endif %}
+                                </span>
+                            </div>
+                            <div class="shape shape-3 scene">
+                                <span data-depth="4">shape 3</span>
+                            </div>
+                            <div class="shape shape-4 scene">
+                                <span data-depth="4">
+                                  {% if module.shape_image_three.src %}
+                                    {% set sizeAttrs = 'width="{{ module.shape_image_three.width }}" height="{{ module.shape_image_three.height }}"' %}
+                                    {% if module.shape_image_three.size_type == 'auto' %}
+                                      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                    {% elif module.shape_image_three.size_type == 'auto_custom_max' %}
+                                      {% set sizeAttrs = 'width="{{ module.shape_image_three.max_width }}" height="{{ module.shape_image_three.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                    {% endif %}
+                                     {% set loadingAttr = module.shape_image_three.loading != 'disabled' ? 'loading="{{ module.shape_image_three.loading }}"' : '' %}
+                                    <img src="{{ module.shape_image_three.src }}" alt="{{ module.shape_image_three.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                  {% endif %}
+                                </span>
+                            </div>
+                            <!-- Animation Shape End -->
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="teaching-content">
+                            <!-- Section Title Start -->
+                            <div class="section-title text-left mb-15 {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+                                <span class="sub-title">{{ module.section_subtitle }}</span>
+                                <h2 class="title fz-48">{{ module.section_title }}</h2>
+                            </div>
+                            <!-- Section Title End -->
+                            <p>{{ module.teaching_desc }}</p>
+                          {% set href = module.teaching_link.url.href %}
+                          {% if module.teaching_link.url.type is equalto "EMAIL_ADDRESS" %}
+                            {% set href = "mailto:" + href %}
+                          {% endif %}
+                          {% set rel = [] %}
+                          {% if module.teaching_link.no_follow %}
+                            {% do rel.append("nofollow") %}
+                          {% endif %}
+                          {% if module.teaching_link.open_in_new_tab %}
+                            {% do rel.append("noopener") %}
+                          {% endif %}
+                          <a class="btn btn-primary btn-hover-secondary mt-30" href="{{ href }}"
+                            {% if module.teaching_link.open_in_new_tab %}target="_blank"{% endif %}
+                            {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                            >
+                            {{ module.teaching_link_text }}
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Teaching Section End -->

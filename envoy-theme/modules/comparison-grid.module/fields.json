@@ -1,0 +1,87 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": "comparison"
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": "Types of Middle Ear Implants"
+  },
+  {
+    "name": "section_subtitle",
+    "type": "text",
+    "label": "Section Subtitle",
+    "default": ""
+  },
+  {
+    "name": "items",
+    "type": "group",
+    "label": "Comparison Items",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "category_tag",
+        "type": "text",
+        "label": "Category Tag",
+        "default": "Category A"
+      },
+      {
+        "name": "item_title",
+        "type": "text",
+        "label": "Item Title",
+        "default": "Option Title"
+      },
+      {
+        "name": "description",
+        "type": "richtext",
+        "label": "Description",
+        "default": "<p>Description of this comparison item.</p>"
+      },
+      {
+        "name": "features",
+        "type": "group",
+        "label": "Features",
+        "occurrence": {
+          "min": 0,
+          "max": null,
+          "default": 0
+        },
+        "children": [
+          {
+            "name": "feature_text",
+            "type": "text",
+            "label": "Feature Text",
+            "default": "Feature detail"
+          }
+        ]
+      },
+      {
+        "name": "link",
+        "type": "link",
+        "label": "CTA Link",
+        "default": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "name": "is_featured",
+        "type": "boolean",
+        "label": "Is Featured",
+        "default": false
+      }
+    ]
+  }
+]

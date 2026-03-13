@@ -1,0 +1,49 @@
+<!-- Gallery Section Start -->
+        <div class="gallery-section section {{ module.section_class }}">
+            <div class="container-fluid p-0">
+                <div class="justified-gallery">
+                  {% for item in module.gallery_item %}
+                    <div class="grid-item">
+                        <!-- Single Gallery Start -->
+                      {% set href = item.gallery_link.url.href %}
+                      {% if item.gallery_link.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                      {% endif %}
+                      {% set rel = [] %}
+                      {% if item.gallery_link.no_follow %}
+                        {% do rel.append("nofollow") %}
+                      {% endif %}
+                      {% if item.gallery_link.open_in_new_tab %}
+                        {% do rel.append("noopener") %}
+                      {% endif %}
+                      <a class="single-gallery" href="{{ href }}"
+                        {% if item.gallery_link.open_in_new_tab %}target="_blank"{% endif %}
+                        {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                        >
+                        <div class="thumbnail">
+                          {% if item.gallery_image.src %}
+                            {% set sizeAttrs = 'width="{{ item.gallery_image.width }}" height="{{ item.gallery_image.height }}"' %}
+                            {% if item.gallery_image.size_type == 'auto' %}
+                              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                            {% elif item.gallery_image.size_type == 'auto_custom_max' %}
+                              {% set sizeAttrs = 'width="{{ item.gallery_image.max_width }}" height="{{ item.gallery_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                            {% endif %}
+                             {% set loadingAttr = item.gallery_image.loading != 'disabled' ? 'loading="{{ item.gallery_image.loading }}"' : '' %}
+                            <img class="img-fluid" src="{{ item.gallery_image.src }}" alt="{{ item.gallery_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                          {% endif %}
+                        </div>
+                        <div class="content">
+                          <h5 class="title">{{ item.title }}</h5>
+                          <div class="description">
+                            <p>{{ item.position }}</p>
+                          </div>
+                        </div>
+                      </a>
+                        <!-- Single Gallery End -->
+                    </div>
+                  {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Section End -->

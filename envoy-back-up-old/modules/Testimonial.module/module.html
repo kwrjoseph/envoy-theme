@@ -1,0 +1,273 @@
+{% if module.layout == 'layout-one' %}
+
+<!-- Testimonial Section Start -->
+<div class="section section-padding-bottom bg-pattern fix {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+
+    <!--Testimonial Slider Start -->
+    <div class="testimonial-slider swiper-container" data-aos="{{ module.animation_name }}">
+      <div class="swiper-wrapper">
+        {% for item in module.testimonial_item %}
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <div class="image">
+              {% if item.author_thumb.src %}
+                {% set sizeAttrs = 'width="{{ item.author_thumb.width }}" height="{{ item.author_thumb.height }}"' %}
+                {% if item.author_thumb.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif item.author_thumb.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.author_thumb.max_width }}" height="{{ item.author_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = item.author_thumb.loading != 'disabled' ? 'loading="{{ item.author_thumb.loading }}"' : '' %}
+                <img src="{{ item.author_thumb.src }}" alt="{{ item.author_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </div>
+            <div class="content">
+              <p>{{ item.testimonial_excerpt }}</p>
+              <h6 class="name">{{ item.author_name }}</h6>
+              <span class="position">{{ item.author_position }}</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!--Testimonial Slider End -->
+
+  </div>
+</div>
+<!-- Testimonial Section End -->
+
+{% elif module.layout == 'layout-two' %}
+
+<!-- Testimonial Section Start -->
+<div class="testimonial-section section section-padding {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+    <div class="container-fluid pl-80 pl-lg-15 pl-md-15 pl-sm-15 pl-xs-15 pr-80 pr-lg-15 pr-md-15 pr-sm-15 pr-xs-15">
+        <!-- Section Title Start -->
+        <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+            <span class="sub-title">{{ module.section_subtitle }}</span>
+            <h2 class="title">{{ module.section_title }}</h2>
+        </div>
+        <!-- Section Title End -->
+
+        <!--Testimonial Slider Start -->
+        <div class="testimonial-slider-two swiper-container" data-aos="{{ module.animation_name }}">
+            <div class="swiper-wrapper">
+                {% for item in module.testimonial_item %}
+                <div class="swiper-slide">
+                    <div class="testimonial-two testimonial-three max-mb-30">
+                        <div class="content">
+                            <h4 class="title">{{ item.testimonial_title }}</h4>
+                            <p>{{ item.testimonial_excerpt }}</p>
+                        </div>
+                        <div class="author-info">
+                            <div class="image">
+                                {% if item.author_thumb.src %}
+                                {% set sizeAttrs = 'width="{{ item.author_thumb.width }}" height="{{ item.author_thumb.height }}"' %}
+                                {% if item.author_thumb.size_type == 'auto' %}
+                                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                {% elif item.author_thumb.size_type == 'auto_custom_max' %}
+                                {% set sizeAttrs = 'width="{{ item.author_thumb.max_width }}" height="{{ item.author_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                {% endif %}
+                                {% set loadingAttr = item.author_thumb.loading != 'disabled' ? 'loading="{{ item.author_thumb.loading }}"' : '' %}
+                                <img src="{{ item.author_thumb.src }}" alt="{{ item.author_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                {% endif %}
+                            </div>
+                            <div class="cite">
+                                <h6 class="name">{{ item.author_name }}</h6>
+                                <span class="position">{{ item.author_position }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!--Testimonial Slider End -->
+    </div>
+</div>
+<!-- Testimonial Section End -->
+
+{% elif module.layout == 'layout-three' %}
+
+<!-- Testimonial Section Start -->
+<div class="testimonial-section section section-padding {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="about-content testimonial-content mb-sm-50 mb-xs-50">
+          <span class="sub-title">{{ module.section_subtitle }}</span>
+          <h2 class="title">{{ module.section_title }}</h2>
+          <p>{{ module.testimonial_content_desc }}</p>
+          {% set href = module.testimonial_link.url.href %}
+          {% if module.testimonial_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.testimonial_link.no_follow %}
+            {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.testimonial_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="link link-lg" href="{{ href }}"
+            {% if module.testimonial_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+            >
+            {{ module.testimonial_link_text }}
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <!--Testimonial Slider Start -->
+        <div class="testimonial-slider-vertical swiper-container" data-aos="{{ module.animation_name }}">
+          <div class="swiper-wrapper">
+            {% for item in module.testimonial_item %}
+              <div class="swiper-slide">
+              <div class="testimonial-two testimonial-three {{ item.testimonial_class }}" data-bg-color="{{ item.testimonial_bg_color }}">
+                <div class="content">
+                  <h4 class="title">{{ item.testimonial_title }}</h4>
+                  <p>{{ item.testimonial_excerpt }}</p>
+                </div>
+                <div class="author-info">
+                  <div class="image">
+                    {% if item.testi_author_thumb.src %}
+                      {% set sizeAttrs = 'width="{{ item.testi_author_thumb.width }}" height="{{ item.testi_author_thumb.height }}"' %}
+                      {% if item.testi_author_thumb.size_type == 'auto' %}
+                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                      {% elif item.testi_author_thumb.size_type == 'auto_custom_max' %}
+                        {% set sizeAttrs = 'width="{{ item.testi_author_thumb.max_width }}" height="{{ item.testi_author_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                      {% endif %}
+                       {% set loadingAttr = item.testi_author_thumb.loading != 'disabled' ? 'loading="{{ item.testi_author_thumb.loading }}"' : '' %}
+                      <img src="{{ item.testi_author_thumb.src }}" alt="{{ item.testi_author_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                  </div>
+                  <div class="cite">
+                    <h6 class="name">{{ item.author_name }}</h6>
+                    <span class="position">{{ item.author_position }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!--Testimonial Slider End -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial Section End -->
+
+{% elif module.layout == 'layout-four' %}
+
+<!-- Testimonial Section Start -->
+<div class="testimonial-section section section-padding-top {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title">{{ module.section_subtitle }}</span>
+      <h2 class="title fz-48">{{ module.section_title }}</h2>
+    </div>
+    <!-- Section Title End -->
+    <!--Testimonial Slider Start -->
+    <div class="h5-testimonial-slider swiper-container" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        {% for item in module.testimonial_item %}
+        <div class="swiper-slide">
+          <!-- Static Testimonial Start -->
+          <div class="static-testimonial h5-testimonial mb-30">
+            <div class="testimonial-image">
+              {% if item.author_thumb.src %}
+                {% set sizeAttrs = 'width="{{ item.author_thumb.width }}" height="{{ item.author_thumb.height }}"' %}
+                {% if item.author_thumb.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif item.author_thumb.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.author_thumb.max_width }}" height="{{ item.author_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = item.author_thumb.loading != 'disabled' ? 'loading="{{ item.author_thumb.loading }}"' : '' %}
+                <img src="{{ item.author_thumb.src }}" alt="{{ item.author_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </div>
+            <div class="testimonial-content">
+              <p>{{ item.testimonial_excerpt }}</p>
+            </div>
+            <div class="author-info">
+              <div class="cite">
+                <h6 class="name">{{ item.author_name }}</h6>
+                <span class="position">{{ item.author_position }}</span>
+              </div>
+            </div>
+          </div>
+          <!-- Static Testimonial End -->
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!--Testimonial Slider End -->
+  </div>
+</div>
+<!-- Testimonial Section End -->
+{% else %}
+<!-- Testimonial Section Start -->
+<div class="section section-padding fix {{ module.section_class }}">
+  <div class="container">
+
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title">{{ module.section_subtitle }}</span>
+      <h2 class="title">{{ module.section_title }}</h2>
+    </div>
+    <!-- Section Title End -->
+
+    <!--Testimonial Slider Start -->
+    <div class="testimonial-slider swiper-container" data-aos="{{ module.animation_name }}">
+      <div class="swiper-wrapper">
+        {% for item in module.testimonial_item %}
+        <div class="swiper-slide max-mb-30">
+          <div class="testimonial-two">
+            <div class="author-info">
+              <div class="image">
+                {% if item.author_thumb.src %}
+                {% set sizeAttrs = 'width="{{ item.author_thumb.width }}" height="{{ item.author_thumb.height }}"' %}
+                {% if item.author_thumb.size_type == 'auto' %}
+                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif item.author_thumb.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.author_thumb.max_width }}" height="{{ item.author_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = item.author_thumb.loading != 'disabled' ? 'loading="{{ item.author_thumb.loading }}"' : '' %}
+                <img src="{{ item.author_thumb.src }}" alt="{{ item.author_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+              </div>
+              <div class="cite">
+                <div class="testimonial-rating">
+                  {% for item2 in item.author_rating %}
+                  {{ item2.testimonial_author_rating }}
+                  {% endfor %}
+                </div>
+                <h6 class="name">{{ item.author_name }}</h6>
+                <span class="position">{{ item.author_position }}</span>
+              </div>
+            </div>
+            <div class="content">
+              <p>{{ item.testimonial_text }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!--Testimonial Slider End -->
+
+  </div>
+</div>
+<!-- Testimonial Section End -->
+
+{% endif %}

@@ -1,0 +1,93 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Acclaim Cochlear Implant
+  screenshotPath: ../images/template-previews/acclaim-cochlear-implant.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Acclaim Cochlear Implant ── #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_ci_hero"
+        path='../modules/hero-banner'
+        label='Acclaim CI Hero'
+        badge_text='Investigational Device'
+        title='The Acclaim&reg; Cochlear Implant'
+        subtitle='<p>Reimagining how we treat severe to profound hearing loss. A fully implanted cochlear implant designed for 24/7 hearing.</p>'
+        theme='light'
+        layout='left'
+        show_pattern=true
+        anchor_id='acclaim-ci-hero'
+        primary_button_text='Learn About The Clinical Trial'
+        primary_button_link='#clinical-trial'
+        secondary_button_text='How It Works'
+        secondary_button_link='#how-it-works'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Caution Banner ── #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_ci_caution"
+        path='../modules/caution-banner'
+        label='Investigational Caution'
+        banner_text='CAUTION: Investigational Device. Limited by Federal (or United States) law to investigational use.'
+        style='amber'
+        icon_class='fas fa-exclamation-triangle'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Introduction: No Externals. Just Hearing. ── #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_ci_features"
+        path='../modules/feature-cards'
+        label='Acclaim Key Benefits'
+        section_title='No Externals. Just Hearing.'
+        section_subtitle='The Acclaim&reg; Cochlear Implant is designed to be the first-of-its-kind fully implanted cochlear implant. Unlike traditional cochlear implants, it requires no external audio processor, microphone, or magnet.'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-ear-listen", "card_title": "Natural Sound Capture", "description": "<p>Designed to use the ear&rsquo;s natural anatomy to capture sound, leveraging the pinna and ear canal just like natural hearing.</p>"}, {"icon_class": "fas fa-infinity", "card_title": "24/7 Hearing", "description": "<p>Hear around the clock. Sleep, shower, and swim without removing any device. Designed for true continuous hearing functionality.</p>"}, {"icon_class": "fas fa-eye-slash", "card_title": "Invisible Hearing&reg;", "description": "<p>Nothing to wear on the ear. Nothing to lose. A fully discreet solution that restores confidence along with hearing.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── How It Works: Sensor Technology ── #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_ci_technology"
+        path='../modules/two-column-section'
+        label='Sensor Technology'
+        anchor_id='how-it-works'
+        badge_text='Technology'
+        title='Innovative Sensor Technology'
+        content='<p class="text-lg text-slate-500 mb-6 leading-relaxed">The groundbreaking innovation behind the Acclaim is our proprietary Sensor Technology.</p><p class="text-lg text-slate-500 mb-12 leading-relaxed">Instead of an external microphone, the Acclaim uses a sensor implanted in the middle ear to detect vibrations from the incus (anvil) bone. This allows the device to leverage the outer ear&rsquo;s natural sound-collecting capabilities.</p><div class="space-y-6"><div class="flex items-start"><div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1"><span class="text-blue-600 font-black text-xs">01</span></div><div class="ml-4"><h4 class="font-bold text-slate-900">Sound Enters Naturally</h4><p class="text-sm text-slate-500 mt-1">Sound waves travel through the ear canal and vibrate the eardrum and hearing bones.</p></div></div><div class="flex items-start"><div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1"><span class="text-blue-600 font-black text-xs">02</span></div><div class="ml-4"><h4 class="font-bold text-slate-900">Sensor Detection</h4><p class="text-sm text-slate-500 mt-1">The implanted sensor detects these mechanical vibrations and converts them into electrical signals.</p></div></div><div class="flex items-start"><div class="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1"><span class="text-blue-600 font-black text-xs">03</span></div><div class="ml-4"><h4 class="font-bold text-slate-900">Cochlear Stimulation</h4><p class="text-sm text-slate-500 mt-1">The processor sends impulses to the electrode array in the cochlea, stimulating the hearing nerve.</p></div></div></div>'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Clinical Trial CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_ci_cta"
+        path='../modules/cta-section'
+        label='Clinical Trial CTA'
+        anchor_id='clinical-trial'
+        badge_text='Pivotal Study Now Enrolling'
+        title='Acclaim&reg; Cochlear Implant Clinical Trial'
+        subtitle='Envoy Medical is currently conducting a pivotal clinical trial for the Acclaim Cochlear Implant at select sites across the United States.'
+        primary_button_text='Am I A Candidate?'
+        primary_button_link='/acclaim-pivotal'
+        secondary_button_text='Find a Clinical Site'
+        secondary_button_link='/acclaim-pivotal'
+        disclaimer='Caution: Investigational Device. Limited by Federal (or United States) law to investigational use.'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

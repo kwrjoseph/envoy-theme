@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if brand_settings.favicon_src %}
+    <link rel="shortcut icon" href="{{ brand_settings.favicon_src }}">
+    {% endif %}
+    {{ standard_header_includes }}
+
+    {# Tailwind CSS #}
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    {# Google Fonts — Inter 300-900 #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    {# Font Awesome 6 #}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    {# Theme CSS #}
+    {{ require_css(get_asset_url("../../css/main.css")) }}
+</head>
+<body class="font-['Inter'] text-[color:var(--brand-grey)] bg-white">
+
+    {# ========== LANDING NAVIGATION (minimal) ========== #}
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="/"
+                class="font-black text-2xl tracking-tighter brand-text-navy hover:opacity-80 transition-opacity">ENVOY MEDICAL</a>
+            <div class="flex items-center space-x-6">
+                <div class="hidden sm:flex flex-col items-end">
+                    <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-1">Talk to an expert</span>
+                    <a href="tel:888-999-0000" class="brand-text-navy font-bold text-lg hover:text-blue-600 transition-colors">888.999.0000</a>
+                </div>
+                <a href="/contact" class="brand-bg-navy text-white px-6 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/10">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="h-20"></div>
+
+    {# ========== MAIN CONTENT ========== #}
+    {% block body %}
+    {% endblock body %}
+
+    {# ========== LANDING FOOTER (minimal) ========== #}
+    <footer class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-12">
+                <div class="max-w-xs">
+                    <div class="font-black text-xl brand-text-navy mb-6 tracking-tighter uppercase">ENVOY MEDICAL</div>
+                    <p class="text-slate-400 text-xs leading-relaxed font-medium">
+                        4875 White Bear Parkway<br>
+                        White Bear Lake, MN 55110<br>
+                        Main: 1-651 361-8000
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-8 md:gap-16">
+                    <div>
+                        <h4 class="font-black text-slate-900 text-[10px] uppercase tracking-widest mb-6">Patient Resources</h4>
+                        <ul class="space-y-3 font-bold text-slate-500 text-xs">
+                            <li><a href="/safety-information" class="hover:text-blue-600 transition-colors">Safety Information</a></li>
+                            <li><a href="#" class="hover:text-blue-600 transition-colors">MRI Compatibility</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-slate-900 text-[10px] uppercase tracking-widest mb-6">Legal</h4>
+                        <ul class="space-y-3 font-bold text-slate-500 text-xs">
+                            <li><a href="/privacy-policy" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                            <li><a href="/terms" class="hover:text-blue-600 transition-colors">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[9px] text-slate-300 uppercase tracking-widest font-black">&copy; {{ local_dt|datetimeformat('%Y') }} Envoy Medical Corporation. All Rights Reserved.</p>
+                <div class="flex space-x-5">
+                    <a href="#" class="text-slate-300 hover:text-blue-600 transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="text-slate-300 hover:text-blue-600 transition-colors"><i class="fab fa-linkedin-in text-sm"></i></a>
+                    <a href="#" class="text-slate-300 hover:text-blue-600 transition-colors"><i class="fab fa-twitter text-sm"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{ standard_footer_includes }}
+</body>
+</html>

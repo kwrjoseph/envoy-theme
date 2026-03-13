@@ -1,1 +1,5 @@
-node_modules/\n.DS_Store\n.env
+hubspot.config.yml
+node_modules/
+.env
+*.log
+.DS_Store

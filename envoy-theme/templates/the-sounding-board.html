@@ -1,0 +1,55 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: The Sounding Board (Blog)
+  screenshotPath: ../images/template-previews/the-sounding-board.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: The Sounding Board ── #}
+    {% dnd_section %}
+      {% dnd_module "blog_hero"
+        path='../modules/hero-banner'
+        label='Blog Hero'
+        badge_text='Envoy Medical Blog'
+        title='The Sounding Board'
+        subtitle='<p>Insights into hearing loss, patient stories, and updates on our innovative hearing technologies.</p>'
+        theme='light'
+        layout='left'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Blog Posts Grid ── #}
+    {% dnd_section %}
+      {% dnd_module "blog_posts"
+        path='../modules/blog-cards'
+        label='Blog Posts'
+        section_title=''
+        columns='3'
+        posts=[{"category": "Hearing Health", "date": "Dec 12, 2024", "title": "Navigating the Holidays with Hearing Loss", "description": "<p>Tips and strategies for enjoying holiday gatherings when you have hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Patient Stories", "date": "Nov 28, 2024", "title": "Sarah&rsquo;s Journey to Better Hearing", "description": "<p>One patient&rsquo;s inspiring journey from hearing loss to restored hearing confidence.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Innovation", "date": "Nov 15, 2024", "title": "The Future of Middle Ear Implants", "description": "<p>Exploring emerging technologies and what they mean for patients with hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Hearing Health", "date": "Oct 30, 2024", "title": "Understanding Your Audiogram", "description": "<p>A guide to reading and understanding your hearing test results.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Company News", "date": "Oct 12, 2024", "title": "Envoy Medical at AAO-HNSF 2024", "description": "<p>Highlights from our participation at the annual otolaryngology conference.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Lifestyle", "date": "Sep 22, 2024", "title": "Music and Hearing Implants", "description": "<p>How implant recipients experience and enjoy music after their procedure.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Newsletter CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "blog_cta"
+        path='../modules/cta-section'
+        label='Blog CTA'
+        title='Stay Informed'
+        subtitle='Subscribe to The Sounding Board for the latest updates on hearing health, patient stories, and Envoy Medical news.'
+        primary_button_text='Subscribe'
+        primary_button_link='/contact'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

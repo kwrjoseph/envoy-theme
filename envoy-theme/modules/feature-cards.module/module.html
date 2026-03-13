@@ -1,0 +1,131 @@
+{# Feature Cards Module — Envoy Medical #}
+
+{% set bg_class_map = {
+  "white": "bg-white",
+  "light": "bg-slate-50",
+  "navy": "brand-bg-navy"
+} %}
+
+{% set bg_class = bg_class_map[module.bg_color] || "bg-white" %}
+{% set is_navy = module.bg_color == "navy" %}
+
+<section
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+  class="{{ bg_class }} py-20 lg:py-28 {{ 'text-white' if is_navy else '' }}"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {# Section Header #}
+    {% if module.section_title or module.section_subtitle %}
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      {% if module.section_title %}
+      <h2 class="text-3xl md:text-4xl font-black {{ 'text-white' if is_navy else 'text-slate-900' }} mb-4">
+        {{ module.section_title }}
+      </h2>
+      {% endif %}
+      {% if module.section_subtitle %}
+      <p class="text-lg {{ 'text-slate-300' if is_navy else 'text-slate-500' }}">
+        {{ module.section_subtitle }}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {# Cards Grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{{ module.columns }} gap-8">
+      {% for card in module.cards %}
+
+        {% set has_link = card.link.url.href %}
+        {% set has_download = card.download_link.url.href %}
+        {% set has_buttons = has_link and (has_download or card.link_text) %}
+
+        {# Cards with dual buttons render as divs, single-link cards wrap in <a> #}
+        {% if has_link and not has_buttons %}
+        <a href="{{ card.link.url.href }}"
+           {% if card.link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+           {% if card.link.no_follow %}rel="nofollow{{ ' noopener' if card.link.open_in_new_tab else '' }}"{% endif %}
+           class="group block rounded-2xl p-8 transition-all duration-300 ease-in-out hover:-translate-y-[10px] hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-offset-2
+                  {% if is_navy %}
+                    bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 focus:ring-white/50
+                  {% else %}
+                    bg-white border border-slate-200 hover:shadow-slate-200/50 focus:ring-slate-300
+                  {% endif %}"
+        >
+        {% else %}
+        <div class="group rounded-2xl p-8 flex flex-col transition-all duration-300 ease-in-out hover:-translate-y-[10px] hover:shadow-2xl
+                    {% if is_navy %}
+                      bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15
+                    {% else %}
+                      bg-white border border-slate-200 hover:shadow-slate-200/50
+                    {% endif %}"
+        >
+        {% endif %}
+
+          {# Icon Circle #}
+          <div class="flex items-center justify-center w-12 h-12 rounded-full mb-6
+                      {% if is_navy %}
+                        bg-white/20
+                      {% else %}
+                        brand-bg-navy
+                      {% endif %}"
+          >
+            <i class="{{ card.icon_class }} text-white text-lg"></i>
+          </div>
+
+          {# Title #}
+          <h3 class="text-xl font-black mb-3 {{ 'text-white' if is_navy else 'text-slate-900' }}">
+            {{ card.card_title }}
+          </h3>
+
+          {# Description #}
+          <div class="{{ 'text-slate-300' if is_navy else 'text-slate-500' }} leading-relaxed {% if has_buttons %}flex-grow{% endif %}">
+            {{ card.description }}
+          </div>
+
+          {# Dual Buttons (View + Download) #}
+          {% if has_buttons %}
+          <div class="mt-6 space-y-3 w-full">
+            <a href="{{ card.link.url.href }}"
+               {% if card.link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+               class="block w-full text-center px-6 py-3 rounded-full font-bold text-sm transition-all
+                      {% if is_navy %}
+                        bg-white text-[#002d74] hover:bg-blue-50
+                      {% else %}
+                        brand-bg-navy text-white hover:opacity-90
+                      {% endif %}">
+              {{ card.link_text || "View" }}
+            </a>
+            {% if has_download %}
+            <a href="{{ card.download_link.url.href }}" download
+               {% if card.download_link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+               class="block w-full text-center px-6 py-3 rounded-full font-bold text-sm transition-all
+                      {% if is_navy %}
+                        bg-transparent border-2 border-white text-white hover:bg-white/10
+                      {% else %}
+                        bg-white border-2 border-[#002d74] text-[#002d74] hover:bg-blue-50
+                      {% endif %}">
+              <i class="fas fa-download mr-2"></i>{{ card.download_text || "Download PDF" }}
+            </a>
+            {% endif %}
+          </div>
+          {% elif has_link %}
+          {# Single Link Arrow #}
+          <div class="mt-6 flex items-center text-sm font-semibold
+                      {{ 'text-white/80 group-hover:text-white' if is_navy else 'text-slate-900 group-hover:text-slate-700' }}
+                      transition-colors duration-200">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right ml-2 transition-transform duration-200 group-hover:translate-x-1"></i>
+          </div>
+          {% endif %}
+
+        {% if has_link and not has_buttons %}
+        </a>
+        {% else %}
+        </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

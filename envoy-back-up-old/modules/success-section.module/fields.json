@@ -1,0 +1,151 @@
+[ {
+  "id" : "47e62819-a833-a245-f33d-b4c158683203",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "89fef3fc-8ffe-f93b-7e90-90c4f3cee18d",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "3dfa191c-485a-1506-071c-aeb9d9cbf31a",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "fd360584-1666-970d-e1a0-5d050b365f3b",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Four major Steps to Success"
+}, {
+  "id" : "51f9229a-5268-80da-dac8-c3ee0edff8d1",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Best chances for expanding your <br> success to the max"
+}, {
+  "id" : "dddf74fe-4e26-cf96-8bbe-8a7a2616fff5",
+  "name" : "timeline_item",
+  "display_width" : null,
+  "label" : "timeline-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "004d9f43-12d1-4567-b69a-f25b4499c444",
+    "name" : "timeline_class",
+    "display_width" : null,
+    "label" : "timeline-class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "37a5247a-285e-e998-7879-04a22acc1d26",
+    "name" : "timeline_title",
+    "display_width" : null,
+    "label" : "timeline-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Broadening"
+  }, {
+    "id" : "308b2e94-a8a7-22cb-bdc9-d6742f331423",
+    "name" : "timeline_image",
+    "display_width" : null,
+    "label" : "timeline-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "5883b01e-e1ad-a2e4-2a37-98f98def3c11",
+    "name" : "timeline_subtitle",
+    "display_width" : null,
+    "label" : "timeline-subtitle",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "#1 Career advancement and hobbies"
+  }, {
+    "id" : "9fa7f0c7-3b4b-ca3b-c2f4-3e8d516e2eb3",
+    "name" : "timeline_desc",
+    "display_width" : null,
+    "label" : "timeline-desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "timeline_title" : "Broadening",
+    "timeline_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "timeline_subtitle" : "#1 Career advancement and hobbies",
+    "timeline_desc" : "Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace."
+  }
+} ]

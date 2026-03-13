@@ -1,0 +1,85 @@
+[ {
+  "id" : "c6f52ad7-72d4-56cf-b0ef-662d53e5e6b8",
+  "name" : "share_label_text",
+  "display_width" : null,
+  "label" : "share-label-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Share this post"
+}, {
+  "id" : "2b40fb9c-b006-2677-f54a-13b542895587",
+  "name" : "share_label_icon",
+  "display_width" : null,
+  "label" : "share-label-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"fas fa-share-alt\"></i>"
+}, {
+  "id" : "08a146ec-acc7-053f-be3c-42c530dd5ece",
+  "name" : "social_item",
+  "display_width" : null,
+  "label" : "social-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "0003197f-29f1-0548-2cdc-308f328d757b",
+    "name" : "social_link",
+    "display_width" : null,
+    "label" : "social-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "adad7eb6-6b9e-03ef-dbb6-ca75d1f795f3",
+    "name" : "social_icon",
+    "display_width" : null,
+    "label" : "social-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fab fa-facebook-f\"></i>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "social_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icon" : "<i class=\"fab fa-facebook-f\"></i>"
+  }
+} ]

@@ -1,0 +1,76 @@
+/* 05.08 Header Social CSS */
+.header-social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.header-social a {
+  padding: 0 10px;
+}
+
+.header-social a i {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .header-social a {
+    padding: 0 6px;
+  }
+  .header-social a i {
+    font-size: 16px;
+  }
+}
+
+.header-light .header-social a {
+  color: #FFFFFF;
+}
+
+.header-orange .header-social a:hover {
+  color: #ef6f31;
+}
+
+.footer-social-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 25px;
+  margin-right: -25px;
+  margin-bottom: -15px;
+}
+
+.footer-social-inline.primary-three a:hover {
+  color: #ef6f31;
+}
+
+.footer-social-inline a {
+  margin-right: 25px;
+  margin-bottom: 15px;
+  color: rgba(105, 105, 105, 0.5);
+}
+
+.footer-social-inline a i {
+  font-size: 24px;
+  line-height: 1;
+  display: block;
+}
+
+.footer-social-inline a:hover {
+  color: var(--primary-color);
+}
+.light-color .footer-social-inline a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.light-color .footer-social-inline a:hover {
+  color: white;
+}

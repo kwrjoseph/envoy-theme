@@ -1,0 +1,351 @@
+/* 10.01. Event Grid CSS */
+.event {
+  overflow: hidden;
+  height: 100%;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 5px;
+  background-color: #FAF8F6;
+}
+.event.primary-three .thumbnail .event-overlay-background {
+  background-color: rgba(106, 197, 241, 0.6);
+}
+.event.primary-three .thumbnail .event-overlay-content .btn {
+  color: #ef6f31 !important;
+}
+.event.primary-three .info .date {
+  color: #ef6f31;
+}
+.event.primary-three .info .title {
+  color: var(--secondary-color);;
+}
+.event.primary-three .info .title a:hover {
+  color: #ef6f31;
+}
+.event.primary-three .info .event-location {
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.event.primary-three .info .event-location li {
+  margin-right: 28px;
+}
+.event.primary-three .info .event-location li:last-child {
+  margin-right: 0;
+}
+.event.primary-three .info .event-location li i {
+  margin-right: 10px;
+}
+.event .thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+.event .thumbnail .image {
+  display: block;
+}
+.event .thumbnail .image img {
+  width: 100%;
+  -webkit-transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+  transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+}
+.event .thumbnail .event-overlay-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(63, 58, 100, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.event .thumbnail .event-overlay-content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.event .info {
+  position: relative;
+  text-align: center;
+  padding: 30px 30px 40px;
+}
+.event .info .date {
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+  margin: 0 0 4px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+.event .info .title {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--secondary-color);;
+}
+.event .info .event-location {
+  font-size: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.event .info .event-location li {
+  margin-right: 28px;
+}
+.event .info .event-location li:last-child {
+  margin-right: 0;
+}
+.event .info .event-location li i {
+  margin-right: 10px;
+}
+.event:hover {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 14px 59px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 14px 59px rgba(0, 0, 0, 0.12);
+}
+.event:hover .thumbnail .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.event:hover .thumbnail .event-overlay-background {
+  opacity: 1;
+  visibility: visible;
+}
+.event:hover .thumbnail .event-overlay-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.event-list-box {
+  position: relative;
+  display: block;
+  background: #f8f8f8;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 100%;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.event-list-box::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: #20ad96;
+  opacity: 0;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.event-list-box .event-caption {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 31px;
+}
+
+@media only screen and (max-width: 479px) {
+  .event-list-box .event-caption {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.event-list-box .event-caption .left-box {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 479px) {
+  .event-list-box .event-caption .left-box {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.event-list-box .event-caption .left-box .event-location {
+  font-size: 14px;
+  color: #7e7e7e;
+  margin: 0 0 7px;
+}
+
+.event-list-box .event-caption .left-box .event-location i {
+  margin-right: 5px;
+}
+
+.event-list-box .event-caption .left-box .title {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.event-list-box .event-caption .right-box {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.event-list-box .event-caption .right-box .event-date {
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+@media only screen and (max-width: 479px) {
+  .event-list-box .event-caption .right-box .event-date {
+    text-align: left;
+  }
+}
+
+.event-list-box .event-caption .right-box .event-date .event-date-day {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+.event-list-box .event-caption .right-box .event-date .event-date-month {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--heading-color);
+}
+
+.event-list-box:hover {
+  background: #fff;
+  -webkit-box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+          box-shadow: 0 0 40px rgba(51, 51, 51, 0.1);
+}
+
+.event-list-box:hover::before {
+  opacity: 1;
+}
+
+/* 10.03. Zoom CSS */
+.zoom-event {
+  overflow: hidden;
+  height: 100%;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 5px;
+  background-color: #FAF8F6;
+}
+.zoom-event .thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+.zoom-event .thumbnail .image {
+  display: block;
+}
+.zoom-event .thumbnail .image img {
+  width: 100%;
+  -webkit-transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+  transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+}
+.zoom-event .info {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+.zoom-event .info .title {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--secondary-color);;
+}
+.zoom-event .info .zoom-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 7px 0 0;
+}
+.zoom-event .info .zoom-id .label {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.73px;
+  color: #9b9b9b;
+}
+.zoom-event .info .zoom-id .value {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.13px;
+}
+.zoom-event .info .meta {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.zoom-event .info .meta li {
+  margin-right: 28px;
+}
+.zoom-event .info .meta li:last-child {
+  margin-right: 0;
+}
+.zoom-event .info .meta li .time {
+  font-weight: 600;
+}
+.zoom-event .info .meta li i {
+  margin-right: 10px;
+}
+.zoom-event:hover {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 14px 59px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 14px 59px rgba(0, 0, 0, 0.12);
+}
+.zoom-event:hover .thumbnail .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}

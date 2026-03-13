@@ -1,0 +1,51 @@
+{% macro defaultItemClasses() %}
+ {{
+ {
+   "class": "no-has-children menu-item"
+ }|xmlattr
+ }}
+{% endmacro %}
+
+{% macro childClasses() %}
+ {{
+ {
+   "class": "has-children menu-item"
+ }|xmlattr
+ }}
+{% endmacro %}
+
+{% macro activeNode() %}
+ {{
+ {"class": "menu-link active active-item",
+ "aria-current": "page"}|xmlattr
+
+ }}
+{% endmacro %}
+
+{% macro link(node) %}
+
+<li {{ childClasses() if node.children else defaultItemClasses() }}>
+  <a class="navs-link" href="{{ node.url }}" {{ activeNode() if node.activeNode }}><span class="menu-text">{{ node.label }}</span></a>
+
+  {% if node.children %}
+
+  {{ renderNavigation(node) }}
+  {% endif %}
+</li>
+{% endmacro %}
+
+{% macro renderNavigation(menuTree) %}
+
+  {% set level = level + 1 %}
+
+  <ul class="navigation hs-menu-children-wrapper sub-menu-{{ level }}" aria-hidden="{{ level != 1 }}">
+    {% for node in menuTree.children %}
+      {{ link(node) }}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+<nav class="site-main-menu collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+    {{ renderNavigation(menu(module.main_meu)) }}              
+</nav>
+

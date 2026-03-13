@@ -1,0 +1,116 @@
+<!-- About Event Section Start -->
+<div class="about-event-section section section-padding {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Section Title Start -->
+        <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+          <h2 class="title fz-48 heading-color">{{ module.section_title }}</h2>
+          <div class="event-entry-meta">
+            {% for item in module.event_meta_item %}
+            <div class="meta-item">
+              {{ item.meta_icon }}
+              <span>{{ item.meta_text }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Section Title End -->
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-8 col-12 order-lg-1 max-mb-50">
+        <!-- Event Details Wrapper Start -->
+        <div class="event-details-wrapper">
+          <div class="map-area">
+            <iframe class="event-map" src="{{ module.map_url }}"></iframe>
+            <div class="entry-location-address">
+              {{ module.location_icon }}
+              {{ module.location_text }}
+            </div>
+          </div>
+        </div>
+        <!-- Event Details Wrapper End -->
+      </div>
+
+      <div class="col-lg-4 col-12 order-lg-2 max-mb-50">
+        <div class="sidebar-widget-wrapper pr-0 pl-30 pl-md-0 pl-sm-0 pl-xs-0">
+          <div class="sidebar-widget">
+            <div class="sidebar-widget-content">
+              <div class="sidebar-entry-event">
+                <div class="entry-register">
+
+                  <ul class="entry-event-info">
+                    {% for item in module.sidebar_meta_item %}
+                    <li class="{{ item.meta_class }}">
+                      <span class="meta-label">
+                        {{ item.meta_label_icon }}
+                        {{ item.meta_label_text }}			
+                      </span>
+                      <span class="meta-value">
+                        {{ item.meta_value_text }}
+                      </span>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  {% set href = module.book_btn.url.href %}
+                  {% if module.book_btn.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                  {% endif %}
+                  {% set rel = [] %}
+                  {% if module.book_btn.no_follow %}
+                  {% do rel.append("nofollow") %}
+                  {% endif %}
+                  {% if module.book_btn.open_in_new_tab %}
+                  {% do rel.append("noopener") %}
+                  {% endif %}
+                  <a class="btn btn-primary btn-hover-secondary btn-width-100" href="{{ href }}"
+                     {% if module.book_btn.open_in_new_tab %}target="_blank"{% endif %}
+                     {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                     >
+                    {{ module.book_btn_text }}
+                  </a>
+                  <p class="event-register-message">{{ module.register_message_text }}</p>
+
+                </div>
+                <ul class="author-social-networks event-social">
+                  {% for item in module.social_item %}
+                  <li class="item">
+                    {% set href = item.social_link.url.href %}
+                    {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                    {% endif %}
+                    {% set rel = [] %}
+                    {% if item.social_link.no_follow %}
+                    {% do rel.append("nofollow") %}
+                    {% endif %}
+                    {% if item.social_link.open_in_new_tab %}
+                    {% do rel.append("noopener") %}
+                    {% endif %}
+                    <a class="social-link" target="_blank" href="{{ href }}"
+                       {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                       {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                       >
+                      {{ item.social_link_icon }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="event-content">
+          {{ module.event_content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Event Section End -->

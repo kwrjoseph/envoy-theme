@@ -1,0 +1,367 @@
+[ {
+  "id" : "83c1c4fd-d9c9-0168-975d-763e5f713919",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "ada26082-0695-a72e-a5d5-2efa2a83a5c0",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "df39e05d-31ca-a80a-713f-b714fe173a85",
+  "name" : "testi_heading",
+  "display_width" : null,
+  "label" : "testi-heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "60742971-4ee3-3c01-b316-6069740100ef",
+  "name" : "testi_rating_number",
+  "display_width" : null,
+  "label" : "testi-rating-number",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "4.9/5.0"
+}, {
+  "id" : "d06abbba-00ed-f223-eed7-bf4c50d94957",
+  "name" : "rate_icon",
+  "display_width" : null,
+  "label" : "rate-icon",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "67860a9c-6fc8-2d40-b49d-2fcdc0d8bdcc",
+    "name" : "rating_icon",
+    "display_width" : null,
+    "label" : "rating-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<span class=\"fa fa-star\"></span>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "rating_icon" : "<span class=\"fa fa-star\"></span>"
+  }
+}, {
+  "id" : "8bf434a6-42e7-23fe-73be-3a66c2d3743d",
+  "name" : "rating_content",
+  "display_width" : null,
+  "label" : "rating-content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "by 700+ Students for 3200+ Sales"
+}, {
+  "id" : "5655c587-0da9-c83e-d915-ac61e1a4f44e",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "e249ab53-d9ea-cb6b-b269-d9ed162500c7",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "bb228aeb-5492-e9b4-8816-c54d8a55a589",
+  "name" : "shape_image_three",
+  "display_width" : null,
+  "label" : "shape-image-three",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "1e988824-f0d4-5f55-f81f-3d846d9282a0",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "b025c5a5-11a1-3077-0e90-ae473432c63a",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "f13cc32e-cf91-f080-8623-7417d2b94f39",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "c50b2ee3-6579-eff5-5196-b2fa5b91181f",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Enjoy <span>Our Companionship</span>"
+}, {
+  "id" : "b2fe6548-19a2-62ff-769f-036eb6a7167b",
+  "name" : "teaching_desc",
+  "display_width" : null,
+  "label" : "teaching-desc",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "6cc80279-b8fe-962e-f367-5304ea13b10c",
+  "name" : "teaching_link",
+  "display_width" : null,
+  "label" : "teaching-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "643d9034-b36a-67f0-8e91-2fdc3f0c43bf",
+  "name" : "teaching_link_text",
+  "display_width" : null,
+  "label" : "teaching-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get trial courses"
+}, {
+  "id" : "eca9ab93-b03c-696f-27d7-17d623b74a77",
+  "name" : "testimonial_card",
+  "display_width" : null,
+  "label" : "testimonial-card",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "73e499d5-6459-e5e4-0626-d6f60f36d4e1",
+    "name" : "testimonial_image",
+    "display_width" : null,
+    "label" : "testimonial_image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "43e8be07-31ac-105a-019d-4d553ec9b98a",
+    "name" : "testimonial_desc",
+    "display_width" : null,
+    "label" : "testimonial_desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "2f65168f-fd51-21e9-27d8-7c9d68ca3392",
+    "name" : "testi_author_name",
+    "display_width" : null,
+    "label" : "testi_author_name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "aaed9340-4561-76b7-1148-02a189393981",
+    "name" : "testi_author_position",
+    "display_width" : null,
+    "label" : "testi_author_position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "testimonial_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "0828675b-6d8b-447c-d0e1-905cfdb50298",
+  "name" : "testimonial_card_two",
+  "display_width" : null,
+  "label" : "testimonial-card-two",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "cc7b2ac3-a22d-711a-d9dd-c27ea70f948b",
+    "name" : "testimonial_image",
+    "display_width" : null,
+    "label" : "testimonial_image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "366cd8c9-741b-1d63-a174-5952aaa5741d",
+    "name" : "testimonial_desc",
+    "display_width" : null,
+    "label" : "testimonial_desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "a689b099-4f16-5f93-a144-a64291b6e860",
+    "name" : "testi_author_name",
+    "display_width" : null,
+    "label" : "testi_author_name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "46fe0b04-ee89-a9f5-1a32-e3ce93263cca",
+    "name" : "testi_author_position",
+    "display_width" : null,
+    "label" : "testi_author_position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "testimonial_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+} ]

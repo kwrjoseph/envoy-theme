@@ -1,0 +1,94 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service
+  screenshotPath: ../images/template-previews/service.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-one', 
+        section_class = '',
+        section_bg_color = '#fff',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Contact Us'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Contact Info Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_16311644976152" path="../modules/contact-us-info", label="contact-us-info"
+        section_class = '',
+        contact_title = 'For more information about our courses, get in touch with MaxCoach via contacts',
+        contact_info_item = [
+            {
+                'info_icon' : '<i class="fal fa-map-marker-alt"></i>',
+                'info_title' : 'Address',
+                'info_text' : '1800 Abbot Kinney Blvd. Unit D & E Venice'
+            },
+            {
+                'info_icon' : '<i class="fal fa-map-marker-alt"></i>',
+                'info_title' : 'Contact',
+                'info_text' : 'Mobile: <strong>(+88) - 1990 - 6886</strong><br>Hotline: <strong>1800 – 1102</strong><br>Mail: hello@hasthemes.com'
+            },
+            {
+                'info_icon' : '<i class="fal fa-map-marker-alt"></i>',
+                'info_title' : 'Hour of operation',
+                'info_text' : 'Monday – Friday : 09:00 – 20:00 <br> Sunday &amp; Saturday: 10:30 – 22:00'
+            }
+        ]
+        
+        %}
+
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Contact Info Section End #}
+
+    {# Contact Map Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_16311677400357" path="../modules/google-map", label="google-map" 
+        section_class = '',
+        map_url = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd'
+        %}
+
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Contact Map Section End #}
+
+    {# Contact Me Form Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_163117486407213" path="../modules/contact-us-form", label="contact-us-form" 
+        section_class = '',
+        contact_title = 'Fill out this form for booking a consultant advising session.',
+
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Contact Me Form Section End #}
+
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

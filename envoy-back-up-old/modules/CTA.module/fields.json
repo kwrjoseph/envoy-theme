@@ -1,0 +1,145 @@
+[ {
+  "id" : "0ac3cff8-8a13-9a45-167f-7edd0e232d50",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "1ed6c774-b782-fe19-a9fe-e4a1a891a3d0",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "289dfb57-60e4-9e8f-b6a0-2667c45dc782",
+  "name" : "cta_content_class",
+  "display_width" : null,
+  "label" : "cta-content-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "0315139d-512b-d0a2-3b6b-816ca35156fc",
+  "name" : "cta_subtitle",
+  "display_width" : null,
+  "label" : "cta-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Start today for getting <span>Online Certification</span>"
+}, {
+  "id" : "d109ad99-f8b1-0b5c-5521-746d627ddb6c",
+  "name" : "cta_title",
+  "display_width" : null,
+  "label" : "cta-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "You can be your own guiding star with our help!"
+}, {
+  "id" : "574d4712-3726-fe9c-6fab-70063a77f4c5",
+  "name" : "cta_link",
+  "display_width" : null,
+  "label" : "cta-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "f874d900-9078-6f64-730a-19a794268954",
+  "name" : "cta_link_text",
+  "display_width" : null,
+  "label" : "cta-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : " Get started for free"
+}, {
+  "id" : "cc66b073-db0d-7e19-2772-6f20c42c2efe",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "8dc6a142-49f6-a72d-aa27-5f159abfbfeb",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "ea8059c2-d5f2-d31c-a812-7e6e9b1d6111",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "f10aa11f-02ce-2c70-6670-9359684670f5",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "Animation Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+} ]

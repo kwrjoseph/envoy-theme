@@ -1,0 +1,115 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Hearing Loss
+  screenshotPath: ../images/template-previews/hearing-loss.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "hearing_loss_hero"
+        path='../modules/hero-banner'
+        label='Hearing Loss Hero'
+        badge_text='Hearing Alternatives'
+        title='The Remarkable Ear'
+        subtitle='<p>The ear is remarkable. Its parts work together in perfect harmony to convert sound waves to mechanical signals and then to electrical signals that your brain perceives as sound.</p><p>Unfortunately, some individuals have ears that don&rsquo;t function optimally. Hearing loss can affect one ear or both ears and can stem from various causes.</p>'
+        primary_button_text='Learn More'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== HOW HEARING WORKS ===== #}
+    {% dnd_section %}
+      {% dnd_module "how_hearing_works"
+        path='../modules/feature-cards'
+        label='How Hearing Works'
+        anchor_id='how-hearing-works'
+        section_title='How Hearing Works'
+        section_subtitle='Sound travels through the ear in three distinct phases. The brain interprets the sound waves as they travel through the ear.'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-ear-listen", "card_title": "Outer Ear", "description": "<p>The visible outer part (the pinna) and the ear canal.</p>"}, {"icon_class": "fas fa-microphone-lines", "card_title": "Middle Ear", "description": "<p>Includes the eardrum and three tiny bones (hammer, anvil, and stirrup), which as a connected component comprise the ossicles.</p>"}, {"icon_class": "fas fa-wave-square", "card_title": "Inner Ear", "description": "<p>The snail-shaped cochlea and the hearing nerve, as well as semicircular canals that help us with balance.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== QUOTE: HEARING RELIES ON COMPONENTS ===== #}
+    {% dnd_section %}
+      {% dnd_module "hearing_quote"
+        path='../modules/quote-card'
+        label='Hearing Components Quote'
+        quote_text='<p>Each of these components of the ear performs a critical function in transmitting sound. Natural hearing relies on the components functioning together. If there is a malfunction anywhere in these phases, hearing loss may be experienced.</p>'
+        author_name=''
+        author_title=''
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== FOUR DEGREES OF HEARING LOSS ===== #}
+    {% dnd_section %}
+      {% dnd_module "degrees_of_loss"
+        path='../modules/two-column-section'
+        label='Four Degrees of Hearing Loss'
+        anchor_id='degrees-of-loss'
+        section_title='Classification'
+        title='Four Degrees of Hearing Loss'
+        description='<p>Hearing loss is not the same for everyone. It is typically categorized into four distinct degrees.</p><ol><li><strong>Mild</strong> &mdash; Ability to hear parts of speech, but difficulty with softer sounds.</li><li><strong>Moderate</strong> &mdash; Struggle to hear speech at a normal level.</li><li><strong>Severe</strong> &mdash; Inability to hear most speech at normal levels; ability to hear loud sounds.</li><li><strong>Profound</strong> &mdash; Inability to hear any normal speech; ability to only hear very loud sounds.</li></ol>'
+        layout='image-right'
+        bg_color='light'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TYPES OF HEARING LOSS ===== #}
+    {% dnd_section %}
+      {% dnd_module "types_of_loss"
+        path='../modules/feature-cards'
+        label='Types of Hearing Loss'
+        anchor_id='types-of-loss'
+        section_title='Types of Hearing Loss'
+        section_subtitle='Four types of hearing loss have been identified, and in most cases, each type is treatable.'
+        columns='2'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-brain", "card_title": "Sensorineural Hearing Loss", "description": "<p>Nerve-related (sensorineural) hearing loss is the most common type of hearing loss. It is caused when tiny hair cells in the cochlea are damaged or degraded, and don&rsquo;t effectively transmit sound impulses to the brain. Envoy Medical&rsquo;s Esteem&reg; is specifically designed for people with moderate-to-severe sensorineural hearing loss.</p>"}, {"icon_class": "fas fa-ear-listen", "card_title": "Conductive Hearing Loss", "description": "<p>When the outer or middle ear malfunctions, limiting sound transmission, it results in conductive hearing loss. Common solutions for this condition include bone-anchored devices, surgically implanted osseointegrated devices or bone conduction surgery.</p>"}, {"icon_class": "fas fa-compress", "card_title": "Mixed Hearing Loss", "description": "<p>Mixed hearing loss is a combination of both sensorineural and conductive hearing loss. It&rsquo;s caused by malfunctions in both the inner and the outer or middle ear. Audiologists typically recommend taking care of the conductive component first.</p>"}, {"icon_class": "fas fa-question-circle", "card_title": "Unique Diagnoses", "description": "<p>In rare cases, none of the typical diagnoses apply, such as: Missing or severed hearing nerve, or Auditory Neuropathy Spectrum Disorder, where sound enters the ear normally but damage to the inner ear or hearing nerve prevents the brain from organizing it in a way that can be understood.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TRENDING ON OUR BLOG ===== #}
+    {% dnd_section %}
+      {% dnd_module "hearing_blog"
+        path='../modules/blog-cards'
+        label='Trending Blog Posts'
+        section_title='Trending on Our Blog'
+        columns='3'
+        posts=[{"category": "Hearing Health", "date": "Dec 12, 2024", "title": "Navigating the Holidays with Hearing Loss", "description": "<p>Tips and strategies for enjoying holiday gatherings when you have hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/the-sounding-board"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Patient Stories", "date": "Nov 28, 2024", "title": "Sarah&rsquo;s Journey to Better Hearing", "description": "<p>One patient&rsquo;s inspiring journey from hearing loss to restored hearing confidence.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/the-sounding-board"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Innovation", "date": "Nov 15, 2024", "title": "The Future of Middle Ear Implants", "description": "<p>Exploring emerging technologies and what they mean for patients with hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/the-sounding-board"}, "open_in_new_tab": false, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "hearing_loss_cta"
+        path='../modules/cta-section'
+        label='Hearing Loss CTA'
+        title='Take Control of Your Hearing'
+        subtitle='Not sure what type of hearing loss you have? Consult with a hearing professional to explore your options.'
+        primary_button_text='Find a Specialist'
+        secondary_button_text='Contact Us'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

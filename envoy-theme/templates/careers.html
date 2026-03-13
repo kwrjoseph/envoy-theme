@@ -1,0 +1,102 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Careers
+  screenshotPath: ../images/template-previews/careers.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Careers ── #}
+    {% dnd_section %}
+      {% dnd_module "careers_hero"
+        path='../modules/hero-banner'
+        label='Careers Hero'
+        badge_text='Careers'
+        title='Join the Revolution'
+        subtitle='<p>We are a company of underdogs and misfits doing what companies 100 times our size are too scared or too complacent to pursue.</p>'
+        theme='light'
+        layout='split'
+        show_pattern=true
+        primary_button_text='View Opportunities'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#open-positions"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='careers-hero'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Quote: CEO ── #}
+    {% dnd_section %}
+      {% dnd_module "ceo_quote"
+        path='../modules/quote-card'
+        label='CEO Quote'
+        quote_text='<p>We are a company of underdogs and misfits doing what companies 100 times our size are too scared or too complacent to pursue.</p>'
+        author_name='Brent Lucas'
+        author_title='CEO, Envoy Medical'
+        bg_color='light'
+        anchor_id='ceo-quote'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Why Envoy Medical? (Values) ── #}
+    {% dnd_section %}
+      {% dnd_module "why_envoy"
+        path='../modules/feature-cards'
+        label='Why Envoy Medical'
+        section_title='Why Envoy Medical?'
+        section_subtitle='We are looking for individuals who want to make a difference, excel in a fast-paced environment wearing many hats, and enjoy working collaboratively with cross-functional colleagues.'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class":"fas fa-heart","card_title":"Impactful Work","description":"<p>Your work positively impacts lives daily. Help us design innovative technology and provide personalized care to patients.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}},{"icon_class":"fas fa-lightbulb","card_title":"Innovation","description":"<p>We are dedicated to pushing boundaries and revolutionizing hearing health with new technologies.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}},{"icon_class":"fas fa-users","card_title":"Collaborative Environment","description":"<p>Collaborate with experts in audiology, engineering, and customer service to create comprehensive solutions.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}},{"icon_class":"fas fa-chart-line","card_title":"Professional Growth","description":"<p>We invest in our team&rsquo;s growth through workshops and mentorship. We value individuals over resumes.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}},{"icon_class":"fas fa-hand-holding-heart","card_title":"Inclusive Culture","description":"<p>We celebrate diversity and value different perspectives, promoting creativity and empathy in everything we do.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}}]
+        anchor_id='why-envoy'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Culture: Driven by Purpose ── #}
+    {% dnd_section %}
+      {% dnd_module "culture_section"
+        path='../modules/two-column-section'
+        label='Our Culture'
+        section_title='Our Culture'
+        title='Driven by Purpose'
+        description='<p>&ldquo;Exceptional colleagues&rdquo; is how we see our team. We do what is hard because it matters.</p><ul><li><strong>Fast-Paced Innovation</strong></li><li><strong>Cross-Functional Collaboration</strong></li><li><strong>Intellectual Fun</strong></li></ul>'
+        layout='image-right'
+        bg_color='light'
+        show_features=false
+        anchor_id='our-culture'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Benefits (Glass Cards) ── #}
+    {% dnd_section %}
+      {% dnd_module "benefits_cards"
+        path='../modules/glass-cards'
+        label='Comprehensive Benefits'
+        section_title='Comprehensive Benefits'
+        section_subtitle='We take care of our team so they can take care of our patients.'
+        columns='2'
+        cards=[{"icon_class":"fas fa-medkit","title":"Health & Dental","description":"<p>Comprehensive health, dental, and vision coverage for you and your family.</p>"},{"icon_class":"fas fa-piggy-bank","title":"401k Matching","description":"<p>Competitive 401k matching to help you plan for the future.</p>"},{"icon_class":"fas fa-umbrella-beach","title":"Paid Time Off","description":"<p>Generous PTO policy to maintain work-life balance.</p>"},{"icon_class":"fas fa-laptop-medical","title":"Remote Options","description":"<p>Flexible remote work options available for qualifying positions.</p>"}]
+        anchor_id='benefits'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Open Positions (Rich Text for dynamic job listings) ── #}
+    {% dnd_section %}
+      {% dnd_module "open_positions"
+        path='@hubspot/rich_text'
+        label='Current Openings'
+        html='<div class="py-24 bg-white"><div class="max-w-7xl mx-auto px-6"><div class="mb-16"><span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">Opportunities</span><h2 class="text-4xl font-black text-slate-900 tracking-tight">Current Openings</h2></div><div class="space-y-6 max-w-4xl mx-auto"><div class="bg-white p-8 rounded-3xl border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-[#002d74] transition-all"><div><h3 class="text-2xl font-bold text-slate-900 mb-2">Clinical Specialist</h3><p class="text-slate-500 font-medium">Field Clinical &bull; Remote / Travel</p></div><div><a href="#" class="bg-[#002d74] text-white py-3 px-8 rounded-xl font-bold text-sm inline-block hover:bg-[#001f52] transition-all">Apply Now</a></div></div><div class="bg-white p-8 rounded-3xl border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-[#002d74] transition-all"><div><h3 class="text-2xl font-bold text-slate-900 mb-2">R&amp;D Engineer</h3><p class="text-slate-500 font-medium">Engineering &bull; White Bear Lake, MN</p></div><div><a href="#" class="bg-[#002d74] text-white py-3 px-8 rounded-xl font-bold text-sm inline-block hover:bg-[#001f52] transition-all">Apply Now</a></div></div><div class="bg-white p-8 rounded-3xl border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-[#002d74] transition-all"><div><h3 class="text-2xl font-bold text-slate-900 mb-2">Territory Manager</h3><p class="text-slate-500 font-medium">Sales &bull; West Coast Region</p></div><div><a href="#" class="bg-[#002d74] text-white py-3 px-8 rounded-xl font-bold text-sm inline-block hover:bg-[#001f52] transition-all">Apply Now</a></div></div></div><div class="mt-16 text-center"><p class="text-slate-500 mb-6">Don&rsquo;t see a position that fits? We are always looking for talent.</p><a href="/contact" class="font-bold text-blue-600 hover:text-blue-800 transition-colors">Send us your resume <i class="fas fa-arrow-right ml-2"></i></a></div></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

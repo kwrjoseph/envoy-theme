@@ -1,0 +1,102 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Fully Implanted Technology
+  screenshotPath: ../images/template-previews/fully-implanted-technology.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== Hero Section — Dark Split Layout ===== #}
+    {% dnd_section %}
+      {% dnd_module "fully_implanted_hero"
+        path='../modules/hero-banner'
+        label='Fully Implanted Technology Hero'
+        badge_text='Technology Pillar'
+        title='Hearing Without Limits.'
+        subtitle='<p>The Acclaim&reg; Cochlear Implant is designed to be the first-of-its-kind fully implanted system, allowing for 24/7 hearing that is as invisible as it is natural.</p>'
+        primary_button_text='Explore the Science'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "#science"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Learn about the Study'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/acclaim-pivotal"}, "open_in_new_tab": false, "no_follow": false}
+        theme='dark'
+        layout='split'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Statistics / Quick Facts ===== #}
+    {% dnd_section %}
+      {% dnd_module "stats"
+        path='../modules/stats-grid'
+        label='Quick Facts'
+        bg_color='light'
+        stats=[{"stat_number": "24/7", "stat_suffix": "", "stat_description": "Hearing Access"}, {"stat_number": "100", "stat_suffix": "%", "stat_description": "Fully Implanted"}, {"stat_number": "0", "stat_suffix": "", "stat_description": "External Components"}, {"stat_number": "\u221E", "stat_suffix": "", "stat_description": "Lifestyle Freedom"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== The Evolution of Hearing Technology ===== #}
+    {% dnd_section %}
+      {% dnd_module "evolution"
+        path='../modules/two-column-section'
+        label='The Evolution of Hearing Technology'
+        title='The Evolution of Hearing Technology'
+        description='<p>For decades, cochlear implants have relied on external hardware&mdash;microphones, processors, and batteries worn on the ear or head. While effective, these external components can limit life&rsquo;s most precious moments.</p><ol><li><strong>Traditional Era:</strong> External gear required. Removed for sleep, showers, and many physical activities.</li><li><strong>The Fully Implanted Era:</strong> The Acclaim&reg; CI is designed to be completely internal, using your ear&rsquo;s natural architecture as part of the system.</li></ol>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== The Science of Internal Sensing — Glass Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "science"
+        path='../modules/glass-cards'
+        label='The Science of Internal Sensing'
+        anchor_id='science'
+        section_title='The Science of Internal Sensing'
+        section_subtitle='Most cochlear implants use external microphones. Envoy Medical\u2019s breakthrough technology uses an implanted piezoelectric sensor that captures sound exactly where nature intended.'
+        columns='3'
+        cards=[{"icon_class": "fas fa-wave-square", "title": "Piezoelectric Tech", "description": "<p>The sensor translates mechanical vibrations from the ear bone into electrical signals, similar to how a record player&rsquo;s needle works.</p>"}, {"icon_class": "fas fa-ear-listen", "title": "Natural Anatomy", "description": "<p>By using the ear itself, the system preserves the natural directionality and filtering effects of your own ear shape.</p>"}, {"icon_class": "fas fa-battery-full", "title": "Deeply Integrated", "description": "<p>An internal battery provides power for daily use, recharged wirelessly while you relax or sleep.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Lifestyle Benefits — Feature Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "lifestyle"
+        path='../modules/feature-cards'
+        label='Life Without External Gear'
+        section_title='Life Without External Gear'
+        section_subtitle='Experience moments that were previously complicated or impossible with traditional processors.'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-shower", "card_title": "Water Freedom", "description": "<p>Shower, swim, and enjoy water activities without ever removing your hearing. True water resistance because it&rsquo;s under the skin.</p>"}, {"icon_class": "fas fa-bed", "card_title": "Seamless Sleep", "description": "<p>Hear the smoke alarm, your family, or the morning birds. No more silence as soon as the external gear comes off for bed.</p>"}, {"icon_class": "fas fa-bicycle", "card_title": "Active Lifestyle", "description": "<p>Helmets, glasses, and strenuous sweat no longer interfere with your hearing or the stability of a processor.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA — Be Part of the Innovation ===== #}
+    {% dnd_section %}
+      {% dnd_module "cta"
+        path='../modules/cta-section'
+        label='Be Part of the Innovation CTA'
+        title='Be Part of the Innovation.'
+        subtitle='Envoy Medical is currently conducting the Acclaim\u00ae Pivotal Study for this groundbreaking technology.'
+        primary_button_text='View Study Details'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "/acclaim-pivotal"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Speak with a Specialist'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

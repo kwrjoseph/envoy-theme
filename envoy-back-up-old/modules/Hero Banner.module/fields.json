@@ -1,0 +1,1057 @@
+[ {
+  "id" : "7d7ac631-564b-d7c7-f321-7df7fd2bcaee",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ], [ "layout-four", "layout-four" ], [ "layout-five", "layout-five" ] ],
+  "type" : "choice"
+}, {
+  "id" : "f582baab-a64b-7150-7936-627373a16b3d",
+  "name" : "intro_one_item",
+  "display_width" : null,
+  "label" : "Intro One Item",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "9456bee5-a9cb-39b2-5c50-6f0055fb2231",
+    "name" : "section_class",
+    "display_width" : null,
+    "label" : "section-class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "12569d3a-6d45-9f7e-b2d2-4e2c66899eef",
+    "name" : "section_image",
+    "display_width" : null,
+    "label" : "section-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "c40ce323-283d-561d-345b-c9e0603ea408",
+    "name" : "intro_subtitle",
+    "display_width" : null,
+    "label" : "intro-subtitle",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "MaxCoach is the lifebuoy"
+  }, {
+    "id" : "606affcd-a1e6-00ee-d28a-5bac1982ee25",
+    "name" : "intro_title",
+    "display_width" : null,
+    "label" : "intro-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "In Mentoring <br>2B a Better You."
+  }, {
+    "id" : "f762852a-8ac2-0320-8e6b-7ae7a7bc7e04",
+    "name" : "intro_desc",
+    "display_width" : null,
+    "label" : "intro-desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "The right mentoring relationship can be a powerful tool for professional growth. Bark up the right tree."
+  }, {
+    "id" : "81d69cfc-b7c9-6ea5-0dc8-a789708c7225",
+    "name" : "intro_btn_link",
+    "display_width" : null,
+    "label" : "intro-btn-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "22f8a3db-d6cc-012b-1600-ed254c150f58",
+    "name" : "intro_btn_link_text",
+    "display_width" : null,
+    "label" : "intro-btn-link-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Download free guide"
+  }, {
+    "id" : "8acdbe03-990e-6dc6-5be9-78ce4085ae59",
+    "name" : "intro_btn_icon",
+    "display_width" : null,
+    "label" : "intro-btn-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-download mr-3\"></i>"
+  }, {
+    "id" : "46d1d797-d0a7-e911-4945-91fc5e758ea3",
+    "name" : "intro_one_class",
+    "display_width" : null,
+    "label" : "intro-one-class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "dc4c5606-ff8e-a65a-9ea9-9e9f07a2d837",
+    "name" : "popular_course_icon",
+    "display_width" : null,
+    "label" : "popular-course-icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "78286bdd-f19e-7d46-b57c-fc84b05096f7",
+    "name" : "intro_course_link",
+    "display_width" : null,
+    "label" : "intro-course-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "bdaf2c45-4ef9-c916-78fa-10087b8afbe4",
+    "name" : "intro_course_thumb",
+    "display_width" : null,
+    "label" : "intro-course-thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "e3931418-dc1f-77be-dae3-1a467c1255d2",
+    "name" : "intro_course_price",
+    "display_width" : null,
+    "label" : "intro-course-price",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Free"
+  }, {
+    "id" : "3333a3c3-a612-187b-de9d-3ab51093d340",
+    "name" : "intro_course_date",
+    "display_width" : null,
+    "label" : "intro-course-date",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Dec 23, 2019"
+  }, {
+    "id" : "7229c6bc-70f8-d3a5-5924-231152875581",
+    "name" : "intro_course_title",
+    "display_width" : null,
+    "label" : "intro-course-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Customer-centric Info-Tech Strategies"
+  }, {
+    "id" : "b2d020a4-0c34-5ba9-9b79-3e04cab329ea",
+    "name" : "intro_course_desc",
+    "display_width" : null,
+    "label" : "intro-course-desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Now more than ever, corporations are investing heavily in IT. The quality of these investments affects the daily …"
+  }, {
+    "id" : "9a0e03fd-4972-e2fc-707f-c2a152b8cb79",
+    "name" : "shape_animation_image",
+    "display_width" : null,
+    "label" : "shape-animation-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "fe7cef98-d750-cbf3-ff22-e7f94cf7db97",
+    "name" : "animation_name",
+    "display_width" : null,
+    "label" : "animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "section_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "intro_subtitle" : "MaxCoach is the lifebuoy",
+    "intro_title" : "In Mentoring <br>2B a Better You.",
+    "intro_desc" : "The right mentoring relationship can be a powerful tool for professional growth. Bark up the right tree.",
+    "intro_btn_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_btn_link_text" : "Download free guide",
+    "intro_btn_icon" : "<i class=\"far fa-download mr-3\"></i>",
+    "popular_course_icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "intro_course_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_course_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "intro_course_price" : "Free",
+    "intro_course_date" : "Dec 23, 2019",
+    "intro_course_title" : "Customer-centric Info-Tech Strategies",
+    "intro_course_desc" : "Now more than ever, corporations are investing heavily in IT. The quality of these investments affects the daily …",
+    "shape_animation_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "233edd9b-8708-276c-4233-9892f1bdb4df",
+  "name" : "intro_two",
+  "display_width" : null,
+  "label" : "Intro Two",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d03b8ce9-31a2-d11c-142d-e2355a072a88",
+    "name" : "section_class",
+    "display_width" : null,
+    "label" : "Section Class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "8b5e360e-3afd-303d-4230-c265d455113d",
+    "name" : "animation_name",
+    "display_width" : null,
+    "label" : "Animation Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "baf2d309-0767-eb9d-e25c-0b60dc260ef6",
+    "name" : "intro_title",
+    "display_width" : null,
+    "label" : "Intro Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Distant learning for further expansion "
+  }, {
+    "id" : "e1e3795f-5bf7-6142-a06f-55dcc109f7ff",
+    "name" : "intro_desc",
+    "display_width" : null,
+    "label" : "Intro Desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process."
+  }, {
+    "id" : "f46e5f30-97a5-d41d-bc42-c6d604001447",
+    "name" : "intro_btn_link",
+    "display_width" : null,
+    "label" : "Intro Btn Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "c0c5f2d8-3116-2963-fd02-6f38b1d509e1",
+    "name" : "intro_btn_icon",
+    "display_width" : null,
+    "label" : "Intro Btn Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-download mr-3\"></i>"
+  }, {
+    "id" : "9c84769c-906d-7947-3f9f-5d4f6a375af0",
+    "name" : "intro_btn_text",
+    "display_width" : null,
+    "label" : "Intro Btn Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "387eda3b-abf7-e060-b9da-eb5ec6fcb955",
+    "name" : "intro_course_link",
+    "display_width" : null,
+    "label" : "Intro Course Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "b453ca3a-1b45-1473-6ae5-3a48baed8b57",
+    "name" : "intro_course_link_text",
+    "display_width" : null,
+    "label" : "Intro Course Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "6a862485-f446-ef3a-732c-53a72091a057",
+    "name" : "intro_image",
+    "display_width" : null,
+    "label" : "Intro Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "10d28cfd-d110-f11c-0497-1eb8ed0285aa",
+    "name" : "shape_image_one",
+    "display_width" : null,
+    "label" : "Shape Image One",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "3c25db59-8f8e-9db8-8b11-b1dfc0da5b2c",
+    "name" : "shape_image_two",
+    "display_width" : null,
+    "label" : "Shape Image Two",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "45749b61-eb2d-dadd-45c2-7515e3787344",
+    "name" : "shape_image_three",
+    "display_width" : null,
+    "label" : "Shape Image Three",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "9bf6220d-bc84-9a9e-def4-229e154b23e1",
+    "name" : "shape_image_four",
+    "display_width" : null,
+    "label" : "Shape Image Four",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "animation_name" : "fade-up",
+    "intro_title" : "Distant learning for further expansion ",
+    "intro_desc" : "Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.",
+    "intro_btn_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_btn_icon" : "<i class=\"far fa-download mr-3\"></i>",
+    "intro_course_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "shape_image_one" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "shape_image_two" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "shape_image_three" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "shape_image_four" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+}, {
+  "id" : "45e49110-4f16-c204-9a2d-353cc9841238",
+  "name" : "intro_three",
+  "display_width" : null,
+  "label" : "intro-three",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "4ca9b3d7-4403-9091-59e4-5f2b9688af7d",
+    "name" : "section_class",
+    "display_width" : null,
+    "label" : "section-class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "993f6472-173d-d2ba-c648-7474360afe77",
+    "name" : "section_bg_image",
+    "display_width" : null,
+    "label" : "Section BG Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "1d77e9c1-03b0-fa01-16c2-8c78779c72ed",
+    "name" : "animation_name",
+    "display_width" : null,
+    "label" : "Animation Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "bd568f48-0efc-38bf-ece3-e42aa2df18e7",
+    "name" : "intro_subtitle",
+    "display_width" : null,
+    "label" : "Intro Subtitle",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Commence Business"
+  }, {
+    "id" : "1eba8799-d39d-2234-ca70-b60a6b31dd35",
+    "name" : "intro_title",
+    "display_width" : null,
+    "label" : "Intro Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Distant Mentoring Program"
+  }, {
+    "id" : "134f57ef-343f-6c9b-87e3-b6f7e40ae434",
+    "name" : "intro_link",
+    "display_width" : null,
+    "label" : "Intro Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "0acb4af2-1e18-666e-48c3-8b438ea6c505",
+    "name" : "intro_link_text",
+    "display_width" : null,
+    "label" : "Intro Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Download free guidebook"
+  }, {
+    "id" : "e435e62f-2569-9b6d-0b0d-0bbba4a6b723",
+    "name" : "intro_link_icon",
+    "display_width" : null,
+    "label" : "Intro Link Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-long-arrow-right ms-3\"></i>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "section_bg_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "animation_name" : "fade-up",
+    "intro_subtitle" : "Commence Business",
+    "intro_title" : "Distant Mentoring Program",
+    "intro_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_link_text" : "Download free guidebook",
+    "intro_link_icon" : "<i class=\"far fa-long-arrow-right ms-3\"></i>"
+  }
+}, {
+  "id" : "d1e691cf-bf12-842f-e78e-ee762051c4d7",
+  "name" : "intro_four",
+  "display_width" : null,
+  "label" : "Intro Four",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "04da8f39-00e5-f79d-9486-2e2a48e10ff4",
+    "name" : "section_class",
+    "display_width" : null,
+    "label" : "Section Class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "d2841028-ee29-4e43-f8e6-35cdf3b0e39b",
+    "name" : "section_bg_image",
+    "display_width" : null,
+    "label" : "Section BG Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "f203fee0-0c70-c752-83ef-0e58be45fcab",
+    "name" : "animation_name",
+    "display_width" : null,
+    "label" : "Animation Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "45b5f6d8-4b8d-9ffb-2159-08032098f289",
+    "name" : "intro_title",
+    "display_width" : null,
+    "label" : "Intro Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Expand Your Possibilities                                <span class=\"ah-words-wrapper\">                                    <b class=\"is-visible\">Positively</b>                                    <b>Intensively</b>                                    <b>Extensively</b>                                </span>"
+  }, {
+    "id" : "b9a4acdd-2a14-d22e-a291-e49a8dc2a312",
+    "name" : "intro_desc",
+    "display_width" : null,
+    "label" : "Intro Desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Reach out to the most competent & passionate mentors"
+  }, {
+    "id" : "30967616-1998-53d2-25a6-dd5ef8859470",
+    "name" : "intro_btn_link",
+    "display_width" : null,
+    "label" : "Intro Btn Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "00c39ca3-f8a3-6ecc-afe4-15df7a6aeb85",
+    "name" : "intro_btn_text",
+    "display_width" : null,
+    "label" : "Intro Btn Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "11511a19-fd03-4d6d-286f-4bb9d207be21",
+    "name" : "intro_video_popup",
+    "display_width" : null,
+    "label" : "Intro Video Popup",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "59ceab59-2593-628d-6a19-d5e4fa4b4173",
+    "name" : "intro_play_icon",
+    "display_width" : null,
+    "label" : "Intro Play Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "92ff7fa0-424f-d030-02ff-ae36b0029ca4",
+    "name" : "intro_video_btn_text",
+    "display_width" : null,
+    "label" : "Intro Video Btn Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "How we work"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "section_bg_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "intro_title" : "Expand Your Possibilities                                <span class=\"ah-words-wrapper\">                                    <b class=\"is-visible\">Positively</b>                                    <b>Intensively</b>                                    <b>Extensively</b>                                </span>",
+    "intro_desc" : "Reach out to the most competent & passionate mentors",
+    "intro_btn_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_video_popup" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_video_btn_text" : "How we work"
+  }
+}, {
+  "id" : "a6ae1688-7e16-e261-134d-7b4eea013356",
+  "name" : "intro_five",
+  "display_width" : null,
+  "label" : "Intro Five",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "fffca6c4-c501-030f-1283-4e70cf42196b",
+    "name" : "section_class",
+    "display_width" : null,
+    "label" : "Section Class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "22dc74b2-5038-d40f-78cb-f04749ade570",
+    "name" : "section_bg_color",
+    "display_width" : null,
+    "label" : "Section BG Color",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "9de137d2-e85c-bf59-c4e7-57e4437bc48d",
+    "name" : "animation_name",
+    "display_width" : null,
+    "label" : "Animation Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "07cf191b-bc33-b126-4f02-c16b48442dd0",
+    "name" : "intro_title",
+    "display_width" : null,
+    "label" : "Intro Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Complete Your Dreams in JavaS Programming"
+  }, {
+    "id" : "46b762ba-ad5d-012f-4fab-c4b830db64fe",
+    "name" : "intro_desc",
+    "display_width" : null,
+    "label" : "intro_desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learn any coding program in distance and for a reasonable fee. You don't have to struggle alone, you've got our assistance and help."
+  }, {
+    "id" : "1b39c46d-64a8-bbf8-655e-fe08ed3d7755",
+    "name" : "intro_btn_link",
+    "display_width" : null,
+    "label" : "Intro Btn Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "a4a1d193-4931-9a41-198f-3aec03d3760f",
+    "name" : "intro_btn_icon",
+    "display_width" : null,
+    "label" : "Intro Btn Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-download mr-3\"></i>"
+  }, {
+    "id" : "c0a2d524-97f8-43f9-df4a-6dc2ceacdf5d",
+    "name" : "intro_btn_text",
+    "display_width" : null,
+    "label" : "Intro Btn Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Download free E-book"
+  }, {
+    "id" : "930aa1a2-5606-3108-35f3-f26f7995ef92",
+    "name" : "intro_image",
+    "display_width" : null,
+    "label" : "Intro Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "animation_name" : "fade-up",
+    "intro_title" : "Complete Your Dreams in JavaS Programming",
+    "intro_desc" : "Learn any coding program in distance and for a reasonable fee. You don't have to struggle alone, you've got our assistance and help.",
+    "intro_btn_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "intro_btn_icon" : "<i class=\"far fa-download mr-3\"></i>",
+    "intro_btn_text" : "Download free E-book",
+    "intro_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }
+} ]

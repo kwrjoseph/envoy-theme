@@ -1,0 +1,68 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "default": "Clinical Trial Participation"
+  },
+  {
+    "name": "inclusion_title",
+    "label": "Inclusion Title",
+    "type": "text",
+    "required": false,
+    "default": "Inclusion Criteria"
+  },
+  {
+    "name": "inclusion_items",
+    "label": "Inclusion Items",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "item_text",
+        "label": "Item Text",
+        "type": "text",
+        "required": false,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "name": "exclusion_title",
+    "label": "Exclusion Title",
+    "type": "text",
+    "required": false,
+    "default": "Exclusion Criteria"
+  },
+  {
+    "name": "exclusion_items",
+    "label": "Exclusion Items",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "item_text",
+        "label": "Item Text",
+        "type": "text",
+        "required": false,
+        "default": ""
+      }
+    ]
+  }
+]

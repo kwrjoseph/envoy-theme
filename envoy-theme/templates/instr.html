@@ -1,0 +1,51 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Instructions for Use
+  screenshotPath: ../images/template-previews/instr.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Instructions for Use ── #}
+    {% dnd_section %}
+      {% dnd_module "instr_hero"
+        path='../modules/hero-banner'
+        label='Instructions Hero'
+        badge_text=''
+        title='Acclaim&reg; Instructions for Use'
+        subtitle='<p>CAUTION&mdash;Investigational device. Limited by Federal (or United States) law to investigational use.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Download Cards ── #}
+    {% dnd_section %}
+      {% dnd_module "instr_downloads"
+        path='../modules/resource-download-cards'
+        label='IFU Download Cards'
+        section_title=''
+        resources=[{"icon_class": "fas fa-file-pdf", "title": "Acclaim Instructions for Use &mdash; Patient", "file_size": "PDF Download", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": true, "no_follow": false}}, {"icon_class": "fas fa-file-pdf", "title": "Acclaim Instructions for Use &mdash; Surgical", "file_size": "PDF Download", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": true, "no_follow": false}}, {"icon_class": "fas fa-file-pdf", "title": "Acclaim Instructions for Use &mdash; Commander", "file_size": "PDF Download", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": true, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Disclaimer ── #}
+    {% dnd_section %}
+      {% dnd_module "instr_disclaimer"
+        path='@hubspot/rich_text'
+        label='IFU Disclaimer'
+        html='<div class="py-12 bg-slate-50 border-t border-slate-200"><div class="max-w-4xl mx-auto px-6 text-center"><p class="text-xs text-slate-500 leading-loose font-medium">CAUTION: The Acclaim&reg; Cochlear Implant is an investigational device. Limited by Federal (or United States) law to investigational use. The safety and effectiveness of this device have not been established.</p></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

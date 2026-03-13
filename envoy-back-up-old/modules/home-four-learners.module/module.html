@@ -1,0 +1,75 @@
+<!-- Learners Section Start -->
+        <div class="learners-section section bg-pattern {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}" data-bg-color="{{ module.section_bg_color }}">
+            <div class="container mt-minus-125">
+
+                <!-- Feature Wrapper Start -->
+                <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 max-mb-n30">
+                    {% for item in module.feature_item_group %}
+                    <!-- Feature Start (Icon Box) -->
+                    <div class="col max-mb-30" data-aos="{{ item.feature_animation_name }}">
+                      {% set href = item.feature_link.url.href %}
+                      {% if item.feature_link.url.type is equalto "EMAIL_ADDRESS" %}
+                        {% set href = "mailto:" + href %}
+                      {% endif %}
+                      {% set rel = [] %}
+                      {% if item.feature_link.no_follow %}
+                        {% do rel.append("nofollow") %}
+                      {% endif %}
+                      {% if item.feature_link.open_in_new_tab %}
+                        {% do rel.append("noopener") %}
+                      {% endif %}
+                      <a class="icon-box text-center" data-bg-color="{{ item.feature_bg_color }}" href="{{ href }}"
+                        {% if item.feature_link.open_in_new_tab %}target="_blank"{% endif %}
+                        {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                        >
+                        <div class="icon">
+                                {% if item.feature_image.src %}
+                                  {% set sizeAttrs = 'width="{{ item.feature_image.width }}" height="{{ item.feature_image.height }}"' %}
+                                  {% if item.feature_image.size_type == 'auto' %}
+                                    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                  {% elif item.feature_image.size_type == 'auto_custom_max' %}
+                                    {% set sizeAttrs = 'width="{{ item.feature_image.max_width }}" height="{{ item.feature_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                  {% endif %}
+                                   {% set loadingAttr = item.feature_image.loading != 'disabled' ? 'loading="{{ item.feature_image.loading }}"' : '' %}
+                                  <img src="{{ item.feature_image.src }}" alt="{{ item.feature_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                {% endif %}
+                            </div>
+                            <div class="content">
+                                <h3 class="title fz-20">{{ item.feature_title }}</h3>
+                                <div class="desc">
+                                    <p>{{ item.feature_desc }}</p>
+                                </div>
+                                <span class="link">{{ item.feature_link_text }} {{ item.feature_link_icon }}</span>
+                            </div>
+                      </a>
+                    </div>
+                    <!-- Feature Start (Icon Box) -->
+                    {% endfor %}
+
+                </div>
+                <!-- Feature Wrapper End -->
+
+                <div class="row max-mt-40">
+                    <div class="text-center col-lg-7 mx-auto">
+                        {% set href = module.all_course_link.url.href %}
+                        {% if module.all_course_link.url.type is equalto "EMAIL_ADDRESS" %}
+                          {% set href = "mailto:" + href %}
+                        {% endif %}
+                        {% set rel = [] %}
+                        {% if module.all_course_link.no_follow %}
+                          {% do rel.append("nofollow") %}
+                        {% endif %}
+                        {% if module.all_course_link.open_in_new_tab %}
+                          {% do rel.append("noopener") %}
+                        {% endif %}
+                        <a class="link link-lg" href="{{ href }}"
+                          {% if module.all_course_link.open_in_new_tab %}target="_blank"{% endif %}
+                          {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                          >
+                          {{ module.all_course_link_text }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Learners Section End -->

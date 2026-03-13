@@ -1,0 +1,391 @@
+{% if module.layout == 'layout-one' %}
+<!-- Event Section Start -->
+<div class="section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+
+
+    <!-- Event Wrapper Start -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+      {% for item in module.event_item %}
+      <!-- Event Start -->
+      <div class="col max-mb-30" data-aos="{{ item.event_animation_name }}">
+        <div class="event">
+          <div class="thumbnail">
+            {% set href = item.event_link.url.href %}
+            {% if item.event_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if item.event_link.no_follow %}
+            {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if item.event_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+            {% endif %}
+            <a class="image" href="{{ href }}"
+               {% if item.event_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+               >
+              {% if item.event_image.src %}
+              {% set sizeAttrs = 'width="{{ item.event_image.width }}" height="{{ item.event_image.height }}"' %}
+              {% if item.event_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.event_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.event_image.max_width }}" height="{{ item.event_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.event_image.loading != 'disabled' ? 'loading="{{ item.event_image.loading }}"' : '' %}
+              <img src="{{ item.event_image.src }}" alt="{{ item.event_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </a>
+            <div class="event-overlay-background"></div>
+            <div class="event-overlay-content">
+              {% set href = item.event_link.url.href %}
+              {% if item.event_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if item.event_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if item.event_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a class="btn btn-md btn-light btn-hover-light theme-color" href="{{ href }}"
+                 {% if item.event_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                 >
+                {{ item.event_btn_text }}
+              </a>
+            </div>
+          </div>
+          <div class="info">
+            <span class="date">{{ item.event_date }}</span>
+            <h3 class="title">
+              {% set href = item.event_link.url.href %}
+              {% if item.event_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if item.event_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if item.event_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if item.event_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                 >
+                {{ item.event_title }}
+              </a>
+            </h3>
+            <ul class="event-location">
+              {% for item2 in item.meta_item %}
+              <li>{{ item2.meta_icon }} {{ item2.meta_text }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Event End -->
+      {% endfor %}
+
+    </div>
+    <!-- Event Wrapper End -->
+
+  </div>
+</div>
+<!-- Event Section End -->
+{% elif module.layout == 'layout-two' %}
+<!-- Event Section Start -->
+<div class="section section-padding {{ module.section_class }}">
+  <div class="container">
+
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title">{{ module.section_subtitle }}</span>
+      <h2 class="title fz-48">{{ module.section_title }}</h2>
+    </div>
+    <!-- Section Title End -->
+
+    <!-- Event Wrapper Start -->
+    <div class="event-slider swiper-container" data-aos="{{ module.animation_name }}">
+
+      <div class="swiper-wrapper">
+        {% for item in module.event_item %}
+        <!-- Event Start -->
+        <div class="swiper-slide">
+          <div class="event max-mb-30">
+            <div class="thumbnail">
+              {% set href = item.event_link.url.href %}
+              {% if item.event_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if item.event_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if item.event_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a class="image" href="{{ href }}"
+                 {% if item.event_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                 >
+                {% if item.event_image.src %}
+                {% set sizeAttrs = 'width="{{ item.event_image.width }}" height="{{ item.event_image.height }}"' %}
+                {% if item.event_image.size_type == 'auto' %}
+                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif item.event_image.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.event_image.max_width }}" height="{{ item.event_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = item.event_image.loading != 'disabled' ? 'loading="{{ item.event_image.loading }}"' : '' %}
+                <img src="{{ item.event_image.src }}" alt="{{ item.event_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+              </a>
+              <div class="event-overlay-background"></div>
+              <div class="event-overlay-content">
+                {% set href = item.event_link.url.href %}
+                {% if item.event_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.event_link.no_follow %}
+                {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.event_link.open_in_new_tab %}
+                {% do rel.append("noopener") %}
+                {% endif %}
+                <a class="btn btn-md btn-light btn-hover-light theme-color" href="{{ href }}"
+                   {% if item.event_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                   >
+                  {{ item.event_btn_txt }}
+                </a>
+              </div>
+            </div>
+            <div class="info">
+              <span class="date">{{ item.event_date }}</span>
+              <h3 class="title">
+                {% set href = item.event_link.url.href %}
+                {% if item.event_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.event_link.no_follow %}
+                {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.event_link.open_in_new_tab %}
+                {% do rel.append("noopener") %}
+                {% endif %}
+                <a href="{{ href }}"
+                   {% if item.event_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                   >
+                  {{ item.event_title }}
+                </a>
+              </h3>
+              <ul class="event-location">
+                {% for item2 in item.meta_item %}
+                <li>{{ item2.meta_icon }} {{ item2.meta_text }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Event End -->
+        {% endfor %}
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+    <!-- Event Wrapper End -->
+
+    <div class="row max-mt-40">
+      <div class="text-center col-lg-7 mx-auto">
+        {% set href = module.all_event_link.url.href %}
+        {% if module.all_event_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        {% set rel = [] %}
+        {% if module.all_event_link.no_follow %}
+        {% do rel.append("nofollow") %}
+        {% endif %}
+        {% if module.all_event_link.open_in_new_tab %}
+        {% do rel.append("noopener") %}
+        {% endif %}
+        <a class="link link-lg" href="{{ href }}"
+           {% if module.all_event_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+           >
+          {{ module.all_event_link_text }}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Event Section End -->
+{% elif module.layout == 'layout-three' %}
+<!-- Event Section Start -->
+<div class="event-section section position-relative section-padding {{ module.section_class }}">
+  <div class="container">
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title">{{ module.section_subtitle }}</span>
+      <h2 class="title fz-48">{{ module.section_title }}</h2>
+    </div>
+    <!-- Section Title End -->
+
+    <div class="row row-cols-lg-2 row-cols-1 max-mb-n30">
+      {% for item in module.event_item %}
+      <div class="col max-mb-30" data-aos="{{ item.event_animation_name }}">
+        <div class="event-list-box">
+          <div class="event-caption">
+            <div class="left-box">
+              <div class="event-location">
+                {{ item.event_icon }}
+                {{ item.event_location }}
+              </div>
+              <h3 class="title">{{ item.event_title }}</h3>
+            </div>
+            <div class="right-box">
+              <div class="event-date">
+                <div class="event-date-day">{{ item.event_date_day }}</div>
+                <div class="event-date-month">{{ item.event_date_month }}</div>
+              </div>
+              <div class="event-button">
+                {% set href = item.btn_link.url.href %}
+                {% if item.btn_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.btn_link.no_follow %}
+                  {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.btn_link.open_in_new_tab %}
+                  {% do rel.append("noopener") %}
+                {% endif %}
+                <a class="btn btn-primary btn-hover-secondary btn-xs" href="{{ href }}"
+                  {% if item.btn_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                  {{ item.btn_link_text }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="row max-mt-70">
+      <div class="text-center col-lg-7 mx-auto">
+        {% set href = module.all_event_link.url.href %}
+          {% if module.all_event_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% endif %}
+          <a class="link link-lg" href="{{ href }}"
+            {% if module.all_event_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if module.all_event_link.rel %}rel="{{ module.all_event_link.rel }}"{% endif %}
+            >
+           {{ module.all_event_link_text }}
+          </a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Section Bottom Shape Start -->
+  <div class="section-bottom-shape-two">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="315">
+      <path class="elementor-shape-fill" d="M 50 0 S75 0 100 100 L100 0"></path>
+    </svg>
+  </div>
+  <!-- Section Bottom Shape End -->
+</div>
+<!-- Event Section End -->
+{% else %} 
+<!-- Zoom Meeting Section Start -->
+<div class="section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+
+    <!-- Zoom Meeting Wrapper Start -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+      {% for item in module.zoom_item %}
+      <!-- Zoom Meeting Start -->
+      <div class="col max-mb-30" data-aos="{{ item.zoom_animation_name }}">
+        <div class="zoom-event">
+          <div class="thumbnail">
+            {% set href = item.zoom_link.url.href %}
+            {% if item.zoom_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if item.zoom_link.no_follow %}
+              {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if item.zoom_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+            {% endif %}
+            <a class="image" href="{{ href }}"
+              {% if item.zoom_link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+              >
+              {% if item.zoom_thumb.src %}
+                {% set sizeAttrs = 'width="{{ item.zoom_thumb.width }}" height="{{ item.zoom_thumb.height }}"' %}
+                {% if item.zoom_thumb.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif item.zoom_thumb.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.zoom_thumb.max_width }}" height="{{ item.zoom_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = item.zoom_thumb.loading != 'disabled' ? 'loading="{{ item.zoom_thumb.loading }}"' : '' %}
+                <img src="{{ item.zoom_thumb.src }}" alt="{{ item.zoom_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </a>
+          </div>
+          <div class="info">
+            <h3 class="title">
+              {% set href = item.zoom_link.url.href %}
+                {% if item.zoom_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.zoom_link.no_follow %}
+                  {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.zoom_link.open_in_new_tab %}
+                  {% do rel.append("noopener") %}
+                {% endif %}
+                <a href="{{ href }}"
+                  {% if item.zoom_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                  {{ item.zoom_title }}
+                </a>
+            </h3>
+            <div class="zoom-id">
+              <span class="label">{{ item.meeting_id_text }} </span>
+              <span class="value theme-color">{{ item.meeting_id_num }}</span>
+            </div>
+            <ul class="meta">
+              {% for item2 in item.meta_item %}
+                <li>{{ item2.meta_icon }} {{ item2.meta_text }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Zoom Meeting End -->
+      {% endfor %}
+
+    </div>
+    <!-- Zoom Meeting Wrapper End -->
+
+  </div>
+</div>
+<!-- Zoom Meeting Section End -->
+{% endif %}

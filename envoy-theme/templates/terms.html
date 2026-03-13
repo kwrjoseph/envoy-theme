@@ -1,0 +1,41 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Terms of Use
+  screenshotPath: ../images/template-previews/terms.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Terms of Use ── #}
+    {% dnd_section %}
+      {% dnd_module "terms_hero"
+        path='../modules/hero-banner'
+        label='Terms of Use Hero'
+        badge_text='Legal'
+        title='Terms of Use'
+        subtitle='<p>Please read these terms carefully before using the Envoy Medical website.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=false
+        anchor_id='terms-hero'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Terms of Use Content ── #}
+    {% dnd_section %}
+      {% dnd_module "terms_content"
+        path='@hubspot/rich_text'
+        label='Terms of Use Content'
+        html='<div class="py-20 bg-slate-50"><div class="max-w-4xl mx-auto px-6"><div class="bg-white rounded-[2.5rem] p-10 lg:p-16 shadow-sm border border-slate-100"><p class="text-sm text-slate-400 font-semibold uppercase tracking-wider mb-8">Last Updated: October 2023</p><p class="text-slate-600 leading-relaxed mb-6">Welcome to the Envoy Medical Corporation (&ldquo;Envoy Medical&rdquo;) website (the &ldquo;Site&rdquo;). By using the Site, you agree to follow and be bound by the following terms and conditions concerning your use of the Site (&ldquo;Terms of Use&rdquo;). We may revise the Terms of Use at any time without notice to you. You may not access or use the Site if you do not agree to these Terms of Use.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">1. Assent to Terms</h2><p class="text-slate-600 leading-relaxed mb-6">Your access to and use of the Site is subject to these Terms of Use and all applicable laws. By accessing and browsing the Site, you accept, without limitation or qualification, these Terms of Use. If you do not agree to these Terms of Use, please do not use the Site.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">2. Medical Advice Disclaimer</h2><div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 my-8"><p class="text-blue-900 text-sm font-medium mb-0"><i class="fas fa-exclamation-circle mr-2"></i> The content on this Site is for general educational and informational purposes only.</p></div><p class="text-slate-600 leading-relaxed mb-6">The content of the Site, including text, graphics, images, and other material (&ldquo;Content&rdquo;), is for informational purposes only. The Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on the Site.</p><p class="text-slate-600 leading-relaxed mb-6">If you think you may have a medical emergency, call your doctor or 911 immediately. Envoy Medical does not recommend or endorse any specific tests, physicians, products, procedures, opinions, or other information that may be mentioned on the Site. Reliance on any information provided by Envoy Medical, Envoy Medical employees, others appearing on the Site at the invitation of Envoy Medical, or other visitors to the Site is solely at your own risk.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">3. Use of Content</h2><p class="text-slate-600 leading-relaxed mb-6">Envoy Medical authorizes you to view or download a single copy of the material on the Site solely for your personal, noncommercial use if you include the following copyright notice: &ldquo;Copyright &copy; 2024, Envoy Medical Corporation. All rights reserved&rdquo; and other copyright and proprietary rights notices that are contained in the Content.</p><p class="text-slate-600 leading-relaxed mb-6">The Content is protected by copyright under both United States and foreign laws. Title to the Content remains with Envoy Medical or its licensors. Any use of the Content not expressly permitted by these Terms of Use is a breach of these Terms of Use and may violate copyright, trademark, and other laws. Content and features are subject to change or termination without notice in the editorial discretion of Envoy Medical. All rights not expressly granted herein are reserved to Envoy Medical and its licensors.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">4. Liability of Envoy Medical and Its Licensors</h2><p class="text-slate-600 leading-relaxed mb-6">The use of the Site and the Content is at your own risk. When using the Site, information will be transmitted over a medium that may be beyond the control and jurisdiction of Envoy Medical and its suppliers. Accordingly, Envoy Medical assumes no liability for or relating to the delay, failure, interruption, or corruption of any data or other information transmitted in connection with use of the Site.</p><p class="text-slate-600 leading-relaxed mb-6">The Site and the Content are provided on an &ldquo;AS IS&rdquo; basis. ENVOY MEDICAL, ITS LICENSORS, AND ITS SUPPLIERS, TO THE FULLEST EXTENT PERMITTED BY LAW, DISCLAIM ALL WARRANTIES, EITHER EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT OF THIRD PARTIES&rsquo; RIGHTS, AND FITNESS FOR PARTICULAR PURPOSE.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">5. Privacy</h2><p class="text-slate-600 leading-relaxed mb-6">Your use of the Site is also subject to the Envoy Medical Privacy Policy. Please review our <a href="/privacy-policy" class="text-blue-600 hover:text-blue-800 font-semibold underline">Privacy Policy</a>, which also governs the Site and informs users of our data collection practices.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">6. Indemnity</h2><p class="text-slate-600 leading-relaxed mb-6">You agree to defend, indemnify, and hold Envoy Medical, its officers, directors, employees, agents, licensors, and suppliers, harmless from and against any claims, actions or demands, liabilities and settlements including without limitation, reasonable legal and accounting fees, resulting from, or alleged to result from, your violation of these Terms of Use.</p><h2 class="text-3xl font-extrabold text-[#002d74] tracking-tight mt-12 mb-6">7. Jurisdiction</h2><p class="text-slate-600 leading-relaxed mb-6">You expressly agree that exclusive jurisdiction for any dispute with Envoy Medical, or in any way relating to your use of the Site, resides in the courts of the State of Minnesota and you further agree and expressly consent to the exercise of personal jurisdiction in the courts of the State of Minnesota in connection with any such dispute including any claim involving Envoy Medical or its affiliates, subsidiaries, employees, contractors, officers, directors, telecommunication providers, and content providers.</p></div></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

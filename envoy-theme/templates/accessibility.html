@@ -1,0 +1,40 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Accessibility Statement
+  screenshotPath: ../images/template-previews/accessibility.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Accessibility Statement ── #}
+    {% dnd_section %}
+      {% dnd_module "accessibility_hero"
+        path='../modules/hero-banner'
+        label='Accessibility Hero'
+        badge_text='Legal'
+        title='Website Accessibility Statement'
+        theme='light'
+        layout='centered'
+        show_pattern=false
+        anchor_id='accessibility-hero'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Accessibility Content ── #}
+    {% dnd_section %}
+      {% dnd_module "accessibility_content"
+        path='@hubspot/rich_text'
+        label='Accessibility Content'
+        html='<div class="py-20 bg-white"><div class="max-w-4xl mx-auto px-6"><div class="w-16 h-1 bg-[#002d74] rounded mb-8"></div><p class="text-xl text-slate-600 mb-12 font-medium leading-relaxed">Envoy Medical is committed to identifying solutions that make its website and partner websites available to as many people as possible and by meeting the requirements of the Americans with Disabilities Act. We strive to ensure that our website-based communications are accessible to those with visual, hearing, cognitive and motor impairments.</p><h3 class="text-2xl font-bold text-slate-900 mb-6">Our Commitment</h3><p class="text-slate-500 mb-8 leading-relaxed">Envoy Medical&rsquo;s current website is ADA Compliant. We have recently reviewed our entire website to identify and correct any non-compliant elements.</p><p class="text-slate-500 mb-12 leading-relaxed">We recognize that internet users with disabilities can find websites difficult to use. We are making every effort to ensure that our website is accessible to everyone. We are working to ensure that our website is accessible to potential customers with disabilities by using industry standard techniques and practices to provide an acceptable level of ADA accessibility for website users.</p><div class="bg-blue-50 border border-blue-100 rounded-3xl p-10"><h3 class="text-2xl font-bold text-slate-900 mb-6">Contact Us</h3><p class="text-slate-600 mb-8">If you are experiencing difficulty accessing any part of our website, please contact us.</p><div class="flex flex-col md:flex-row gap-8"><div class="flex items-center space-x-4"><div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-sm"><i class="fas fa-envelope"></i></div><div><span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Email</span><a href="mailto:info@envoymedical.com" class="text-lg font-bold text-slate-900 hover:text-blue-600">info@envoymedical.com</a></div></div><div class="flex items-center space-x-4"><div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-sm"><i class="fas fa-phone"></i></div><div><span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Phone</span><a href="tel:8779003277" class="text-lg font-bold text-slate-900 hover:text-blue-600">(877) 900-EARS (3277)</a></div></div></div></div></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

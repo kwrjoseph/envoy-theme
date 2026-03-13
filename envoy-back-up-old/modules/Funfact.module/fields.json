@@ -1,0 +1,227 @@
+[ {
+  "id" : "3bd27a3b-56cb-6edf-dbd6-4c069c5e836f",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ], [ "layout-four", "layout-four" ], [ "layout-five", "layout-five" ] ],
+  "type" : "choice"
+}, {
+  "id" : "64d46950-e20a-3381-71b7-3dc4c3d2d6b7",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "4b1352fa-525f-dfdb-9a2f-85fb7288f1cd",
+  "name" : "section_bg_image",
+  "display_width" : null,
+  "label" : "section-bg-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "b616e32e-1718-ad44-8d14-2b75ad09bf0d",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "b09d44b7-5c37-6def-b726-2966bb9969ea",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "eece263d-f431-687a-fabb-9cf593f0ced0",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "eeae624b-ccf1-6e5f-ad97-3e4630142ee9",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "56c54eda-2544-c372-9f33-f297054bf0b6",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Learn the secrets to <span>Life Success</span>, <br>these people have got the key.​"
+}, {
+  "id" : "d087cb90-b23f-a432-142c-9ac52f56389f",
+  "name" : "about_subtitle",
+  "display_width" : null,
+  "label" : "About Subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "778f081c-99ea-08f2-c06e-84f60903d56f",
+  "name" : "about_title",
+  "display_width" : null,
+  "label" : "About Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "We prioritize & embrace the power of <span>Cooperation</span> "
+}, {
+  "id" : "bf2056bf-8eb0-191c-8bfe-5d78992976b8",
+  "name" : "about_desc",
+  "display_width" : null,
+  "label" : "About Desc",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get better choice of course, lessons, duration and tutors from our catalog. Free consultation sessions available. "
+}, {
+  "id" : "03b020a1-0b35-e9bd-b277-77c9c501736a",
+  "name" : "about_link",
+  "display_width" : null,
+  "label" : "About Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "11a88661-ca3a-3158-d8ad-2ee1ca5ec63b",
+  "name" : "about_link_text",
+  "display_width" : null,
+  "label" : "About Link Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "c2434a38-502d-d80c-e6a9-14bb054a7e64",
+  "name" : "funfact_item_group",
+  "display_width" : null,
+  "label" : "funfact-item-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "0152c7dd-8d5b-0e7f-4a25-7e73c37c5877",
+    "name" : "counter_number",
+    "display_width" : null,
+    "label" : "counter-number",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "ccc25c91-79ea-dd3e-7294-e34ef190eb74",
+    "name" : "counter_title",
+    "display_width" : null,
+    "label" : "counter-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Registered Enrolls"
+  }, {
+    "id" : "7dd33cca-2c32-6100-2826-02e47acc9ae0",
+    "name" : "funfact_animation_name",
+    "display_width" : null,
+    "label" : "funfact-animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "44e628ff-d335-f0f3-c8fa-9ea95f68bfe7",
+    "name" : "counter_text",
+    "display_width" : null,
+    "label" : "counter-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Enrolled Learners"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "counter_title" : "Registered Enrolls",
+    "counter_text" : "Enrolled Learners"
+  }
+} ]

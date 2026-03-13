@@ -1,0 +1,69 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": "open-positions"
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": "Current Openings"
+  },
+  {
+    "name": "section_subtitle",
+    "type": "text",
+    "label": "Section Subtitle",
+    "default": "Opportunities"
+  },
+  {
+    "name": "jobs",
+    "type": "group",
+    "label": "Job Listings",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "job_title",
+        "type": "text",
+        "label": "Job Title",
+        "default": "Clinical Specialist"
+      },
+      {
+        "name": "department",
+        "type": "text",
+        "label": "Department",
+        "default": "Field Clinical"
+      },
+      {
+        "name": "location",
+        "type": "text",
+        "label": "Location",
+        "default": "Remote / Travel"
+      },
+      {
+        "name": "job_type",
+        "type": "text",
+        "label": "Job Type",
+        "default": "Full-time"
+      },
+      {
+        "name": "apply_link",
+        "type": "link",
+        "label": "Apply Link",
+        "default": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      }
+    ]
+  }
+]

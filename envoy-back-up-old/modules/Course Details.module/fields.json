@@ -1,0 +1,623 @@
+[ {
+  "id" : "0833b114-acaa-cc9d-6cd6-b83fac55ac17",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ] ],
+  "type" : "choice"
+}, {
+  "id" : "09e8b0c5-64a1-39a6-f843-ea737175a53c",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "f2290140-a1ce-2a3a-00ee-a9610d894e53",
+  "name" : "course_tab_nav",
+  "display_width" : null,
+  "label" : "course-tab-nav",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "3bb01dfa-e3ed-11a3-5014-4b924bacf809",
+    "name" : "course_tab_link",
+    "display_width" : null,
+    "label" : "course-tab-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "18c166cb-8bb8-3761-130d-8aab179b4cfe",
+    "name" : "course_tab_link_text",
+    "display_width" : null,
+    "label" : "course-tab-link-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Overview"
+  }, {
+    "id" : "6caab0d5-40ee-f5b7-bed7-f42cb8623f71",
+    "name" : "class_name",
+    "display_width" : null,
+    "label" : "class-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "course_tab_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "course_tab_link_text" : "Overview"
+  }
+}, {
+  "id" : "ab74de91-26eb-b06f-7360-e098a795bbcf",
+  "name" : "tab_content_group",
+  "display_width" : null,
+  "label" : "tab-content-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "96322c76-a1c9-e596-ce00-fc0093f3b307",
+    "name" : "tab_content_id",
+    "display_width" : null,
+    "label" : "tab-content-id",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "93d34df5-2c53-d5ea-b8fd-1048c06ea93a",
+    "name" : "tab_content_class_name",
+    "display_width" : null,
+    "label" : "tab-content-class-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "fbc64b8b-1b67-5dbd-621b-14a793e367d3",
+    "name" : "main_content",
+    "display_width" : null,
+    "label" : "main-content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3 class=\"title\">Course Description</h3>\n<p>Now more than ever, corporations are investing heavily in IT. The quality of these investments affects the daily work of millions.</p>\n<p>Yet it’s not uncommon to see industry surveys where the failure rates for IT projects is over 50%. It’s possible to do better and it’s possible to do so consistently. Use the Business Model Canvas to focus your company strategy and facilitate buy-in from stakeholders.</p>\n<div class=\"overview-course-video\">\n<div class=\"hs-responsive-embed-wrapper hs-responsive-embed\" style=\"width: 100%; height: auto; position: relative; overflow: hidden; padding: 0; max-width: 560px; max-height: 315px; min-width: 256px; margin: 0px auto; display: block;\">\n<div class=\"hs-responsive-embed-inner-wrapper\" style=\"position: relative; overflow: hidden; max-width: 100%; padding-bottom: 56.25%; margin: 0;\"><iframe class=\"hs-responsive-embed-iframe\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;\" title=\"Drive Digital Transformation With Platform Strategies | Info-Tech Analyst Perspective\" xml=\"lang\" src=\"https://www.youtube.com/embed/m-X1ExlQ9uE?feature=oembed\" data-service=\"youtube\" width=\"560\" height=\"315\"></iframe></div>\n</div>\n</div>\n<p>In this two-week course, we’ll step through major challenges within corporate IT and how to address them with the disciplined use of design thinking, Lean Startup, and agile as a team framework.</p>\n<p>Translate your work on the Canvas to specific charters in IT. Rapidly prototype strategically-aligned processes for implementation within your IT infrastructure. How do you define a customer-centric strategy you can actually execute? To do strategic IT, you’ve got to have a strategy! Ideally, you need one that’s easy to understand and use as a clear basis for action.</p>\n<p>That’s what you’ll learn in this course.</p>\n<h3 class=\"title\">A Short Description</h3>\n<p>A customer-centric way of doing business is a way that provides a positive customer experience before and after the sale in order to drive repeat business, enhance customer loyalty and improve business growth.</p>\n<p>But, a customer-centric company is more than a company that offers good service. Both Amazon and Zappos are prime examples of brands that are customer-centric and have spent years creating a culture around the customer and their needs. Their commitment to delivering customer value is genuine – In fact, Zappos is happy to fire employees if they do not fit within their customer-centric culture!</p>\n<p>But, how important is being customer-centric? The good news is that’s becoming very important! Econsultancy recently asked what the most important characteristic is in order to establish a truly “digital-native” culture. The answer to that question and leading the responses with 58% was to be customer-centric.</p>\n<p>Enroll in this course to find out.</p>"
+  }, {
+    "id" : "7c0be29d-90de-61af-76c7-b1d457864bcb",
+    "name" : "main_content_class",
+    "display_width" : null,
+    "label" : "main-content-class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "main_content" : "<h3 class=\"title\">Course Description</h3>\n<p>Now more than ever, corporations are investing heavily in IT. The quality of these investments affects the daily work of millions.</p>\n<p>Yet it’s not uncommon to see industry surveys where the failure rates for IT projects is over 50%. It’s possible to do better and it’s possible to do so consistently. Use the Business Model Canvas to focus your company strategy and facilitate buy-in from stakeholders.</p>\n<div class=\"overview-course-video\">\n<div class=\"hs-responsive-embed-wrapper hs-responsive-embed\" style=\"width: 100%; height: auto; position: relative; overflow: hidden; padding: 0; max-width: 560px; max-height: 315px; min-width: 256px; margin: 0px auto; display: block;\">\n<div class=\"hs-responsive-embed-inner-wrapper\" style=\"position: relative; overflow: hidden; max-width: 100%; padding-bottom: 56.25%; margin: 0;\"><iframe class=\"hs-responsive-embed-iframe\" style=\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;\" title=\"Drive Digital Transformation With Platform Strategies | Info-Tech Analyst Perspective\" xml=\"lang\" src=\"https://www.youtube.com/embed/m-X1ExlQ9uE?feature=oembed\" data-service=\"youtube\" width=\"560\" height=\"315\"></iframe></div>\n</div>\n</div>\n<p>In this two-week course, we’ll step through major challenges within corporate IT and how to address them with the disciplined use of design thinking, Lean Startup, and agile as a team framework.</p>\n<p>Translate your work on the Canvas to specific charters in IT. Rapidly prototype strategically-aligned processes for implementation within your IT infrastructure. How do you define a customer-centric strategy you can actually execute? To do strategic IT, you’ve got to have a strategy! Ideally, you need one that’s easy to understand and use as a clear basis for action.</p>\n<p>That’s what you’ll learn in this course.</p>\n<h3 class=\"title\">A Short Description</h3>\n<p>A customer-centric way of doing business is a way that provides a positive customer experience before and after the sale in order to drive repeat business, enhance customer loyalty and improve business growth.</p>\n<p>But, a customer-centric company is more than a company that offers good service. Both Amazon and Zappos are prime examples of brands that are customer-centric and have spent years creating a culture around the customer and their needs. Their commitment to delivering customer value is genuine – In fact, Zappos is happy to fire employees if they do not fit within their customer-centric culture!</p>\n<p>But, how important is being customer-centric? The good news is that’s becoming very important! Econsultancy recently asked what the most important characteristic is in order to establish a truly “digital-native” culture. The answer to that question and leading the responses with 58% was to be customer-centric.</p>\n<p>Enroll in this course to find out.</p>"
+  }
+}, {
+  "id" : "c107fa2c-ef72-b24d-ad7a-572531d02eda",
+  "name" : "share_static_btn",
+  "display_width" : null,
+  "label" : "share-static-btn",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "061ee3ef-06c3-1130-85be-cabbd47a9770",
+  "name" : "share_btn_text",
+  "display_width" : null,
+  "label" : "share-btn-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Share this course"
+}, {
+  "id" : "6d385798-8e84-b22e-7743-da83c4c9b836",
+  "name" : "share_btn_icon",
+  "display_width" : null,
+  "label" : "share-btn-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<span class=\"share-icon far fa-share-alt\"></span>"
+}, {
+  "id" : "e27e871e-7b02-f464-0c51-4755e856591b",
+  "name" : "social_item",
+  "display_width" : null,
+  "label" : "social-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "f0d3c834-66e9-c531-743c-fe0b79c82f57",
+    "name" : "social_icon",
+    "display_width" : null,
+    "label" : "social-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fab fa-facebook-f\"></i>"
+  }, {
+    "id" : "22e982c6-99dd-4d74-896d-f8795f3c43e4",
+    "name" : "social_link",
+    "display_width" : null,
+    "label" : "social-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "social_icon" : "<i class=\"fab fa-facebook-f\"></i>",
+    "social_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "3613d135-d080-ce01-12f1-67241176a320",
+  "name" : "lp_course_btn_item",
+  "display_width" : null,
+  "label" : "lp-course-btn-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "97a89e96-4f51-df30-148a-da6ff07d58e7",
+    "name" : "lp_course_link",
+    "display_width" : null,
+    "label" : "lp-course-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "32f49b9f-037d-652c-17b3-a3607f7e814e",
+    "name" : "lp_course_btn_text",
+    "display_width" : null,
+    "label" : "lp-course-btn-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Buy Membership"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "lp_course_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "lp_course_btn_text" : "Buy Membership"
+  }
+}, {
+  "id" : "cf3ccfb1-3185-4be4-67dc-cac2e0731fdf",
+  "name" : "widget_title",
+  "display_width" : null,
+  "label" : "widget-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Recent Courses"
+}, {
+  "id" : "9116ca77-32f7-611b-d12d-fb8913fdbd11",
+  "name" : "cr_item",
+  "display_width" : null,
+  "label" : "cr-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "e51403e2-2bf6-0c3f-6997-3dd29d29094e",
+    "name" : "cr_link",
+    "display_width" : null,
+    "label" : "cr-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "63e517ff-8869-e5c1-2135-35c94cf3e0b7",
+    "name" : "cr_thumb",
+    "display_width" : null,
+    "label" : "cr-thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "7258b82c-2bd8-25c0-801a-40aba602f825",
+    "name" : "cr_price",
+    "display_width" : null,
+    "label" : "cr-price",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$40<span>.00</span>"
+  }, {
+    "id" : "226a9e98-b7a4-95c5-f2fd-7b8542804a6e",
+    "name" : "cr_title",
+    "display_width" : null,
+    "label" : "cr-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "cr_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "cr_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "cr_price" : "$40<span>.00</span>"
+  }
+}, {
+  "id" : "91a50f4d-409b-5e32-c38f-09859278336d",
+  "name" : "price_icon",
+  "display_width" : null,
+  "label" : "Price Icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"meta-icon far fa-money-bill-wave\"></i>"
+}, {
+  "id" : "b5971fa6-26d3-2805-d75c-36212b9c8bbe",
+  "name" : "price_text",
+  "display_width" : null,
+  "label" : "Price Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "bc530ec3-b024-c832-348e-259a5839edb0",
+  "name" : "price_amount_text",
+  "display_width" : null,
+  "label" : "Price Amount Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "3d75cc5f-df37-9200-bdd5-7cfcdef3d362",
+  "name" : "cr_meta_item",
+  "display_width" : null,
+  "label" : "CR Meta Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "0482d57a-7fde-f055-0af7-78a3f4b9295e",
+    "name" : "cr_meta_class_name",
+    "display_width" : null,
+    "label" : "CR Meta Class Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "45921f59-d306-6234-f237-5d496563353c",
+    "name" : "cr_meta_icon",
+    "display_width" : null,
+    "label" : "CR Meta Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-chalkboard-teacher\"></i>"
+  }, {
+    "id" : "33ef452d-4649-6846-29c0-657aaab7928c",
+    "name" : "cr_meta_text",
+    "display_width" : null,
+    "label" : "CR Meta Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Instructor"
+  }, {
+    "id" : "a9d8209a-5aa2-abea-3f7d-e2fbf68fda2d",
+    "name" : "cr_meta_value",
+    "display_width" : null,
+    "label" : "CR Meta Value",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Maggie Strickland"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "cr_meta_icon" : "<i class=\"far fa-chalkboard-teacher\"></i>",
+    "cr_meta_text" : "Instructor",
+    "cr_meta_value" : "Maggie Strickland"
+  }
+}, {
+  "id" : "b6c62241-763d-7ed5-b976-2de719a7c867",
+  "name" : "cr_enroll_btn_text",
+  "display_width" : null,
+  "label" : "CR Enroll Btn Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Enroll"
+}, {
+  "id" : "83da0b6c-06a6-ddfe-8b4c-50e2dff628e8",
+  "name" : "cr_social_text_label",
+  "display_width" : null,
+  "label" : "CR Social Text Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Share this course"
+}, {
+  "id" : "aaf0249e-a7a8-13bf-b4c5-345bc7350dc9",
+  "name" : "cr_social_icon_label",
+  "display_width" : null,
+  "label" : "CR Social Icon Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<span class=\"share-icon far fa-share-alt\"></span>"
+}, {
+  "id" : "05e8a4e8-7297-000d-bb92-72b6e9fde6af",
+  "name" : "cr_social_item",
+  "display_width" : null,
+  "label" : "CR Social Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "0b8b2265-c428-bab8-bc2f-ed528647ea0b",
+    "name" : "cr_social_link_icon",
+    "display_width" : null,
+    "label" : "CR Social Link Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fab fa-facebook-f\"></i>"
+  }, {
+    "id" : "45a1e867-32f5-5400-721c-651a1946571e",
+    "name" : "cr_social_link",
+    "display_width" : null,
+    "label" : "CR Social Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "cr_social_link_icon" : "<i class=\"fab fa-facebook-f\"></i>",
+    "cr_social_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

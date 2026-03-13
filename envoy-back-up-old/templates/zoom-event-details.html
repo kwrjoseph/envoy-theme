@@ -1,0 +1,135 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Zoom Event Details
+  screenshotPath: ../images/template-previews/zoom-event-details.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-two', 
+        section_class = '',
+        section_bg_color = '#fff',
+        page_title = 'Zoom Event Details',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Zoom Event Details'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Zoom Event Details Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_163254380653112" path="../modules/zoom-event-details", label="zoom-event-details"
+        section_class = '',
+        event_main_image = { 
+                'alt': 'zoom image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/event/event-details/event-details.jpg') 
+            },
+        event_main_content = '<h3 class="title">I. Marketing Budget</h3>
+        <ol>
+            <li>2013 carry over – 12,000$</li>
+            <li>2014 budget – $16,500</li>
+        </ol>
+        <h3 class="title">II. Marketing Plan</h3>
+        <ol>
+            <li>Marketing objectives
+                <ul>
+                    <li>Business recruitment – Incentives/Available Land/Assistance</li>
+                    <li>Community name recognition</li>
+                    <li>Amenities/Family Recruitment</li>
+                </ul>
+            </li>
+            <li>Community support/matching grants
+                <ol>
+                    <li>Hillsboro Partners in Marketing (PIM) Grant
+                        <ul>
+                            <li>Marketing plan grant $2,500 match for $5,500 total project</li>
+                            <li>Business recruitment grant $2,300 match for $22,000 total project</li>
+                        </ul>
+                    </li>
+                    <li>May-Port PIM Grant
+                        <ul>
+                            <li>Marketing plan grant $2,500 match for $5,500 total project</li>
+                            <li>Business recruitment grant $2,300 match for $22,000 total project</li>
+                        </ul>
+                    </li>
+                    <li>Other communities?</li>
+                </ol>
+            </li>
+            <li>County-wide marketing
+                <ul>
+                    <li>Newman Billboard along I-29 – $19,000 for 1 year contract</li>
+                    <li>Constructing/Renting/Printing billboard on I-29 for Buxton and Hillsboro commercial property – $15,000 approx.</li>
+                </ul>
+            </li>
+            <li>Organizational marketing
+                <ul>
+                    <li>Local advertising describing our organization – $2,500/yr.</li>
+                    <li>Quarterly newsletter printed and mailed – $500/yr.</li>
+                </ul>
+            </li>
+        </ol>',
+        sidebar_countdown_time = '2022/09/17',
+        sidebar_event_title = 'Details',
+        event_list_item = [
+            {
+                'list_name' : 'Hosted By',
+                'list_value' : 'Owen Christ'
+            },
+            {
+                'list_name' : 'Start',
+                'list_value' : 'Jul 24, 2020 8:30 PM'
+            },
+            {
+                'list_name' : 'Category',
+                'list_value' : 'Strategies'
+            },
+            {
+                'list_name' : 'Duration',
+                'list_value' : '45 minutes'
+            },
+            {
+                'list_name' : 'Timezone',
+                'list_value' : 'Atlantic/Azores'
+            }
+        ],
+        sidebar_message = 'Note</strong>: Countdown time is shown based on your local timezone.',
+        lp_btn_item = [
+            {
+                'event_btn_text' : 'Join Meeting via Zoom App'
+            },
+            {
+                'event_btn_text' : 'Join via Web Browser'
+            }
+        ]
+        
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Zoom Event Details Section End #}
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

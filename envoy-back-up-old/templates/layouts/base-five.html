@@ -1,0 +1,49 @@
+<!--
+  templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title %}<title>{{ page_meta.html_title }}</title>{% endif %}
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {{ require_css("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap") }} 
+    {{ require_css(get_asset_url("../../css/vendor/vendor.min.css")) }}
+    {{ require_css(get_asset_url("../../css/plugins/aos.min.css")) }}
+    {{ require_css(get_asset_url("../../css/plugins/swiper.min.css")) }}
+    {{ require_css(get_asset_url("../../css/plugins/magnific-popup.css")) }}
+    {{ require_css(get_asset_url("../../css/main.css")) }}
+    {{ require_js(get_asset_url('../../js/vendor/vendor.min.js')) }}
+    {{ standard_header_includes }}
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+      {% block header %}
+        {% global_partial path='../partials/header-four.html' %}
+      {% endblock header %}
+
+      {% block body %}
+      {% endblock body %}
+
+      {% block footer %}
+        {% global_partial path='../partials/footer-light.html' %}
+      {% endblock footer %}
+      
+      {% module "module_16328871032134" path="../../modules/scroll-to-top", label="scroll-to-top"
+      arrow_top_icon = '<i class="arrow-top fal fa-long-arrow-up"></i>',
+      arrow_bottom_icon = '<i class="arrow-bottom fal fa-long-arrow-up"></i>'
+
+      %}
+    </div>
+    {{ require_js(get_asset_url('../../js/vendor/vendor.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/aos.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/parallax.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/waypoints.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/jquery.counterup.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/swiper.min.js')) }}
+    {{ require_js(get_asset_url('../../js/plugins/jquery.magnific-popup.min.js')) }}
+    {{ require_js(get_asset_url('../../js/active.js')) }}
+    {{ standard_footer_includes }}
+  </body>
+</html>

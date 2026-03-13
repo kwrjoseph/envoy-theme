@@ -1,0 +1,237 @@
+{% if module.layout == 'layout-one' %}
+<!-- Course Section Start -->
+<div class="section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+
+    <!-- Courses Wrapper Start -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+      {% for item in module.course_item %}
+      <!-- Course Start -->
+      <div class="col max-mb-30" data-aos="{{ item.course_animation_name }}">
+        <div class="course">
+          <div class="thumbnail">
+            <span class="badge">{{ item.course_badge }}</span>
+            {% set href = item.course_link.url.href %}
+            {% if item.course_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if item.course_link.no_follow %}
+            {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if item.course_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+            {% endif %}
+            <a class="image" href="{{ href }}"
+               {% if item.course_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+               >
+              {% if item.course_image.src %}
+              {% set sizeAttrs = 'width="{{ item.course_image.width }}" height="{{ item.course_image.height }}"' %}
+              {% if item.course_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.course_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.course_image.max_width }}" height="{{ item.course_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.course_image.loading != 'disabled' ? 'loading="{{ item.course_image.loading }}"' : '' %}
+              <img src="{{ item.course_image.src }}" alt="{{ item.course_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </a>
+          </div>
+          <div class="info">
+            <span class="price">{{ item.course_price }}</span>
+            <h3 class="title">
+              {% set href = item.course_link.url.href %}
+              {% if item.course_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if item.course_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if item.course_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if item.course_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                 >
+                {{ item.course_title }}
+              </a>
+            </h3>
+            <ul class="meta">
+              {% for item2 in item.meta_item %}
+              <li>{{ item2.meta_icon }}{{ item2.meta_text }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Course End -->
+      {% endfor %}
+
+    </div>
+    <!-- Courses Wrapper End -->
+
+  </div>
+</div>
+<!-- Course Section End -->
+{% elif module.layout == 'layout-two' %}
+<!-- Course Section Start -->
+<div class="section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+
+
+    <!-- Courses Wrapper Start -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+      {% for item in module.course_item %}
+      <!-- Course Start -->
+      <div class="col max-mb-30" data-aos="{{ item.course_animation_name }}">
+        <div class="course-2">
+          <div class="thumbnail">
+            {% set href = item.course_link.url.href %}
+            {% if item.course_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if item.course_link.no_follow %}
+            {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if item.course_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.course_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+               >
+              {% if item.course_image.src %}
+              {% set sizeAttrs = 'width="{{ item.course_image.width }}" height="{{ item.course_image.height }}"' %}
+              {% if item.course_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.course_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.course_image.max_width }}" height="{{ item.course_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.course_image.loading != 'disabled' ? 'loading="{{ item.course_image.loading }}"' : '' %}
+              <img src="{{ item.course_image.src }}" alt="{{ item.course_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </a>
+          </div>
+          <div class="info">
+            <span class="price">{{ item.course_price }}</span>
+            <span class="date">{{ item.course_date }}</span>
+            <h3 class="title">
+              {% set href = item.course_link.url.href %}
+              {% if item.course_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if item.course_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if item.course_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if item.course_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                 >
+                {{ item.course_title }}
+              </a>
+            </h3>
+            <ul class="meta">
+              {% for item2 in item.meta_item %}
+              <li>{{ item2.meta_icon }}{{ item2.meta_text }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Course End -->
+      {% endfor %}
+
+    </div>
+    <!-- Courses Wrapper End -->
+
+
+  </div>
+</div>
+<!-- Course Section End -->
+{% else %}
+<!-- Course Section Start -->
+<div class="section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+
+
+    <!-- Courses Wrapper Start -->
+    <div class="row row-cols-lg-2 row-cols-1 max-mb-n30">
+      {% for item in module.course_item %}
+      <!-- Course Start -->
+      <div class="col max-mb-30" data-aos="{{ item.course_animation_name }}">
+        <div class="course-3">
+          <div class="thumbnail">
+            {% set href = item.course_link.url.href %}
+            {% if item.course_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if item.course_link.no_follow %}
+            {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if item.course_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+            {% endif %}
+            <a class="image" href="{{ href }}"
+               {% if item.course_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+               >
+              {% if item.course_image.src %}
+              {% set sizeAttrs = 'width="{{ item.course_image.width }}" height="{{ item.course_image.height }}"' %}
+              {% if item.course_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.course_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.course_image.max_width }}" height="{{ item.course_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.course_image.loading != 'disabled' ? 'loading="{{ item.course_image.loading }}"' : '' %}
+              <img src="{{ item.course_image.src }}" alt="{{ item.course_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </a>
+          </div>
+          <div class="info">
+            <span class="price">{{ item.course_price }}</span>
+            <h3 class="title">
+              {% set href = item.course_link.url.href %}
+              {% if item.course_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              {% set rel = [] %}
+              {% if item.course_link.no_follow %}
+              {% do rel.append("nofollow") %}
+              {% endif %}
+              {% if item.course_link.open_in_new_tab %}
+              {% do rel.append("noopener") %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if item.course_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                 >
+                {{ item.course_title }}
+              </a>
+            </h3>
+            <ul class="meta">
+              {% for item2 in item.meta_item %}
+              <li>{{ item2.meta_icon }} {{ item2.meta_text }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Course End -->
+      {% endfor %}
+
+    </div>
+    <!-- Courses Wrapper End -->
+
+  </div>
+</div>
+<!-- Course Section End -->
+{% endif %}

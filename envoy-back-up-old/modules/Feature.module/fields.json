@@ -1,0 +1,224 @@
+[ {
+  "id" : "d6b4546f-e969-6574-61df-0128425dcf06",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "2e64e1b6-5b8a-5ed8-7a44-207e4dea38ad",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "e40f64bf-a0e2-22d4-fe69-97cd13bf3aae",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "Section BG Color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "59f1ab9d-73ba-39b8-e593-8ea13311c433",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "Section Title Class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "e0137f85-d6bf-0b89-fab8-539b99d25519",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "e21f24b5-91a3-f51b-9def-048f9f8b0088",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Start Learning Coding Languages"
+}, {
+  "id" : "8b2b3986-2921-4cf5-9d46-f98e7c9503f5",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Build Your Dream <span>TODAY</span>"
+}, {
+  "id" : "2c650622-c52b-761c-c0e1-5c6d39f4a288",
+  "name" : "feature_item_group",
+  "display_width" : null,
+  "label" : "feature-item-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "311defbb-4fef-0ab8-eecd-981e572c3368",
+    "name" : "feature_animation_name",
+    "display_width" : null,
+    "label" : "feature-animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "4ed7ed8b-2821-c364-4899-3e1b06638d37",
+    "name" : "feature_link",
+    "display_width" : null,
+    "label" : "feature-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "38a2da07-7a80-c841-536e-21a9fb24f027",
+    "name" : "feature_image",
+    "display_width" : null,
+    "label" : "feature-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "f22b2386-ac94-559d-0918-fa6262b88639",
+    "name" : "feature_title",
+    "display_width" : null,
+    "label" : "feature-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Idea Discussion"
+  }, {
+    "id" : "2e28b776-e554-afc8-569a-0b843baa63bf",
+    "name" : "feature_desc",
+    "display_width" : null,
+    "label" : "feature-desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Get teamed up with the specialists who work and teach coding for years at famous universities."
+  }, {
+    "id" : "237d4575-874c-207c-2c8f-e2b8330dee3e",
+    "name" : "link_text",
+    "display_width" : null,
+    "label" : "link-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "159b76a3-87fa-beae-ac29-dc24aa2e10fd",
+    "name" : "link_icon",
+    "display_width" : null,
+    "label" : "link-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-long-arrow-right\"></i>"
+  }, {
+    "id" : "cc9010a8-fb2b-e1e8-08c3-1ec5417586c8",
+    "name" : "icon_class",
+    "display_width" : null,
+    "label" : "Icon Class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "feature_animation_name" : "fade-up",
+    "feature_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "feature_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "feature_title" : "Idea Discussion",
+    "feature_desc" : "Get teamed up with the specialists who work and teach coding for years at famous universities.",
+    "link_icon" : "<i class=\"far fa-long-arrow-right\"></i>"
+  }
+} ]

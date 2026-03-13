@@ -1,0 +1,100 @@
+{# Sidebar Table of Contents Module — Envoy Medical #}
+
+<style>
+  .sidebar-link {
+    display: block;
+    padding: 0.75rem 0;
+    color: #64748b;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+    padding-left: 1rem;
+  }
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    color: var(--brand-navy);
+    border-left-color: var(--brand-navy);
+    font-weight: 600;
+  }
+  .prose-custom h2 {
+    color: var(--brand-navy);
+    font-weight: 800;
+    font-size: 1.875rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.025em;
+  }
+  .prose-custom h3 {
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .prose-custom p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #475569;
+  }
+  .prose-custom ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #475569;
+  }
+  .prose-custom li {
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<section
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+  class="py-20 bg-slate-50"
+>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-4 gap-12">
+
+      {# Sidebar Navigation #}
+      <aside class="hidden lg:block col-span-1">
+        <div class="sticky top-32">
+          {% if module.sidebar_title %}
+          <h5 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">{{ module.sidebar_title }}</h5>
+          {% endif %}
+          <nav class="space-y-1">
+            {% for link in module.links %}
+            <a href="#{{ link.link_anchor }}" class="sidebar-link hover:bg-slate-50 rounded-r-lg">{{ link.link_label }}</a>
+            {% endfor %}
+          </nav>
+        </div>
+      </aside>
+
+      {# Main Content #}
+      <main class="lg:col-span-3">
+        <div class="bg-white rounded-[2rem] p-10 lg:p-16 shadow-sm border border-slate-100">
+
+          {# Header #}
+          {% if module.badge_text or module.page_title or module.last_updated %}
+          <div class="border-b border-slate-100 pb-10 mb-10">
+            {% if module.badge_text %}
+            <span class="text-blue-600 font-bold tracking-wide uppercase text-xs mb-3 block">{{ module.badge_text }}</span>
+            {% endif %}
+            {% if module.page_title %}
+            <h1 class="text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tight">{{ module.page_title }}</h1>
+            {% endif %}
+            {% if module.last_updated %}
+            <p class="text-slate-500">Last Updated: {{ module.last_updated }}</p>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {# Rich Text Content #}
+          <div class="prose-custom">
+            {{ module.content }}
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+</section>

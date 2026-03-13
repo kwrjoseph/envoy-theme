@@ -1,0 +1,138 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Advocacy
+  screenshotPath: ../images/template-previews/advocacy.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero Banner ── #}
+    {% dnd_section %}
+      {% dnd_module "advocacy_hero_banner"
+        path='../modules/hero-banner'
+        label='Advocacy Hero'
+        badge_text='Advocacy & Legislation'
+        title='The Hearing Device Coverage Clarification Act'
+        subtitle='<p>H.R. 1921 and S. 983 seek to clarify that fully implanted active middle ear hearing devices are prosthetics &mdash; not hearing aids &mdash; ensuring they are not excluded from Medicare coverage.</p>'
+        primary_button_text='How You Can Help'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#how-to-help"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='Press Release'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"https://www.envoymedical.com/news/hearing-device-coverage-clarification-act-reintroduced-in-house-and-senate"},"open_in_new_tab":true,"no_follow":false}
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Why This Matters ── #}
+    {% dnd_section %}
+      {% dnd_module "why_this_matters"
+        path='../modules/two-column-section'
+        label='Why This Matters'
+        title='Why This Matters'
+        description='<p>Despite major advancements in medical technology, individuals with hearing loss have not benefited from the same level of innovation and access. Hearing loss is the third most common chronic health condition in the United States, yet Medicare&rsquo;s outdated classification restricts access to breakthrough solutions.</p><h3>Why the Current Policy Is a Problem</h3><ul><li><strong>Outdated Classification</strong> &mdash; CMS categorizes the Esteem&reg; implant as a hearing aid, automatically excluding it from Medicare coverage.</li><li><strong>The Challenge</strong> &mdash; Medicare beneficiaries are blocked from innovative options that could significantly improve quality of life.</li><li><strong>The Vision</strong> &mdash; This legislation would open access to modern hearing technologies for nearly 40 million Americans with disabling hearing loss.</li></ul><p>Passing this legislation will require broad public support &mdash; and your voice can help move it forward.</p><p><em style="font-size:0.75rem;color:#94a3b8;">Blackwell DL, Lucas JW, Clarke TC. Summary health statistics for US adults: National Health Interview Survey, 2012. Vital Health Stat 10. 2014;260:1-161.</em></p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        anchor_id='advocacy-intro'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Legislative Spotlight ── #}
+    {% dnd_section %}
+      {% dnd_module "legislative_spotlight"
+        path='../modules/glass-cards'
+        label='Legislative Spotlight'
+        section_title='About H.R. 1921 / S. 983'
+        section_subtitle='The Hearing Device Coverage Clarification Act would establish that fully implanted active middle ear devices are prosthetics, ensuring they are eligible for Medicare coverage.'
+        columns='3'
+        cards=[{"icon_class":"fas fa-gavel","title":"Modernizes Policy","description":"<p>Modernizes outdated Medicare hearing device policy</p>"},{"icon_class":"fas fa-universal-access","title":"Expands Access","description":"<p>Expands access to transformative hearing technologies</p>"},{"icon_class":"fas fa-rocket","title":"Encourages Innovation","description":"<p>Encourages innovation and competition within the hearing care field</p>"}]
+        anchor_id='about-bill'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── How You Can Help ── #}
+    {% dnd_section %}
+      {% dnd_module "how_to_help"
+        path='../modules/two-column-section'
+        label='How You Can Help'
+        title='How You Can Help'
+        section_title='Take Action'
+        description='<p>Anyone can support this bill by contacting their representatives. Share how hearing loss &mdash; and limited access to implantable technology &mdash; affects you, your health, or someone you love. Personal stories make a powerful difference.</p><p><strong>Your Message:</strong> <em>Ask your representatives to co-sponsor The Hearing Device Coverage Clarification Act (H.R. 1921 / S. 983).</em></p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='Sign Up for Advocacy Updates'
+        button_link={"url":{"type":"EXTERNAL","href":"#advocacy-form"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='how-to-help'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Find Your Representatives CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "find_reps_cta"
+        path='../modules/cta-section'
+        label='Find Your Representatives'
+        title='Find Your Representatives'
+        subtitle='Visit the links below to find out who your U.S. Senators and Representatives are and how to reach them.'
+        primary_button_text='Find Your Senator'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"https://www.senate.gov/senators/senators-contact.htm"},"open_in_new_tab":true,"no_follow":false}
+        secondary_button_text='Find Your Representative'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"https://www.house.gov/representatives/find-your-representative"},"open_in_new_tab":true,"no_follow":false}
+        anchor_id='find-reps'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Advocacy Resources ── #}
+    {% dnd_section %}
+      {% dnd_module "advocacy_resources"
+        path='../modules/feature-cards'
+        label='Advocacy Resources'
+        section_title='Advocacy Resources'
+        section_subtitle='Advocacy can take many forms and participation is always voluntary. The resources below support individuals who would like to learn more or engage in advocacy efforts.'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class":"fas fa-file-signature","card_title":"Sample Advocacy Letter","description":"<p>Use this sample letter to contact your representatives about H.R. 1921 / S. 983.</p>","link":{"url":{"type":"EXTERNAL","href":"https://www.envoymedical.com/hubfs/Advocacy/Sample%20Letter%20Template%20-%20Advocacy%20021726F.pdf"},"open_in_new_tab":true,"no_follow":false},"link_text":"View Letter","download_link":{"url":{"type":"EXTERNAL","href":"https://www.envoymedical.com/hubfs/Advocacy/Sample%20Letter%20Template%20-%20Advocacy%20021726F.pdf"},"open_in_new_tab":false,"no_follow":false},"download_text":"Download PDF"},{"icon_class":"fas fa-comments","card_title":"Sample Call Script","description":"<p>Talking points guide for speaking with congressional offices about the Clarification Act.</p>","link":{"url":{"type":"EXTERNAL","href":"https://www.envoymedical.com/hubfs/Advocacy/Call%20Script%20to%20Congressmans%20office%20Final%20021726.pdf"},"open_in_new_tab":true,"no_follow":false},"link_text":"View Script"},{"icon_class":"fas fa-info-circle","card_title":"Additional Information","description":"<p>View the bill text on Congress.gov, read the press release, or learn about the FI-AMEI technology overview.</p>","link":{"url":{"type":"EXTERNAL","href":"https://www.congress.gov/bill/119th-congress/house-bill/1921"},"open_in_new_tab":true,"no_follow":false},"link_text":"Link to Bill"}]
+        anchor_id='resources'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Stay Informed CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "stay_informed_cta"
+        path='../modules/cta-section'
+        label='Stay Informed'
+        title='Stay Informed'
+        subtitle='Want updates on this legislation and new advocacy opportunities? Sign up for advocacy updates to receive advocacy tools and resources.'
+        primary_button_text='Sign Up for Advocacy Updates'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#advocacy-form"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='stay-informed'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Important Notice ── #}
+    {% dnd_section %}
+      {% dnd_module "important_notice"
+        path='../modules/caution-banner'
+        label='Important Notice'
+        icon_class='fas fa-exclamation-triangle'
+        style='amber'
+        banner_text='<p><strong>Important Notice</strong></p><ul><li>Resources are for informational purposes only <em>and not intended as legal, reimbursement, or medical advice.</em></li><li>Reimbursement and coverage decisions vary and are subject to change.</li></ul>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

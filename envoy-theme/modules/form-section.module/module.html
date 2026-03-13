@@ -1,0 +1,40 @@
+{# Form Section Module #}
+
+{% if module.bg_color == "light" %}
+  {% set bg = "bg-slate-50" %}
+{% else %}
+  {% set bg = "bg-white" %}
+{% endif %}
+
+<section{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %} class="{{ bg }} py-16 lg:py-24">
+  <div class="max-w-3xl mx-auto px-6">
+
+    {% if module.section_title %}
+    <div class="text-center mb-10">
+      <h2 class="text-3xl lg:text-4xl font-black text-slate-900 mb-4">{{ module.section_title }}</h2>
+      {% if module.section_subtitle %}
+      <div class="text-slate-500 leading-relaxed max-w-xl mx-auto">{{ module.section_subtitle }}</div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="bg-white rounded-2xl p-8 lg:p-12 shadow-sm border border-slate-100">
+      {% if module.form.form_id %}
+        {% form
+          form_to_use="{{ module.form.form_id }}"
+          response_type="{{ module.form.response_type }}"
+          message="{{ module.form.message }}"
+        %}
+      {% else %}
+        <p class="text-center text-slate-400 py-8">Select a form in the module settings.</p>
+      {% endif %}
+
+      {% if module.privacy_text %}
+      <div class="text-center text-xs text-slate-400 mt-6 leading-relaxed">
+        {{ module.privacy_text }}
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+</section>

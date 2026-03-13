@@ -1,0 +1,115 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Safety Information
+  screenshotPath: ../images/template-previews/safety-information.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== Hero Section ===== #}
+    {% dnd_section %}
+      {% dnd_module "safety_hero"
+        path='../modules/hero-banner'
+        label='Safety Information Hero'
+        badge_text='Important Information'
+        title='Safety Information'
+        subtitle='<p>Important safety considerations, indications, and MRI guidelines for the Envoy Medical Esteem&reg; System.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+        caution_text='<p>Caution: Federal law restricts this device to sale by or on the order of a physician.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Quick Links — Feature Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "quick_links"
+        path='../modules/feature-cards'
+        label='Safety Quick Links'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-ban", "card_title": "Contraindications", "description": "<p>Who should not receive the implant.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#contraindications"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-shield-halved", "card_title": "General Safety", "description": "<p>Daily living &amp; precautions.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#general-safety"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-magnet", "card_title": "MRI Compatibility", "description": "<p>Scanning guidelines.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#mri-safety"}, "open_in_new_tab": false, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Contraindications — Ear Health ===== #}
+    {% dnd_section %}
+      {% dnd_module "contraindications_ear"
+        path='../modules/feature-cards'
+        label='Contraindications'
+        anchor_id='contraindications'
+        section_title='Contraindications'
+        section_subtitle='The Esteem\u00ae System is not suitable for everyone. The following conditions are contraindicated for this device.'
+        columns='2'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-ear-deaf", "card_title": "Ear Health History", "description": "<p>Contraindicated conditions include:</p><ul><li>History of post-adolescent chronic middle ear infections</li><li>Inner ear disorders (e.g., Meniere&rsquo;s, Hydrops)</li><li>Recurring vertigo requiring treatment</li><li>History of cholesteatoma or destructive middle ear disease</li><li>Retrocochlear or central auditory disorders</li></ul>"}, {"icon_class": "fas fa-user-xmark", "card_title": "General Health & Anatomy", "description": "<p>Contraindicated conditions include:</p><ul><li>Pregnancy</li><li>History of keloid formation</li><li>Hypersensitivity to silicone, polyurethane, stainless steel, gold, or titanium</li><li>Pre-existing conditions affecting healing</li><li>Disabling tinnitus requiring treatment</li></ul>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== General Safety — Device Care ===== #}
+    {% dnd_section %}
+      {% dnd_module "general_safety"
+        path='../modules/feature-cards'
+        label='General Safety Information'
+        anchor_id='general-safety'
+        section_title='General Safety Information'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-hand-holding-medical", "card_title": "Device Care & Handling", "description": "<p>Patients should avoid pushing or twisting the implanted parts (Sensor and Driver leads) located under the skin. Excessive manipulation can lead to skin erosion or damage to the Esteem system components, potentially requiring surgical correction.</p>"}, {"icon_class": "fas fa-plane-departure", "card_title": "Travel & Security", "description": "<p><strong>Airport Security:</strong> The Esteem may activate metal detectors. Carry your Envoy Medical identification card at all times.</p><p><strong>Interference:</strong> Metal detectors may temporarily interrupt hearing. Moving away from the source should restore normal function.</p><p><strong>Pressure Changes:</strong> You may experience temporary &ldquo;plugged&rdquo; sensations during flight.</p>"}, {"icon_class": "fas fa-user-doctor", "card_title": "Medical Procedures", "description": "<p>The Esteem device should always be turned OFF during medical therapies to prevent interference noises or damage.</p><p><strong>Electrocautery:</strong> Must be bipolar only and never used directly over the implant.</p><p><strong>Defibrillation:</strong> Turn device OFF during emergency use.</p><p><strong>Radiation/X-Ray:</strong> Image quality near the implant may be compromised.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== MRI Conditional Safety — Glass Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "mri_safety"
+        path='../modules/glass-cards'
+        label='MRI Conditional Safety'
+        anchor_id='mri-safety'
+        section_title='MRI Conditional Safety'
+        section_subtitle='The implanted components of the Esteem\u00ae System are MR Conditional. A patient with this device can be safely scanned in an MR system meeting specific conditions.'
+        columns='2'
+        cards=[{"icon_class": "fas fa-magnet", "title": "1.5 Tesla Systems", "description": "<p>Max field gradient: 1900 G/cm (19.0 T/m). Sound processor can be present during the scan.</p>"}, {"icon_class": "fas fa-magnet", "title": "3.0 Tesla Systems", "description": "<p>Max field gradient: 1100 G/cm (with processor). Max field gradient: 1900 G/cm (processor removed).</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== MRI Warnings — Two Column ===== #}
+    {% dnd_section %}
+      {% dnd_module "mri_warnings"
+        path='../modules/two-column-section'
+        label='MRI Warnings'
+        title='MRI Warnings'
+        description='<p>The Personal Programmer and other external accessories are <strong>MR Unsafe</strong> and must never enter the MRI room. Exposure to MRI scanning may reset the Sound Processor to factory settings.</p><p><em>The health and safety information provided here is for general informational purposes only and is not intended to replace professional medical advice. Please consult with your physician for detailed safety information relevant to your specific condition.</em></p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA Section ===== #}
+    {% dnd_section %}
+      {% dnd_module "cta"
+        path='../modules/cta-section'
+        label='Contact CTA'
+        title='Have Questions About Safety?'
+        subtitle='Speak with our team or consult your physician for personalized safety guidance.'
+        primary_button_text='Contact Us'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='View Implanted Options'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/implanted-options"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

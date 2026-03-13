@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Check%20Circle:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 54680431221,
+  "label" : "success-section",
+  "is_available_for_new_content" : true
+}

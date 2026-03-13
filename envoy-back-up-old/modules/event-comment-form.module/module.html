@@ -1,0 +1,29 @@
+<!-- Event Comment Section Start -->
+        <div class="event-comment-section section section-padding-bottom {{ module.section_class }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Section Title Start -->
+                        <div class="section-title text-center mb-50 {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+                            <h2 class="title fz-48 heading-color">{{ module.section_title }}</h2>
+                        </div>
+                        <!-- Section Title End -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-lg-2 col-lg-8">
+                        <div class="event-form">
+                            {% form
+                              form_to_use="{{ module.maxcoach_comment_form.form_id }}"
+                              response_response_type="{{ module.maxcoach_comment_form.response_type }}"
+                              response_message="{{ module.maxcoach_comment_form.message }}"
+                              response_redirect_id="{{ module.maxcoach_comment_form.redirect_id }}"
+                              response_redirect_url="{{module.maxcoach_comment_form.redirect_url}}"
+                              gotowebinar_webinar_key="{{ module.maxcoach_comment_form.gotowebinar_webinar_key }}"
+                            %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Event Comment Section End -->

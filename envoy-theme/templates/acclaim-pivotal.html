@@ -1,0 +1,115 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Acclaim Pivotal Study
+  screenshotPath: ../images/template-previews/acclaim-pivotal.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== Hero Section — Split Layout ===== #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_pivotal_hero"
+        path='../modules/hero-banner'
+        label='Acclaim Pivotal Study Hero'
+        badge_text='Clinical Trial \u2014 NCT06699797'
+        title='The Acclaim\u00ae Pivotal Study'
+        subtitle='<p>Envoy Medical recently received FDA review to begin a pivotal clinical study for the first-of-its-kind, fully implanted cochlear implant.</p>'
+        primary_button_text='Study Overview'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "#study-details"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Check Eligibility'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "#eligibility"}, "open_in_new_tab": false, "no_follow": false}
+        theme='light'
+        layout='split'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Fully Implanted. Naturally Designed. — Two Column ===== #}
+    {% dnd_section %}
+      {% dnd_module "innovation"
+        path='../modules/two-column-section'
+        label='Fully Implanted. Naturally Designed.'
+        title='Fully Implanted. Naturally Designed.'
+        description='<p>The Acclaim&reg; Cochlear Implant is an investigational device designed to be the first-of-its-kind <strong>fully implanted</strong> cochlear implant. Unlike traditional cochlear implants that rely on external microphones and processors, the Acclaim&reg; CI is designed to leverage the unique anatomy of the ear.</p><p>It uses an implanted sensor to capture sound vibrations directly from the ear structure, eliminating the need for any external components on the head or ear during daily use.</p><ul><li><strong>Internal Sensor:</strong> Implanted piezoelectric sensor captures natural sound vibrations.</li><li><strong>No External Gear:</strong> Designed to be invisible and unencumbered for 24/7 hearing.</li></ul>'
+        layout='image-left'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Study Details — Stats Grid ===== #}
+    {% dnd_section %}
+      {% dnd_module "study_stats"
+        path='../modules/stats-grid'
+        label='Study Information'
+        anchor_id='study-details'
+        bg_color='light'
+        stats=[{"stat_number": "2", "stat_suffix": " yrs", "stat_description": "Post-activation follow-up duration"}, {"stat_number": "7", "stat_suffix": "", "stat_description": "Recruiting Centers across AZ, CA, FL, MN, OH, OK, SC"}, {"stat_number": "$0", "stat_suffix": "", "stat_description": "Cost for qualified participants (device and procedure at no cost)"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Clinical Trial Participation — Eligibility ===== #}
+    {% dnd_section %}
+      {% dnd_module "eligibility"
+        path='../modules/feature-cards'
+        label='Clinical Trial Participation'
+        anchor_id='eligibility'
+        section_title='Clinical Trial Participation'
+        section_subtitle='We are currently enrolling participants to evaluate the safety and performance of the Acclaim CI.'
+        columns='2'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-check-circle", "card_title": "Inclusion Criteria", "description": "<ul><li>18 years of age or older</li><li>Became deaf after learning to speak (post-lingual)</li><li>Bilaterally symmetric moderate to profound hearing loss</li><li>Used hearing aids in both ears for at least 30 days</li><li>Limited benefit from appropriately fitted hearing aids</li><li>English speaking and able to follow study rules</li></ul>"}, {"icon_class": "fas fa-times-circle", "card_title": "Exclusion Criteria", "description": "<ul><li>Prior cochlear implant in either ear</li><li>Ear bone abnormalities or middle ear disease</li><li>Hearing loss for 20 or more years</li><li>Need for MRI or radiation treatment during study</li><li>Pregnancy</li></ul>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Study Information — Glass Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "study_info"
+        path='../modules/glass-cards'
+        label='Study Details'
+        section_title='Study Information'
+        columns='3'
+        cards=[{"icon_class": "fas fa-clock", "title": "Duration", "description": "<p>Approximately 2 years post-activation follow-up period.</p>"}, {"icon_class": "fas fa-map-marker-alt", "title": "Locations", "description": "<p>7 Recruiting Centers across AZ, CA, FL, MN, OH, OK, SC.</p>"}, {"icon_class": "fas fa-shield-check", "title": "IRB Approved", "description": "<p>IRB Approved February 04, 2025. Breakthrough Device Designation received in 2019.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA — Take the Next Step ===== #}
+    {% dnd_section %}
+      {% dnd_module "cta"
+        path='../modules/cta-section'
+        label='Take the Next Step CTA'
+        title='Take the Next Step'
+        subtitle='If you or a loved one are struggling with severe hearing loss and hearing aids are no longer enough, you may be a candidate for the Acclaim Pivotal Study.'
+        primary_button_text='Contact a Specialist'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='View All Implant Options'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/implanted-options"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Caution Notice — Hero as footer note ===== #}
+    {% dnd_section %}
+      {% dnd_module "caution_note"
+        path='../modules/hero-banner'
+        label='Investigational Device Caution'
+        theme='light'
+        layout='centered'
+        show_pattern=false
+        caution_text='<p>*Caution: Investigational Device. Limited by Federal (United States) law to investigational use. The Acclaim&reg; Cochlear Implant is not commercially available in the United States or elsewhere.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

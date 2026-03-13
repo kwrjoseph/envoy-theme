@@ -1,0 +1,68 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact Us
+  screenshotPath: ../images/template-previews/contact.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "contact_hero"
+        path='../modules/hero-banner'
+        label='Contact Hero'
+        badge_text='Get in Touch'
+        title='Contact Envoy Medical'
+        subtitle='<p>We are dedicated to developing innovative hearing solutions. Please use the information below or the form to get in touch with us.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CONTACT INFO CARDS ===== #}
+    {% dnd_section %}
+      {% dnd_module "contact_info_cards"
+        path='../modules/feature-cards'
+        label='Contact Information'
+        section_title=''
+        section_subtitle=''
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-headset", "card_title": "General Inquiries", "description": "<p>Phone: 877-900-EARS (3277)<br>Email: info@envoymedical.com</p>"}, {"icon_class": "fas fa-building", "card_title": "Corporate Headquarters", "description": "<p>Envoy Medical Corporation<br>4875 White Bear Parkway<br>White Bear Lake, MN 55110</p>"}, {"icon_class": "fas fa-newspaper", "card_title": "Investor &amp; Media Relations", "description": "<p><strong>Investor Relations</strong><br>Phone: 651-361-8043<br>Email: InvestorRelations@EnvoyMedical.com</p><p><strong>Media Inquiries</strong><br>Contact: Anne Donohoe<br>Email: Envoy@kcsa.com</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CONTACT FORM ===== #}
+    {% dnd_section %}
+      {% dnd_module "contact_form"
+        path='../modules/form-section'
+        label='Contact Form'
+        section_title='Send Us a Message'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "contact_cta"
+        path='../modules/cta-section'
+        label='Contact CTA'
+        title='Ready to Learn More?'
+        subtitle='Reach out to our team for questions about Esteem, Acclaim, or finding a hearing specialist near you.'
+        primary_button_text='Call 877-900-EARS'
+        secondary_button_text='Email Us'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,41 @@
+[ {
+  "id" : "68b55aa7-e989-803e-c613-517efeb3a6ec",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "863f63c4-15d0-d8f9-a7a7-44c5268c5b8f",
+  "name" : "btn_link",
+  "display_width" : null,
+  "label" : "btn-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "40db3097-e8fb-0e19-14b8-85ce4be3375f",
+  "name" : "btn_text",
+  "display_width" : null,
+  "label" : "btn-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

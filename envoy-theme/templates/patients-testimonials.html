@@ -1,0 +1,121 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Patient Testimonials
+  screenshotPath: ../images/template-previews/patients-testimonials.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== Hero Section ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonials_hero"
+        path='../modules/hero-banner'
+        label='Patient Testimonials Hero'
+        badge_text='Real Stories'
+        title='Patient Testimonials'
+        subtitle='<p>Discover how Envoy Medical&rsquo;s innovative hearing solutions have transformed the lives of people around the world.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Testimonial 1 — Jane P. ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonial_1"
+        path='../modules/quote-card'
+        label='Testimonial — Jane P.'
+        quote_text='<p>I forgot what it was like to hear the birds in the morning. After my Esteem was activated, that was the very first thing I noticed. Now I hear everything&mdash;my grandchildren whispering, rain on the roof, my favorite songs the way they were meant to sound. It gave me my life back.</p>'
+        author_name='Jane P.'
+        author_title='Esteem Recipient'
+        bg_color='white'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Testimonial 2 — Michael D. ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonial_2"
+        path='../modules/quote-card'
+        label='Testimonial — Michael D.'
+        quote_text='<p>As a surgeon, communication in the OR is everything. Hearing aids were always falling out or creating feedback. Since getting the Esteem, I don&rsquo;t even think about my hearing anymore. I just hear. It&rsquo;s invisible, it&rsquo;s always on, and it lets me focus entirely on my patients.</p>'
+        author_name='Michael D.'
+        author_title='Esteem Recipient'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Testimonial 3 — Sarah R. ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonial_3"
+        path='../modules/quote-card'
+        label='Testimonial — Sarah R.'
+        quote_text='<p>Swimming was my passion, but hearing aids meant I had to choose between the pool and being able to hear my coach. With the Esteem, I jumped in the water for the first time in years and could still hear everything when I surfaced. It was the most freeing moment of my life.</p>'
+        author_name='Sarah R.'
+        author_title='Esteem Recipient'
+        bg_color='white'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Testimonial 4 — Robert B. ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonial_4"
+        path='../modules/quote-card'
+        label='Testimonial — Robert B.'
+        quote_text='<p>Watching my wife struggle with hearing aids for over a decade was heartbreaking. She would withdraw from family gatherings and avoid phone calls. After the Esteem, she&rsquo;s a completely different person&mdash;laughing at dinner, calling the grandkids, living fully again. Our whole family is grateful.</p>'
+        author_name='Robert B.'
+        author_title='Family Member'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Testimonial 5 — Emily L. ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonial_5"
+        path='../modules/quote-card'
+        label='Testimonial — Emily L.'
+        quote_text='<p>I&rsquo;m a yoga instructor, and wearing hearing aids while teaching was always awkward&mdash;they&rsquo;d shift during poses, and the feedback was embarrassing. The Esteem changed everything. My students have no idea I have a hearing device, and I can hear every breath and every question clearly.</p>'
+        author_name='Emily L.'
+        author_title='Esteem Recipient'
+        bg_color='white'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Testimonial 6 — David T. ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonial_6"
+        path='../modules/quote-card'
+        label='Testimonial — David T.'
+        quote_text='<p>The thing nobody tells you about hearing loss is how isolating it is. I stopped going to restaurants, avoided meetings, and felt like I was disappearing. The Esteem brought me back. I hear conversations in noisy rooms, I participate in meetings with confidence, and I finally feel like myself again.</p>'
+        author_name='David T.'
+        author_title='Esteem Recipient'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "testimonials_cta"
+        path='../modules/cta-section'
+        label='Share Your Story CTA'
+        title='Share Your Story'
+        subtitle='Are you an Esteem recipient? We would love to hear about your experience and how the Esteem has impacted your life.'
+        primary_button_text='Contact Us'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

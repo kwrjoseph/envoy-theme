@@ -1,0 +1,207 @@
+
+/* 12.01 About CSS */
+.about-content {
+  position: relative;
+  z-index: 99;
+  max-width: 420px;
+}
+
+.about-content.max-width-470 {
+  max-width: 470px;
+}
+
+.about-content.max-width-470 p {
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+.about-content .sub-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2;
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.about-content .title {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 15px;
+  color: var(--secondary-color);;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-content .title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-content .title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+.about-content .title span {
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.about-content a {
+  font-size: 15px;
+}
+
+.about-image {
+  position: relative;
+  z-index: 9;
+}
+
+.about-image .about-image-one img {
+  border-radius: 5px;
+}
+
+.about-image .about-image-two {
+  position: absolute;
+  top: -90px;
+  right: -73px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .about-image .about-image-two {
+    right: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .about-image .about-image-two {
+    right: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-image .about-image-two {
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-image .about-image-two {
+    right: 0px;
+  }
+}
+
+.about-image .about-image-two img {
+  border-radius: 5px;
+}
+
+.about-image .shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.about-image .shape-1 {
+  z-index: 11;
+  top: -51px;
+  left: -107px;
+}
+
+.about-image .shape-1 span {
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  border: 7px solid #ecc5ab;
+  border-radius: 50%;
+}
+
+.about-image .shape-2 {
+  left: -40px;
+  bottom: -26px;
+  z-index: -1;
+}
+
+.about-image .shape-3 {
+  bottom: -40px;
+  right: 10px;
+}
+
+.about-image .shape-4 {
+  top: -27px;
+  left: 360px;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-image .shape {
+    position: absolute;
+    z-index: -1;
+  }
+  .about-image .shape-1 {
+    z-index: -1;
+    top: -51px;
+    left: 0px;
+  }
+  .about-image .shape-2 {
+    max-width: 80px;
+    width: 80px;
+    left: 0;
+  }
+  .about-image .shape-3 {
+    max-width: 80px;
+    width: 80px;
+  }
+  .about-image .shape-4 {
+    max-width: 80px;
+    width: 80px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-image .shape {
+    position: absolute;
+    z-index: -1;
+  }
+  .about-image .shape-1 {
+    z-index: -1;
+    top: -51px;
+    left: 0px;
+  }
+  .about-image .shape-1 span {
+    width: 45px;
+    height: 45px;
+  }
+  .about-image .shape-2 {
+    max-width: 80px;
+    width: 80px;
+    left: 0;
+  }
+  .about-image .shape-3 {
+    max-width: 80px;
+    width: 80px;
+  }
+  .about-image .shape-4 {
+    max-width: 80px;
+    width: 80px;
+  }
+}

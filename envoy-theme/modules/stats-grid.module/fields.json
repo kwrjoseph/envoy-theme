@@ -1,0 +1,68 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'stats' for #stats links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "name": "bg_color",
+    "label": "Background Color",
+    "type": "choice",
+    "required": false,
+    "display": "select",
+    "choices": [
+      [
+        "white",
+        "White"
+      ],
+      [
+        "light",
+        "Light Gray"
+      ],
+      [
+        "navy",
+        "Navy (Dark)"
+      ]
+    ],
+    "default": "white"
+  },
+  {
+    "name": "stats",
+    "label": "Stats",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 12,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "stat_number",
+        "label": "Stat Number",
+        "type": "text",
+        "required": false,
+        "default": "100+"
+      },
+      {
+        "name": "stat_suffix",
+        "label": "Stat Suffix",
+        "type": "text",
+        "required": false,
+        "default": "",
+        "help_text": "Optional suffix displayed after the number (e.g. '%', '+', 'M')."
+      },
+      {
+        "name": "stat_description",
+        "label": "Stat Description",
+        "type": "text",
+        "required": false,
+        "default": "Stat description"
+      }
+    ],
+    "default": []
+  }
+]

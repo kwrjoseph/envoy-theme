@@ -1,0 +1,18 @@
+
+  {% set href = module.ht_login_link.url.href %}
+  {% if module.ht_login_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+  {% endif %}
+  {% set rel = [] %}
+  {% if module.ht_login_link.no_follow %}
+  {% do rel.append("nofollow") %}
+  {% endif %}
+  {% if module.ht_login_link.open_in_new_tab %}
+  {% do rel.append("noopener") %}
+  {% endif %}
+  <a href="{{ href }}"
+     {% if module.ht_login_link.open_in_new_tab %}target="_blank"{% endif %}
+     {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+     >
+    {{ module.ht_login_icon }}
+  </a>

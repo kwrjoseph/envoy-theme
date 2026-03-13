@@ -1,0 +1,48 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'contact-form' for #contact-form links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "type": "richtext",
+    "default": ""
+  },
+  {
+    "name": "form",
+    "label": "HubSpot Form",
+    "type": "form",
+    "default": {
+      "response_type": "inline",
+      "message": "Thanks for submitting the form."
+    }
+  },
+  {
+    "name": "privacy_text",
+    "label": "Privacy Disclaimer Text",
+    "type": "richtext",
+    "default": "<p>By submitting this form, you agree to our <a href=\"/privacy-policy\">Privacy Policy</a>. Your information is secure and will not be shared with unauthorized third parties.</p>"
+  },
+  {
+    "name": "bg_color",
+    "label": "Background Color",
+    "type": "choice",
+    "display": "select",
+    "choices": [
+      ["white", "White"],
+      ["light", "Light Gray"]
+    ],
+    "default": "white"
+  }
+]

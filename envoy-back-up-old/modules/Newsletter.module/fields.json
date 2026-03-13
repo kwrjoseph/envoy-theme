@@ -1,0 +1,123 @@
+[ {
+  "id" : "b1a65fd7-0a12-88a4-b6bf-ba08fcea9fae",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "93624dc6-37c9-316e-c352-99d9867dcc07",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "292944ba-72e5-ddf9-319d-a180e0edb8f0",
+  "name" : "section_bg_image",
+  "display_width" : null,
+  "label" : "Section BG Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "21c1c453-6622-8678-cab1-41253e014301",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "Section Title Class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "e911ea0d-9b5f-7bb4-0924-7f123ee230a2",
+  "name" : "newsletter_title",
+  "display_width" : null,
+  "label" : "newsletter-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Sign up for our <span>Newsletters</span>"
+}, {
+  "id" : "309521f5-f375-129c-5851-50d39da404fa",
+  "name" : "newsletter_desc",
+  "display_width" : null,
+  "label" : "newsletter-desc",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Enter your email address to register to our newsletter subscription <br class=\"d-none d-md-block\">delivered on a regular basis! "
+}, {
+  "id" : "ef6ae26a-1183-0ad6-8c39-2c50679d1e89",
+  "name" : "newsletter_from",
+  "display_width" : null,
+  "label" : "newsletter-from",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "81e997b2-4e0e-494c-8dba-c8d29687eb6d",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "9f1ab724-c72a-cc00-cac9-04f434ce5bac",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "b821b756-5724-e128-950d-9952ee1c30ea",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+} ]

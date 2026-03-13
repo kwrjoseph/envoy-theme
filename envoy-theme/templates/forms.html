@@ -1,0 +1,66 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Forms & Resources
+  screenshotPath: ../images/template-previews/forms.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Forms & Resources ── #}
+    {% dnd_section %}
+      {% dnd_module "forms_hero"
+        path='../modules/hero-banner'
+        label='Forms Hero'
+        badge_text='Resources'
+        title='Forms &amp; Information'
+        subtitle='<p>Access important patient forms, insurance verification documents, and medical provider resources. Submit your information securely below.</p>'
+        theme='light'
+        layout='left'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Patient Intake Form (HubSpot Form) ── #}
+    {% dnd_section %}
+      {% dnd_module "forms_intake"
+        path='../modules/form-section'
+        label='Patient Intake Form'
+        section_title='Start Your Journey'
+        section_subtitle='<p>Please fill out the form below to request more information or schedule a consultation with a provider near you.</p>'
+        bg_color='white'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Downloadable Resources ── #}
+    {% dnd_section %}
+      {% dnd_module "forms_downloads"
+        path='../modules/resource-download-cards'
+        label='Downloadable Packets'
+        section_title='Downloadable Packets'
+        resources=[{"icon_class": "fas fa-file-pdf", "title": "New Patient Guide", "file_size": "PDF, 2.4 MB", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": true, "no_follow": false}}, {"icon_class": "fas fa-file-medical", "title": "Insurance Info", "file_size": "PDF, 1.1 MB", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": true, "no_follow": false}}, {"icon_class": "fas fa-clipboard-list", "title": "Pre-Visit Checklist", "file_size": "PDF, 0.8 MB", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": true, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Support CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "forms_cta"
+        path='../modules/cta-section'
+        label='Forms Support CTA'
+        title='Need Assistance?'
+        subtitle='Our patient support team is available to help you complete these forms or answer any questions about our hearing solutions.'
+        primary_button_text='Contact Support'
+        primary_button_link='/contact'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

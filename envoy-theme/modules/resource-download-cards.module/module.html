@@ -1,0 +1,104 @@
+{# Resource Download Cards Module #}
+{% require_css %}
+<style>
+  .feature-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 40px -15px rgba(0, 45, 116, 0.08);
+    border-color: var(--brand-navy);
+  }
+  .icon-box {
+    width: 56px;
+    height: 56px;
+    background-color: rgba(0, 45, 116, 0.05);
+    color: var(--brand-navy);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .resource-btn-primary {
+    display: block;
+    width: 100%;
+    background-color: var(--brand-navy);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .resource-btn-primary:hover {
+    background-color: #001f52;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -10px rgba(0, 45, 116, 0.3);
+  }
+  .resource-btn-secondary {
+    display: block;
+    width: 100%;
+    background: white;
+    border: 2px solid var(--brand-navy);
+    color: var(--brand-navy);
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .resource-btn-secondary:hover {
+    background-color: #eff6ff;
+  }
+</style>
+{% end_require_css %}
+
+<section{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %} class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    {% if module.section_title %}
+      <div class="text-center mb-16">
+        <div style="height: 4px; width: 48px; background-color: var(--brand-navy); border-radius: 2px; margin-bottom: 1.5rem;" class="mx-auto"></div>
+        <h3 class="text-3xl lg:text-5xl font-black text-slate-900 tracking-tight">{{ module.section_title }}</h3>
+      </div>
+    {% endif %}
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {% for resource in module.resources %}
+        <div class="feature-card items-center text-center">
+          <div class="icon-box mx-auto">
+            <i class="{{ resource.icon_class }}"></i>
+          </div>
+          {% if resource.resource_title %}
+            <h4 class="text-xl font-bold text-slate-900 mb-4">{{ resource.resource_title }}</h4>
+          {% endif %}
+          {% if resource.description %}
+            <p class="text-sm mb-8 flex-grow text-slate-500">{{ resource.description }}</p>
+          {% endif %}
+          <div class="w-full space-y-3 mt-auto">
+            {% if resource.primary_button_text and resource.primary_button_link.url.href %}
+              <a href="{{ resource.primary_button_link.url.href }}"{% if resource.primary_button_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %} class="resource-btn-primary">
+                {{ resource.primary_button_text }}
+              </a>
+            {% endif %}
+            {% if resource.secondary_button_text and resource.secondary_button_link.url.href %}
+              <a href="{{ resource.secondary_button_link.url.href }}"{% if resource.secondary_button_link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %} class="resource-btn-secondary">
+                {{ resource.secondary_button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

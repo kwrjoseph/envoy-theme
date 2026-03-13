@@ -1,0 +1,57 @@
+<!--
+  templateType: "global_partial"
+  label: "Header no navigation"
+  isAvailableForNewContent: false
+-->
+
+<!-- Header Section Start -->
+<div class="header-section header-fluid sticky-header section">
+  <div class="header-inner">
+      <div class="container position-relative">
+          <div class="row justify-content-between align-items-center">
+
+              <!-- Header Logo Start -->
+              <div class="col-xl-3 col-auto">
+                  <div class="header-logo">
+                    {% module 'site_logo' path='@hubspot/logo', label='Logo',
+                        img={ 'alt': 'Maxcoach Logo', "size_type": "auto", 'src': get_asset_url('../../images/logo/dark-logo.png') }
+                    %}
+                  </div>
+              </div>
+              <!-- Header Logo End -->
+
+              <!-- Header Right Start -->
+              <div class="col-xl-3 col-auto">
+                  <div class="header-right">
+                      <div class="inner">
+
+                        <div class="language language-black d-lg-block d-none">
+                          {% if content.translated_content.values()|selectattr('published')|length || is_listing_view && group.translations %}
+                            <div class="header__language-switcher header--element">
+                                {% module 'language-switcher' path='@hubspot/language_switcher',
+                                  label='Language switcher',
+                                  display_mode='localized'
+                                %}
+                                <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
+                            </div>
+                          {% endif %}
+                     </div>
+
+                          <!-- Header Search Start -->
+                          <div class="header-btn">
+                            {% module "module_16327132073104" path="../../modules/button", label="button"
+                            btn_link={ 'url': { 'type': 'EXTERNAL', 'href': '/'}, 'open_in_new_tab': false, 'no_follow': false },
+                            btn_text = 'Contact Me'
+                            %}
+                          </div>
+                          <!-- Header Search End -->
+                      </div>
+                  </div>
+              </div>
+              <!-- Header Right End -->
+
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Header Section End -->

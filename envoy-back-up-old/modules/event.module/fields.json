@@ -1,0 +1,529 @@
+[ {
+  "id" : "d4a1b196-e3af-da97-5ef6-f254a467efb4",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ], [ "layout-four", "layout-four" ] ],
+  "type" : "choice"
+}, {
+  "id" : "01d53d5e-1271-75ad-534b-3ad3738b8abb",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section_class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "4f576434-c115-d37d-aebf-549ae79f9bd9",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "Animation Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "1dd69793-12ca-76d3-899b-58556f80189c",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "Section Title Class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "9c2bf9a2-ed7e-427f-3640-b60fffe5d7a0",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "Section Subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Stimulated to take part in?"
+}, {
+  "id" : "10ff7120-3810-e7ad-dd33-c333b9d8711c",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "15c34589-9326-6fca-fffa-7bee71177a17",
+  "name" : "event_item",
+  "display_width" : null,
+  "label" : "event-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "6ea69928-2952-3ebb-4230-23ad703177f8",
+    "name" : "event_animation_name",
+    "display_width" : null,
+    "label" : "event-animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "f283ade8-9345-9fc8-217f-3fae974a7f10",
+    "name" : "event_link",
+    "display_width" : null,
+    "label" : "event-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "99f592ab-6ab3-cc27-79e4-612bd142b20c",
+    "name" : "event_image",
+    "display_width" : null,
+    "label" : "event-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "cfd8113c-f307-4b5b-1ff0-8f7bf1a0ef80",
+    "name" : "event_btn_text",
+    "display_width" : null,
+    "label" : "event-btn-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Get ticket"
+  }, {
+    "id" : "921dee67-a1cc-8e32-3d82-fcd526f16bfe",
+    "name" : "event_date",
+    "display_width" : null,
+    "label" : "event-date",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Nov 22, 2020"
+  }, {
+    "id" : "3d2a2371-4666-4ebd-931d-39b3600b0727",
+    "name" : "event_title",
+    "display_width" : null,
+    "label" : "event-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Storytelling Workshop"
+  }, {
+    "id" : "6a9e7618-7770-b744-ca4f-e5c251c1aab8",
+    "name" : "meta_item",
+    "display_width" : null,
+    "label" : "meta-item",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "fe2d90c8-9fc3-87c8-4f96-8deaa44f47ad",
+      "name" : "meta_icon",
+      "display_width" : null,
+      "label" : "meta-icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    }, {
+      "id" : "f1eb0ff0-0499-7aef-21f6-5b856a9c3b07",
+      "name" : "meta_text",
+      "display_width" : null,
+      "label" : "meta-text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Texas, US"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "meta_text" : "Texas, US"
+    }
+  }, {
+    "id" : "61054f00-bb6d-4dc3-fef0-99a01a76db00",
+    "name" : "event_icon",
+    "display_width" : null,
+    "label" : "Event Icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-map-marker-alt\"></i>"
+  }, {
+    "id" : "1e795136-0587-25fe-eefa-8e50ec073b77",
+    "name" : "event_location",
+    "display_width" : null,
+    "label" : "Event Location",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Texas, US"
+  }, {
+    "id" : "035e5c50-b277-8f71-9a85-85bfb722f1e5",
+    "name" : "event_date_day",
+    "display_width" : null,
+    "label" : "Event Date Day",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "22"
+  }, {
+    "id" : "cdb6832b-7884-0d21-f7ec-8bec4e675723",
+    "name" : "event_date_month",
+    "display_width" : null,
+    "label" : "Event Date Month",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "6c3c327b-d59e-d328-07da-bdb08dd29032",
+    "name" : "btn_link",
+    "display_width" : null,
+    "label" : "Btn Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "b2520a84-216a-ad29-46d5-ad36f2d49c38",
+    "name" : "btn_link_text",
+    "display_width" : null,
+    "label" : "Btn Link Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Get ticket"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "event_animation_name" : "fade-up",
+    "event_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "event_btn_text" : "Get ticket",
+    "event_date" : "Nov 22, 2020",
+    "event_title" : "Storytelling Workshop",
+    "meta_item" : {
+      "meta_text" : "Texas, US"
+    },
+    "event_icon" : "<i class=\"far fa-map-marker-alt\"></i>",
+    "event_location" : "Texas, US",
+    "event_date_day" : "22",
+    "btn_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "btn_link_text" : "Get ticket"
+  }
+}, {
+  "id" : "35074371-ead6-890b-e301-a6699750e3aa",
+  "name" : "all_event_link",
+  "display_width" : null,
+  "label" : "All Event Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "cbec200a-ec1d-d002-0fa6-4c796610bca6",
+  "name" : "all_event_link_text",
+  "display_width" : null,
+  "label" : "All Event Link Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "We love to see you at our events.​​ <mark>Check out events <i class=\"far fa-long-arrow-right\"></i></mark>"
+}, {
+  "id" : "e12314ba-5ec4-44da-73ad-1eb04184bb38",
+  "name" : "zoom_item",
+  "display_width" : null,
+  "label" : "Zoom Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "c91ef245-1e9b-0961-991e-084b7e154972",
+    "name" : "zoom_animation_name",
+    "display_width" : null,
+    "label" : "Zoom Animation Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "b5d42483-16a6-06b4-8405-2deeabcda919",
+    "name" : "zoom_link",
+    "display_width" : null,
+    "label" : "Zoom Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "411a9ca0-2842-8720-78c7-d18a1efb25fb",
+    "name" : "zoom_thumb",
+    "display_width" : null,
+    "label" : "Zoom Thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "2d8b4b37-c98a-ee1a-485d-c008d2415ce4",
+    "name" : "zoom_title",
+    "display_width" : null,
+    "label" : "Zoom Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Marketing Committee Meeting"
+  }, {
+    "id" : "fe89aaae-38b1-f184-e98f-07a6fff040b0",
+    "name" : "meeting_id_text",
+    "display_width" : null,
+    "label" : "Meeting Id Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Meeting ID:"
+  }, {
+    "id" : "f881d934-f776-8f58-44f5-1278de0409fd",
+    "name" : "meeting_id_num",
+    "display_width" : null,
+    "label" : "Meeting Id Num",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "91169814481"
+  }, {
+    "id" : "92e6377a-c209-9ce7-095c-e9e1a753dd74",
+    "name" : "meta_item",
+    "display_width" : null,
+    "label" : "Meta Item",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "fe508bc9-b0a5-8cd2-d394-f2d9d35f6d50",
+      "name" : "meta_icon",
+      "display_width" : null,
+      "label" : "Meta Icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<i class=\"far fa-calendar\"></i>"
+    }, {
+      "id" : "88e77adf-201c-aef6-5c84-1251e664ff42",
+      "name" : "meta_text",
+      "display_width" : null,
+      "label" : "Meta Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "July 24, 2020 <span class=\"time\">2:30 PM</span>"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "meta_icon" : "<i class=\"far fa-calendar\"></i>",
+      "meta_text" : "July 24, 2020 <span class=\"time\">2:30 PM</span>"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "zoom_animation_name" : "fade-up",
+    "zoom_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "zoom_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "zoom_title" : "Marketing Committee Meeting",
+    "meeting_id_text" : "Meeting ID:",
+    "meeting_id_num" : "91169814481",
+    "meta_item" : {
+      "meta_icon" : "<i class=\"far fa-calendar\"></i>",
+      "meta_text" : "July 24, 2020 <span class=\"time\">2:30 PM</span>"
+    }
+  }
+} ]

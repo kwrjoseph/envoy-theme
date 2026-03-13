@@ -1,0 +1,170 @@
+{% if module.layout == 'layout-one' %}
+<!-- Blog Section Start -->
+<div class="blog-section section section-padding {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title">{{ module.sub_title }}</span>
+      <h2 class="title fz-48">{{ module.title }}</h2>
+    </div>
+    <!-- Section Title End -->
+
+    <!-- Blog Wrapper Start -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+
+      {% set posts = blog_recent_posts('default',  module.number_blog_to_show ) %}
+      {% set posts = blog_recent_posts(module.maxcoach_blog, 3) %}
+      {% for post in posts %}
+      <!-- Blog Start -->
+      <div class="col max-mb-30" data-aos="fade-up">
+        <div class="blog">
+          <div class="thumbnail">
+            <a href="{{post.absolute_url}}" class="image"><img src="{{ post.post_list_summary_featured_image }}" alt="Blog Image"></a>
+          </div>
+          <div class="info">
+            {% if post.tag_list %}
+            {% for tag in post.tag_list[0] %}
+            <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="category">{{ tag.name }}</a>
+            {% endfor %}
+            {% endif %}
+            <h3 class="title"><a href="{{post.absolute_url}}">{{ post.name }}</a></h3>
+            <ul class="meta">
+              <li><i class="far fa-user"></i>{{ post.blog_post_author.display_name }}</li>
+              <li><i class="far fa-calendar"></i>{{post.publish_date|datetimeformat('%B %e %Y') }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Blog End -->
+      {% endfor %}
+
+    </div>
+    <!-- Blog Wrapper End -->
+  </div>
+</div>
+<!-- Blog Section End -->
+{% elif module.layout == 'layout-two' %}
+<!-- Blog Section Start -->
+<div class="section section-padding-bottom fix {{ module.section_class }}">
+  <div class="container">
+    <div class="row max-mb-n50">
+
+      <div class="col-lg-8 col-12 offset-lg-2">
+        <!-- Blog Wrapper Start -->
+        <div class="row row-cols-1 g-0">
+          {% set posts = blog_recent_posts('default',  module.number_blog_to_show ) %}
+          {% set posts = blog_recent_posts(module.maxcoach_blog, 3) %} 
+          {% for post in posts %}  
+          <!-- Blog Start -->
+          <div class="blog-3 col" data-aos="fade-up">
+            <div class="thumbnail">
+              <a href="{{post.absolute_url}}" class="image"><img src="{{ post.post_list_summary_featured_image }}" alt="Blog Image"></a>
+            </div>
+            <div class="info">
+              {% if post.tag_list %}
+              {% for tag in post.tag_list[0] %}
+              <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="category">{{ tag.name }}</a>
+              {% endfor %}
+              {% endif %}
+              <h3 class="title"><a href="{{post.absolute_url}}">{{ post.name }}</a></h3>
+              <ul class="meta">
+                <li><i class="far fa-user"></i>{{ post.blog_post_author.display_name }}</li>
+                <li><i class="far fa-calendar"></i>{{post.publish_date|datetimeformat('%B %e %Y') }}</li>
+              </ul>
+              <div class="desc">
+                <p>{{ post.post_list_content|striptags|truncate(130) }}</p>
+              </div>
+              <div class="row justify-content-between max-mt-30">
+                <div class="col-auto">
+                  <a href="{{post.absolute_url}}" class="btn btn-primary btn-hover-secondary">Read More</a>
+                </div>
+                <div class="col-auto">
+                  <div class="post-share">
+                    <span class="label">Share this post</span>
+                    <div class="media">
+                      <span class="icon"><i class="fas fa-share-alt"></i></span>
+                      <div class="list">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tumblr.com/"><i class="fab fa-tumblr-square"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Blog End -->
+          {% endfor %}
+
+        </div>
+        <!-- Blog Wrapper End -->
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Blog Section End -->
+{% else %}
+<!-- Blog Section Start -->
+<div class="section section-padding-bottom fix {{ module.section_class }}">
+  <div class="container">
+
+    <!-- Blog Wrapper Start -->
+    <div class="row row-cols-1 g-0">
+      {% set posts = blog_recent_posts('default',  module.number_blog_to_show ) %}
+      {% set posts = blog_recent_posts(module.maxcoach_blog, 9) %} 
+      {% for post in posts %}
+      <!-- Blog Start -->
+      <div class="blog-3 col" data-aos="fade-up">
+        <div class="row row-cols-lg-2 row-cols-1 max-mb-n30">
+          <div class="col max-mb-30">
+            <div class="thumbnail">
+              <a href="{{post.absolute_url}}" class="image"><img src="{{ post.post_list_summary_featured_image }}" alt="Blog Image"></a>
+            </div>
+          </div>
+          <div class="col max-mb-30">
+            <div class="info pt-0">
+              <h3 class="title"><a href="{{post.absolute_url}}">{{ post.name }}</a></h3>
+              <ul class="meta">
+                <li><i class="far fa-user"></i> {{ post.blog_post_author.display_name }}</li>
+                <li><i class="far fa-calendar"></i>{{post.publish_date|datetimeformat('%B %e %Y') }}</li>
+              </ul>
+              <div class="desc">
+                <p>{{ post.post_list_content|striptags|truncate(130) }}</p>
+              </div>
+              <div class="row justify-content-between max-mt-30">
+                <div class="col-auto">
+                  <a href="{{post.absolute_url}}" class="btn btn-primary btn-hover-secondary">Read More</a>
+                </div>
+                <div class="col-auto">
+                  <div class="post-share">
+                    <span class="label">Share this post</span>
+                    <div class="media">
+                      <span class="icon"><i class="fas fa-share-alt"></i></span>
+                      <div class="list">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.tumblr.com/"><i class="fab fa-tumblr-square"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Blog End -->
+      {% endfor %}
+
+    </div>
+    <!-- Blog Wrapper End -->
+
+
+  </div>
+</div>
+<!-- Blog Section End -->
+{% endif %}

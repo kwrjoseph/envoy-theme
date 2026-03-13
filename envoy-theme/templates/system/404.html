@@ -1,0 +1,24 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: 404 Error Page
+  screenshotPath: ../images/template-previews/404.png
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {% dnd_section %}
+      {% dnd_module "error_hero"
+        path='@hubspot/rich_text'
+        label='404 Error Content'
+        html='<div class="min-h-[60vh] flex items-center justify-center relative"><div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none"><span class="text-[12rem] font-black text-[#f0f7ff] leading-none tracking-tighter">404</span></div><div class="text-center relative z-10 px-6"><h1 class="text-4xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">Page Not Found</h1><p class="text-xl text-slate-500 max-w-lg mx-auto leading-relaxed mb-8">We couldn&rsquo;t listen to that request. The page you are looking for might have been removed or is temporarily unavailable.</p><a href="/" class="inline-block bg-[#002d74] text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-[#001f52] transition-all hover:-translate-y-0.5 hover:shadow-lg">Return Home</a></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

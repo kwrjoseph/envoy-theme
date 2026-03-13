@@ -1,0 +1,174 @@
+[ {
+  "id" : "68ee7fa0-0122-0765-cb91-9c3331052a77",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "e4b9759d-f9ed-198b-8a2a-9c9eaefe907b",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "8d1ead53-aa86-5bd4-ad2f-3ccdcf2ef246",
+  "name" : "about_subtitle",
+  "display_width" : null,
+  "label" : "about-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get to know about <strong>MaxCoach</strong>"
+}, {
+  "id" : "2247086d-de11-5649-0511-b873a72b61cf",
+  "name" : "about_title",
+  "display_width" : null,
+  "label" : "about-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Learn about our <span>Work Culture</span> at MaxCoach"
+}, {
+  "id" : "4064b9a0-0aa4-dd90-e14f-e7d0e4538ec1",
+  "name" : "about_desc_text",
+  "display_width" : null,
+  "label" : "about-desc-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "28c36c7e-d9b6-c3db-ab51-a55c461ad423",
+  "name" : "about_link",
+  "display_width" : null,
+  "label" : "about-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "07367f8e-784f-9774-5066-725173f2715b",
+  "name" : "about_link_text",
+  "display_width" : null,
+  "label" : "about-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Have questions?​ <mark>Get Free Form <i class=\"far fa-long-arrow-right\"></i></mark>"
+}, {
+  "id" : "08095b9d-70ee-f77f-227c-cc36cba5a7d4",
+  "name" : "about_image_one",
+  "display_width" : null,
+  "label" : "about-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "f5dec9fa-728c-2545-5f73-8c4c6f4e4ae7",
+  "name" : "about_image_two",
+  "display_width" : null,
+  "label" : "about-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "c0317065-c7c8-bc6e-e239-5604f3d03e0f",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "062a283b-1a7c-0c1b-6c39-4ab5a9b37a5d",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "22ab4026-b0f2-a05d-0278-e25fe4af0870",
+  "name" : "shape_image_three",
+  "display_width" : null,
+  "label" : "shape-image-three",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+} ]

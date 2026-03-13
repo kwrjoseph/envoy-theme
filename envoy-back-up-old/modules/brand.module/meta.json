@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "true",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 53136596114,
+  "label" : "brand",
+  "is_available_for_new_content" : true
+}

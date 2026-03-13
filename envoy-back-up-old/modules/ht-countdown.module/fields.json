@@ -1,0 +1,24 @@
+[ {
+  "id" : "48f42ec0-ce4e-996b-3ba1-07314870f10e",
+  "name" : "ht_icon",
+  "display_width" : null,
+  "label" : "ht-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"far fa-clock\"></i>"
+}, {
+  "id" : "5d677e76-2ac9-85c1-5d58-0156d1ddfbad",
+  "name" : "countdown_date",
+  "display_width" : null,
+  "label" : "countdown-date",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

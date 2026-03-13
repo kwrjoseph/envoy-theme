@@ -1,0 +1,134 @@
+.teacher-quote-wrapper {
+  padding-bottom: 50px;
+  padding-left: 200px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .teacher-quote-wrapper {
+    padding-left: 135px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .teacher-quote-wrapper {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+.teacher-quote {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FAF8F6;
+}
+
+.teacher-quote .image {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 270px;
+  margin-left: -135px;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.teacher-quote .content {
+  padding: 70px 30px 70px 50px;
+}
+
+.teacher-quote .content .section-title {
+  margin-bottom: 25px;
+}
+
+.teacher-quote .content .quote {
+  width: 64.5%;
+  padding: 0 15px;
+}
+
+.teacher-quote .content .quote p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.teacher-quote .content .experience {
+  width: 35.406%;
+  padding: 0 15px;
+}
+
+.teacher-quote .content .experience .amount {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.3;
+  display: block;
+  color: var(--primary-color);
+}
+
+.teacher-quote .content .experience .amount span {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.teacher-quote .content .experience .title {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary-color);;
+}
+
+.teacher-quote .content .experience .link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8C89A2;
+}
+
+.teacher-quote .content .experience .link:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .teacher-quote .content .quote p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (max-width: 767px) {
+  .teacher-quote .image {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .teacher-quote .content .quote p {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .teacher-quote .content {
+    padding: 40px;
+  }
+  .teacher-quote .content .quote {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .teacher-quote .content .experience {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .teacher-quote .content {
+    padding: 30px;
+  }
+  .teacher-quote .content .quote p {
+    font-size: 22px;
+  }
+}

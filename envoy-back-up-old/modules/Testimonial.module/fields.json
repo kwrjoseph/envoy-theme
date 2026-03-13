@@ -1,0 +1,289 @@
+[ {
+  "id" : "3bc8f51a-372b-98fb-bc13-ce4b46e84a45",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ], [ "layout-four", "layout-four" ], [ "layout-five", "layout-five" ] ],
+  "type" : "choice"
+}, {
+  "id" : "741334e0-094a-8268-3107-e796eb843391",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "cf19fdcf-8c6a-cbd9-3941-fac7d95bb99a",
+  "name" : "section_bg_image",
+  "display_width" : null,
+  "label" : "Section BG Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "54841cad-7b9c-d115-110f-a70a6e644e78",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "5a3a1f07-9145-afa7-d094-81706005a44f",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "29b27951-204d-86f0-5a53-c0fe5f0c1247",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "661dd018-aed8-6a2c-b1ec-c1be7040f4ca",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "97e5c1c1-8d46-01fc-6f21-b5a2160000e2",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our <span> top learners'</span> verbatim"
+}, {
+  "id" : "8d2a7381-aabe-db11-2f8a-b287b4872605",
+  "name" : "testimonial_content_desc",
+  "display_width" : null,
+  "label" : "Testimonial Content Desc",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Seeking for verbals of our service quality? Find them here. Everything is transparent and straightforward for your sense of jusitifcation. "
+}, {
+  "id" : "54f321ce-eaf6-efd8-5a4c-38a5bb674ac7",
+  "name" : "testimonial_item",
+  "display_width" : null,
+  "label" : "testimonial-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "134c9f7a-f268-b84e-0a5b-55b48d2fdc16",
+    "name" : "testimonial_title",
+    "display_width" : null,
+    "label" : "testimonial-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "High level of efficiency and scientific teaching methods"
+  }, {
+    "id" : "8f2333a0-23bc-f60e-9412-6587503b0a57",
+    "name" : "testimonial_excerpt",
+    "display_width" : null,
+    "label" : "testimonial-excerpt",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners."
+  }, {
+    "id" : "06b39626-ed89-e81e-2509-80c3297ba4a4",
+    "name" : "author_thumb",
+    "display_width" : null,
+    "label" : "author-thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "87d91dcd-f03f-c4bc-aefa-583a6622e7b6",
+    "name" : "author_name",
+    "display_width" : null,
+    "label" : "author-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Florence Themes"
+  }, {
+    "id" : "32e62f12-1147-8efb-775d-7e3451f350fd",
+    "name" : "author_position",
+    "display_width" : null,
+    "label" : "author-position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "/ Multimedia Admin"
+  }, {
+    "id" : "30c84b56-ed7c-c588-8008-3ea9b709a99c",
+    "name" : "testimonial_class",
+    "display_width" : null,
+    "label" : "Testimonial Class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "5af7afd2-65ec-d65c-373b-a9d2d17f1217",
+    "name" : "testimonial_bg_color",
+    "display_width" : null,
+    "label" : "Testimonial BG Color",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "e42627db-7de2-b1b0-80a9-fff68918985a",
+    "name" : "author_rating",
+    "display_width" : null,
+    "label" : "Author Rating",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "3bdf21e8-1272-c145-d1e2-beb84955e650",
+      "name" : "testimonial_author_rating",
+      "display_width" : null,
+      "label" : "Testimonial Author Rating",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<span class=\"fa fa-star\"></span>"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "testimonial_author_rating" : "<span class=\"fa fa-star\"></span>"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "testimonial_title" : "High level of efficiency and scientific teaching methods",
+    "testimonial_excerpt" : "I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.",
+    "author_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "author_name" : "Florence Themes",
+    "author_position" : "/ Multimedia Admin",
+    "author_rating" : {
+      "testimonial_author_rating" : "<span class=\"fa fa-star\"></span>"
+    }
+  }
+}, {
+  "id" : "4e87d848-8444-c211-8a1c-c4ac4ac6de0b",
+  "name" : "testimonial_link",
+  "display_width" : null,
+  "label" : "Testimonial Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "c9e4c191-7deb-a246-4477-520bf1b0df3b",
+  "name" : "testimonial_link_text",
+  "display_width" : null,
+  "label" : "Testimonial Link Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Have questions?​ <mark>Get Free Form <i class=\"far fa-long-arrow-right\"></i></mark>"
+} ]

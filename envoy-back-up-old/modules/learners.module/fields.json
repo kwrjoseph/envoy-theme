@@ -1,0 +1,184 @@
+[ {
+  "id" : "2a9a98ce-93df-b91d-ffb5-f2bb603f0da9",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "90d02382-d7e1-038a-ebf6-7f153046f939",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "60f4f4cd-5892-d44a-58eb-ed7480cd54eb",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "bd1c8935-5e57-7cf1-be07-36c5097c522d",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "467941fe-bb24-c633-a443-878bb69bd73d",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Access <span>Smart Tutoring</span> Program For Benefits."
+}, {
+  "id" : "82c76b1d-fda8-fe78-ec75-ea3a2c793426",
+  "name" : "feature_item_group",
+  "display_width" : null,
+  "label" : "feature-item-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "66c8c4e7-9cba-11a4-1533-fe131b84b69b",
+    "name" : "feature_animation_name",
+    "display_width" : null,
+    "label" : "feature-animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "e07e4a6b-3bad-368a-2ded-15fa86558de2",
+    "name" : "feature_link",
+    "display_width" : null,
+    "label" : "feature-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "10546894-4c69-b3e3-7f8c-a3d3ed1af002",
+    "name" : "feature_icon",
+    "display_width" : null,
+    "label" : "feature-icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "af9637c7-6455-5cdd-a082-5c76dbef1a5f",
+    "name" : "feature_title",
+    "display_width" : null,
+    "label" : "feature-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "2ba28d01-6e1c-ab4e-8054-e73fe0bc2f52",
+    "name" : "feature_desc",
+    "display_width" : null,
+    "label" : "feature-desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "00a5cd4c-343c-428e-aa5e-eb34607e0dc1",
+    "name" : "featuer_link_text",
+    "display_width" : null,
+    "label" : "featuer-link-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "0fab7a5d-9995-6f94-240b-2ccf21e72a4b",
+    "name" : "feature_link_icon",
+    "display_width" : null,
+    "label" : "feature-link-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-long-arrow-right\"></i>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "feature_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "feature_icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "feature_link_icon" : "<i class=\"far fa-long-arrow-right\"></i>"
+  }
+} ]

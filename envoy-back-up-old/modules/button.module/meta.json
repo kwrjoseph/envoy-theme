@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Link:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 56112110993,
+  "label" : "button",
+  "is_available_for_new_content" : true
+}

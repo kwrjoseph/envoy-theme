@@ -1,0 +1,36 @@
+[ {
+  "id" : "1c8c7104-579c-24f7-f38c-81e0dd5ca8a1",
+  "name" : "quote_title",
+  "display_width" : null,
+  "label" : "quote-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "I learned one thing about online education is that            <span>highly motivated individuals</span>            always find a way to tackle the challenge in the most creative and flexible way."
+}, {
+  "id" : "d87295ca-0e13-5b6f-a283-a617d3184b49",
+  "name" : "quote_content",
+  "display_width" : null,
+  "label" : "quote-content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<p>At MaxCoach, we put ourselves in learners’ shoes to understand what they want and need, to build handy options for their education and guide them to a better version of themselves. We do the hard work to pave the ways for innovative higher education with advanced delivery modalities.</p>          <p>From high school students, tertiary pupils, graduates or post-graduate learners, learners of any levels can easily find a suitable online program for themselves. It’s now convenient than the past to take an online course for improving the degree, becoming working professionals or pursuing a better job with valid certification… MaxCoach offers a wide range of online options for students around the globe. </p>"
+}, {
+  "id" : "cfb919ce-706c-8899-dfc6-bd9dfcb4409f",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

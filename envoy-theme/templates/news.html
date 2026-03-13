@@ -1,0 +1,65 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: News & Press Releases
+  screenshotPath: ../images/template-previews/news.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: News & Updates ── #}
+    {% dnd_section %}
+      {% dnd_module "news_hero"
+        path='../modules/hero-banner'
+        label='News Hero'
+        badge_text='Press Room'
+        title='News & Updates'
+        subtitle='<p>Stay informed about Envoy Medical&rsquo;s mission to revolutionize hearing health, our latest clinical milestones, and corporate announcements.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+        anchor_id='news-hero'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Featured News (Rich Text for featured article card) ── #}
+    {% dnd_section %}
+      {% dnd_module "featured_news"
+        path='@hubspot/rich_text'
+        label='Featured News'
+        html='<div class="pb-16 bg-white"><div class="max-w-7xl mx-auto px-6"><div class="bg-[#002d74] text-white rounded-[2rem] overflow-hidden shadow-2xl"><div class="grid lg:grid-cols-2"><div class="p-12 lg:p-16 flex flex-col justify-center"><div class="flex items-center space-x-4 mb-6"><span class="bg-blue-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Featured</span><span class="text-blue-200 text-sm font-medium">December 18, 2025</span></div><h2 class="text-3xl lg:text-4xl font-bold mb-6 leading-tight">Envoy Medical Reaches Enrollment Midpoint in Acclaim&reg; Cochlear Implant Pivotal Study</h2><p class="text-blue-100 leading-relaxed mb-8 text-lg">A major milestone for the fully implanted Acclaim&reg; CI. The company also announced the completion of the first set of device activations in the final stage of the study.</p><a href="#" class="inline-flex items-center text-white font-bold hover:text-blue-200 transition-colors">Read Full Release <i class="fas fa-arrow-right ml-2"></i></a></div><div class="relative min-h-[300px] bg-blue-900"><div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#002d74]"></div></div></div></div></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Latest Press Releases (Blog Listing) ── #}
+    {% dnd_section %}
+      {% dnd_module "press_releases"
+        path='@hubspot/rich_text'
+        label='Latest Press Releases'
+        html='<div class="py-24 bg-slate-50"><div class="max-w-7xl mx-auto px-6"><div class="flex justify-between items-end mb-12"><h3 class="text-2xl font-black text-slate-900">Latest Press Releases</h3></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{% for content in contents %}<div class="bg-white border border-slate-200 rounded-3xl p-8 hover:shadow-lg hover:border-[#002d74] transition-all h-full flex flex-col"><span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-3 block">{{ content.publish_date|datetimeformat("%b %d, %Y") }}</span><h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight">{{ content.name }}</h4><p class="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{{ content.post_summary|truncatehtml(120) }}</p><a href="{{ content.absolute_url }}" class="inline-flex items-center text-[#002d74] font-semibold hover:text-blue-700 transition-colors mt-auto">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a></div>{% endfor %}</div></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Media Contact CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "media_contact_cta"
+        path='../modules/cta-section'
+        label='Media Inquiries'
+        title='Media Inquiries'
+        subtitle='For press kits, interview requests, or investor relations questions, please reach out to our corporate communications team at investors@envoymedical.com or call 651-361-8000.'
+        primary_button_text='Contact Media Team'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"mailto:investors@envoymedical.com"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='contact'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,42 @@
+{# Job Listings Module — from careers.html #}
+<section id="{{ module.anchor_id }}" class="py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-end mb-16">
+      <div>
+        <span class="text-xs font-black uppercase tracking-widest text-slate-400 mb-4 block">{{ module.section_subtitle }}</span>
+        <h2 class="text-4xl font-black text-slate-900 tracking-tight">{{ module.section_title }}</h2>
+      </div>
+    </div>
+
+    <div class="space-y-6 max-w-4xl mx-auto">
+      {% for job in module.jobs %}
+      <div class="job-card group flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer"
+           style="background:white;padding:2rem;border-radius:1.5rem;border:1px solid #e2e8f0;transition:all 0.3s ease;">
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">{{ job.job_title }}</h3>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="text-slate-500 font-medium">{{ job.department }}</span>
+            <span class="text-slate-300">&bull;</span>
+            <span class="text-slate-500 font-medium">{{ job.location }}</span>
+            {% if job.job_type %}
+            <span class="text-slate-300">&bull;</span>
+            <span class="inline-block bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">{{ job.job_type }}</span>
+            {% endif %}
+          </div>
+        </div>
+        <div>
+          {% if job.apply_link.url.href %}
+          <a href="{{ job.apply_link.url.href }}"
+             {% if job.apply_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if job.apply_link.no_follow %}rel="nofollow"{% endif %}
+             class="btn-primary py-3 px-8 text-sm"
+             style="background-color:#002d74;color:white;padding:0.75rem 2rem;border-radius:9999px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;transition:all 0.3s ease;">
+            Apply Now
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

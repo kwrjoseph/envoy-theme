@@ -1,0 +1,140 @@
+{% if module.layout == 'layout-one' %}
+<!-- Contact Information Section Start -->
+<div class="contact-information-section section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contact-title">
+          <span class="sub-title">{{ module.contact_subtitle }}</span>
+          <h2 class="title">{{ module.contact_title }}</h2>
+        </div>
+
+        <div class="contact-info-wrap max-mb-n50">
+          {% for item in module.info_item %}
+          <!-- Single Contact Info Start -->
+          <div class="contact-info max-mb-50">
+            <div class="icon">
+              {{ item.info_icon }}
+            </div>
+            <div class="info">
+              <h4 class="title"> {{ item.info_title }}</h4>
+              <span class="info-text"> {{ item.info_text }}</span>
+            </div>
+          </div>
+          <!-- Single Contact Info End -->
+          {% endfor %}
+        </div>
+
+      </div>
+      <div class="col-lg-8">
+        <div class="contact-image mt-sm-50 mt-xs-50">
+          {% if module.contact_image.src %}
+                {% set sizeAttrs = 'width="{{ module.contact_image.width }}" height="{{ module.contact_image.height }}"' %}
+                {% if module.contact_image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.contact_image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.contact_image.max_width }}" height="{{ module.contact_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.contact_image.loading != 'disabled' ? 'loading="{{ module.contact_image.loading }}"' : '' %}
+                <img src="{{ module.contact_image.src }}" alt="{{ module.contact_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="3">
+              {% if module.shape_image.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image.width }}" height="{{ module.shape_image.height }}"' %}
+                {% if module.shape_image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image.max_width }}" height="{{ module.shape_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image.loading != 'disabled' ? 'loading="{{ module.shape_image.loading }}"' : '' %}
+                <img src="{{ module.shape_image.src }}" alt="{{ module.shape_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-2 scene">
+            <span data-depth="-3">
+              {% if module.shape_image_one.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+                {% if module.shape_image_one.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+                <img src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-3 scene">
+            <span data-depth="4">shape 3</span>
+          </div>
+          <div class="shape shape-4 scene">
+            <span data-depth="4">
+              {% if module.shape_image_two.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+                {% if module.shape_image_two.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+                <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-5 scene">
+            <span data-depth="4">
+              {% if module.shape_image_three.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_three.width }}" height="{{ module.shape_image_three.height }}"' %}
+                {% if module.shape_image_three.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_three.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_three.max_width }}" height="{{ module.shape_image_three.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_three.loading != 'disabled' ? 'loading="{{ module.shape_image_three.loading }}"' : '' %}
+                <img src="{{ module.shape_image_three.src }}" alt="{{ module.shape_image_three.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Information Section End -->
+{% else %}
+<!-- Contact Information Section Start -->
+<div class="contact-information-section section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+    <div class="row margin-bottom-85">
+      <div class="col-12">
+        <div class="contact-title max-width-740">
+          <h2 class="title">{{ module.contact_title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row row-30 row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+      {% for item in module.contact_info_item %}
+      <div class="col max-mb-30">
+        <!-- Single Contact Info Start -->
+        <div class="contact-info">
+          <div class="icon">
+            {{ item.info_icon }}
+          </div>
+          <div class="info">
+            <h4 class="title"> {{ item.info_title }}</h4>
+            <span class="info-text">{{ item.info_text }}</span>
+          </div>
+        </div>
+        <!-- Single Contact Info End -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<!-- Contact Information Section End -->
+{% endif %}

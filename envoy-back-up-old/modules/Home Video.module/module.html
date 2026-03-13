@@ -1,0 +1,270 @@
+{% if module.layout == 'layout-one' %}
+<!-- About Video Section Start -->
+<div class="about-video-section section section-padding-top section-padding-bottom-160 {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <!-- About Me Video Wrapper Start -->
+        <div class="about-me-video-wrapper about-us-one-video pr-55 pr-sm-0 pr-xs-0">
+
+          <!-- About Me Video Start -->
+          {% set href = module.video_popup_link.url.href %}
+          {% if module.video_popup_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.video_popup_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.video_popup_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="about-me-video video-popup" data-aos="{{ module.animation_name }}" href="{{ href }}"
+             {% if module.video_popup_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {% if module.video_banner_image.src %}
+            {% set sizeAttrs = 'width="{{ module.video_banner_image.width }}" height="{{ module.video_banner_image.height }}"' %}
+            {% if module.video_banner_image.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.video_banner_image.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.video_banner_image.max_width }}" height="{{ module.video_banner_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.video_banner_image.loading != 'disabled' ? 'loading="{{ module.video_banner_image.loading }}"' : '' %}
+            <img class="image" src="{{ module.video_banner_image.src }}" alt="{{ module.video_banner_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            {% if module.video_icon.src %}
+            {% set sizeAttrs = 'width="{{ module.video_icon.width }}" height="{{ module.video_icon.height }}"' %}
+            {% if module.video_icon.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.video_icon.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.video_icon.max_width }}" height="{{ module.video_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.video_icon.loading != 'disabled' ? 'loading="{{ module.video_icon.loading }}"' : '' %}
+            <img class="icon" src="{{ module.video_icon.src }}" alt="{{ module.video_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </a>
+          <!-- About Me Video End -->
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="3">
+              {% if module.shape_image_one.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+              {% if module.shape_image_one.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+              <img class="svgInject" src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-2 scene">
+            <span data-depth="-3">
+              {% if module.shape_image_two.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+              {% if module.shape_image_two.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+              <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-3 scene">
+            <span data-depth="4">shape 3</span>
+          </div>
+          <div class="shape shape-4 scene">
+            <span data-depth="4">
+              {% if module.shape_image_three.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_three.width }}" height="{{ module.shape_image_three.height }}"' %}
+              {% if module.shape_image_three.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_three.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_three.max_width }}" height="{{ module.shape_image_three.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_three.loading != 'disabled' ? 'loading="{{ module.shape_image_three.loading }}"' : '' %}
+              <img src="{{ module.shape_image_three.src }}" alt="{{ module.shape_image_three.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+
+        </div>
+        <!-- About Me Video Wrapper End -->
+      </div>
+
+      <div class="col-lg-4">
+        <div class="about-content mt-sm-50 mt-xs-50">
+          <span class="sub-title">{{ module.about_subtitle }}</span>
+          <h2 class="title">{{ module.about_title }}</h2>
+          <p>{{ module.about_desc_text }}</p>
+          {% set href = module.about_link.url.href %}
+          {% if module.about_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.about_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.about_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="link link-lg" href="{{ href }}"
+             {% if module.about_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ module.about_link_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- About Video Section End -->
+{% else %}
+<!-- About Video Section Start -->
+<div class="about-video-section section position-relative section-padding-top section-padding-bottom-160 {{ module.section_class }}">
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <!-- About Me Video Wrapper Start -->
+        <div class="about-me-video-wrapper about-us-one-video">
+
+          <!-- About Me Video Start -->
+          {% set href = module.video_popup_link.url.href %}
+          {% if module.video_popup_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.video_popup_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.video_popup_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="about-me-video video-popup" data-aos="{{ module.animation_name }}" href="{{ href }}"
+             {% if module.video_popup_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {% if module.video_banner_image.src %}
+            {% set sizeAttrs = 'width="{{ module.video_banner_image.width }}" height="{{ module.video_banner_image.height }}"' %}
+            {% if module.video_banner_image.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.video_banner_image.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.video_banner_image.max_width }}" height="{{ module.video_banner_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.video_banner_image.loading != 'disabled' ? 'loading="{{ module.video_banner_image.loading }}"' : '' %}
+            <img class="image" src="{{ module.video_banner_image.src }}" alt="{{ module.video_banner_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            {% if module.video_icon.src %}
+            {% set sizeAttrs = 'width="{{ module.video_icon.width }}" height="{{ module.video_icon.height }}"' %}
+            {% if module.video_icon.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.video_icon.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.video_icon.max_width }}" height="{{ module.video_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.video_icon.loading != 'disabled' ? 'loading="{{ module.video_icon.loading }}"' : '' %}
+            <img class="icon" src="{{ module.video_icon.src }}" alt="{{ module.video_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </a>
+          <!-- About Me Video End -->
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="3">
+              {% if module.shape_image_one.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+                {% if module.shape_image_one.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+                <img class="svgInject" src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-2 scene">
+            <span data-depth="-3">
+              {% if module.shape_image_two.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+                {% if module.shape_image_two.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+                <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-3 scene">
+            <span data-depth="4">shape 3</span>
+          </div>
+          <div class="shape shape-4 scene">
+            <span data-depth="4">
+              {% if module.shape_image_three.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_three.width }}" height="{{ module.shape_image_three.height }}"' %}
+                {% if module.shape_image_three.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_three.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_three.max_width }}" height="{{ module.shape_image_three.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_three.loading != 'disabled' ? 'loading="{{ module.shape_image_three.loading }}"' : '' %}
+                <img src="{{ module.shape_image_three.src }}" alt="{{ module.shape_image_three.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+
+        </div>
+        <!-- About Me Video Wrapper End -->
+      </div>
+
+      <div class="col-lg-4">
+        <div class="about-content max-width-100 pl-60 pl-md-20 pl-sm-0 pl-xs-0 mt-sm-50 mt-xs-50">
+          <span class="sub-title">{{ module.about_subtitle }}</span>
+          <h2 class="title">{{ module.about_title }}</h2>
+          <p>{{ module.about_desc_text }}</p>
+          {% set href = module.about_link.url.href %}
+          {% if module.about_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.about_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.about_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="link link-lg" href="{{ href }}"
+             {% if module.about_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ module.about_link_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Bottom Shape Start -->
+  <div class="section-bottom-shape-two">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="315">
+      <path class="elementor-shape-fill" d="M 50 0 S75 0 100 100 L100 0"></path>
+    </svg>
+  </div>
+  <!-- Section Bottom Shape End -->
+
+</div>
+<!-- About Video Section End -->
+{% endif %}
+{{  }}

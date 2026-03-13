@@ -1,0 +1,64 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'history' for #history links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "id": "section_title_field",
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": "Our History"
+  },
+  {
+    "id": "events_field",
+    "name": "events",
+    "label": "Timeline Events",
+    "type": "group",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 0,
+      "sorting_label_field": "event_year"
+    },
+    "children": [
+      {
+        "id": "event_year_field",
+        "name": "event_year",
+        "label": "Year",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "default": "2024"
+      },
+      {
+        "id": "event_title_field",
+        "name": "event_title",
+        "label": "Event Title",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "default": "Milestone Title"
+      },
+      {
+        "id": "event_description_field",
+        "name": "event_description",
+        "label": "Event Description",
+        "type": "richtext",
+        "required": false,
+        "locked": false,
+        "default": "<p>Description of the milestone event.</p>"
+      }
+    ],
+    "default": []
+  }
+]

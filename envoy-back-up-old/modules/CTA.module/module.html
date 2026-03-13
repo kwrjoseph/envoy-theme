@@ -1,0 +1,107 @@
+{% if module.layout == 'layout-one' %}
+
+<!-- CTA Section Start -->
+<div class="cta-section section section-padding {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="cta-content text-center {{ module.cta_content_class }}">
+          <span class="sub-title">{{ module.cta_subtitle }}</span>
+          <h2 class="title">{{ module.cta_title }}</h2>
+          {% set href = module.cta_link.url.href %}
+          {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.cta_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.cta_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="btn btn-primary btn-hover-secondary btn-width-300" href="{{ href }}"
+             {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ module.cta_link_text }}
+          </a>
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="4">shape 1</span>
+          </div>
+          <div class="shape shape-2 scene">
+            <span data-depth="4">
+              {% if module.shape_image_one.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+              {% if module.shape_image_one.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+              <img src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-3 scene">
+            <span data-depth="4">
+              {% if module.shape_image_two.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+              {% if module.shape_image_two.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+              <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- CTA Section End -->
+
+{% else %}
+
+<!-- CTA Section Start -->
+<div class="cta-section section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="cta-content-area">
+          <!-- Section Title Start -->
+          <div class="section-title text-center mb-0 {{ module.cta_content_class }}" data-aos="{{ module.animation_name }}">
+            <span class="sub-title secondary-color max-mb-30">{{ module.cta_subtitle }}</span>
+            <h2 class="title heading-color max-mb-30">{{ module.cta_title }}</h2>
+            {% set href = module.cta_link.url.href %}
+            {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            {% set rel = [] %}
+            {% if module.cta_link.no_follow %}
+            {% do rel.append("nofollow") %}
+            {% endif %}
+            {% if module.cta_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+            {% endif %}
+            <a class="btn btn-primary btn-hover-secondary btn-width-300" href="{{ href }}"
+               {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+               >
+              {{ module.cta_link_text }}
+            </a>
+          </div>
+          <!-- Section Title End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- CTA Section End -->
+
+{% endif %}

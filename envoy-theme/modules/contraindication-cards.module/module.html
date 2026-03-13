@@ -1,0 +1,28 @@
+{# Contraindication Cards Module - from safety-information.html #}
+
+{% if module.anchor_id %}
+<div id="{{ module.anchor_id }}">
+{% endif %}
+
+{% if module.cards %}
+<div class="grid md:grid-cols-2 gap-8">
+  {% for card in module.cards %}
+  <div class="bg-white border border-red-50 rounded-3xl p-8 shadow-sm">
+    <h3 class="font-bold text-slate-900 mb-6 flex items-center">
+      <i class="{{ card.icon_class }} text-red-400 mr-3"></i> {{ card.card_title }}
+    </h3>
+    {% if card.items %}
+    <ul class="space-y-3 text-sm text-slate-600">
+      {% for item in card.items %}
+      <li><i class="fas fa-times text-red-500 mr-2"></i> {{ item.item_text }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if module.anchor_id %}
+</div>
+{% endif %}

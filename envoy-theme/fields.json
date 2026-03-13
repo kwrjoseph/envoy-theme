@@ -1,0 +1,31 @@
+[
+  {
+    "name": "brand_navy",
+    "label": "Brand Navy",
+    "type": "color",
+    "required": false,
+    "default": { "color": "#002d74" },
+    "help_text": "Primary brand color"
+  },
+  {
+    "name": "brand_accent",
+    "label": "Brand Accent Blue",
+    "type": "color",
+    "required": false,
+    "default": { "color": "#0056b3" },
+    "help_text": "Secondary accent color"
+  },
+  {
+    "name": "body_font",
+    "label": "Body Font",
+    "type": "font",
+    "required": false,
+    "default": {
+      "font": "Inter",
+      "font_set": "GOOGLE",
+      "variant": "400",
+      "color": "#53575a",
+      "size": 16
+    }
+  }
+]

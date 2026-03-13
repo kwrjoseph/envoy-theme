@@ -1,0 +1,69 @@
+<!-- Zoom Event Details Section Start -->
+        <div class="section section-padding-bottom {{ module.section_class }}">
+            <div class="container">
+                <div class="row max-mb-n50">
+
+                    <div class="col-lg-8 col-12 order-lg-1 max-mb-50">
+                        <!-- Zoom Event Details Wrapper Start -->
+                        <div class="zoom-event-details-wrapper">
+                            <div class="image">
+                                {% if module.event_main_image.src %}
+                                  {% set sizeAttrs = 'width="{{ module.event_main_image.width }}" height="{{ module.event_main_image.height }}"' %}
+                                  {% if module.event_main_image.size_type == 'auto' %}
+                                    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                  {% elif module.event_main_image.size_type == 'auto_custom_max' %}
+                                    {% set sizeAttrs = 'width="{{ module.event_main_image.max_width }}" height="{{ module.event_main_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                  {% endif %}
+                                   {% set loadingAttr = module.event_main_image.loading != 'disabled' ? 'loading="{{ module.event_main_image.loading }}"' : '' %}
+                                  <img src="{{ module.event_main_image.src }}" alt="{{ module.event_main_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                {% endif %}
+                            </div>
+                            <div class="content">
+                                {{ module.event_main_content }}
+                            </div>
+                        </div>
+                        <!-- Zoom Event Details Wrapper End -->
+                    </div>
+
+                    <div class="col-lg-4 col-12 order-lg-2 max-mb-50">
+                        <div class="sidebar-widget-wrapper pr-0 pl-30 pl-md-0 pl-sm-0 pl-xs-0">
+
+                            <div class="sidebar-widget">
+                                <div class="sidebar-widget-content">
+                                    <div class="event-countdown">
+                                        <div class="pro-countdown" data-countdown="{{ module.sidebar_countdown_time }}"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sidebar-widget">
+                                <div class="sidebar-widget-content">
+                                    <div class="sidebar-entry-event-info">
+                                        <h3 class="title">{{ module.sidebar_event_title }}</h3>
+                                        <div class="event-meta">
+                                           {% for item in module.event_list_item %}
+                                            <div class="event-content-list">
+                                                <span class="name">{{ item.list_name }}</span>
+                                                <span class="value">{{ item.list_value }}</span>
+                                            </div>
+                                          {% endfor %}
+
+
+                                            <p class="notice">{{ module.sidebar_message }}</p>
+
+                                        </div>
+                                        <div class="lp-event-buttons">
+                                          {% for item in module.lp_btn_item %}
+                                            <button class="btn btn-primary btn-hover-secondary btn-width-100">{{ item.event_btn_text }}</button>
+                                          {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Zoom Event Details Section End -->

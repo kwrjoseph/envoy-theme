@@ -1,0 +1,89 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": ""
+  },
+  {
+    "name": "columns",
+    "type": "choice",
+    "label": "Columns",
+    "display": "select",
+    "choices": [
+      [
+        "2",
+        "2 Columns"
+      ],
+      [
+        "3",
+        "3 Columns"
+      ]
+    ],
+    "default": "3"
+  },
+  {
+    "name": "posts",
+    "type": "group",
+    "label": "Blog Posts",
+    "occurrence": {
+      "min": 0,
+      "max": 50,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "post_image",
+        "type": "image",
+        "label": "Post Image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "category",
+        "type": "text",
+        "label": "Category",
+        "default": "Hearing Health"
+      },
+      {
+        "name": "date_text",
+        "type": "text",
+        "label": "Date",
+        "default": "Dec 12, 2024"
+      },
+      {
+        "name": "title",
+        "type": "text",
+        "label": "Title",
+        "default": "Blog Post Title"
+      },
+      {
+        "name": "excerpt",
+        "type": "text",
+        "label": "Excerpt",
+        "default": "Brief excerpt of the blog post content goes here."
+      },
+      {
+        "name": "link",
+        "type": "link",
+        "label": "Link",
+        "default": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": false
+        }
+      }
+    ],
+    "default": []
+  }
+]

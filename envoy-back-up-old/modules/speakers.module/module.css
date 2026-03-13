@@ -1,0 +1,27 @@
+.single-speaker {
+  text-align: center;
+}
+.single-speaker .image {
+  margin-bottom: 28px;
+  text-align: center;
+}
+.single-speaker .image img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.single-speaker .content .speaker-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--heading-color);
+  margin-bottom: 6px;
+}
+.event-speakers-description {
+  font-size: 18px;
+  line-height: 1.67;
+  width: 630px;
+  max-width: 100%;
+  text-align: center;
+  margin: 54px auto 0;
+}

@@ -1,0 +1,186 @@
+{% if module.layout == 'layout-one' %}
+<!-- Faq Section Start -->
+<div class="faq-section section section-padding-bottom position-relative {{ module.section_class }}">
+  <div class="container">
+    <div class="row row-cols-lg-2 row-cols-1 align-items-center">
+      <div class="col">
+        <div class="faq-left-image">
+          {% if module.faq_image.src %}
+          {% set sizeAttrs = 'width="{{ module.faq_image.width }}" height="{{ module.faq_image.height }}"' %}
+          {% if module.faq_image.size_type == 'auto' %}
+          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+          {% elif module.faq_image.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.faq_image.max_width }}" height="{{ module.faq_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.faq_image.loading != 'disabled' ? 'loading="{{ module.faq_image.loading }}"' : '' %}
+          <img src="{{ module.faq_image.src }}" alt="{{ module.faq_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="3">
+              {% if module.shape_image.src %}
+              {% set sizeAttrs = 'width="{{ module.shape_image.width }}" height="{{ module.shape_image.height }}"' %}
+              {% if module.shape_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.shape_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.shape_image.max_width }}" height="{{ module.shape_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.shape_image.loading != 'disabled' ? 'loading="{{ module.shape_image.loading }}"' : '' %}
+              <img class="svgInject" src="{{ module.shape_image.src }}" alt="{{ module.shape_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+        </div>
+      </div>
+      <div class="col">
+        <div class="faq-content-area">
+          <!-- Section Title Start -->
+          <div class="section-title text-left mb-50" data-aos="{{ module.animation_name }}">
+            <span class="sub-title">{{ module.section_subtitle }}</span>
+            <h2 class="title fz-48">{{ module.section_title }}</h2>
+          </div>
+          <!-- Section Title End -->
+
+          <div class="mx-accordion max-mb-n30" id="{{ module.accordion_id_one }}">
+            {% for item in module.accordion_item %}
+            {% if loop.first %}
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="acc-btn border-0" data-bs-toggle="collapse" data-bs-target="#collapse_{{ loop.index }}" aria-expanded="true" aria-controls="collapseOne">
+                    {{ item.accordion_title }}
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapse_{{ loop.index }}" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="card-body">
+                  {{ item.accordion_text }}
+                </div>
+              </div>
+            </div>
+            {% else %}
+
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="acc-btn border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_{{ loop.index }}" aria-expanded="false" aria-controls="collapseTwo">
+                    {{ item.accordion_title }}
+                  </button>
+                </h5>
+              </div>
+              <div id="collapse_{{ loop.index }}" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="card-body">
+                  {{ item.accordion_text }}
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Faq Section End -->
+{% else %}
+<!-- Faq Section Start -->
+<div class="faq-section section section-padding {{ module.section_class }}">
+  <div class="container">
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title secondary-color">{{ module.section_subtitle }}</span>
+      <h2 class="title heading-color">{{ module.section_title }}</h2>
+    </div>
+    <!-- Section Title End -->
+    <div class="row">
+      <!-- Start Single Accordion -->
+      <div class="col-lg-6">
+        <div class="mx-accordion max-mb-n30 mb-sm-30 mb-xs-30" id="{{ module.accordion_id_one }}">
+          {% for item in module.accordion_item %}
+          {% if loop.first %}
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="acc-btn" data-bs-toggle="collapse" data-bs-target="#collapse_{{ loop.index }}" aria-expanded="true" aria-controls="collapseOne">
+                  {{ item.accordion_title }}
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapse_{{ loop.index }}" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="card-body">
+                {{ item.accordion_text }}
+              </div>
+            </div>
+          </div>
+          {% else %}
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="acc-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_{{ loop.index }}" aria-expanded="false" aria-controls="collapseTwo">
+                  {{ item.accordion_title }}
+                </button>
+              </h5>
+            </div>
+            <div id="collapse_{{ loop.index }}" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="card-body">
+                {{ item.accordion_text }}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <!-- End Single Accordion -->
+
+      <!-- Start Single Accordion -->
+      <div class="col-lg-6">
+        <div class="mx-accordion max-mb-n30" id="{{ module.accordion_id_two }}">
+          {% for item in module.accordion_item_two %}
+          {% if loop.first %}
+          <div class="card">
+            <div class="card-header" id="headingfour">
+              <h5 class="mb-0">
+                <button class="acc-btn" data-bs-toggle="collapse" data-bs-target="#collapseItem_{{ loop.index }}" aria-expanded="false" aria-controls="collapsefour">
+                  {{ item.accordion_title }}
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseItem_{{ loop.index }}" class="collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample2">
+              <div class="card-body">{{ item.accordion_text }}</div>
+            </div>
+          </div>
+          {% else %}
+          <div class="card">
+            <div class="card-header" id="headingfive">
+              <h5 class="mb-0">
+                <button class="acc-btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseItem_{{ loop.index }}" aria-expanded="false" aria-controls="collapsefive">
+                  {{ item.accordion_title }}
+                </button>
+              </h5>
+            </div>
+            <div id="collapseItem_{{ loop.index }}" class="collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample2">
+              <div class="card-body">
+                {{ item.accordion_text }}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+      <!-- End Single Accordion -->
+    </div>
+  </div>
+</div>
+<!-- Faq Section End -->
+{% endif %}

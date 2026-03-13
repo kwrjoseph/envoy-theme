@@ -1,0 +1,99 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Esteem Implant
+  screenshotPath: ../images/template-previews/esteem.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_hero"
+        path='../modules/hero-banner'
+        label='Esteem Hero'
+        badge_text='Fully Implanted Active Middle Ear Implant (FI-AMEI)'
+        title='The Esteem\u00ae Implant'
+        subtitle='<p>The first and only FDA-approved, fully implanted, active middle ear implant. Invisible hearing without external components.</p><p>Designed for adults with moderate to severe sensorineural hearing loss who desire a unique, 24/7 hearing solution that uses the ear&rsquo;s natural anatomy.</p>'
+        primary_button_text='How It Works'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TOTALLY INVISIBLE. FULLY INTERNAL. ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_intro"
+        path='../modules/two-column-section'
+        label='Esteem Introduction'
+        title='Totally Invisible. Fully Internal.'
+        description='<p>The Esteem device is different. It is invisible. You don&rsquo;t wear it; you live with it.</p><p>Unlike hearing aids or cochlear implants, the Esteem is fully implanted under the skin. It eliminates the artificial microphone found in other devices, instead using your own eardrum to capture sound naturally. This innovative design reduces the background noise and acoustic feedback often associated with traditional hearing aids.</p><ul><li><strong>No external components</strong> to put on or take off.</li><li><strong>Maintenance-free daily life</strong>&mdash;no cleaning or battery changing.</li><li><strong>Waterproof:</strong> Swim, shower, and exercise freely.</li><li><strong>Natural Sound:</strong> Uses the ear canal and eardrum.</li></ul>'
+        layout='image-left'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== HOW IT WORKS ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_how_it_works"
+        path='../modules/feature-cards'
+        label='How Esteem Works'
+        anchor_id='how-it-works'
+        section_title='How it Works'
+        section_subtitle='The Esteem system uses three fully implanted components to mechanically stimulate the middle ear, bypassing the damaged parts of the cochlea.'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-wave-square", "card_title": "1. The Sensor", "description": "<p>The piezoelectric sensor is attached to the incus (anvil) bone. It picks up the physical vibrations from the eardrum. By using the eardrum as a microphone, it preserves the ear&rsquo;s natural ability to localize sound and filter noise.</p>"}, {"icon_class": "fas fa-microchip", "card_title": "2. The Sound Processor", "description": "<p>Implanted behind the ear, this device filters, processes, and amplifies the electrical signals from the sensor. It houses the battery, which lasts approximately 4.5 to 9 years depending on usage.</p>"}, {"icon_class": "fas fa-volume-high", "card_title": "3. The Driver", "description": "<p>Attached to the stapes (stirrup) bone, the piezoelectric driver converts the confirmed electrical signals back into mechanical vibrations. These intensified vibrations are delivered directly to the inner ear, allowing for clear, natural sound perception.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== LIVE LIFE UNINTERRUPTED ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_lifestyle"
+        path='../modules/two-column-section'
+        label='Esteem Lifestyle Benefits'
+        title='Live Life Uninterrupted'
+        description='<p>Because the Esteem is fully implanted, it offers freedoms that traditional hearing aids cannot.</p><ul><li><strong>Waterproof</strong> &mdash; Go swimming, take a shower, or enjoy water sports without worrying about your hearing device.</li><li><strong>Hearing 24/7</strong> &mdash; Hear your children at night, your alarm clock in the morning, and everything in between. It&rsquo;s always on.</li><li><strong>Personal Programmer</strong> &mdash; You receive a Personal Programmer to adjust volume, switch between settings, or turn the device off.</li></ul>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CANDIDACY CRITERIA ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_candidacy"
+        path='../modules/glass-cards'
+        label='Esteem Candidacy Criteria'
+        section_title='Is Esteem Right for You?'
+        section_subtitle='The Esteem implant is a prescription device. Candidacy is determined by a certified hearing specialist, but generalized criteria include:'
+        columns='3'
+        cards=[{"icon_class": "fas fa-check-circle", "title": "Adults 18+", "description": "<p>Adults 18 years of age or older.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Bilateral SNHL", "description": "<p>Stable moderate to severe sensorineural hearing loss in both ears.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Word Recognition", "description": "<p>Unaided word recognition score of 40% or better.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Hearing Aid Experience", "description": "<p>At least 30 days of experience with appropriately fit hearing aids.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Normal Anatomy", "description": "<p>Normally functioning Eustachian tube and middle ear anatomy.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_cta"
+        path='../modules/cta-section'
+        label='Esteem CTA'
+        title='Take the Next Step'
+        subtitle='The best way to know if you are a candidate is to schedule a consultation with an Envoy Medical Certified Center.'
+        primary_button_text='Find a Professional'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

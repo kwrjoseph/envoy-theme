@@ -1,0 +1,55 @@
+{% if module.layout == 'layout-one' %}
+<!-- Contact Form Section Start -->
+<div class="contact-form-section section section-padding-bottom {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contact-title">
+          <h2 class="title">{{ module.contact_title }}</h2>
+        </div>
+
+      </div>
+      <div class="col-lg-8">
+        <div class="contact-form pl-90 pl-md-0 pl-sm-0 pl-xs-0">
+          {% form
+            form_to_use="{{ module.contact_form.form_id }}"
+            response_response_type="{{ module.contact_form.response_type }}"
+            response_message="{{ module.contact_form.message }}"
+            response_redirect_id="{{ module.contact_form.redirect_id }}"
+            response_redirect_url="{{module.contact_form.redirect_url}}"
+            gotowebinar_webinar_key="{{ module.contact_form.gotowebinar_webinar_key }}"
+          %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Form Section End -->
+
+{% else %}
+
+<!-- Contact Form Section Start -->
+<div class="contact-form-section section section-padding {{ module.section_class }}">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8">
+        <div class="contact-title max-width-600">
+          <h2 class="title">{{ module.contact_title }}</h2>
+        </div>
+        <div class="contact-form">
+          {% form
+            form_to_use="{{ module.contact_form.form_id }}"
+            response_response_type="{{ module.contact_form.response_type }}"
+            response_message="{{ module.contact_form.message }}"
+            response_redirect_id="{{ module.contact_form.redirect_id }}"
+            response_redirect_url="{{module.contact_form.redirect_url}}"
+            gotowebinar_webinar_key="{{ module.contact_form.gotowebinar_webinar_key }}"
+          %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact Form Section End -->
+
+{% endif %}

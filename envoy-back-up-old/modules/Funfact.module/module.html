@@ -1,0 +1,159 @@
+{% if module.layout == 'layout-one' %}
+<!-- Funfact Section Start -->
+<div class="section section-padding-top bg-pattern fix {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+
+    <!-- Section Title Start -->
+    <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+      <span class="sub-title">{{ module.section_subtitle }}</span>
+      <h2 class="title">{{ module.section_title }}</h2>
+    </div>
+    <!-- Section Title End -->
+
+    <!-- Funfact Wrapper Start -->
+    <div class="row max-mb-70">
+      <div class="col-lg-9 mx-auto">
+        <div class="row row-cols-md-3 row-cols-1 max-mb-n30">
+          {% for item in module.funfact_item_group %}
+          <!-- Funfact Start -->
+          <div class="col max-mb-30" data-aos="{{ item.funfact_animation_name }}">
+            <div class="funfact">
+              <div class="number">{{ item.counter_number }}</div>
+              <h6 class="text">{{ item.counter_title }}</h6>
+            </div>
+          </div>
+          <!-- Funfact End -->
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+    <!-- Funfact Wrapper End -->
+
+  </div>
+</div>
+<!-- Funfact Section End -->
+{% elif module.layout == 'layout-two' %}
+<!-- Funfact Section Start -->
+<div class="funfact-section section {{ module.section_class }}">
+  <div class="container funfact-border bg-pattern" data-bg-image="{{ module.section_bg_image.src }}">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
+          {% for item in module.funfact_item_group %}
+          <!-- Funfact Start -->
+          <div class="col" data-aos="{{ item.funfact_animation_name }}">
+            <div class="funfact funfact-style-two max-mb-50">
+              <h2 class="title">{{ item.counter_title }}</h2>
+              <div class="number">{{ item.counter_number }}</div>
+              <h6 class="text">{{ item.counter_text }}</h6>
+            </div>
+          </div>
+          <!-- Funfact End -->
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Funfact Section End -->
+{% elif module.layout == 'layout-three' %}
+<!-- Funfact Section Start -->
+<div class="funfact-section section {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+    <!-- Funfact Wrapper Start -->
+    <div class="row">
+      <div class="col-lg-9 mx-auto">
+        <div class="row row-cols-md-3 row-cols-1 max-mb-n30">
+          {% for item in module.funfact_item_group %}
+          <!-- Funfact Start -->
+          <div class="col max-mb-30" data-aos="{{ item.funfact_animation_name }}">
+            <div class="funfact">
+              <div class="number">{{ item.counter_number }}</div>
+              <h6 class="text">{{ item.counter_title }}</h6>
+            </div>
+          </div>
+          <!-- Funfact End -->
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+    <!-- Funfact Wrapper End -->
+  </div>
+</div>
+<!-- Funfact Section End -->
+{% elif module.layout == 'layout-four' %}
+<!-- Funfact Section Start -->
+<div class="funfact-section section section-padding bg-pattern {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="about-content max-width-470 mb-sm-50 mb-xs-50">
+          <span class="sub-title">{{ module.about_subtitle }}</span>
+          <h2 class="title">{{ module.about_title }}</h2>
+          <p>{{ module.about_desc }}</p>
+          {% set href = module.about_link.url.href %}
+          {% if module.about_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.about_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.about_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="link link-lg" href="{{ href }}"
+             {% if module.about_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ module.about_link_text }}
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row row-cols-sm-2 row-cols-1 max-mb-n30">
+          {% for item in module.funfact_item_group %}
+          <!-- Funfact Start -->
+          <div class="col max-mb-60" data-aos="{{ item.funfact_animation_name }}">
+            <div class="funfact">
+              <div class="number">{{ item.funfact_number }}</div>
+              <h6 class="text">{{ item.funfact_title }}</h6>
+            </div>
+          </div>
+          <!-- Funfact End -->
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Funfact Section End -->
+{% else %}
+<!-- Funfact Section Start -->
+<div class="funfact-section section section-padding-top {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <div class="row row-cols-md-4 row-cols-1 max-mb-n30">
+          {% for item in module.funfact_item_group %}
+          <!-- Funfact Start -->
+          <div class="col max-mb-30" data-aos="{{ item.funfact_animation_name }}">
+            <div class="funfact">
+              <div class="number">{{ item.counter_number }}</div>
+              <h6 class="text">{{ item.counter_title }}</h6>
+            </div>
+          </div>
+          <!-- Funfact End -->
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Funfact Section End -->
+{% endif %}

@@ -1,0 +1,415 @@
+{% if module.layout == 'layout-one' %}
+<!-- Course Details Section Start -->
+<div class="section {{ module.section_class }}">
+  <div class="container">
+    <div class="row max-mb-n50">
+
+      <div class="offset-lg-2 col-lg-8 col-12 max-mb-50">
+        <!-- Course Details Wrapper Start -->
+        <div class="course-details-wrapper">
+          <div class="course-nav-tab">
+            <ul class="nav justify-content-center">
+              {% for item in module.course_tab_nav %}
+              <li>
+                {% set href = item.course_tab_link.url.href %}
+                {% if item.course_tab_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.course_tab_link.no_follow %}
+                  {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.course_tab_link.open_in_new_tab %}
+                  {% do rel.append("noopener") %}
+                {% endif %}
+                <a class="{{ item.class_name }}" data-bs-toggle="tab" href="{{ href }}"
+                  {% if item.course_tab_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                  {{ item.course_tab_link_text }}
+                </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="tab-content">
+            {% for item in module.tab_content_group %}
+              <div id="{{ item.tab_content_id }}" class="tab-pane fade show {{ item.tab_content_class_name }}">
+                <div class="{{ item.main_content_class }}">
+                  {{ item.main_content }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="lp-course-buttons">
+                              {% for item in module.lp_course_btn_item %}
+                                {% set href = item.lp_course_link.url.href %}
+                                {% if item.lp_course_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                  {% set href = "mailto:" + href %}
+                                {% endif %}
+                                {% set rel = [] %}
+                                {% if item.lp_course_link.no_follow %}
+                                  {% do rel.append("nofollow") %}
+                                {% endif %}
+                                {% if item.lp_course_link.open_in_new_tab %}
+                                  {% do rel.append("noopener") %}
+                                {% endif %}
+                                <a class="btn btn-primary btn-hover-secondary" href="{{ href }}"
+                                  {% if item.lp_course_link.open_in_new_tab %}target="_blank"{% endif %}
+                                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                  >
+                                  {{ item.lp_course_btn_text }}
+                                </a>
+                              {% endfor %}
+                                <div class="entry-course-share mt-0">
+                                    <div class="share-media">
+                                      {% set href = module.share_static_btn.url.href %}
+                                      {% if module.share_static_btn.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                      {% endif %}
+                                      {% set rel = [] %}
+                                      {% if module.share_static_btn.no_follow %}
+                                        {% do rel.append("nofollow") %}
+                                      {% endif %}
+                                      {% if module.share_static_btn.open_in_new_tab %}
+                                        {% do rel.append("noopener") %}
+                                      {% endif %}
+                                      <a class="btn btn-primary btn-hover-secondary" href="{{ href }}"
+                                        {% if module.share_static_btn.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                        >
+                                        <div class="share-label">{{ module.share_btn_text }}</div>
+                                        {{ module.share_btn_icon }}
+                                      </a>
+
+                                        <div class="share-list">
+                                          {% for item in module.social_item %}
+                                            {% set href = item.social_link.url.href %}
+                                            {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                              {% set href = "mailto:" + href %}
+                                            {% endif %}
+                                            {% set rel = [] %}
+                                            {% if item.social_link.no_follow %}
+                                              {% do rel.append("nofollow") %}
+                                            {% endif %}
+                                            {% if item.social_link.open_in_new_tab %}
+                                              {% do rel.append("noopener") %}
+                                            {% endif %}
+                                            <a class="hint--bounce hint--top hint--theme-two" target="_blank" href="{{ href }}"
+                                              {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                              {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                              >
+                                              {{ item.social_icon }}
+                                            </a>
+                                          {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <!-- Course Details Wrapper End -->
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!-- Course Details Section End -->
+{% elif module.layout == 'layout-two' %}
+<!-- Course Details Section Start -->
+<div class="section {{ module.section_class }}">
+  <div class="container">
+    <div class="row max-mb-n50">
+
+      <div class="col-lg-8 col-12 order-lg-1 max-mb-50">
+        <!-- Course Details Wrapper Start -->
+        <div class="course-details-wrapper">
+          <div class="course-nav-tab">
+            <ul class="nav">
+              {% for item in module.course_tab_nav %}
+              <li>
+                {% set href = item.course_tab_link.url.href %}
+                {% if item.course_tab_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.course_tab_link.no_follow %}
+                  {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.course_tab_link.open_in_new_tab %}
+                  {% do rel.append("noopener") %}
+                {% endif %}
+                <a class="{{ item.class_name }}" data-bs-toggle="tab" href="{{ href }}"
+                  {% if item.course_tab_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                  {{ item.course_tab_link_text }}
+                </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="tab-content">
+            {% for item in module.tab_content_group %}
+              <div id="{{ item.tab_content_id }}" class="tab-pane fade show {{ item.tab_content_class_name }}">
+                <div class="{{ item.main_content_class }}">
+                  {{ item.main_content }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Course Details Wrapper End -->
+      </div>
+
+      <div class="col-lg-4 col-12 order-lg-2 max-mb-50" id="sticky-sidebar">
+        <div class="sidebar-widget-wrapper pr-0">
+          <div class="sidebar-widget">
+            <div class="sidebar-widget-content">
+              <div class="sidebar-entry-course-info">
+                <div class="course-price">
+                  <span class="meta-label">
+                    {{ module.price_icon }}
+                    {{ module.price_text }}
+                  </span>
+                  <span class="meta-value">
+                    <span class="price">{{ module.price_amount_text }}</span>
+                  </span>
+                </div>
+                <div class="course-meta">
+                  {% for item in module.cr_meta_item %}
+                    <div class="{{ item.cr_meta_class_name }}">
+                    <span class="meta-label">
+                      {{ item.cr_meta_icon }}
+                      {{ item.cr_meta_text }}				
+                    </span>
+                    <span class="meta-value">{{ item.cr_meta_value }}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="lp-course-buttons">
+                  <button class="btn btn-primary btn-hover-secondary btn-width-100">{{ module.cr_enroll_btn_text }}</button>
+                </div>
+                <div class="entry-course-share">
+                  <div class="share-media">
+
+                    <div class="share-label">{{ module.cr_social_text_label }}</div>
+                    {{ module.cr_social_icon_label }}
+
+                    <div class="share-list">
+                      {% for item in module.cr_social_item %}
+                      {% set href = item.cr_social_link.url.href %}
+                        {% if item.cr_social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                          {% set href = "mailto:" + href %}
+                        {% endif %}
+                        {% set rel = [] %}
+                        {% if item.cr_social_link.no_follow %}
+                          {% do rel.append("nofollow") %}
+                        {% endif %}
+                        {% if item.cr_social_link.open_in_new_tab %}
+                          {% do rel.append("noopener") %}
+                        {% endif %}
+                        <a class="hint--bounce hint--top hint--theme-two" target="_blank" href="{{ href }}"
+                          {% if item.cr_social_link.open_in_new_tab %}target="_blank"{% endif %}
+                          {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                          >
+                          {{ item.cr_social_link_icon }}
+                        </a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Course Details Section End -->
+{% else %}
+<!-- Course Details Section Start -->
+<div class="section {{ module.section_class }}">
+  <div class="container">
+    <div class="row max-mb-n50">
+
+      <div class="col-lg-8 col-12 order-lg-1 max-mb-50">
+        <!-- Course Details Wrapper Start -->
+        <div class="course-details-wrapper">
+          <div class="course-nav-tab">
+            <ul class="nav">
+              {% for item in module.course_tab_nav %}
+              <li>
+                {% set href = item.course_tab_link.url.href %}
+                {% if item.course_tab_link.url.type is equalto "EMAIL_ADDRESS" %}
+                  {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if item.course_tab_link.no_follow %}
+                  {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if item.course_tab_link.open_in_new_tab %}
+                  {% do rel.append("noopener") %}
+                {% endif %}
+                <a class="{{ item.class_name }}" data-bs-toggle="tab" href="{{ href }}"
+                  {% if item.course_tab_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                  {{ item.course_tab_link_text }}
+                </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="tab-content">
+            {% for item in module.tab_content_group %}
+              <div id="{{ item.tab_content_id }}" class="tab-pane fade show {{ item.tab_content_class_name }}">
+                <div class="{{ item.main_content_class }}">
+                  {{ item.main_content }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="lp-course-buttons">
+                              {% for item in module.lp_course_btn_item %}
+                                {% set href = item.lp_course_link.url.href %}
+                                {% if item.lp_course_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                  {% set href = "mailto:" + href %}
+                                {% endif %}
+                                {% set rel = [] %}
+                                {% if item.lp_course_link.no_follow %}
+                                  {% do rel.append("nofollow") %}
+                                {% endif %}
+                                {% if item.lp_course_link.open_in_new_tab %}
+                                  {% do rel.append("noopener") %}
+                                {% endif %}
+                                <a class="btn btn-primary btn-hover-secondary" href="{{ href }}"
+                                  {% if item.lp_course_link.open_in_new_tab %}target="_blank"{% endif %}
+                                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                  >
+                                  {{ item.lp_course_btn_text }}
+                                </a>
+                              {% endfor %}
+                                <div class="entry-course-share mt-0">
+                                    <div class="share-media">
+                                      {% set href = module.share_static_btn.url.href %}
+                                      {% if module.share_static_btn.url.type is equalto "EMAIL_ADDRESS" %}
+                                        {% set href = "mailto:" + href %}
+                                      {% endif %}
+                                      {% set rel = [] %}
+                                      {% if module.share_static_btn.no_follow %}
+                                        {% do rel.append("nofollow") %}
+                                      {% endif %}
+                                      {% if module.share_static_btn.open_in_new_tab %}
+                                        {% do rel.append("noopener") %}
+                                      {% endif %}
+                                      <a class="btn btn-primary btn-hover-secondary" href="{{ href }}"
+                                        {% if module.share_static_btn.open_in_new_tab %}target="_blank"{% endif %}
+                                        {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                        >
+                                        <div class="share-label">{{ module.share_btn_text }}</div>
+                                        {{ module.share_btn_icon }}
+                                      </a>
+
+                                        <div class="share-list">
+                                          {% for item in module.social_item %}
+                                            {% set href = item.social_link.url.href %}
+                                            {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                              {% set href = "mailto:" + href %}
+                                            {% endif %}
+                                            {% set rel = [] %}
+                                            {% if item.social_link.no_follow %}
+                                              {% do rel.append("nofollow") %}
+                                            {% endif %}
+                                            {% if item.social_link.open_in_new_tab %}
+                                              {% do rel.append("noopener") %}
+                                            {% endif %}
+                                            <a class="hint--bounce hint--top hint--theme-two" target="_blank" href="{{ href }}"
+                                              {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                              {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                              >
+                                              {{ item.social_icon }}
+                                            </a>
+                                          {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        </div>
+        <!-- Course Details Wrapper End -->
+      </div>
+
+      <div class="col-lg-4 col-12 order-lg-2 max-mb-50">
+        <div class="sidebar-widget-wrapper pl-30 pl-md-0 pl-sm-0 pl-xs-0">
+
+                            <div class="sidebar-widget">
+                                <h3 class="sidebar-widget-title">{{ module.widget_title }}</h3>
+                                <div class="sidebar-widget-content">
+                                    <ul class="sidebar-widget-course">
+                                      {% for item in module.cr_item %}
+                                        <li class="widget-course">
+                                            <div class="thumbnail">
+                                                {% set href = item.cr_link.url.href %}
+                                                {% if item.cr_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                                  {% set href = "mailto:" + href %}
+                                                {% endif %}
+                                                {% set rel = [] %}
+                                                {% if item.cr_link.no_follow %}
+                                                  {% do rel.append("nofollow") %}
+                                                {% endif %}
+                                                {% if item.cr_link.open_in_new_tab %}
+                                                  {% do rel.append("noopener") %}
+                                                {% endif %}
+                                                <a class="image" href="{{ href }}"
+                                                  {% if item.cr_link.open_in_new_tab %}target="_blank"{% endif %}
+                                                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                                  >
+                                                  {% if item.cr_thumb.src %}
+                                                    {% set sizeAttrs = 'width="{{ item.cr_thumb.width }}" height="{{ item.cr_thumb.height }}"' %}
+                                                    {% if item.cr_thumb.size_type == 'auto' %}
+                                                      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                                    {% elif item.cr_thumb.size_type == 'auto_custom_max' %}
+                                                      {% set sizeAttrs = 'width="{{ item.cr_thumb.max_width }}" height="{{ item.cr_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                                    {% endif %}
+                                                     {% set loadingAttr = item.cr_thumb.loading != 'disabled' ? 'loading="{{ item.cr_thumb.loading }}"' : '' %}
+                                                    <img src="{{ item.cr_thumb.src }}" alt="{{ item.cr_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                                  {% endif %}
+                                                </a>
+                                            </div>
+                                            <div class="info">
+                                                <span class="price">{{ item.cr_price }}</span>
+                                                <h6 class="title">
+                                                  {% set href = item.cr_link.url.href %}
+                                                    {% if item.cr_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                                      {% set href = "mailto:" + href %}
+                                                    {% endif %}
+                                                    {% set rel = [] %}
+                                                    {% if item.cr_link.no_follow %}
+                                                      {% do rel.append("nofollow") %}
+                                                    {% endif %}
+                                                    {% if item.cr_link.open_in_new_tab %}
+                                                      {% do rel.append("noopener") %}
+                                                    {% endif %}
+                                                    <a href="{{ href }}"
+                                                      {% if item.cr_link.open_in_new_tab %}target="_blank"{% endif %}
+                                                      {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                                      >
+                                                      {{ item.cr_title }}
+                                                    </a>
+                                                </h6>
+                                            </div>
+                                        </li>
+                                      {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Course Details Section End -->
+{% endif %}

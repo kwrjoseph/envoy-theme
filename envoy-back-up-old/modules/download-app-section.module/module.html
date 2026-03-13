@@ -1,0 +1,99 @@
+<!-- Download App Section Start -->
+<div class="download-app-section section section-padding-top {{ module.section_class }}">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="download-app-image mb-sm-50 mb-xs-50">
+          {% if module.app_image.src %}
+            {% set sizeAttrs = 'width="{{ module.app_image.width }}" height="{{ module.app_image.height }}"' %}
+            {% if module.app_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif module.app_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.app_image.max_width }}" height="{{ module.app_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+             {% set loadingAttr = module.app_image.loading != 'disabled' ? 'loading="{{ module.app_image.loading }}"' : '' %}
+            <img src="{{ module.app_image.src }}" alt="{{ module.app_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+
+          <!-- Animation Shape Start -->
+          <div class="shape shape-1 scene">
+            <span data-depth="3">
+              {% if module.shape_image_one.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_one.width }}" height="{{ module.shape_image_one.height }}"' %}
+                {% if module.shape_image_one.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_one.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_one.max_width }}" height="{{ module.shape_image_one.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_one.loading != 'disabled' ? 'loading="{{ module.shape_image_one.loading }}"' : '' %}
+                <img class="svgInject" src="{{ module.shape_image_one.src }}" alt="{{ module.shape_image_one.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-2 scene">
+            <span data-depth="-3">
+              {% if module.shape_image_two.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_two.width }}" height="{{ module.shape_image_two.height }}"' %}
+                {% if module.shape_image_two.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_two.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_two.max_width }}" height="{{ module.shape_image_two.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_two.loading != 'disabled' ? 'loading="{{ module.shape_image_two.loading }}"' : '' %}
+                <img src="{{ module.shape_image_two.src }}" alt="{{ module.shape_image_two.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <div class="shape shape-3 scene">
+            <span data-depth="4">shape 3</span>
+          </div>
+          <div class="shape shape-4 scene">
+            <span data-depth="4">
+              {% if module.shape_image_three.src %}
+                {% set sizeAttrs = 'width="{{ module.shape_image_three.width }}" height="{{ module.shape_image_three.height }}"' %}
+                {% if module.shape_image_three.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.shape_image_three.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.shape_image_three.max_width }}" height="{{ module.shape_image_three.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                 {% set loadingAttr = module.shape_image_three.loading != 'disabled' ? 'loading="{{ module.shape_image_three.loading }}"' : '' %}
+                <img src="{{ module.shape_image_three.src }}" alt="{{ module.shape_image_three.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}
+            </span>
+          </div>
+          <!-- Animation Shape End -->
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="download-app-content">
+          <!-- Section Title Start -->
+          <div class="section-title text-left mb-30 {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+            <span class="sub-title">{{ module.section_subtitle }}</span>
+            <h2 class="title fz-48">{{ module.section_title }}</h2>
+          </div>
+          <!-- Section Title End -->
+
+          <p>{{ module.desc }}</p>
+          {% set href = module.btn_link.url.href %}
+          {% if module.btn_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if module.btn_link.no_follow %}
+            {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if module.btn_link.open_in_new_tab %}
+            {% do rel.append("noopener") %}
+          {% endif %}
+          <a class="btn btn-primary btn-hover-secondary mt-30" href="{{ href }}"
+            {% if module.btn_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+            >
+            {{ module.btn_link_text }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Download App Section End -->

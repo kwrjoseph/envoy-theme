@@ -1,0 +1,160 @@
+.faq-left-image {
+  position: relative;
+  z-index: 9;
+  padding: 0 0 0 40px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .faq-left-image {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .faq-left-image {
+    padding-left: 0;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .faq-left-image {
+    padding-left: 0;
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+}
+
+.faq-left-image .shape {
+  position: absolute;
+  z-index: 1;
+}
+
+.faq-left-image .shape-1 {
+  top: 50px;
+  left: -60px;
+  z-index: -1;
+  width: 392px;
+  height: 392px;
+  -webkit-transform: rotate(0deg) scale(1, 1);
+      -ms-transform: rotate(0deg) scale(1, 1);
+          transform: rotate(0deg) scale(1, 1);
+}
+
+.faq-left-image .shape-1 svg {
+  width: 100%;
+  height: 100%;
+}
+
+.faq-left-image .shape-1 svg * {
+  fill: #b6b7d2;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .faq-left-image .shape-1 {
+    left: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .faq-left-image .shape-1 {
+    left: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .faq-left-image .shape-1 {
+    left: 0px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .faq-left-image .shape-1 {
+    left: 0px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.mx-accordion .card {
+  border: 0 none;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.mx-accordion .card-header {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  border: 0 none;
+}
+
+.mx-accordion .card-header h5 button.acc-btn {
+  color: var(--default-color);
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 0;
+  font-weight: 600;
+  border: 0 none;
+  font-family: var(--secondary-font);
+  -webkit-appearance: none;
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid #eee;
+  padding: 20px 26px;
+  margin: -1px -1px 0;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.mx-accordion .card-header h5 button.acc-btn::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f055";
+  right: 16px;
+  font-size: 20px;
+  color: #8c89a2;
+}
+
+.mx-accordion .card-header h5 button.acc-btn[aria-expanded="true"] {
+  background: var(--primary-color);
+  color: #FFFFFF;
+}
+
+.mx-accordion .card-header h5 button.acc-btn[aria-expanded="true"]::before {
+  content: "\f056";
+  color: #FFFFFF;
+}
+
+.mx-accordion .card-header h5 button.border-0 {
+  border: 0;
+  border-radius: 5px 5px 0 0;
+  -webkit-box-shadow: 0 15px 50px rgba(51, 51, 51, 0.1);
+          box-shadow: 0 15px 50px rgba(51, 51, 51, 0.1);
+}
+
+.mx-accordion .card-body {
+  padding: 27px 25px 39px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.74;
+  font-size: 15px;
+  font-family: var(--secondary-font);
+  border: 0 none;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 0 0 5px 5px;
+}

@@ -1,0 +1,139 @@
+[ {
+  "id" : "2dad2fa5-7da1-c4c3-1e40-3533c6e80dce",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "cd338623-1aea-ee30-044e-e9d1f468dd34",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "15725aa5-4872-446c-5e8e-6e108b5eca9b",
+  "name" : "teracher_quote_thumb",
+  "display_width" : null,
+  "label" : "teracher-quote-thumb",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "fb18bbb1-a0dc-9521-23e1-48d9fd1b15cf",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "21d629ab-5155-047b-6d46-78d88c0f85f6",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "1f11bd4e-7a41-b298-c1eb-1dbb7476025a",
+  "name" : "quote_text",
+  "display_width" : null,
+  "label" : "quote-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "I assist learners in finding new effective belief and get rid of the outdated, discouraged and irrelevant life attitudes. You're upgrading to be a better you."
+}, {
+  "id" : "af8da036-dda3-32cb-6d84-ea86ce9e913b",
+  "name" : "experience_year_text",
+  "display_width" : null,
+  "label" : "experience-year-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "23d8cda9-9c8a-e77a-43c5-eb3ea1f83d60",
+  "name" : "experience_title",
+  "display_width" : null,
+  "label" : "experience-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Work Experience"
+}, {
+  "id" : "5ef5237d-39f8-819c-4d20-8c192bf2fe64",
+  "name" : "quote_link",
+  "display_width" : null,
+  "label" : "quote-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "3c68e134-0d2c-3224-5ea6-5648e316ce3f",
+  "name" : "quote_link_text",
+  "display_width" : null,
+  "label" : "quote-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "21eba7e2-d887-5008-7f3c-2f9fa115bb0a",
+  "name" : "quote_link_icon",
+  "display_width" : null,
+  "label" : "quote-link-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"far fa-long-arrow-right\"></i>"
+} ]

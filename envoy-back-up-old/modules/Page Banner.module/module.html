@@ -1,0 +1,113 @@
+{% if module.layout == 'layout-one' %}
+<!-- Page Banner Section Start -->
+<div class="page-banner-section section section-padding-200 {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-banner-title">
+          <h1 class="title">{{ module.page_title }}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page Banner Section End -->
+{% elif module.layout == 'layout-two' %}
+<!-- Page Banner Slider Start -->
+<div class="page-banner-slider section {{ module.section_class }}">
+  <div class="banner-slider swiper-container">
+
+    <div class="swiper-wrapper">
+      {% for item in module.banner_item %}
+      <div class="swiper-slide">
+        <!--Banner Slider Item start-->
+        <div class="banner-slider-item" data-bg-image="{{ item.banner_image.src }}">
+          <div class="container">
+            <div class="row row-25 banner-content-area">
+              <div class="col-lg-4">
+                <div class="banner-slider-content-2 right">
+                  <h1>{{ item.banner_title }}</h1>
+                </div>
+              </div>
+              <div class="col-lg-8">
+
+                <!--Banner Slider Content start-->
+                <div class="banner-slider-content-2 left">
+                  <h3>
+                    {{ item.banner_title_left }}
+                  </h3>
+                  <p>{{ item.banner_desc }}</p>
+                </div>
+                <!--Banner Slider Content end-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Banner Slider Item end-->
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="banner-slider-prev swiper-button-prev banner-slider-nav">{{ module.left_arrow }}</div>
+    <div class="banner-slider-next swiper-button-next banner-slider-nav">{{ module.right_arrow }}</div>
+
+  </div>
+</div>
+<!-- Page Banner Slider End -->
+{% elif module.layout == 'layout-three' %}
+<!-- Page Banner Section Start -->
+<div class="page-banner-section section overlay section-padding {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-banner-title course-banner-title">
+          <h1 class="title">{{ module.page_title }}</h1>
+        </div>
+
+        <div class="page-title-bar-meta">
+          {% for item in module.meta_item %}
+          <div class="{{ item.class_name }}">
+            {% if meta_thumb.src == meta_thumb.src%}
+            <span class="meta-icon meta-image">
+              {% if item.meta_thumb.src %}
+              {% set sizeAttrs = 'width="{{ item.meta_thumb.width }}" height="{{ item.meta_thumb.height }}"' %}
+              {% if item.meta_thumb.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.meta_thumb.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.meta_thumb.max_width }}" height="{{ item.meta_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.meta_thumb.loading != 'disabled' ? 'loading="{{ item.meta_thumb.loading }}"' : '' %}
+              <img class="avatar" src="{{ item.meta_thumb.src }}" alt="{{ item.meta_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}			
+            </span>
+            {% else %}
+            <span class="{{ item.meta_icon }}"></span>
+            {% endif %}
+            <span class="meta-value">{{ item.meta_value }}</span>
+          </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page Banner Section End -->
+{% else %}
+<!-- Event Page Banner Start -->
+<div class="event-page-banner section overlay section-padding-top-200 section-padding-bottom-180 {{ module.section_class }}" data-bg-image="{{ module.section_bg_image.src }}">
+  <div class="container">
+    <div class="col-12">
+      <div class="event-hero-content">
+        <div class="entry-date">{{ module.event_date }}</div>
+        <h1 class="entry-title">{{ module.event_title }}</h1>
+        <div class="entry-countdown">
+          <div class="pro-countdown-1" data-countdown="{{ module.event_countdown_time }}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Event Page Banner End -->
+{% endif %}

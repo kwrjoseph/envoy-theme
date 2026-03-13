@@ -1,0 +1,63 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": "Find Your Representatives"
+  },
+  {
+    "name": "section_subtitle",
+    "type": "text",
+    "label": "Section Subtitle",
+    "default": "Visit the links below to find out who your U.S. Senators and Representatives are and how to reach them."
+  },
+  {
+    "name": "cards",
+    "type": "group",
+    "label": "Action Cards",
+    "occurrence": {
+      "min": 0,
+      "max": 20,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "icon_class",
+        "type": "text",
+        "label": "Icon Class",
+        "default": "fas fa-university"
+      },
+      {
+        "name": "card_title",
+        "type": "text",
+        "label": "Card Title",
+        "default": "US Senators"
+      },
+      {
+        "name": "card_subtitle",
+        "type": "text",
+        "label": "Card Subtitle",
+        "default": "senate.gov"
+      },
+      {
+        "name": "link",
+        "type": "link",
+        "label": "Link",
+        "default": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": true
+        }
+      }
+    ],
+    "default": []
+  }
+]

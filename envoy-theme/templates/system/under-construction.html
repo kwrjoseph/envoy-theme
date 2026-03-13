@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Under Construction
+  screenshotPath: ../images/template-previews/under-construction.png
+-->
+{% extends "../layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {% dnd_section %}
+      {% dnd_module "construction_content"
+        path='@hubspot/rich_text'
+        label='Under Construction Content'
+        html='<div class="min-h-[60vh] flex items-center justify-center text-center"><div class="px-6 max-w-2xl mx-auto"><i class="fas fa-hard-hat text-[5rem] text-[#002d74] mb-8 block"></i><h1 class="text-4xl lg:text-6xl font-black text-slate-900 mb-8 tracking-tight">Under Construction</h1><p class="text-lg text-slate-500 leading-relaxed mb-6">We are currently building something remarkable. This page is being updated to provide you with a better experience.</p><div class="w-16 h-1 bg-slate-200 mx-auto rounded-full mb-8"></div><a href="/" class="inline-block bg-[#002d74] text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-[#001f52] transition-all hover:-translate-y-0.5 hover:shadow-lg">Back to Home</a></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,560 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home Two
+  screenshotPath: ../images/template-previews/home-two.jpg
+-->
+{% extends "./layouts/base-two.html" %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+  {% dnd_area 'dnd_area' class='body-container body-container--home p-0', label='Main section' %}
+
+  {# Intro section two #}
+  {% dnd_section %}
+    {% dnd_module "module_164654442049910" path="../modules/Hero Banner", label="Hero Banner" 
+    layout = 'layout-two',
+    intro_two = {
+      'section_class' : '',
+      'intro_title' : 'Distant learning for further expansion',
+      'intro_desc' : 'Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.',
+      'intro_btn_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+      'intro_btn_icon' : '<i class="far fa-download me-3"></i>',
+      'intro_btn_text' : 'Download free guide',
+      'intro_course_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+      'intro_course_link_text' : 'Have questions?​ <mark>Get Free Form <i class="far fa-long-arrow-right"></i></mark>',
+      'intro_image' : { 
+              'alt': 'Intro Image',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/contact/contact.jpg') 
+          },
+      'shape_image_one' : { 
+                  'alt': 'shape image one',
+                  'size_type': 'auto', 
+                  'src': get_asset_url('../images/shape-animation/about-shape-1.png') 
+              },
+      'shape_image_two' : { 
+          'alt': 'shape image two',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/about-shape-1.png') 
+          },
+      'shape_image_three' : { 
+        'alt': 'shape image three',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/shape-1.png') 
+      },
+      'intro_course_thumb' : { 
+        'alt': 'shape image four',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+      },
+      'animation_name' : 'fade-up'
+    }
+
+
+    %}
+    
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# End intro section two #}
+
+  {# Brand Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_162928786002957" path="../modules/brand", label="brand"
+    
+    section_class = '',
+    animation_name = '',
+    brand_item = [
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-01.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-02.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-03.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-04.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-05.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-06.png') 
+        },
+      },
+      {
+        'brand_logo' : { 
+          'alt': 'Brand Logo',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/brand/client-logo-07.png') 
+        },
+      }
+    ]
+
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Brand Section End #}
+
+  {# Hpme Two Course Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164595274961343" path="../modules/Home Course", label="Home Course"
+    layout = 'layout-two',
+    section_class = '',
+    section_bg_color = '#f5f7fa',
+    section_title_class = '',
+    section_subtitle = 'Stimulated to learn?',
+    section_title = 'Featured Online Courses',
+    animation_name = 'fade-up',
+    course_item = [
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+        'course_thumb' : { 
+          'alt': 'Course Thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/courses/170/course-1.jpg') 
+        },
+        'course_price' : '$40<span>.00</span>',
+        'course_title' : 'Learning to Write as a Professional Author',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '20 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '51 Students'
+          }
+        ]
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+        'course_thumb' : { 
+          'alt': 'Course Thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/courses/170/course-2.jpg') 
+        },
+        'course_price' : 'Free',
+        'course_title' : 'Customer-centric Info-Tech Strategies',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '23 Lessons'
+          }
+        ]
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+        'course_thumb' : { 
+          'alt': 'Course Thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/courses/170/course-3.jpg') 
+        },
+        'course_price' : '$19<span>.00</span>',
+        'course_title' : 'Open Programming Courses for Everyone: Python',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '16 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '57 Students'
+          }
+        ]
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+        'course_thumb' : { 
+          'alt': 'Course Thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/courses/170/course-4.jpg') 
+        },
+        'course_price' : '$26<span>.00</span>',
+        'course_title' : 'Academic Listening and Note-taking',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '14 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '67 Students'
+          }
+        ]
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+        'course_thumb' : { 
+          'alt': 'Course Thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/courses/170/course-5.jpg') 
+        },
+        'course_price' : '$39<span>.00</span>',
+        'course_title' : 'Master jQuery in a Short Period of Time',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '6 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '45 Students'
+          }
+        ]
+      },
+      {
+        'animation_name' : 'fade-up',
+        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+        'course_thumb' : { 
+          'alt': 'Course Thumb',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/courses/170/course-6.jpg') 
+        },
+        'course_price' : '$59<span>.00</span>',
+        'course_title' : 'Introduction to Javascript for Beginners',
+        'meta_group' : [
+          {
+            'meta_icon' : '<i class="far fa-file-alt"></i>',
+            'meta_text' : '14 Lessons'
+          },
+          {
+            'meta_icon' : '<i class="far fa-user-alt"></i>',
+            'meta_text' : '70 Students'
+          }
+        ]
+      }
+    ],
+    all_course_link = { 'url': { 'type': 'CONTENT', 'href': './courses-grid-three'},},
+    all_course_link_text = 'View all courses',
+    all_course_link_icon = '<i class="far fa-long-arrow-right ms-3"></i>'
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Home Two Course Section End #}
+
+  {# Learners Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_162952582630815" path="../modules/learners", label="learners" 
+    
+    section_class = '',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_subtitle = 'Maxcoach available courses',
+    section_title = 'Access <span>Smart Tutoring</span> Program For Benefits.',
+    feature_item_group = [
+      {
+        'feature_animation_name' : 'fade-up',
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './about'}},
+        'feature_icon' : { 
+            'alt': 'Feature icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/learner/h2-learner-01.png') 
+          },
+        'feature_title' : 'Customize Preferences',
+        'feature_desc' : 'Learners are given the right to arrange and customize their study schedule and timetable based on preferences.',
+        'featuer_link_text' : 'Start here',
+        'feature_link_icon' : '<i class="far fa-long-arrow-right"></i>'
+       },
+      {
+        'feature_animation_name' : 'fade-up',
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './about'}},
+        'feature_icon' : { 
+            'alt': 'Feature icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/learner/learner-02.png') 
+          },
+        'feature_title' : 'Cloud Storage',
+        'feature_desc' : 'You can store online lessons via online cloud or download to your device and revise lessons on the way.',
+        'featuer_link_text' : 'Get Free Quote',
+        'feature_link_icon' : '<i class="far fa-long-arrow-right"></i>'
+       },
+      {
+        'feature_animation_name' : 'fade-up',
+        'feature_link' : { 'url': { 'type': 'CONTENT', 'href': './about'}},
+        'feature_icon' : { 
+            'alt': 'Feature icon',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/learner/h2-learner-02.png') 
+          },
+        'feature_title' : 'Multimedia Channels',
+        'feature_desc' : 'We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.',
+        'featuer_link_text' : 'Start here',
+        'feature_link_icon' : '<i class="far fa-long-arrow-right"></i>'
+       }
+    ]
+
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Learners Section End #}
+
+  {# About Video Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16462218113128" path="../modules/Home Video", label="Home Video" 
+    layout = 'layout-two', 
+    
+    section_class = '';
+    video_popup_link = { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/watch?v=eS9Qm4AOOBY'},},
+    animation_name = 'fade-up',
+    video_banner_image = { 
+        'alt': 'Video banner image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/video/home-2-popup-video-poster.jpg') 
+      },
+      video_icon = { 
+        'alt': 'Video icon',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/icons/icon-youtube-play.png') 
+      },
+      shape_image_one = { 
+      'alt': 'shape image',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/shape-animation/shape-2.svg') 
+    },
+    shape_image_two = { 
+        'alt': 'shape image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/shape-3.png') 
+      },
+      shape_image_three = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/shape-1.png') 
+        },
+        about_subtitle = 'Get started  <strong>effortlessly</strong>',
+        about_title = 'Enjoy Our <span>Companionship</span> ',
+        about_desc_text = 'Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We are opening new classes every beginning of each month. ',
+        about_link = { 'url': { 'type': 'CONTENT', 'href': './about'},},
+        about_link_text = '<mark>Download free guidebook <i class="far fa-long-arrow-right"></i></mark>'
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# About Video Section End #}
+
+  {# Testimonial Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164602431065922" path="../modules/Testimonial", label="Testimonial" 
+    layout = 'layout-two', 
+    section_class = '',
+    section_bg_color = '#f8f8f8',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_subtitle = 'great words about maxcoach',
+    title_font_size = '',
+    section_title = 'Our <span> top learners </span> verbatim',
+    testimonial_item = [
+      {
+        'testimonial_title' :  'High level of efficiency and scientific teaching methods',
+        'testimonial_excerpt' : 'I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-1.jpg') 
+          },
+        'author_name' :  'Florence Themes',
+        'author_position' : '/ Multimedia Admin',
+      },
+      {
+        'testimonial_title' :  'Professional team of specialists and passionate mentors at reach',
+        'testimonial_excerpt' : 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-2.jpg') 
+          },
+        'author_name' :  'Madley Pondor',
+        'author_position' : '/ IT Specialist',
+      },
+      {
+        'testimonial_title' :  'Highly recommend their courses and teaching system',
+        'testimonial_excerpt' : 'I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-3.jpg') 
+          },
+        'author_name' :  'Luvic Dubble',
+        'author_position' : '/ Private Tutor',
+      },
+      {
+        'testimonial_title' :  'Its a choice of quality for people who need specialized study programs',
+        'testimonial_excerpt' : 'I am a very strict person so I require everything to be organized and neat. Then, I will be able to make things right and shine. MaxCoach guys just got me.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-4.jpg') 
+          },
+        'author_name' :  'Florence Themes',
+        'author_position' : '/ Multimedia Admin',
+      }
+    ]
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Testimonial Section End #}
+
+  {# CTA Section Start #}
+  {% dnd_section %}
+  
+    {% dnd_module "module_164603954194410" path="../modules/CTA", label="CTA"
+    layout = 'layout-one', 
+    
+    section_class = '',
+    section_bg_color = '#f5f5f5',
+    cta_content_class = '',
+    cta_subtitle = 'Start today for getting <span>Online Certification</span>',
+    cta_title = 'You can be your own guiding star with our help!',
+    cta_link = { 'url': { 'type': 'CONTENT', 'href': '/contact'},},
+    cta_link_text = 'Get started for free',
+    shape_image_one = { 
+          'alt': 'shape image one',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/cta-shape-01.png') 
+        },
+    shape_image_two = { 
+          'alt': 'shape image one',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+        }
+    
+    %}
+
+
+    {% end_dnd_module %}
+
+  {% end_dnd_section %}
+  {# CTA Section End #}
+
+  {# Funfact Section Start #}
+  {% dnd_section %}
+
+    {% dnd_module "module_164593702089027" path="../modules/Funfact", label="Funfact" 
+    layout = 'layout-two', 
+    section_class = '',
+    section_bg_image = { 
+          'alt': 'section bg image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/bg/background-pattern-grid-line-02.png') 
+        },
+    funfact_item_group = [
+      {
+        'funfact_animation_name' : 'fade-up',
+        'funfact_title' : 'Successfully trained',
+        'funfact_counter' : '<span class="counter">1790</span>',
+        'funfact_text' : 'Enrolled Learners'
+      },
+      {
+        'funfact_animation_name' : 'fade-up',
+        'funfact_title' : 'Proudly Received',
+        'funfact_counter' : '<span class="counter">19</span>',
+        'funfact_text' : 'Countrywide Awards'
+      },
+      {
+        'funfact_animation_name' : 'fade-up',
+        'funfact_title' : 'Firmly Established',
+        'funfact_counter' : '<span class="counter">24</span>',
+        'funfact_text' : 'local branches'
+      },
+      {
+        'funfact_animation_name' : 'fade-up',
+        'funfact_title' : 'Getting Featured on',
+        'funfact_counter' : '<span class="counter">1090</span>',
+        'funfact_text' : 'Blog Posts'
+      }
+    ]
+    
+    %}
+
+    {% end_dnd_module %}
+
+  {% end_dnd_section %}
+  {# Funfact Section End #}
+
+  {# Blog Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164604968563358" path="../modules/Blog", label="Blog"
+    layout = 'layout-one', 
+    section_class = '',
+    section_bg_color = '#f8f8f8',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    sub_title = 'Consider registering our courses?',
+    title = 'Trending on <span>Our Blogs</span>'
+
+    %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Blog Section End #}
+
+  {# Newsletter Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164619298538613" path="../modules/Newsletter", label="Newsletter"
+    layout = 'layout-one', 
+    section_class = '',
+    newsletter_title = 'Sign up for our <span>Newsletters</span>',
+    newsletter_desc = 'Enter your email address to register to our newsletter subscription <br class="d-none d-md-block" />delivered on a regular basis!',
+    shape_image_one = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-1.png') 
+        },
+    shape_image_two = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+        },
+    
+    %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Newsletter Section End #}
+
+  
+
+
+
+
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

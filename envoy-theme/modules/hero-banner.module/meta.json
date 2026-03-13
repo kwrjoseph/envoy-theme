@@ -1,0 +1,9 @@
+{
+  "label": "Hero Banner",
+  "css_assets": [{ "path": "../../css/main.css" }],
+  "js_assets": [],
+  "other_assets": [],
+  "global": false,
+  "host_template_types": ["PAGE"],
+  "is_available_for_new_content": true
+}

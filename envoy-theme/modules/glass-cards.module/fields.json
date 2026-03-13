@@ -1,0 +1,78 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'features' for #features links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "columns",
+    "label": "Columns",
+    "type": "choice",
+    "required": false,
+    "display": "select",
+    "choices": [
+      [
+        "2",
+        "2 Columns"
+      ],
+      [
+        "3",
+        "3 Columns"
+      ]
+    ],
+    "default": "3"
+  },
+  {
+    "name": "cards",
+    "label": "Cards",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 12,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "icon_class",
+        "label": "Icon Class",
+        "type": "text",
+        "required": false,
+        "default": "fas fa-microchip",
+        "help_text": "Font Awesome icon class (e.g. 'fas fa-microchip', 'fas fa-brain')."
+      },
+      {
+        "name": "title",
+        "label": "Card Title",
+        "type": "text",
+        "required": false,
+        "default": "Card Title"
+      },
+      {
+        "name": "description",
+        "label": "Card Description",
+        "type": "richtext",
+        "required": false,
+        "default": "<p>Card description.</p>"
+      }
+    ],
+    "default": []
+  }
+]

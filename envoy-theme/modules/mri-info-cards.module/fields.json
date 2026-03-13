@@ -1,0 +1,63 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "default": "Safe for MRI under specific conditions"
+  },
+  {
+    "name": "badge_text",
+    "label": "Badge Text",
+    "type": "text",
+    "required": false,
+    "default": "MR CONDITIONAL"
+  },
+  {
+    "name": "section_description",
+    "label": "Section Description",
+    "type": "richtext",
+    "required": false,
+    "default": "<p>The implanted components of the Esteem&reg; System are MR Conditional. A patient with this device can be safely scanned in an MR system meeting specific conditions.</p>"
+  },
+  {
+    "name": "cards",
+    "label": "Specification Cards",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "tesla_level",
+        "label": "Tesla Level",
+        "type": "text",
+        "required": false,
+        "default": "1.5 Tesla Systems"
+      },
+      {
+        "name": "specifications",
+        "label": "Specifications",
+        "type": "richtext",
+        "required": false,
+        "default": ""
+      }
+    ]
+  },
+  {
+    "name": "warning_text",
+    "label": "Warning Text",
+    "type": "richtext",
+    "required": false,
+    "default": ""
+  }
+]

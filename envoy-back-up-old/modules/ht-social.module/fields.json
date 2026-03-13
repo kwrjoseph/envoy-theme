@@ -1,0 +1,82 @@
+[ {
+  "id" : "557cdf59-a76b-d8b0-bd08-b9041585b147",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "06a57a02-66c1-d889-9d36-3bcf439a01c8",
+  "name" : "social_class",
+  "display_width" : null,
+  "label" : "Social Class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "4d9135fa-c3fd-9324-2b73-ea2728a4d854",
+  "name" : "social_group",
+  "display_width" : null,
+  "label" : "social-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "a0ead171-9960-38b8-4cd3-0fe32f6c309c",
+    "name" : "social_link",
+    "display_width" : null,
+    "label" : "social-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "67bb40af-c633-c07d-3d0d-a462de3984ab",
+    "name" : "social_icon",
+    "display_width" : null,
+    "label" : "social-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fab fa-twitter\"></i>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "social_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_icon" : "<i class=\"fab fa-twitter\"></i>"
+  }
+} ]

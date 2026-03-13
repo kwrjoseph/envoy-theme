@@ -1,0 +1,70 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Media
+  screenshotPath: ../images/template-previews/media.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero ── #}
+    {% dnd_section %}
+      {% dnd_module "media_hero"
+        path='../modules/hero-banner'
+        label='Media Hero'
+        badge_text='Press Room'
+        title='Media'
+        subtitle='<p>Coverage, interviews, and stories featuring Envoy Medical and our mission to revolutionize hearing health through fully implanted technology.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Quick Links ── #}
+    {% dnd_section %}
+      {% dnd_module "media_quick_links"
+        path='../modules/feature-cards'
+        label='Media Quick Links'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-newspaper", "card_title": "Press Releases", "description": "<p>Official company announcements and corporate news.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-video", "card_title": "Media Coverage", "description": "<p>Articles, interviews, and features from external media outlets.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#media-coverage"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-envelope", "card_title": "Media Contact", "description": "<p>Reach our communications team for press inquiries.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#media-contact"}, "open_in_new_tab": false, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Media Coverage Grid (Blog-powered) ── #}
+    {% dnd_section %}
+      {% dnd_module "media_coverage"
+        path='../modules/blog-cards'
+        label='Media Coverage'
+        anchor_id='media-coverage'
+        section_title='Media Coverage'
+        columns='3'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Media Contact CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "media_cta"
+        path='../modules/cta-section'
+        label='Media Contact CTA'
+        anchor_id='media-contact'
+        title='Media Inquiries'
+        subtitle='For press kits, interview requests, or media coverage, please reach out to our communications team.'
+        primary_button_text='Contact Media Team'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "mailto:Envoy@kcsa.com"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='View Press Releases'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

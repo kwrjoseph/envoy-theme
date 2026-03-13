@@ -1,0 +1,64 @@
+{# Comparison Grid Module — from middle-ear-implants.html and cochlear-implants.html #}
+<section {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %} class="py-32 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    {# Section header #}
+    <div class="text-center mb-24">
+      <div class="section-accent mx-auto" style="width:80px;height:4px;background:#002d74;border-radius:2px;margin-bottom:2rem;margin-left:auto;margin-right:auto;"></div>
+      <h2 class="text-4xl lg:text-7xl font-black text-slate-900 tracking-tighter">{{ module.section_title }}</h2>
+      {% if module.section_subtitle %}
+      <p class="text-xl text-slate-500 mt-6 max-w-3xl mx-auto">{{ module.section_subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {# Comparison grid #}
+    <div class="grid {% if module.items|length == 3 %}md:grid-cols-3{% else %}md:grid-cols-2{% endif %} gap-8">
+      {% for item in module.items %}
+      <div class="feature-card relative {% if item.is_featured %}border-blue-200 bg-white ring-4 ring-blue-50/50{% endif %}"
+           style="background:white;border:1px solid {% if item.is_featured %}#bfdbfe{% else %}#f1f5f9{% endif %};border-radius:2.5rem;padding:3rem;transition:all 0.4s cubic-bezier(0.165,0.84,0.44,1);">
+
+        {# Featured badge #}
+        {% if item.is_featured %}
+        <div class="absolute top-6 right-6">
+          <span class="inline-block py-1 px-3 bg-blue-600 rounded-full text-[10px] font-bold uppercase tracking-wide text-white">Featured</span>
+        </div>
+        {% endif %}
+
+        {# Category tag #}
+        {% if item.category_tag %}
+        <div class="text-[10px] font-black uppercase tracking-widest {% if item.is_featured %}text-blue-400{% else %}text-slate-300{% endif %} mb-6 block">{{ item.category_tag }}</div>
+        {% endif %}
+
+        {# Title #}
+        <h3 class="text-3xl font-black text-slate-900 mb-6 tracking-tight">{{ item.item_title }}</h3>
+
+        {# Description #}
+        <div class="text-slate-500 mb-8 leading-relaxed">{{ item.description }}</div>
+
+        {# Features checklist #}
+        {% if item.features %}
+        <ul class="space-y-4 mb-10">
+          {% for feature in item.features %}
+          <li class="flex items-center text-sm font-bold text-slate-600">
+            <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+            {{ feature.feature_text }}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        {# CTA link #}
+        {% if item.link.url.href %}
+        <a href="{{ item.link.url.href }}"
+           {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if item.link.no_follow %}rel="nofollow"{% endif %}
+           class="text-blue-600 font-bold hover:underline">
+          Learn more <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

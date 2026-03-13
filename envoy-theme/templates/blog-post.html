@@ -1,0 +1,137 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Blog Post
+  screenshotPath: ../images/template-previews/blog-post.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+
+  {# ── Post Hero ── #}
+  <section class="relative overflow-hidden py-20 lg:py-28 brand-bg-navy text-white">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-20 w-80 h-80 rounded-full border border-white/20"></div>
+      <div class="absolute bottom-10 left-10 w-60 h-60 rounded-full border border-white/10"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      <div class="mb-6 flex flex-wrap items-center justify-center gap-3">
+        {% for t in content.topic_list %}
+        <span class="text-[10px] font-bold uppercase tracking-widest text-blue-300 bg-white/10 px-4 py-2 rounded-full">{{ t.name }}</span>
+        {% endfor %}
+      </div>
+      <h1 class="text-3xl lg:text-5xl font-black tracking-tight mb-6 leading-tight">{{ content.name }}</h1>
+      <div class="flex items-center justify-center gap-4 text-blue-200 text-sm">
+        {% if content.blog_author %}
+        <span class="font-medium">{{ content.blog_author.display_name }}</span>
+        <span>&bull;</span>
+        {% endif %}
+        <span>{{ content.publish_date|datetimeformat('%B %d, %Y') }}</span>
+      </div>
+    </div>
+  </section>
+
+  {# ── Featured Image ── #}
+  {% if content.featured_image %}
+  <div class="max-w-5xl mx-auto px-6 -mt-12 relative z-10">
+    <div class="rounded-2xl overflow-hidden shadow-xl">
+      <img src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text }}" class="w-full h-auto">
+    </div>
+  </div>
+  {% endif %}
+
+  {# ── Post Body ── #}
+  <article class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="prose prose-lg prose-slate max-w-none
+                  prose-headings:font-black prose-headings:text-slate-900 prose-headings:tracking-tight
+                  prose-a:text-blue-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+                  prose-img:rounded-xl prose-img:shadow-md
+                  prose-blockquote:border-l-4 prose-blockquote:border-blue-600 prose-blockquote:bg-slate-50 prose-blockquote:rounded-r-xl prose-blockquote:py-4 prose-blockquote:px-6
+                  prose-strong:text-slate-900">
+        {{ content.post_body }}
+      </div>
+
+      {# ── Tags ── #}
+      {% if content.topic_list %}
+      <div class="mt-12 pt-8 border-t border-slate-200">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Topics:</span>
+          {% for t in content.topic_list %}
+          <a href="{{ blog_tag_url(group.id, t.slug) }}" class="text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 transition-colors">{{ t.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {# ── Author Bio ── #}
+      {% if content.blog_author %}
+      <div class="mt-12 p-8 bg-slate-50 rounded-2xl">
+        <div class="flex items-start gap-6">
+          {% if content.blog_author.avatar %}
+          <img src="{{ content.blog_author.avatar }}" alt="{{ content.blog_author.display_name }}" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
+          {% else %}
+          <div class="w-16 h-16 rounded-full bg-slate-200 flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-user text-slate-400 text-xl"></i>
+          </div>
+          {% endif %}
+          <div>
+            <h4 class="font-bold text-slate-900 mb-1">{{ content.blog_author.display_name }}</h4>
+            {% if content.blog_author.bio %}
+            <p class="text-slate-500 text-sm leading-relaxed">{{ content.blog_author.bio }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </article>
+
+  {# ── Related Posts ── #}
+  {% set related = blog_recent_posts(group.id, 3) %}
+  {% if related %}
+  <section class="py-20 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-2xl font-black text-slate-900 mb-12">More from {{ group.public_title }}</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {% for post in related %}
+        {% if post.absolute_url != content.absolute_url %}
+        <article class="bg-white border border-slate-100 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full flex flex-col">
+          {% if post.featured_image %}
+          <div class="w-full h-[200px] overflow-hidden">
+            <img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text }}" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          {% else %}
+          <div class="w-full h-[200px] bg-slate-100 flex items-center justify-center text-slate-300">
+            <i class="fas fa-image text-3xl"></i>
+          </div>
+          {% endif %}
+          <div class="p-8 flex flex-col flex-grow">
+            <span class="text-xs text-slate-400 font-medium mb-3">{{ post.publish_date|datetimeformat('%b %d, %Y') }}</span>
+            <h4 class="text-lg font-bold text-slate-900 mb-4 leading-tight">
+              <a href="{{ post.absolute_url }}" class="hover:text-blue-600 transition-colors">{{ post.name }}</a>
+            </h4>
+            <a href="{{ post.absolute_url }}" class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors mt-auto">
+              Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {# ── Back to Blog CTA ── #}
+  <section class="py-12 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <a href="{{ group.absolute_url }}" class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors">
+        <i class="fas fa-arrow-left mr-2 text-xs"></i> Back to {{ group.public_title }}
+      </a>
+    </div>
+  </section>
+
+</main>
+{% endblock body %}

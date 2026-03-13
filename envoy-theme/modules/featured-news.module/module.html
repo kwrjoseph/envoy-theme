@@ -1,0 +1,36 @@
+{# Featured News Module #}
+<section class="pb-16 bg-white"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %}>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="featured-card shadow-2xl" style="background-color: var(--brand-navy); color: white; border-radius: 2rem; overflow: hidden; position: relative;">
+      <div class="grid lg:grid-cols-2">
+        <div class="p-12 lg:p-16 flex flex-col justify-center relative z-10">
+          <div class="flex items-center space-x-4 mb-6">
+            {% if module.badge_text %}
+              <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">{{ module.badge_text }}</span>
+            {% endif %}
+            {% if module.date_text %}
+              <span class="text-blue-200 text-sm font-medium">{{ module.date_text }}</span>
+            {% endif %}
+          </div>
+          {% if module.title %}
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6 font-serif leading-tight">{{ module.title }}</h2>
+          {% endif %}
+          {% if module.description %}
+            <div class="text-blue-100 leading-relaxed mb-8 text-lg">{{ module.description }}</div>
+          {% endif %}
+          {% if module.link.url.href %}
+            <a href="{{ module.link.url.href }}"{% if module.link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %} class="inline-flex items-center text-white font-bold hover:text-blue-200 transition-colors">
+              Read Full Story <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          {% endif %}
+        </div>
+        <div class="relative min-h-[300px] bg-blue-900">
+          {% if module.image.src %}
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay" style="background-image: url('{{ module.image.src }}');"></div>
+          {% endif %}
+          <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#002d74]"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

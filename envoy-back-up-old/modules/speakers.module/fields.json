@@ -1,0 +1,128 @@
+[ {
+  "id" : "173f1f57-6fb9-c0f5-89d2-0dfab66d1562",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "663ccb14-f6a8-48d5-59a4-b1dd9bfaa3d2",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "3cb8bbf3-ea9d-2286-9861-880e8f45628f",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our Speakers"
+}, {
+  "id" : "4cf847d4-b3b2-2320-6612-e6ec14da79bf",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our Speakers"
+}, {
+  "id" : "b1bfc3b0-df8c-e33a-3bf9-28c498a59c53",
+  "name" : "speaker_item",
+  "display_width" : null,
+  "label" : "speaker-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "2f85023d-dcb8-752d-f452-deb882111657",
+    "name" : "speaker_thumb",
+    "display_width" : null,
+    "label" : "speaker-thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "46c87d48-8fd2-96b3-c87c-565e3a014d21",
+    "name" : "speaker_name",
+    "display_width" : null,
+    "label" : "speaker-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Solomon"
+  }, {
+    "id" : "b16becd7-3ee1-750b-6814-5c6dd77d7995",
+    "name" : "speaker_position",
+    "display_width" : null,
+    "label" : "speaker-position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "/ Designer"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "speaker_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "speaker_name" : "Solomon",
+    "speaker_position" : "/ Designer"
+  }
+}, {
+  "id" : "fede39f6-20e6-b896-21ae-f762b3869fc9",
+  "name" : "speakers_desc",
+  "display_width" : null,
+  "label" : "speakers-desc",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Register online, get your ticket, meet up with our inspirational speakers and specialists in the field to share your ideas."
+} ]

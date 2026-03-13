@@ -1,0 +1,216 @@
+[ {
+  "id" : "ea75ad66-598f-76c3-5f2b-1c700283e939",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+}, {
+  "id" : "b4cfcf9d-7cf8-cd23-8dfa-6ec5f23a411a",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "f57024a4-78d9-f3ed-9ab4-2762961d7e83",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "ccdb9e79-f8e7-b9f6-9dd2-47362f4e85e6",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "cc5fda16-f490-5ee1-4780-9a4c41ca3ad9",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Four major Steps to Success"
+}, {
+  "id" : "23aa2114-25b5-db56-ebab-2a7488d65f83",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Best chances for expanding your <br> success to the max"
+}, {
+  "id" : "0d8834e4-8519-d519-78ad-1bada5fa60eb",
+  "name" : "faq_image",
+  "display_width" : null,
+  "label" : "Faq Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "856a6cb3-97f8-dcff-a094-287e68b08c90",
+  "name" : "shape_image",
+  "display_width" : null,
+  "label" : "Shape Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "94eebf20-77f4-7279-a41f-3b715045378b",
+  "name" : "accordion_id_one",
+  "display_width" : null,
+  "label" : "accordion-id-one",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "591ab0c8-4d96-54f5-203b-55fc4f6b6d73",
+  "name" : "accordion_id_two",
+  "display_width" : null,
+  "label" : "accordion-id-two",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "accordionExample2"
+}, {
+  "id" : "e2765819-eecd-4226-baf5-17d96d3431da",
+  "name" : "accordion_item",
+  "display_width" : null,
+  "label" : "accordion-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "153c4c44-9038-d649-33fb-390d936bb744",
+    "name" : "accordion_title",
+    "display_width" : null,
+    "label" : "accordion-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "How to register online?"
+  }, {
+    "id" : "3c3996f0-0e5b-0350-9bd6-170703e0d251",
+    "name" : "accordion_text",
+    "display_width" : null,
+    "label" : "accordion-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "accordion_title" : "How to register online?",
+    "accordion_text" : "Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started."
+  }
+}, {
+  "id" : "a567ce87-013b-abcd-0609-c32eff35c950",
+  "name" : "accordion_item_two",
+  "display_width" : null,
+  "label" : "accordion-item-two",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "9e545d1a-f130-e919-e59f-e00cb5c6771c",
+    "name" : "accordion_title",
+    "display_width" : null,
+    "label" : "accordion-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "How to register online?"
+  }, {
+    "id" : "054e7a05-71ea-5964-961d-f12d6d34738e",
+    "name" : "accordion_text",
+    "display_width" : null,
+    "label" : "accordion-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "accordion_title" : "How to register online?",
+    "accordion_text" : "Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started."
+  }
+} ]

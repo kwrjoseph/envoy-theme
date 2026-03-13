@@ -1,0 +1,318 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Courses Grid One
+  screenshotPath: ../images/template-previews/courses-grid-1.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-two', 
+        section_class = '',
+        section_bg_color = '#fff',
+        page_title = 'Courses Grid 01',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Courses Grid 01'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Course Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_164604319578241" path="../modules/Course Grid", label="Course Grid"
+        layout = 'layout-one',
+        section_class = '',
+        course_item = [
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-1.jpg') 
+                },
+                'course_price' : '$40<span>.00</span>',
+                'course_title' : 'Learning to Write as a Professional Author',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '20 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '51 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : 'Free',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-2.jpg') 
+                },
+                'course_price' : '$0<span>.00</span>',
+                'course_title' : 'Customer-centric Info-Tech Strategies',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '23 Lessons'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-3.jpg') 
+                },
+                'course_price' : '$19<span>.00</span>',
+                'course_title' : 'Open Programming Courses for Everyone: Python',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '16 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '57 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-4.jpg') 
+                },
+                'course_price' : '$26<span>.00</span>',
+                'course_title' : 'Academic Listening and Note-taking',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '14 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '67 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-5.jpg') 
+                },
+                'course_price' : '$39<span>.00</span>',
+                'course_title' : 'Master jQuery in a Short Period of Time',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '6 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '45 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-6.jpg') 
+                },
+                'course_price' : '$59<span>.00</span>',
+                'course_title' : 'Introduction to Javascript for Beginners',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '14 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '70 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-7.jpg') 
+                },
+                'course_price' : '$26<span>.00</span>',
+                'course_title' : 'Problem-solving Skills for Better Success',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '15 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '40 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-8.jpg') 
+                },
+                'course_price' : '$22<span>.00</span>',
+                'course_title' : 'Speed Reading Techniques in University',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '18 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '40 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-9.jpg') 
+                },
+                'course_price' : '$22<span>.00</span>',
+                'course_title' : 'Database & SQL for Computer Science',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '15 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '96 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-10.jpg') 
+                },
+                'course_price' : '$22<span>.00</span>',
+                'course_title' : 'Intermediate English Speaking Practice',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '18 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '49 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-11.jpg') 
+                },
+                'course_price' : '$28<span>.00</span>',
+                'course_title' : 'Complete Fitness Trainer: Beginner to Advanced',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '8 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '47 Students'
+                    }
+                ],
+            },
+            {
+                'course_animation_name' : 'fade-up',
+                'course_badge' : '',
+                'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                'course_image' : { 
+                    'alt': 'course image',
+                    'size_type': 'auto', 
+                    'src': get_asset_url('../images/courses/370/course-12.jpg') 
+                },
+                'course_price' : '$22<span>.00</span>',
+                'course_title' : 'Learning to Write as a Professional Author',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-file-alt"></i>',
+                        'meta_text' : '8 Lessons'
+                    },
+                    {
+                        'meta_icon' : '<i class="far fa-user-alt"></i>',
+                        'meta_text' : '47 Students'
+                    }
+                ],
+            }
+        ]
+        
+        %}
+
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Course Section End #}
+
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

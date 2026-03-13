@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Alternate%20Pencil:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 55030695972,
+  "label" : "terms_of_service",
+  "is_available_for_new_content" : true
+}

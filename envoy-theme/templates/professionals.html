@@ -1,0 +1,155 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Professional Portal
+  screenshotPath: ../images/template-previews/professionals.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_hero"
+        path='../modules/hero-banner'
+        label='Professional Portal Hero'
+        badge_text='Healthcare Professional Portal'
+        title='Advancing Care with Invisible Hearing\u00ae'
+        subtitle='<p>Partner with Envoy Medical to offer the Esteem\u00ae\u2014the world&rsquo;s first fully implanted hearing solution designed for total freedom.</p>'
+        primary_button_text='Partner With Us'
+        secondary_button_text='Explore Technology'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== NATURE'S MICROPHONE / TECHNOLOGY SPOTLIGHT ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_technology"
+        path='../modules/two-column-section'
+        label='Technology Spotlight'
+        anchor_id='tech'
+        section_title='Revolutionary Engineering'
+        title='Nature&rsquo;s Microphone\u2122'
+        description='<p>The Esteem&reg; implant uses your patient&rsquo;s own eardrum as a microphone. By leveraging natural ear anatomy, it preserves the natural resonances of the pinna and ear canal.</p><p>Unlike traditional hearing aids or partially implanted devices, the Esteem FI-AMEI technology eliminates the need for external microphones, connectors, and daily maintenance.</p><ul><li><strong>No external components</strong></li><li><strong>24/7 hearing access</strong></li><li><strong>Natural sound localization</strong></li></ul>'
+        layout='image-left'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== RECIPIENT BENEFITS GRID ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_benefits"
+        path='../modules/feature-cards'
+        label='Recipient Benefits'
+        section_title='Recipient Benefits'
+        section_subtitle=''
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-clock", "card_title": "24/7 Hearing Access", "description": "<p>Continuous auditory input enhances safety and situational awareness\u2014critical for patients living alone or in caregiving roles.</p>"}, {"icon_class": "fas fa-water", "card_title": "Waterproof", "description": "<p>Continue to hear worry-free while swimming, showering, and sweating. Submersion capability up to 33 feet supports active lifestyles.</p>"}, {"icon_class": "fas fa-headphones", "card_title": "Expanded Audio Access", "description": "<p>Preserve personal audio habits. Use headphones, earbuds, and Bluetooth accessories without any interference.</p>"}, {"icon_class": "fas fa-universal-access", "card_title": "Enhanced Accessibility", "description": "<p>Ideal for individuals with dexterity, vision, or cognitive challenges\u2014no handling, insertion, or adjustment required.</p>"}, {"icon_class": "fas fa-check-double", "card_title": "Daily Convenience", "description": "<p>No risk of misplacement, no cleaning, no recharging, and no battery changes\u2014reduces patient burden and improves adherence.</p>"}, {"icon_class": "fas fa-shield-alt", "card_title": "No Daily Maintenance", "description": "<p>Requires no cleaning or insertion/removal, ensuring a seamless experience for every patient.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== HOW THE ESTEEM WORKS ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_how_it_works"
+        path='../modules/feature-cards'
+        label='How the Esteem Works'
+        anchor_id='how-it-works'
+        section_title='How the Esteem works'
+        section_subtitle='Three core implanted components working in harmony with human anatomy.'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-wave-square", "card_title": "Piezoelectric Sensor", "description": "<p>Positioned on the incus bone. When the eardrum vibrates, the sensor captures these movements and converts them into electrical signals.</p>"}, {"icon_class": "fas fa-microchip", "card_title": "Sound Processor", "description": "<p>Subcutaneously implanted behind the ear. It processes signals based on the patient&rsquo;s unique hearing profile and transmits them to the driver.</p>"}, {"icon_class": "fas fa-volume-high", "card_title": "Piezoelectric Driver", "description": "<p>Converts processed signals back into mechanical vibrations, directly stimulating the stapes bone for natural hearing perception.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== ELIGIBILITY CRITERIA ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_eligibility"
+        path='../modules/two-column-section'
+        label='Eligibility Criteria'
+        anchor_id='eligibility'
+        title='Who is a Candidate?'
+        description='<p>The Esteem is designed for adults with moderate to severe sensorineural hearing loss. Use our clinical criteria to identify potential candidates in your clinic.</p><ul><li>18 years of age or older</li><li>Stable bilateral sensorineural hearing loss</li><li>Moderate to severe SNHL (defined by PTA)</li><li>Unaided SDS Score &ge; 40%</li><li>Normally functioning Eustachian tube</li><li>Normal middle ear anatomy &amp; membrane</li><li>Adequate space (determined via CT scan)</li><li>Min. 30 days hearing aid experience</li></ul>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='Become a Provider'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== PROVIDER TESTIMONIALS ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_testimonial_1"
+        path='../modules/quote-card'
+        label='Provider Testimonial - Dr. Li'
+        quote_text='<p>The technology [of the Esteem hearing implant] is just amazing. This implant is actually the Cadillac or Lamborghini of all hearing options out there... It&rsquo;s for people who really care about the carefree lifestyle.</p>'
+        author_name='John Li, MD'
+        author_title='Otolaryngology Specialist, Jupiter, FL'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section %}
+      {% dnd_module "pro_testimonial_2"
+        path='../modules/quote-card'
+        label='Provider Testimonial - Dr. Shohet'
+        quote_text='<p>The Esteem has enabled us to provide a new treatment modality for a population of patients we previously could not help. This is a group of people who simply have not been satisfied with hearing aids...</p>'
+        author_name='Jack Shohet, MD'
+        author_title='Neurotologist/Otologist, Orange County, CA'
+        bg_color='white'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section %}
+      {% dnd_module "pro_testimonial_3"
+        path='../modules/quote-card'
+        label='Provider Testimonial - Nancy Cohen'
+        quote_text='<p>It takes close collaboration and synchronicity with the surgeon, an understanding of the uniqueness of each case, as well as a total commitment to the needs and best interests of each individual patient.</p>'
+        author_name='Nancy Cohen, AUD'
+        author_title='CSA at Envoy Medical'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== PROFESSIONAL RESOURCES ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_resources"
+        path='../modules/blog-cards'
+        label='Professional Resources'
+        section_title='Professional Resources'
+        columns='3'
+        posts=[{"category": "Clinical", "date": "", "title": "Esteem&reg; Surgical Training Guide", "description": "<p>Comprehensive guide for surgeons performing the Esteem implantation procedure.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Research", "date": "", "title": "Published Clinical Data", "description": "<p>Access peer-reviewed research and clinical trial results for the Esteem FI-AMEI.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Education", "date": "", "title": "Patient Candidacy Assessment Tool", "description": "<p>Tools and checklists to help evaluate patient eligibility for the Esteem implant.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== PARTNERSHIP CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_cta"
+        path='../modules/cta-section'
+        label='Partnership CTA'
+        anchor_id='partner'
+        title='Ready to Expand Your Practice?'
+        subtitle='Join an elite network of providers dedicated to delivering the most advanced hearing technology in the world.'
+        primary_button_text='Apply to Become a Provider'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

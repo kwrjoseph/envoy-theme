@@ -1,0 +1,32 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Welcome / Greeting
+  screenshotPath: ../images/template-previews/greeting.png
+-->
+{% extends "./layouts/landing.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Full-Screen Welcome Hero ── #}
+    {% dnd_section %}
+      {% dnd_module "greeting_hero"
+        path='../modules/hero-banner'
+        label='Welcome Hero'
+        badge_text='Welcome'
+        title='Hello.'
+        subtitle='<p class="text-2xl">Thank you for visiting Envoy Medical. We are dedicated to providing innovative hearing solutions that restore the joy of sound.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+        primary_button_text='Explore Our Solutions'
+        primary_button_link='/'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

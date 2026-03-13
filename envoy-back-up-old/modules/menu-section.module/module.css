@@ -1,0 +1,315 @@
+/* 05.02 Main Menu CSS */
+.site-main-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+.h2-justify-content-start .site-main-menu{
+  justify-content: flex-start !important;
+}
+  
+  .site-main-menu > ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .site-main-menu > ul > li {
+    position: relative;
+  }
+  
+  .site-main-menu > ul > li > a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.375;
+    display: block;
+    padding: 29px 14px;
+    color: var(--secondary-color);
+  }
+
+  
+  
+  .site-main-menu > ul > li > a .menu-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .site-main-menu > ul > li .menu-toggle {
+    display: none;
+  }
+  
+  .site-main-menu > ul > li.has-children > a .menu-text::after {
+    font-family: "Font Awesome 5 Pro";
+    font-size: 8px;
+    font-weight: 900;
+    margin-left: 10px;
+    content: "\f078";
+  }
+  
+  .site-main-menu > ul > li:hover > a {
+    color: var(--primary-color);
+  }
+  
+  .site-main-menu > ul > li:hover > .sub-menu-2, .site-main-menu .sub-menu-2 li:hover > .sub-menu-3 {
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
+  }
+  
+  .site-main-menu .sub-menu-2, .site-main-menu .sub-menu-3, .site-main-menu .mega-menu {
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    width: 240px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 18px 0;
+    list-style: none;
+    -webkit-transition: all 0.4s ease 0.2s;
+    -o-transition: all 0.4s ease 0.2s;
+    transition: all 0.4s ease 0.2s;
+    opacity: 0;
+    border-bottom: 4px solid var(--primary-color);
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 2px 29px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 29px rgba(0, 0, 0, 0.05);
+  }
+ .site-main-menu .sub-menu-2 .sub-menu-3 {
+    top: -18px;
+    left: 100%;
+  }
+  
+  .site-main-menu .sub-menu-2 li, .site-main-menu .mega-menu li {
+    position: relative;
+  }
+  
+  .site-main-menu .sub-menu-2 li a, .site-main-menu .mega-menu li a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.375;
+    display: block;
+    padding: 8px 30px;
+    white-space: nowrap;
+    color: var(--default-color);
+  }
+  
+  .site-main-menu .sub-menu-2 li a .menu-text, .site-main-menu .mega-menu li a .menu-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .site-main-menu .sub-menu-2 li .menu-toggle, .site-main-menu .mega-menu li .menu-toggle {
+    display: none;
+  }
+  
+  .site-main-menu .sub-menu-2 li.has-children > a .menu-text::after, .site-main-menu .mega-menu li.has-children > a .menu-text::after {
+    font-family: "Font Awesome 5 Pro";
+    font-size: 8px;
+    font-weight: 900;
+    margin-left: auto;
+    content: "\f054";
+  }
+  
+  .site-main-menu .sub-menu-2 li:hover > a, .site-main-menu .sub-menu-2 li.active > a, .site-main-menu .mega-menu li:hover > a, .site-main-menu .mega-menu li.active > a {
+    color: #111111;
+  }
+  
+  .site-main-menu .sub-menu-2 li:hover > .sub-menu-2, .site-main-menu .mega-menu li:hover > .sub-menu-2 {
+    visibility: visible;
+    margin-top: 0;
+    opacity: 1;
+  }
+  
+  .site-main-menu .sub-menu-2 .sub-menu-3, .site-main-menu .mega-menu .sub-menu-2 {
+    top: -18px;
+    left: 100%;
+  }
+  
+  .site-main-menu .mega-menu {
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 15px 34px;
+    list-style: none;
+  }
+  
+  .site-main-menu .mega-menu > li {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    width: 25%;
+    padding: 0 15px;
+  }
+  
+  .site-main-menu .mega-menu > li.menu-item-50 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    width: 50%;
+    padding: 0 15px;
+  }
+  
+  .site-main-menu .mega-menu > li > ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .site-main-menu .mega-menu > li > ul > li > a {
+    font-size: 15px;
+    line-height: 1.78;
+    font-weight: 500;
+    padding: 8px 0px;
+  }
+  
+  .site-main-menu .mega-menu > li > ul > li > a .badge {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(45deg, #fe378c 0%, #fe5b34 100%);
+    background-image: -o-linear-gradient(45deg, #fe378c 0%, #fe5b34 100%);
+    background-image: linear-gradient(45deg, #fe378c 0%, #fe5b34 100%);
+    display: inline-block;
+    border-radius: 2px;
+    padding: 4px 8px 3px;
+    color: #FFFFFF;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin: 0 0 0 7px;
+  }
+  
+  .site-main-menu .mega-menu > li > ul > li > a .badge.primary {
+    background-image: none;
+    background-color: #20AD96 !important;
+  }
+  
+  @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .site-main-menu.laptop-space > ul > li > a {
+      padding-right: 9px;
+      padding-left: 9px;
+    }
+  }
+  
+  .site-main-menu.menu-hover-1 > ul > li > a .menu-text {
+    position: relative;
+  }
+  
+  .site-main-menu.menu-hover-1 > ul > li > a .menu-text::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    content: "";
+    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background-color: var(--primary-color);
+  }
+  
+  .site-main-menu.menu-hover-1 > ul > li:hover > a .menu-text::before {
+    left: 0;
+    width: 100%;
+  }
+  
+  .header-light .site-main-menu > ul > li > a {
+    color: #FFFFFF;
+  }
+  
+  .header-light .site-main-menu > ul > li:hover > a {
+    color: #FFFFFF;
+  }
+  
+  .header-light .site-main-menu.menu-hover-1 > ul > li > a .menu-text::before {
+    background-color: #FFFFFF;
+  }
+  
+  .header-orange .site-main-menu > ul > li > a {
+    color: var(--secondary-color);;
+  }
+  
+  .header-orange .site-main-menu > ul > li:hover > a {
+    color: #ef6f31;
+  }
+  
+  .header-orange .site-main-menu .sub-menu-2 {
+    border-bottom: 4px solid #ef6f31;
+  }
+  
+  .header-orange .site-main-menu .sub-menu-2 li:hover > a, .header-orange .site-main-menu .sub-menu-2 li.active > a {
+    color: #ef6f31;
+  }
+  
+  .header-orange .site-main-menu .mega-menu {
+    border-bottom: 4px solid #ef6f31;
+  }
+  
+  .header-orange .site-main-menu .mega-menu li:hover > a, .header-orange .site-main-menu .mega-menu li.active > a {
+    color: #ef6f31;
+  }
+  
+  .header-orange .site-main-menu.menu-hover-1 > ul > li > a .menu-text::before {
+    background-color: #ef6f31;
+  }
+  
+  .header-fluid .site-main-menu .mega-menu, .header-fluid-two .site-main-menu .mega-menu {
+    width: 1170px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .header-left .site-main-menu .mega-menu {
+    left: 150px;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    text-align: center;
+  }
+  
+  @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .header-left .site-main-menu .mega-menu {
+      left: 20px;
+    }
+  }
+

@@ -1,0 +1,49 @@
+{# Quote Card Module #}
+
+{% set bg_classes = {
+  "white": "bg-white",
+  "light": "bg-slate-50"
+} %}
+
+<section
+  class="{{ bg_classes[module.bg_color] }} py-16 lg:py-24"
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl p-8 lg:p-12 shadow-sm border border-slate-100">
+
+      {# Quote icon #}
+      <div class="mb-6">
+        <i class="fas fa-quote-left text-3xl text-brand-navy opacity-60"></i>
+      </div>
+
+      {# Quote text #}
+      <blockquote class="text-xl lg:text-2xl font-medium text-slate-700 italic leading-relaxed mb-8">
+        {{ module.quote_text }}
+      </blockquote>
+
+      {# Author #}
+      <div class="flex items-center gap-4">
+        {% if module.author_image.src %}
+          <img
+            src="{{ module.author_image.src }}"
+            alt="{{ module.author_image.alt || module.author_name }}"
+            class="w-12 h-12 rounded-full object-cover flex-shrink-0"
+            width="48"
+            height="48"
+            loading="lazy"
+          >
+        {% endif %}
+        <div>
+          {% if module.author_name %}
+            <p class="font-bold text-slate-900">{{ module.author_name }}</p>
+          {% endif %}
+          {% if module.author_title %}
+            <p class="text-sm text-slate-500">{{ module.author_title }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

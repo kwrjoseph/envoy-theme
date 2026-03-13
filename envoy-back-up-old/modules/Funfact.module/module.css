@@ -1,0 +1,141 @@
+.about-content {
+  position: relative;
+  z-index: 99;
+  max-width: 420px;
+}
+
+.about-content.max-width-470 {
+  max-width: 470px;
+}
+
+.about-content.max-width-470 p {
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-content {
+    max-width: 100%;
+  }
+}
+
+.about-content .sub-title {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2;
+  display: block;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8C89A2;
+}
+
+.about-content .title {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 15px;
+  color: var(--secondary-color);;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-content .title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .about-content .title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+.about-content .title span {
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+.about-content a {
+  font-size: 15px;
+}
+
+.funfact-border {
+  padding: 99px 15px 52px;
+  background-position: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+  .funfact-border {
+    background-position: top center !important;
+  }
+}
+
+.funfact {
+  text-align: center;
+}
+
+.funfact .number {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+  color: var(--primary-color);
+}
+
+.funfact .text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.34;
+  margin-top: 14px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary-color);;
+}
+
+
+.funfact.funfact-style-two .title {
+  max-width: 180px;
+  font-size: 24px;
+  line-height: 1.34;
+  color: var(--secondary-color);;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.funfact.funfact-style-two .number {
+  font-size: 64px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .funfact.funfact-style-two .number {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .funfact.funfact-style-two .number {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .funfact.funfact-style-two .number {
+    font-size: 48px;
+  }
+}
+
+.funfact.funfact-style-two .text {
+  color: var(--default-color);
+}

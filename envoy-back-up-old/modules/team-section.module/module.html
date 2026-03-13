@@ -1,0 +1,110 @@
+<!-- Team Section Start -->
+        <div class="team-section section section-padding-top {{ module.section_class }}">
+            <div class="container">
+                <!-- Section Title Start -->
+                <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+                    <span class="sub-title">{{ module.section_subtitle }}</span>
+                    <h2 class="title fz-48">{{ module.section_title }}</h2>
+                </div>
+                <!-- Section Title End -->
+                <div class="row ht-team-member-style-two">
+                  {% for item in module.team_item %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 max-mb-50">
+                        <div class="grid-item">
+                            <div class="ht-team-member">
+                                <div class="team-image">
+                                    {% if item.team_image.src %}
+                                      {% set sizeAttrs = 'width="{{ item.team_image.width }}" height="{{ item.team_image.height }}"' %}
+                                      {% if item.team_image.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                      {% elif item.team_image.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ item.team_image.max_width }}" height="{{ item.team_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                      {% endif %}
+                                       {% set loadingAttr = item.team_image.loading != 'disabled' ? 'loading="{{ item.team_image.loading }}"' : '' %}
+                                      <img class="img-fluid" src="{{ item.team_image.src }}" alt="{{ item.team_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                    {% endif %}
+                                    <div class="social-networks">
+                                        <div class="inner">
+                                          {% for item2 in item.team_social %}
+                                              {% set href = item2.social_link.url.href %}
+                                              {% if item2.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                                {% set href = "mailto:" + href %}
+                                              {% endif %}
+                                              {% set rel = [] %}
+                                              {% if item2.social_link.no_follow %}
+                                                {% do rel.append("nofollow") %}
+                                              {% endif %}
+                                              {% if item2.social_link.open_in_new_tab %}
+                                                {% do rel.append("noopener") %}
+                                              {% endif %}
+                                              <a target="_blank" class=" hint--bounce  hint--top hint--theme-two" aria-label="{{ item2.aria_label }}" href="{{ href }}"
+                                                {% if item2.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                                {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                                >
+                                                {{ item2.social_icon }}
+                                              </a>
+                                          {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info text-center">
+                                    <h5 class="name">{{ item.team_member_name }}</h5>
+                                    <div class="position">{{ item.position }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  {% endfor %}
+                </div>
+                <div class="row ht-team-member-style-three max-mb-n50">
+                    {% for item in module.team_item_four_column %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 max-mb-50">
+                        <div class="grid-item ">
+                            <div class="ht-team-member">
+                                <div class="team-image">
+                                  {% if item.team_image.src %}
+                                    {% set sizeAttrs = 'width="{{ item.team_image.width }}" height="{{ item.team_image.height }}"' %}
+                                    {% if item.team_image.size_type == 'auto' %}
+                                      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                    {% elif item.team_image.size_type == 'auto_custom_max' %}
+                                      {% set sizeAttrs = 'width="{{ item.team_image.max_width }}" height="{{ item.team_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                    {% endif %}
+                                     {% set loadingAttr = item.team_image.loading != 'disabled' ? 'loading="{{ item.team_image.loading }}"' : '' %}
+                                    <img class="img-fluid" src="{{ item.team_image.src }}" alt="{{ item.team_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                  {% endif %}
+                                    <div class="social-networks">
+                                        <div class="inner">
+                                          {% for item2 in item.team_social %}
+                                              {% set href = item2.social_link.url.href %}
+                                              {% if item2.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                                {% set href = "mailto:" + href %}
+                                              {% endif %}
+                                              {% set rel = [] %}
+                                              {% if item2.social_link.no_follow %}
+                                                {% do rel.append("nofollow") %}
+                                              {% endif %}
+                                              {% if item2.social_link.open_in_new_tab %}
+                                                {% do rel.append("noopener") %}
+                                              {% endif %}
+                                              <a target="_blank" class=" hint--bounce  hint--top hint--theme-two" aria-label="{{ item2.aria_label }}" href="{{ href }}"
+                                                {% if item2.social_link.open_in_new_tab %}target="_blank"{% endif %}
+                                                {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                                >
+                                                {{ item2.social_icon }}
+                                              </a>
+                                          {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info text-center">
+                                    <h6 class="name">{{ item.team_member_name }} </h6>
+                                    <div class="position">{{ item.position }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- Team Section End -->

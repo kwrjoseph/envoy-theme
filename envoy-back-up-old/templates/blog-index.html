@@ -1,0 +1,118 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Boilerplate - blog listing
+  screenshotPath: ../images/template-previews/blog-index.jpg
+-->
+{% set template_css = '../../css/templates/blog.css' %}
+{% extends './layouts/base.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area'
+    label='Main section',
+    class='body-container body-container--blog-index p-0'
+  %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+      {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+      layout = 'layout-two', 
+      section_class = '',
+      section_bg_color = '#fff',
+      page_title = 'Blog Grid',
+      breadcrumb_group = [
+          {
+              'breadcrumb_class' : '',
+              'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+              'breadcrumb_text' : 'Home'
+          },
+          {
+              'breadcrumb_class' : 'current',
+              'breadcrumb_text' : 'Blog Grid'
+          }
+      ]
+
+
+      %}
+      
+      {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# End Breadcrumb section #}
+
+  {% end_dnd_area %}
+
+
+  <!-- Blog Section Start -->
+  <div class="section section-padding-bottom">
+      <div class="container">
+
+        <!-- Blog Wrapper Start -->
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 max-mb-n30">
+          {% for content in contents %}
+          <!-- Blog Start -->
+          <div class="col max-mb-30" data-aos="fade-up">
+            <div class="blog">
+              <div class="thumbnail">
+                <a href="{{content.absolute_url}}" class="image"><img src="{{ content.post_list_summary_featured_image }}" alt="Blog Image"></a>
+              </div>
+              <div class="info">
+                {% if content.tag_list %}
+                {% for tag in content.tag_list[0] %}
+                <a href="{{ blog_tag_url(group.id, tag.slug) }}" class="category">{{ tag.name }}</a>
+                {% endfor %}
+                {% endif %}
+                <h3 class="title"><a href="{{content.absolute_url}}">{{ content.name }}</a></h3>
+                <ul class="meta">
+                  <li><i class="far fa-user"></i>{{ content.blog_post_author.display_name }}</li>
+                  <li><i class="far fa-calendar"></i>{{content.publish_date|datetimeformat('%B %e %Y') }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Blog End -->
+          {% endfor %}
+        </div>
+        <!-- Blog Wrapper End -->
+
+          <!-- Pagination Start -->
+          <div class="row max-mt-50">
+              <div class="col">
+              {% if contents.total_page_count > 1 %}
+                {% set page_index = current_page_num > 0 ? current_page_num : 1 %}
+                  <ul class="pagination center">
+                    {# First #}
+                    {% if page_index >= 3 %}
+                      <li class="active"><a href="{{ blog_page_link(1) }}">1</a></li>
+                      <span class="blog-pagination__ellipsis">...</span>
+                    {% endif %}
+                    {% if page_index > 1 %}
+                      <li><a href="{{ blog_page_link(page_index - 1) }}">{{ page_index - 1 }}</a></li>
+                    {% endif %}
+                      <li><a href="{{ blog_page_link(page_index) }}">{{ page_index }}</a></li>
+                    {% if page_index != contents.total_page_count %}
+                      <li><a href="{{ blog_page_link(page_index + 1) }}">{{ page_index + 1 }}</a></li>
+                    {% endif %}
+
+                    {# Last #}
+
+
+                    {% if contents.total_page_count - page_index > 1 %}
+                    <span class="blog-pagination__ellipsis">...</span>
+                    <li><a href="{{ blog_page_link(contents.total_page_count) }}">{{ contents.total_page_count }}</a></li>
+                    {% endif %}
+
+                    {# Next button #}
+                  </ul>
+                {% endif %}
+              </div>
+          </div>
+          <!-- Pagination End -->
+
+      </div>
+  </div>
+  <!-- Blog Section End -->
+
+</main>
+{% endblock body %}

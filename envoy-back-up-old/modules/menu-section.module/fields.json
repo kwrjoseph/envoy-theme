@@ -1,0 +1,10 @@
+[ {
+  "id" : "primary_menu_field",
+  "name" : "main_meu",
+  "display_width" : null,
+  "label" : "main_meu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "default" : 56216500803
+} ]

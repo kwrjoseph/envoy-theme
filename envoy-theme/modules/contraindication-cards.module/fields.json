@@ -1,0 +1,54 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "cards",
+    "label": "Cards",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "icon_class",
+        "label": "Icon Class",
+        "type": "text",
+        "required": false,
+        "default": "fas fa-ear-deaf"
+      },
+      {
+        "name": "card_title",
+        "label": "Card Title",
+        "type": "text",
+        "required": false,
+        "default": ""
+      },
+      {
+        "name": "items",
+        "label": "Items",
+        "type": "group",
+        "occurrence": {
+          "min": 0,
+          "max": null,
+          "default": 0
+        },
+        "children": [
+          {
+            "name": "item_text",
+            "label": "Item Text",
+            "type": "text",
+            "required": false,
+            "default": ""
+          }
+        ]
+      }
+    ]
+  }
+]

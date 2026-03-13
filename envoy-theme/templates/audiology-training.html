@@ -1,0 +1,78 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Acclaim Pivotal Audiology Training
+  screenshotPath: ../images/template-previews/audiology-training.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Audiology Training ── #}
+    {% dnd_section %}
+      {% dnd_module "training_hero"
+        path='../modules/hero-banner'
+        label='Training Hero'
+        badge_text=''
+        title='Acclaim&reg; Pivotal Audiology Training'
+        subtitle='<p>CAUTION &mdash; Investigational device. Limited by Federal (or United States) law to investigational use.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Refresher Course Intro ── #}
+    {% dnd_section %}
+      {% dnd_module "training_intro"
+        path='@hubspot/rich_text'
+        label='Refresher Course Intro'
+        html='<div class="py-16 bg-white"><div class="max-w-5xl mx-auto px-6 text-center"><div class="bg-slate-50 border border-slate-100 rounded-[2rem] p-12 relative overflow-hidden"><h2 class="text-3xl font-bold text-slate-800 mb-4">Pivotal Clinical Trial Stage 2<br>Audiology Refresher Course</h2><p class="text-xl text-slate-500 mb-8 font-serif italic">Fall 2025</p><div class="max-w-3xl mx-auto bg-white/50 p-6 rounded-xl border border-dashed border-slate-300"><p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-relaxed">This presentation contains CONFIDENTIAL INFORMATION intended solely for the attendees or recipient(s). The information set forth in this presentation may not be reproduced or disclosed by the recipient(s) without the prior written consent of the author.</p><p class="mt-4 text-[10px] font-bold text-slate-800">CAUTION &ndash; Investigational device. Limited by Federal (or United States) law to investigational use.</p></div><div class="mt-8 flex justify-center"><a href="#" class="inline-flex items-center space-x-2 text-blue-600 font-bold hover:text-blue-800 transition-colors"><i class="fas fa-file-pdf text-xl"></i><span>Download Presentation Slides</span></a></div></div><p class="mt-4 text-[10px] text-slate-300">Acclaim, Envoy and Envoy Medical are registered trademarks of Envoy Medical Corporation.</p></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Training Module 1: Video ── #}
+    {% dnd_section %}
+      {% dnd_module "training_video_1"
+        path='../modules/video-placeholder'
+        label='Training Module 1'
+        anchor_id='module-1'
+        title='Pivotal Training Module 1'
+        video_url=''
+        watermark_text='ENVOY MEDICAL'
+        show_watermark=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Training Module 2: Locked Video ── #}
+    {% dnd_section %}
+      {% dnd_module "training_video_2"
+        path='../modules/video-placeholder'
+        label='Training Module 2'
+        anchor_id='module-2'
+        title='Pivotal Training Module 2'
+        video_url=''
+        watermark_text='ENVOY MEDICAL'
+        show_watermark=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Disclaimer Section ── #}
+    {% dnd_section %}
+      {% dnd_module "training_disclaimer"
+        path='@hubspot/rich_text'
+        label='Training Disclaimer'
+        html='<div class="py-16 bg-slate-100 border-t border-slate-200"><div class="max-w-4xl mx-auto px-6 text-center"><p class="text-xs text-slate-500 leading-loose font-medium">These materials are intended to be a resource for education, product training and instructions for use for participation in the Pivotal Clinical Trial Evaluating the Safety and Efficacy of the Acclaim&reg; Cochlear Implant System. They are not intended to constitute medical or business advice or in any way substitute for or replace the independent medical judgment of a trained and licensed physician. Individuals should talk to their Study Doctor if they have any questions or concerns.</p></div></div>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

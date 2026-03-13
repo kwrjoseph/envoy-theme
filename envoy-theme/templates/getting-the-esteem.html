@@ -1,0 +1,43 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Getting the Esteem
+  screenshotPath: ../images/template-previews/getting-the-esteem.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Patient Journey ── #}
+    {% dnd_section %}
+      {% dnd_module "getting_esteem_hero"
+        path='../modules/hero-banner'
+        label='Getting the Esteem Hero'
+        badge_text='Patient Journey'
+        title='Getting the Esteem&reg;'
+        subtitle='<p>Take the first step towards invisible hearing. Fill out the form below to request more information or check your candidacy.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+        anchor_id='getting-the-esteem-hero'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── HubSpot Form Embed ── #}
+    {% dnd_section %}
+      {% dnd_module "getting_esteem_form"
+        path='../modules/form-section'
+        label='Getting the Esteem Form'
+        section_title='Request Information'
+        section_subtitle='<p>Fill out the form below and a member of our team will be in touch to discuss your candidacy and next steps.</p>'
+        bg_color='white'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

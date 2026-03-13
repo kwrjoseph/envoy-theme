@@ -1,0 +1,10 @@
+{
+  "label": "Caution Banner",
+  "css_assets": [
+    {
+      "path": "../../css/main.css"
+    }
+  ],
+  "host_template_types": ["PAGE"],
+  "is_available_for_new_content": true
+}

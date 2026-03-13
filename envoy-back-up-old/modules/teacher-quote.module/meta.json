@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:quote-right:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 52955689020,
+  "label" : "teacher_quote",
+  "is_available_for_new_content" : true
+}

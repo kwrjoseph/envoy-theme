@@ -1,0 +1,307 @@
+[ {
+  "id" : "f126ac27-1055-41f5-4c87-5bdb29648c46",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "ccfd41d2-113a-174e-2b4e-d1e693048474",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "262075db-b0a7-dee3-3a30-d8a93f631f0b",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "576bd110-fe6e-d1c0-c0c9-3cf5292e96bc",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "About The Event"
+}, {
+  "id" : "3db5dda6-ed72-61df-e238-e790da404ad5",
+  "name" : "event_meta_item",
+  "display_width" : null,
+  "label" : "event-meta-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "1efeaebc-7450-46df-1eff-f942adbbe5d5",
+    "name" : "meta_icon",
+    "display_width" : null,
+    "label" : "meta-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"meta-icon fal fa-map-marker-alt\"></i>"
+  }, {
+    "id" : "6209c6af-3e12-9830-d316-86cbb9a77c3a",
+    "name" : "meta_text",
+    "display_width" : null,
+    "label" : "meta-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Hamburg, Germany"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "meta_icon" : "<i class=\"meta-icon fal fa-map-marker-alt\"></i>",
+    "meta_text" : "Hamburg, Germany"
+  }
+}, {
+  "id" : "86b235d4-d294-311f-4c29-06dbd56f0c76",
+  "name" : "map_url",
+  "display_width" : null,
+  "label" : "map-url",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd"
+}, {
+  "id" : "7ed0ca2c-205a-6f11-b80a-1f2efa0edf04",
+  "name" : "location_icon",
+  "display_width" : null,
+  "label" : "location-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<span class=\"fal fa-map-marker-alt\"></span>"
+}, {
+  "id" : "2ff71a2d-545e-8ea3-954d-e272492610c7",
+  "name" : "location_text",
+  "display_width" : null,
+  "label" : "location-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Betahaus Hamburg Schanze, Eifflerstraße 43"
+}, {
+  "id" : "53faed3b-77de-85fb-6b23-e89e5fccca72",
+  "name" : "sidebar_meta_item",
+  "display_width" : null,
+  "label" : "sidebar-meta-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "9084109e-0479-da27-c5e9-f1b4da4676a0",
+    "name" : "meta_label_icon",
+    "display_width" : null,
+    "label" : "meta-label-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"meta-icon far fa-money-bill-wave\"></i>"
+  }, {
+    "id" : "94d13939-b6df-ef98-bfc9-ceb9b6852835",
+    "name" : "meta_label_text",
+    "display_width" : null,
+    "label" : "meta-label-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Cost:"
+  }, {
+    "id" : "eca289ac-4360-3849-2fa9-edfba4c6c1bc",
+    "name" : "meta_value_text",
+    "display_width" : null,
+    "label" : "meta-value-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "ebb74eea-0460-73ae-db6a-3fd993797d3f",
+    "name" : "meta_class",
+    "display_width" : null,
+    "label" : "meta-class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "meta_label_icon" : "<i class=\"meta-icon far fa-money-bill-wave\"></i>",
+    "meta_label_text" : "Cost:"
+  }
+}, {
+  "id" : "ef83f953-7542-5851-ee1d-07ed2d9248b7",
+  "name" : "book_btn",
+  "display_width" : null,
+  "label" : "book-btn",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "753cd7d8-b1f6-5e58-3c18-5c6903bccf86",
+  "name" : "book_btn_text",
+  "display_width" : null,
+  "label" : "book-btn-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Book Now"
+}, {
+  "id" : "083c1548-911e-a955-9ee2-bf942e612c09",
+  "name" : "register_message_text",
+  "display_width" : null,
+  "label" : "register-message-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "You must login before register event."
+}, {
+  "id" : "c63caa32-4a6f-8efa-4e53-9a0ce429d66d",
+  "name" : "social_item",
+  "display_width" : null,
+  "label" : "social-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "7586fd12-4c15-aa3f-c54f-9f09142cc067",
+    "name" : "social_link",
+    "display_width" : null,
+    "label" : "social-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "2f78dcc8-7d58-2644-3b04-0b611aadeb68",
+    "name" : "social_link_icon",
+    "display_width" : null,
+    "label" : "social-link-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fab fa-facebook-f social-link-icon\"></i>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "social_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "social_link_icon" : "<i class=\"fab fa-facebook-f social-link-icon\"></i>"
+  }
+}, {
+  "id" : "d036acf9-1913-28ac-11b8-9ddd8dbea216",
+  "name" : "event_content",
+  "display_width" : null,
+  "label" : "event-content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>International Art Fair is a contemporary art fair that presents collective and solo projects by leading and emerging international artists. The 12th edition will represent a forum for direct exchange of ideas and contacts between collectors, artists, photographers, designers and art professionals. The art fair features paintings, sculptures, photography art, installations, video art and live performance.</p>\n<p>International Art Fair, organized by ITSLIQUID Group in collaboration with Art Events and Ca’ Zanardi, will be held in Venice, at THE ROOM Contemporary Art Space from April 09 to May 10 2020, at Palazzo Ca’ Zanardi from April 10 to May 10 2020 and in other prestigious venues and historical buildings.</p>\n<p>International Art Fair provides artists and exhibitors with the unique opportunity to present their works to an international audience of professionals as curators, gallerists, collectors, editors and publishers who seek to acquire, publish and encourage the best contemporary art talents.</p>\n<p><strong>The participation includes the following services</strong><br>– exhibition space dedicated to the artist’s works<br>– assisting with customs formalities, international shipping and local transport<br>– assisting in finding accommodation for artist<br>– the design and the printing of invitation cards, posters<br>– the global and local press office, publicity, press, banners, totem, etc.<br>– the realization of the exhibition website and dedicated press releases<br>– mounting and dismounting of the exhibition<br>– exhibitions opening event with drinks and food<br>– a one day dedicated presentation, talk or workshop focusing on the artist’s career<br>– a dedicated interview published on ITSLIQUID website and spread on our social networks<br>– providing services and drinks for small meetings at the exhibition places for invited guests</p>"
+} ]

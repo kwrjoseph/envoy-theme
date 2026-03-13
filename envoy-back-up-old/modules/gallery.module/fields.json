@@ -1,0 +1,108 @@
+[ {
+  "id" : "6b543e1d-66e6-62e5-afca-c8a64b3615b6",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "aef36ba5-90dc-68db-27af-ead30bb5c59b",
+  "name" : "gallery_item",
+  "display_width" : null,
+  "label" : "gallery-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "61b15fe9-ae69-6fdd-79cc-894334efbbd7",
+    "name" : "gallery_link",
+    "display_width" : null,
+    "label" : "gallery-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "092eed19-b2a5-20ee-4b72-a515d4ccca17",
+    "name" : "gallery_image",
+    "display_width" : null,
+    "label" : "gallery-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "0f6808c6-3fde-d737-a74e-7109f56cbacb",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lonnie Marks"
+  }, {
+    "id" : "f435a82a-770d-33ff-0ba1-ef14e647a16b",
+    "name" : "position",
+    "display_width" : null,
+    "label" : "position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Tutor"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "gallery_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "gallery_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "title" : "Lonnie Marks",
+    "position" : "Tutor"
+  }
+} ]

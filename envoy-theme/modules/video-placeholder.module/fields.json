@@ -1,0 +1,42 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": "Training Module"
+  },
+  {
+    "name": "video_url",
+    "type": "text",
+    "label": "Video URL (iframe embed)",
+    "default": ""
+  },
+  {
+    "name": "placeholder_image",
+    "type": "image",
+    "label": "Placeholder Image",
+    "responsive": true,
+    "default": {
+      "src": "",
+      "alt": "Video placeholder"
+    }
+  },
+  {
+    "name": "watermark_text",
+    "type": "text",
+    "label": "Watermark Text",
+    "default": "CONFIDENTIAL"
+  },
+  {
+    "name": "show_watermark",
+    "type": "boolean",
+    "label": "Show Watermark",
+    "default": false
+  }
+]

@@ -1,0 +1,60 @@
+<!-- Teacher Quote Section Start -->
+        <div class="section section-padding {{ module.section_class }}">
+            <div class="container">
+
+                <!-- Teacher Quote Wrapper Start -->
+                <div class="teacher-quote-wrapper" data-aos="{{ module.animation_name }}">
+                    <!-- Teacher Quote Start -->
+                    <div class="teacher-quote">
+                        <div class="image">
+                        {% if module.teracher_quote_thumb.src %}
+                          {% set sizeAttrs = 'width="{{ module.teracher_quote_thumb.width }}" height="{{ module.teracher_quote_thumb.height }}"' %}
+                          {% if module.teracher_quote_thumb.size_type == 'auto' %}
+                            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                          {% elif module.teracher_quote_thumb.size_type == 'auto_custom_max' %}
+                            {% set sizeAttrs = 'width="{{ module.teracher_quote_thumb.max_width }}" height="{{ module.teracher_quote_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                          {% endif %}
+                           {% set loadingAttr = module.teracher_quote_thumb.loading != 'disabled' ? 'loading="{{ module.teracher_quote_thumb.loading }}"' : '' %}
+                          <img src="{{ module.teracher_quote_thumb.src }}" alt="{{ module.teracher_quote_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                        {% endif %}
+                      </div>
+                        <div class="content">
+                            <div class="section-title {{ module.section_title_class }}">
+                                <h2 class="title">{{ module.section_title }}</h2>
+                            </div>
+                            <div class="row">
+                                <div class="quote">
+                                    <p>{{ module.quote_text }}</p>
+                                </div>
+                                <div class="experience">
+                                    <span class="amount">{{ module.experience_year_text }}</span>
+                                    <h6 class="title">{{ module.experience_title }}</h6>
+                                    {% set href = module.quote_link.url.href %}
+                                    {% if module.quote_link.url.type is equalto "EMAIL_ADDRESS" %}
+                                      {% set href = "mailto:" + href %}
+                                    {% endif %}
+                                    {% set rel = [] %}
+                                    {% if module.quote_link.no_follow %}
+                                      {% do rel.append("nofollow") %}
+                                    {% endif %}
+                                    {% if module.quote_link.open_in_new_tab %}
+                                      {% do rel.append("noopener") %}
+                                    {% endif %}
+                                    <a class="link" href="{{ href }}"
+                                      {% if module.quote_link.open_in_new_tab %}target="_blank"{% endif %}
+                                      {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                                      >
+                                      {{ module.quote_link_text }}
+                                      {{ module.quote_link_icon }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Teacher Quote End -->
+                </div>
+                <!-- Teacher Quote Wrapper End -->
+
+            </div>
+        </div>
+        <!-- Teacher Quote Section End -->

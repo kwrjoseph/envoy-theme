@@ -1,0 +1,67 @@
+.form-columns-2{
+  margin: 0 -15px !important;
+}
+
+.form-columns-2 .hs-form-field{
+  padding: 0 15px;
+}
+
+.event-form form .hs-form-field > label{
+  display: none;
+}
+
+.event-form form fieldset{
+  max-width: none !important;
+  margin-bottom: 30px !important;
+}
+
+.event-form form input{
+  margin: 0; 
+}
+.event-form form .hs-phone .input, .event-form form .hs-message .input, .event-form form .hs-firstname .input, .event-form form .hs-email .input{
+  margin: 0 !important;
+}
+.event-form form .hs-phone .input input, .event-form form .hs-message .input textarea{
+  width: 100%;
+}
+
+.event-form form textarea{
+  margin: 0; 
+}
+
+.hs-submit{
+  text-align: center;
+}
+
+.hs-button{
+  font-size: 14px;
+font-weight: 700;
+  width: 180px;
+line-height: 58px;
+display: -webkit-inline-box;
+display: -ms-inline-flexbox;
+display: inline-flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+height: 60px;
+padding: 0 40px;
+cursor: pointer;
+white-space: nowrap;
+ background-color: #20ad96;
+color: #fff;
+border-width: 1px;
+border-style: solid;
+border-color: #20ad96;
+border-radius: 5px;
+outline: 0;
+}
+
+.hs-button:hover{
+  border-color: transparent;
+  background-color: var(--secondary-color);;
+  color: #fff;
+}

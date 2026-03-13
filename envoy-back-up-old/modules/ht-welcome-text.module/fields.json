@@ -1,0 +1,13 @@
+[ {
+  "id" : "c60478eb-6a7a-a47e-4702-5eddeb71d12e",
+  "name" : "welcome_text",
+  "display_width" : null,
+  "label" : "welcome-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Starts TOMORROW! Our biggest event of the year..."
+} ]

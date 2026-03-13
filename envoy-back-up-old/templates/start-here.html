@@ -1,0 +1,273 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Start Here
+  screenshotPath: ../images/template-previews/start-here.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Page Banner Slider Section Start #}
+    {% dnd_section %}
+      {% dnd_module "module_164620038129064" path="../modules/Page Banner", label="Page Banner"
+      layout = 'layout-two',  
+      section_class = '',
+      banner_item = [
+        {
+            'banner_image' : { 
+                'alt': 'banner bg image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/page-banner/about-us-01-hero-bg.jpg') 
+            },
+            'banner_title' : 'AWAKEN <br> YOUR GIFTS <br>NOW ',
+            'banner_title_left' : '<span class="number">01</span><span class="line"></span>INSPIRING CURRICULUM',
+            'banner_desc' : 'Learning with MaxCoach might a turning point in your life when you get communication with a great awakening of born talents.'
+        },
+        {
+            'banner_image' : { 
+                'alt': 'banner bg image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/page-banner/start-here-hero-slide-02-bg.jpg') 
+            },
+            'banner_title' : 'OPEN UP <br>  A BRIGHT <br>SKY ',
+            'banner_title_left' : '<span class="number">02</span><span class="line"></span>
+            life consultancy',
+            'banner_desc' : 'Ever feel drained of ideas and inspiration in life? Lost in no where and have no place to go? Find help and advice from our MaxCoach specialists.'
+        },
+        {
+            'banner_image' : { 
+                'alt': 'banner bg image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/page-banner/start-here-hero-slide-03-bg.jpg') 
+            },
+            'banner_title' : 'write your <br>   own life <br>book',
+            'banner_title_left' : '<span class="number">03</span><span class="line"></span>
+            skill advancement',
+            'banner_desc' : 'Not only your skills are advanced, your inner self can get a new identity as well. You are the one who take the full control of your life book.'
+        }
+      ],
+      left_arrow = '<i class="fal fa-angle-left"></i>',
+      right_arrow = '<i class="fal fa-angle-right"></i>'
+      
+      %}
+
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Page Banner Slider Section End #}
+
+    {# Success Section Start  #}
+    {% dnd_section %}
+      {% dnd_module "module_163098844728913" path="../modules/success-section", label="success-section"
+      section_class = '',
+      section_title_class = '',
+      animation_name = 'fade-up',
+      section_subtitle = 'Four major Steps to Success',
+      section_title = 'Best chances for expanding your <br> success to the max',
+      timeline_item = [
+        {
+          'timeline_class' : '',
+          'timeline_title' : 'Broadening',
+          'timeline_image' : { 
+                'alt': 'timeline image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/timeline/start-here-timeline-photo-01.jpg') 
+              },
+          'timeline_subtitle' : '#1 Career advancement and hobbies',
+          'timeline_desc' : 'Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace.'
+        },
+        {
+          'timeline_class' : '',
+          'timeline_title' : 'Scheduling',
+          'timeline_image' : { 
+                'alt': 'timeline image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/timeline/start-here-timeline-photo-02.jpg') 
+              },
+          'timeline_subtitle' : '#2 Flexible schedule & environment',
+          'timeline_desc' : 'Taking an online course also means that you don’t have to commute to class, which means less time spent on the bus and more study time sitting on your couch, the sound of a crackling fireplace in the background. You no longer have to worry about missing an important class!'
+        },
+        {
+          'timeline_class' : '',
+          'timeline_title' : 'Self-discipline',
+          'timeline_image' : { 
+                'alt': 'timeline image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/timeline/start-here-timeline-photo-03.jpg') 
+              },
+          'timeline_subtitle' : '#3 Self-discipline & responsibility',
+          'timeline_desc' : 'Who says that having to be more self-disciplined is a disadvantage? It is true that studying online requires more time-management skills, because you will spend a lot of time on your own without someone physically close to keep you focused on deadlines.'
+        },
+        {
+          'timeline_class' : '',
+          'timeline_title' : 'Investment',
+          'timeline_image' : { 
+                'alt': 'timeline image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/timeline/start-here-timeline-photo-04.jpg') 
+              },
+          'timeline_subtitle' : '#4 Investment',
+          'timeline_desc' : 'Studying online means that you pay the tuition fee, possibly book supplies, an online application fee, and few other items. You don’t, however, incur the costs of housing (which can range up to $12,000 per year) and transportation, which translates to lower debts and more savings.'
+        }
+      ]
+      
+      %}
+
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Success Section End  #}
+
+    {# CTA Section Start #}
+    {% dnd_section %}
+      {% dnd_module "module_164603954194410" path="../modules/CTA", label="CTA"
+      layout = 'layout-two',
+      section_class = '',
+      cta_content_class = '',
+      animation_name = 'fade-up',
+      cta_subtitle = 'Get yourself a <strong>MaxCoach</strong>  ID?',
+      cta_title = 'Take your interest and register an online class <br> today to enjoy life fully',
+      cta_link = { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+      cta_link_text = 'Get started for free'
+
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# CTA Section End #}
+
+
+    {# Gallery Section Start #}
+    {% dnd_section %}
+      {% dnd_module "module_163099409357830" path="../modules/gallery", label="gallery"
+      section_class = '',
+      gallery_item = [
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-01.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-02.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-03.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-04.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-05.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-06.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        },
+        {
+          'gallery_link' : { 'url': { 'type': 'CONTENT', 'href': './success-story'}},
+          'gallery_image' : { 
+                'alt': 'gallery image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/gallery/start-here-gallery-image-07.jpg') 
+              },
+          'title' : 'Lonnie Marks',
+          'position' : 'Tutor'
+        }
+      ]
+
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Gallery Section End #}
+
+    {# Faq Section Start #}
+    {% dnd_section %}
+      {% dnd_module "module_164603723605245" path="../modules/FAQ", label="FAQ"
+      layout = 'layout-two',
+      section_class = '',
+      section_title_class = '',
+      animation_name = 'fade-up',
+      section_subtitle = 'Four major Steps to Success',
+      section_title = 'Best chances for expanding your <br> success to the max',
+      accordion_id_one = 'accordionExample',
+      accordion_item = [
+        {
+          'accordion_title' :  'How to register online?',
+          'accordion_text' :  'Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started.'
+        },
+        {
+          'accordion_title' :  'How do I customize my account?',
+          'accordion_text' :  'In order to customize your account’s information, just log in with the provided passcode and change the info.'
+        },
+        {
+          'accordion_title' :  'How do you process my information?',
+          'accordion_text' :  'Your data will be kept private and secure on our database. No illegal use without prior notice.'
+        }
+      ],
+      accordion_id_two = 'accordionExample2',
+      accordion_item_two = [
+        {
+          'accordion_title' :  'How do I contact support?',
+          'accordion_text' :  'You can contact our help center or any contact method (phone call, email or appear at our office) to get help.'
+        },
+        {
+          'accordion_title' :  'How to cancel my membership?',
+          'accordion_text' :  'You just need to submit a membership termination request, we’ll proceed within 24 hours.'
+        },
+        {
+          'accordion_title' :  'How can I get a discount?',
+          'accordion_text' :  'Learners can get a discount by coupon or voucher. If you have one, fill in the code box before making any payment.'
+        }
+      ]
+
+
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Faq Section End #}
+
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

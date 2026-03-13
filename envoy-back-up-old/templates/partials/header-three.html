@@ -1,0 +1,167 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+
+
+<!-- Header Top Section Start -->
+<div class="header-top-section section" data-bg-color="#f5f5f5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="header-top-content">
+                    {% module "module_16301384653544" path="../../modules/ht-welcome-text", label="ht-welcome-text" %}
+                    {% module "module_16301386873488" path="../../modules/ht-countdown", label="ht-countdown" 
+                        ht_icon = '<i class="far fa-clock"></i>',
+                        countdown_date = '2021/10/17'
+                    %}
+                    {% module "module_164586501111818" path="../../modules/button", label="button" 
+                        layout = 'layout-two'
+                        btn_link = { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+                        btn_text = 'Get ticket'
+                    
+                    %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header Top Section Start -->
+
+<!-- Header Section Start -->
+<div class="header-section sticky-header section">
+    <div class="header-inner">
+        <div class="container position-relative">
+            <div class="row justify-content-between align-items-center">
+
+                <!-- Header Logo Start -->
+                <div class="col-xl-3 col-auto">
+                    <div class="header-logo">
+                        {% module 'site_logo' path='@hubspot/logo', label='Logo',
+                        img={ 'alt': 'Maxcoach Logo', "size_type": "auto", 'src': get_asset_url('../../images/logo/dark-logo.png') }
+                        %}
+                    </div>
+                </div>
+                <!-- Header Logo End -->
+
+                <!-- Header Main Menu Start -->
+                <div class="col d-none d-xl-block position-static">
+                    {% module "module_16289155243643" path="../../modules/menu-section", label="menu-section" %}
+                </div>
+                <!-- Header Main Menu End -->
+
+                <!-- Header Right Start -->
+                <div class="col-xl-3 col-auto">
+                    <div class="header-right">
+                        <div class="inner">
+
+                            <!-- Header Social Start -->
+                            {% module "module_16465469015553" path="../../modules/ht-social", label="ht-social"
+                            layout = 'layout-one', 
+                            
+                            social_group = [
+                                {
+                                    'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': './contact'}},
+                                    'social_icon' : '<i class="fab fa-twitter"></i>'
+                                },
+                                {
+                                    'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': './contact'}},
+                                    'social_icon' : '<i class="fab fa-facebook-f"></i>'
+                                },
+                                {
+                                    'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': './contact'}},
+                                    'social_icon' : '<i class="fab fa-instagram"></i>'
+                                },
+                                {
+                                    'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': './contact'}},
+                                    'social_icon' : '<i class="fab fa-linkedin"></i>'
+                                }
+                            ]
+
+
+                            %}
+                            <!-- Header Social End -->
+
+                            <div class="language language-black d-lg-block d-none">
+                                {% if content.translated_content.values()|selectattr('published')|length || is_listing_view && group.translations %}
+                                  <div class="header__language-switcher header--element">
+                                      {% module 'language-switcher' path='@hubspot/language_switcher',
+                                        label='Language switcher',
+                                        display_mode='localized'
+                                      %}
+                                      <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
+                                  </div>
+                                {% endif %}
+                           </div>
+
+                            <!-- Header Login Start -->
+                            <div class="header-login">
+                                {% module "module_16301449069808" path="../../modules/ht-login", label="ht-login" 
+                                
+                                ht_login_link = { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+                                ht_login_icon = '<i class="far fa-user-circle"></i>'
+                                
+                                %}
+                            </div>
+                            <!-- Header Login End -->
+
+                            <!-- Header Fullscreen Search Start -->
+                            <button class="header-fs-search-toggle"><i class="far fa-search"></i></button>
+                            <!-- Header Fullscreen Search End -->
+
+                            <!-- Header Mobile Menu Toggle Start -->
+                            <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
+                                <button class="toggle">
+                                    <i class="icon-top"></i>
+                                    <i class="icon-middle"></i>
+                                    <i class="icon-bottom"></i>
+                                </button>
+                            </div>
+                            <!-- Header Mobile Menu Toggle End -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Right End -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header Section End -->
+
+<!-- Full Screen Search Start -->
+<div id="fullscreen-search" class="fullscreen-search">
+    <div class="fullscreen-search-close">
+        <button class="toggle">
+            <i class="icon-top"></i>
+            <i class="icon-bottom"></i>
+        </button>
+    </div>
+    <div class="fullscreen-search-form">
+        {% module 'site_search' path='@hubspot/search_input',
+                label='Search'
+            %}
+    </div>
+</div>
+<!-- Full Screen Search End -->
+
+<div id="site-main-mobile-menu" class="site-main-mobile-menu">
+    <div class="site-main-mobile-menu-inner">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                {% module 'site_logo' path='@hubspot/logo', label='Logo',
+                        img={ 'alt': 'Maxcoach Logo', "size_type": "auto", 'src': get_asset_url('../../images/logo/dark-logo.png') }
+                    %}
+            </div>
+            <div class="mobile-menu-close">
+                <button class="toggle">
+                    <i class="icon-top"></i>
+                    <i class="icon-bottom"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu-content">
+            {% module "module_16289315575805" path="../../modules/mobile-menu", label="mobile-menu" %}
+        </div>
+    </div>
+</div>

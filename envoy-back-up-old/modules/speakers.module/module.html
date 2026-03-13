@@ -1,0 +1,45 @@
+<!-- Speaker Section Start -->
+        <div class="speaker-section section section-padding-bottom {{ module.section_class }}">
+            <div class="container section-border-bottom section-padding-bottom-90">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Section Title Start -->
+                        <div class="section-title text-center max-mb-50 {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+                            <h2 class="title fz-48 heading-color">{{ module.section_title }}</h2>
+                        </div>
+                        <!-- Section Title End -->
+                    </div>
+                </div>
+                <div class="speaker-slider swiper-container" data-aos="{{ module.animation_name }}">
+                    <div class="swiper-wrapper">
+                      {% for item in module.speaker_item %}
+                        <div class="swiper-slide">
+                            <div class="single-speaker">
+                                <div class="image">
+                                    {% if item.speaker_thumb.src %}
+                                      {% set sizeAttrs = 'width="{{ item.speaker_thumb.width }}" height="{{ item.speaker_thumb.height }}"' %}
+                                      {% if item.speaker_thumb.size_type == 'auto' %}
+                                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                      {% elif item.speaker_thumb.size_type == 'auto_custom_max' %}
+                                        {% set sizeAttrs = 'width="{{ item.speaker_thumb.max_width }}" height="{{ item.speaker_thumb.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                      {% endif %}
+                                       {% set loadingAttr = item.speaker_thumb.loading != 'disabled' ? 'loading="{{ item.speaker_thumb.loading }}"' : '' %}
+                                      <img src="{{ item.speaker_thumb.src }}" alt="{{ item.speaker_thumb.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                    {% endif %}
+                                </div>
+                                <div class="content">
+                                    <h6 class="speaker-name">{{ item.speaker_name }}</h6>
+                                    <div class="speaker-description">{{ item.speaker_position }}</div>
+                                </div>
+                            </div>
+                        </div>
+                      {% endfor %}
+
+                    </div>
+                </div>
+                <div class="event-speakers-description">
+                    {{ module.speakers_desc }}
+                </div>
+            </div>
+        </div>
+        <!-- Speaker Section End -->

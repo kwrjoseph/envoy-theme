@@ -1,0 +1,138 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'hero' for #hero links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "name": "badge_text",
+    "label": "Badge Text",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional badge text displayed above the title (e.g. 'Investigational Device')."
+  },
+  {
+    "name": "badge_style",
+    "label": "Badge Style",
+    "type": "choice",
+    "required": false,
+    "display": "select",
+    "choices": [
+      ["default", "Default (Navy)"],
+      ["amber", "Amber"]
+    ],
+    "default": "default"
+  },
+  {
+    "name": "title",
+    "label": "Title",
+    "type": "text",
+    "required": false,
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "default": "Page Title"
+  },
+  {
+    "name": "subtitle",
+    "label": "Subtitle",
+    "type": "richtext",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "primary_button_text",
+    "label": "Primary Button Text",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "primary_button_link",
+    "label": "Primary Button Link",
+    "type": "link",
+    "required": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT"
+    ]
+  },
+  {
+    "name": "secondary_button_text",
+    "label": "Secondary Button Text",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "secondary_button_link",
+    "label": "Secondary Button Link",
+    "type": "link",
+    "required": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT"
+    ]
+  },
+  {
+    "name": "hero_image",
+    "label": "Hero Image",
+    "type": "image",
+    "required": false,
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "src": "",
+      "alt": "",
+      "loading": "lazy",
+      "width": null,
+      "height": null
+    },
+    "help_text": "Image for the split (two-column) layout. Displays on the right side."
+  },
+  {
+    "name": "theme",
+    "label": "Theme",
+    "type": "choice",
+    "required": false,
+    "display": "select",
+    "choices": [
+      ["light", "Light (gradient #f0f7ff to white)"],
+      ["dark", "Dark (brand navy gradient)"]
+    ],
+    "default": "light"
+  },
+  {
+    "name": "layout",
+    "label": "Layout",
+    "type": "choice",
+    "required": false,
+    "display": "select",
+    "choices": [
+      ["centered", "Centered (text centered)"],
+      ["left", "Left-Aligned (text left)"],
+      ["split", "Split (text left, image right)"]
+    ],
+    "default": "centered"
+  },
+  {
+    "name": "show_pattern",
+    "label": "Show Pattern Overlay",
+    "type": "boolean",
+    "required": false,
+    "default": true,
+    "help_text": "Toggle the dot pattern overlay on or off."
+  },
+  {
+    "name": "caution_text",
+    "label": "Caution / Regulatory Text",
+    "type": "richtext",
+    "required": false,
+    "default": "",
+    "help_text": "Optional regulatory warning text. Displays in an amber caution box below the hero content."
+  }
+]

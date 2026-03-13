@@ -1,0 +1,58 @@
+{# Team Member Cards Module — Envoy Medical #}
+
+<section
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+  class="py-20 bg-slate-50"
+>
+  <div class="max-w-7xl mx-auto px-6">
+
+    {# Section Header #}
+    {% if module.section_title or module.section_subtitle %}
+    <div class="mb-10">
+      {% if module.section_title %}
+      <h2 class="text-3xl font-black text-slate-900 tracking-tight">
+        {{ module.section_title }}
+      </h2>
+      {% endif %}
+      {% if module.section_subtitle %}
+      <p class="text-lg text-slate-500 mt-4">
+        {{ module.section_subtitle }}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {# Members Grid #}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-{{ module.columns }} gap-6">
+      {% for member in module.members %}
+      <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center space-x-6">
+
+        {# Avatar: Image or Initials #}
+        {% if member.member_image.src %}
+        <div class="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden">
+          <img
+            src="{{ member.member_image.src }}"
+            alt="{{ member.member_image.alt || member.member_name }}"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          >
+        </div>
+        {% else %}
+        <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center flex-shrink-0">
+          <span class="font-bold text-slate-400 text-xl">{{ member.member_initials }}</span>
+        </div>
+        {% endif %}
+
+        {# Content #}
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg">{{ member.member_name }}</h3>
+          <p class="text-blue-600 text-sm font-medium uppercase tracking-wide mb-1">{{ member.member_title }}</p>
+          <div class="text-slate-500 text-sm">{{ member.member_bio }}</div>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

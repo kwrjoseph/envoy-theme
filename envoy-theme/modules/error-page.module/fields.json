@@ -1,0 +1,53 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "name": "icon_class",
+    "type": "text",
+    "label": "Icon Class",
+    "default": "fas fa-hard-hat"
+  },
+  {
+    "name": "error_code",
+    "type": "text",
+    "label": "Error Code",
+    "default": "404"
+  },
+  {
+    "name": "title",
+    "type": "text",
+    "label": "Title",
+    "default": "Page Not Found"
+  },
+  {
+    "name": "description",
+    "type": "richtext",
+    "label": "Description",
+    "default": "<p>We couldn't listen to that request. The page you are looking for might have been removed or is temporarily unavailable.</p>"
+  },
+  {
+    "name": "button_text",
+    "type": "text",
+    "label": "Button Text",
+    "default": "Return Home"
+  },
+  {
+    "name": "button_link",
+    "type": "link",
+    "label": "Button Link",
+    "default": {
+      "url": {
+        "href": "/",
+        "type": "EXTERNAL"
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

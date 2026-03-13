@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:YouTube",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 53119685707,
+  "label" : "video_section_one",
+  "is_available_for_new_content" : true
+}

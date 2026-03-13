@@ -1,0 +1,45 @@
+.success-quote-heading {
+  padding: 38px 0 0 45px;
+  background-image: url("../../../assets/images/icons/testimonial-icon.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .success-quote-heading {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .success-quote-heading {
+    padding-left: 0;
+  }
+}
+
+.success-quote-heading .title {
+  font-size: 24px;
+  line-height: 36px;
+  max-width: 370px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .success-quote-heading .title {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .success-quote-heading .title {
+    max-width: 100%;
+  }
+}
+
+.success-quote-heading .title span {
+  color: var(--primary-color);
+}
+
+.success-quote-content {
+  padding-top: 35px;
+}

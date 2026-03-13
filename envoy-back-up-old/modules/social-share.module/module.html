@@ -1,0 +1,27 @@
+<div class="post-share">
+  <span class="label">{{ module.share_label_text }}</span>
+  <div class="media">
+    <span class="icon">{{ module.share_label_icon }}</span>
+    <div class="list">
+      {% for item in module.social_item %}
+      {% set href = item.social_link.url.href %}
+      {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+      {% endif %}
+      {% set rel = [] %}
+      {% if item.social_link.no_follow %}
+        {% do rel.append("nofollow") %}
+      {% endif %}
+      {% if item.social_link.open_in_new_tab %}
+        {% do rel.append("noopener") %}
+      {% endif %}
+      <a href="{{ href }}"
+        {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+        {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+        >
+        {{ item.social_icon }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

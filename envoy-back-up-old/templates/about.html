@@ -1,0 +1,468 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About
+  screenshotPath: ../images/template-previews/about.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Page Banner Section Start #}
+    {% dnd_section %}
+      {% dnd_module "module_164620038129064" path="../modules/Page Banner", label="Page Banner"
+      layout = 'layout-one', 
+      section_class = '',
+      section_bg_image = { 
+              'alt': 'section bg image',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/page-banner/about-us-01-hero-bg.jpg') 
+          },
+          page_title = 'Grow strong to take up the challenges of life. The top lessons for getting you back on track.'
+      
+      %}
+
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Page Banner Section End #}
+
+    {# About Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_162987946845825" path="../modules/home-three-about", label="home-three-about" 
+    
+    section_class = '',
+    section_bg_color = '#fff',
+    about_subtitle = 'Get to know about <strong>MaxCoach</strong>',
+    about_title = 'Learn about our <span>Work Culture</span> at MaxCoach',
+    about_desc_text = 'Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We are opening new classes every beginning of each month. ',
+    about_link = { 'url': { 'type': 'CONTENT', 'href': './about'},},
+    about_link_text = 'Have questions?​ <mark>Get Free Form <i class="far fa-long-arrow-right"></i></mark>',
+    about_image_one = { 
+      'alt': 'About Thumb one',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/about/about01/about1.jpg') 
+    },
+    about_image_two = { 
+      'alt': 'About Thumb two',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/about/about01/about2.jpg') 
+    },
+    shape_image_one = { 
+      'alt': 'shape image one',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/shape-animation/about-shape-1.png') 
+    },
+    shape_image_three = { 
+      'alt': 'shape image one',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/shape-animation/shape-1.png') 
+    },
+    
+    %}
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# About Section End #}
+
+  {# About Video Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16462218113128" path="../modules/Home Video", label="Home Video" 
+    layout = 'layout-one', 
+    section_class = 'section-padding-bottom pt-0',
+    section_bg_color = '#fff',
+    video_popup_link = { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/watch?v=eS9Qm4AOOBY'},},
+    animation_name = 'fade-up',
+    video_banner_image = { 
+        'alt': 'Video banner image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/video/about-video.jpg') 
+      },
+      video_icon = { 
+        'alt': 'Video icon',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/icons/icon-youtube-play.png') 
+      },
+      shape_image_one = { 
+      'alt': 'shape image',
+      'size_type': 'auto', 
+      'src': get_asset_url('../images/shape-animation/shape-2.svg') 
+    },
+    shape_image_two = { 
+        'alt': 'shape image',
+        'size_type': 'auto', 
+        'src': get_asset_url('../images/shape-animation/shape-3.png') 
+      },
+      shape_image_three = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/shape-1.png') 
+        },
+        about_subtitle = 'how we work',
+        about_title = 'Upgrade Your Skills <span>Upgrade Your Life</span>',
+        about_desc_text = 'Spend some time to visit our website or head office and discover our current courses, enrollment procedure, and registration deadline. We are opening new classes every beginning of each month. ',
+        about_link = { 'url': { 'type': 'CONTENT', 'href': './about'},},
+        about_link_text = '<mark>Download free guidebook <i class="far fa-long-arrow-right"></i></mark>'
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# About Video Section End #}
+
+  {# Testimonial Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_16462226955603" path="../modules/Testimonial", label="Testimonial" 
+    layout = 'layout-two',
+    section_class = '',
+    section_bg_color = '#f5f5f5',
+    section_title_class = '',
+    animation_name = 'fade-up',
+    section_subtitle = 'Wanna transform your life?',
+    title_font_size = 'fz-48',
+    section_title = 'Our <span> learners </span> verbatim',
+    testimonial_item = [
+      {
+        'testimonial_title' :  'High level of efficiency and scientific teaching methods',
+        'testimonial_excerpt' : 'I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-1.jpg') 
+          },
+        'author_name' :  'Florence Themes',
+        'author_position' : '/ Multimedia Admin',
+      },
+      {
+        'testimonial_title' :  'Professional team of specialists and passionate mentors at reach',
+        'testimonial_excerpt' : 'I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-2.jpg') 
+          },
+        'author_name' :  'Madley Pondor',
+        'author_position' : '/ IT Specialist',
+      },
+      {
+        'testimonial_title' :  'Highly recommend their courses and teaching system',
+        'testimonial_excerpt' : 'I am happy with their arrangement of lessons and subjects. They reflect a scientific investigation into effective methods to adopt for learners.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-3.jpg') 
+          },
+        'author_name' :  'Luvic Dubble',
+        'author_position' : '/ Private Tutor',
+      },
+      {
+        'testimonial_title' :  'Its a choice of quality for people who need specialized study programs',
+        'testimonial_excerpt' : 'I am a very strict person so I require everything to be organized and neat. Then, I will be able to make things right and shine. MaxCoach guys just got me.',
+        'author_thumb' : { 
+            'alt': 'auuthor thumb',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/testimonial/70/testimonial-4.jpg') 
+          },
+        'author_name' :  'Florence Themes',
+        'author_position' : '/ Multimedia Admin',
+      }
+    ]
+    
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Testimonial Section End #}
+
+  {# CTA Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164603954194410" path="../modules/CTA", label="CTA"
+    layout = 'layout-one',
+    section_class = 'section-padding-bottom pt-0',
+    section_bg_color = '#f5f5f5',
+    cta_content_class = '',
+    cta_subtitle = 'Start today for getting <span>Online Certification</span>',
+    cta_title = 'You can be your own guiding star with our help!',
+    cta_link = { 'url': { 'type': 'CONTENT', 'href': '/contact'},},
+    cta_link_text = 'Get started for free',
+    shape_image_one = { 
+          'alt': 'shape image one',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/cta-shape-01.png') 
+        },
+    shape_image_two = { 
+          'alt': 'shape image one',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+        }
+    
+    %}
+
+
+    {% end_dnd_module %}
+
+  {% end_dnd_section %}
+  {# CTA Section End #}
+
+  {# Team Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_163091925353628" path="../modules/team-section", label="team-section" 
+      section_class = '',
+      section_title_class = '',
+      animation_name = 'fade-up',
+      section_subtitle = 'The guys behind the curtains',
+      section_title = 'Whose <span> Inspirations</span> You Love',
+      team_item = [
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/350/team-member-01.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Merrie Lewis',
+          'position' : 'General Director'
+        },
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/350/team-member-02.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Mariana Buenos',
+          'position' : 'CEO & Chief Manager'
+        },
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/350/team-member-03.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Parks Missie',
+          'position' : 'Course Researcher'
+        }
+      ],
+      team_item_four_column = [
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/270/team-member-04.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Smiley Fords',
+          'position' : 'Linguistic Mentor'
+        },
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/270/team-member-05.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Smoonz Rotley',
+          'position' : 'Lifestyle Inspirer'
+        },
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/270/team-member-06.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Bill Prad',
+          'position' : 'Computer Engineer'
+        },
+        {
+          'team_image' : { 
+              'alt': 'Team Thumb',
+              'size_type': 'auto', 
+              'src': get_asset_url('../images/team/270/team-member-07.jpg') 
+            },
+          'team_social' : [
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+              'social_icon' : '<i class="fab fa-facebook-f"></i>',
+              'aria_label' : 'Facebook'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+              'social_icon' : '<i class="fab fa-twitter"></i>',
+              'aria_label' : 'Twitter'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.instagram.com/'}},
+              'social_icon' : '<i class="fab fa-instagram"></i>',
+              'aria_label' : 'Instagram'
+            },
+            {
+              'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.youtube.com/'}},
+              'social_icon' : '<i class="fab fa-youtube"></i>',
+              'aria_label' : 'Youtube'
+            }
+          ],
+          'team_member_name' : 'Dora Floral',
+          'position' : 'Graphic Designer'
+        }
+      ]
+    %}
+
+    {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Team Section End #}
+
+  {# Newsletter Section Start #}
+  {% dnd_section %}
+    {% dnd_module "module_164619298538613" path="../modules/Newsletter", label="Newsletter"
+    layout = 'layout-one', 
+    section_class = '',
+    newsletter_title = 'Sign up for our <span>Newsletters</span>',
+    newsletter_desc = 'Enter your email address to register to our newsletter subscription <br class="d-none d-md-block" />delivered on a regular basis!',
+    shape_image_one = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-1.png') 
+        },
+    shape_image_two = { 
+          'alt': 'shape image',
+          'size_type': 'auto', 
+          'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+        },
+    
+    %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# Newsletter Section End #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

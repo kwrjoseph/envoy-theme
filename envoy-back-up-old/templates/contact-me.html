@@ -1,0 +1,112 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Contact Me
+  screenshotPath: ../images/template-previews/contact-me.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-one', 
+        section_class = '',
+        section_bg_color = '#fff',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Contact me'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Contact Info Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_164587624238948" path="../modules/Contact Info", label="Contact Info"
+        layout = 'layout-one',
+        section_class = '',
+        contact_subtitle = 'Get excited already?',
+        contact_title = 'Reach me!',
+        info_item = [
+            {
+                'info_icon' : '<i class="fal fa-map-marker-alt"></i>',
+                'info_title' : 'Address',
+                'info_text' : '1800 Abbot Kinney Blvd. Unit D & E Venice'
+            },
+            {
+                'info_icon' : '<i class="fal fa-map-marker-alt"></i>',
+                'info_title' : 'Contact',
+                'info_text' : 'Mobile: <strong>(+88) - 1990 - 6886</strong><br>Hotline: <strong>1800 – 1102</strong><br>Mail: hello@hasthemes.com'
+            },
+            {
+                'info_icon' : '<i class="fal fa-map-marker-alt"></i>',
+                'info_title' : 'Hour of operation',
+                'info_text' : 'Monday – Friday : 09:00 – 20:00 <br> Sunday &amp; Saturday: 10:30 – 22:00'
+            }
+        ],
+        contact_image = { 
+                'alt': 'Contact Image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/contact/contact.jpg') 
+            },
+        shape_image = { 
+            'alt': 'Shape Image',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/shape-animation/about-shape-1.png') 
+            },
+        shape_image_one = { 
+            'alt': 'Shape Image',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/shape-animation/about-shape-1.png') 
+            },
+        shape_image_two = { 
+            'alt': 'Shape Image',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/shape-animation/shape-1.png') 
+            },
+        shape_image_three = { 
+            'alt': 'Shape Image',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/shape-animation/nwesletter-shape-2.png') 
+            },
+        
+        %}
+
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Contact Info Section End #}
+
+    {# Contact Me Form Section Start #}
+    {% module  %}
+    {% dnd_section %}
+        {% dnd_module "module_164586877888232" path="../modules/Contact Form", label="Contact Form" 
+        layout = 'layout-one'
+        section_class = '',
+        contact_title = 'Or just drop me a line',
+
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Contact Me Form Section End #}
+
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

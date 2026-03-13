@@ -1,0 +1,134 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Terms of Service
+  screenshotPath: ../images/template-previews/terms-of-service.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-two', 
+        section_class = '',
+        section_bg_color = '#fff',
+        page_title = 'Terms of Service',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Terms of Service'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Privacy Policy Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_16313534169851" path="../modules/terms-of-service", label="terms-of-service"
+        section_class = '',
+        main_image = { 
+            'alt': 'main Image',
+            'size_type': 'auto', 
+            'src': get_asset_url('../images/purchase-guide/terms-of-service.jpg') 
+            },
+        sidebar_nav_widget = [
+            {
+                'sidebar_nav_link' : { 'url': { 'type': 'CONTENT', 'href': './about-me'}},
+                'class_name' : '',
+                'sidebar_nav_text' : 'About me'
+            },
+            {
+                'sidebar_nav_link' : { 'url': { 'type': 'CONTENT', 'href': './contact-me'}},
+                'class_name' : '',
+                'sidebar_nav_text' : 'Contact me'
+            },
+            {
+                'sidebar_nav_link' : { 'url': { 'type': 'CONTENT', 'href': './purchase-guide'}},
+                'class_name' : '',
+                'sidebar_nav_text' : 'Purchase Guide'
+            },
+            {
+                'sidebar_nav_link' : { 'url': { 'type': 'CONTENT', 'href': './privacy-policy'}},
+                'class_name' : '',
+                'sidebar_nav_text' : 'Privacy Policy'
+            },
+            {
+                'sidebar_nav_link' : { 'url': { 'type': 'CONTENT', 'href': './terms-of-service'}},
+                'class_name' : 'active',
+                'sidebar_nav_text' : 'Terms of Service'
+            }
+        ],
+        sidebar_course_widget = [
+            {
+                'sidebar_title' : 'Recent Courses',
+                'course_widget' : [
+                    {
+                        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                        'course_image' : { 
+                            'alt': 'main Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/courses/170/course-1.jpg') 
+                        },
+                        'course_price' : '$40<span>.00</span>',
+                        'course_title' : 'Learning to Write as a Professional Author'
+                    },
+                    {
+                        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                        'course_image' : { 
+                            'alt': 'main Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/courses/170/course-2.jpg') 
+                        },
+                        'course_price' : 'Free',
+                        'course_title' : 'Customer-centric Info-Tech Strategies'
+                    },
+                    {
+                        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                        'course_image' : { 
+                            'alt': 'main Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/courses/170/course-3.jpg') 
+                        },
+                        'course_price' : '$19<span>.00</span>',
+                        'course_title' : 'Open Programming Courses for Everyone: Python'
+                    },
+                    {
+                        'course_link' : { 'url': { 'type': 'CONTENT', 'href': './course-details'}},
+                        'course_image' : { 
+                            'alt': 'main Image',
+                            'size_type': 'auto', 
+                            'src': get_asset_url('../images/courses/170/course-4.jpg') 
+                        },
+                        'course_price' : '$26<span>.00</span>',
+                        'course_title' : 'Academic Listening and Note-taking'
+                    }
+                ]
+            }
+        ]
+        
+        %}
+
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Privacy Policy Section End #}
+
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

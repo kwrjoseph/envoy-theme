@@ -1,0 +1,51 @@
+/* 07.01. Page Title CSS */
+.page-title-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .page-title-section {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-title-section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+.page-title .title {
+  font-size: 48px;
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .page-title .title {
+    font-size: 42px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .page-title .title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .page-title .title {
+    font-size: 30px;
+  }
+}
+
+.page-breadcrumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

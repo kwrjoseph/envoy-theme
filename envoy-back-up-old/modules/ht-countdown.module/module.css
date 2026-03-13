@@ -1,0 +1,118 @@
+.header-top-section {
+  padding: 10px 0;
+}
+
+.header-top-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .header-top-content {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+.header-top-content p {
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-top-content p {
+    margin-right: 18px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-top-content p {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .header-top-content p {
+    text-align: center;
+  }
+}
+
+.header-top-content .header-top-countdown .countdown-item:first-child::before {
+  display: none;
+}
+
+.header-top-countdown {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 45px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-top-countdown {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .header-top-countdown {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+.header-top-countdown .ht-icon {
+  margin-right: 5px;
+}
+
+.header-top-countdown .ht-icon i {
+  font-size: 18px;
+  color: var(--secondary-color);;
+}
+
+.header-top-countdown .countdown-item {
+  position: relative;
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+.header-top-countdown .countdown-item.before-none::before {
+  display: none;
+}
+
+.header-top-countdown .countdown-item::before {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  content: ':';
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary-color);;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header-top-countdown .countdown-item span {
+  font-size: 18px;
+  color: var(--secondary-color);;
+  font-weight: 700;
+  line-height: 1;
+}

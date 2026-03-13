@@ -1,0 +1,220 @@
+[ {
+  "id" : "04c48544-3f56-b1d6-0600-bffb101de351",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "2a85d3d0-7bd8-cca7-dd8a-22641504463b",
+  "name" : "section_bg_image",
+  "display_width" : null,
+  "label" : "section-bg-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "407c4240-6fde-330a-7ce7-fd08c9b4a075",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "#f8f8f8"
+}, {
+  "id" : "e6a6bf65-14fa-b9c3-6bd1-242cb92ee6de",
+  "name" : "feature_item_group",
+  "display_width" : null,
+  "label" : "feature-item-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "aac99457-4d57-bdf3-f6b4-e816d8b91396",
+    "name" : "feature_animation_name",
+    "display_width" : null,
+    "label" : "feature-animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "3f76062d-f21d-c875-002c-425229145935",
+    "name" : "feature_link",
+    "display_width" : null,
+    "label" : "feature-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "1fad85c6-c30b-fc5d-f1e7-3f3222b28e93",
+    "name" : "feature_bg_color",
+    "display_width" : null,
+    "label" : "feature-bg-color",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "#fff"
+  }, {
+    "id" : "0da36d51-f394-2cea-7c89-fd9429ff29c5",
+    "name" : "feature_image",
+    "display_width" : null,
+    "label" : "feature-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "51706438-3eea-b41b-50d5-8cf9ee06b72a",
+    "name" : "feature_title",
+    "display_width" : null,
+    "label" : "feature-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Customize Freely to Your Preferences"
+  }, {
+    "id" : "b8711883-ebfd-5750-564e-68ec148eb4ca",
+    "name" : "feature_desc",
+    "display_width" : null,
+    "label" : "feature-desc",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learners are given the right to arrange and customize their study schedule and timetable based on preferences."
+  }, {
+    "id" : "fe114fbc-2974-ed7d-6ca8-455c9cb5e0a2",
+    "name" : "feature_link_text",
+    "display_width" : null,
+    "label" : "feature-link-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Start here"
+  }, {
+    "id" : "52fa7329-bda4-4543-c9fe-e4297120587f",
+    "name" : "feature_link_icon",
+    "display_width" : null,
+    "label" : "feature-link-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-long-arrow-right\"></i>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "feature_animation_name" : "fade-up",
+    "feature_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "feature_bg_color" : "#fff",
+    "feature_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "feature_title" : "Customize Freely to Your Preferences",
+    "feature_desc" : "Learners are given the right to arrange and customize their study schedule and timetable based on preferences.",
+    "feature_link_text" : "Start here",
+    "feature_link_icon" : "<i class=\"far fa-long-arrow-right\"></i>"
+  }
+}, {
+  "id" : "60c4b773-c0d9-2f60-eb78-704988039de9",
+  "name" : "all_course_link",
+  "display_width" : null,
+  "label" : "all-course-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "b11b5b27-44af-bf4b-e0a2-9c1889129592",
+  "name" : "all_course_link_text",
+  "display_width" : null,
+  "label" : "all-course-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Explore the most appropriate courses and certificate that you desire will be the sweet ultimate reward. <mark>Let’s get started <i class=\"far fa-long-arrow-right\"></i></mark>"
+} ]

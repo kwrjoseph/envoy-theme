@@ -1,0 +1,38 @@
+<!-- Brand Section Start -->
+        <div class="brand-section section section-padding {{ module.section_class }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="brand-wrapper">
+                            <div class="brand-list">
+                                <div class="brand-carousel swiper-container" data-aos="{{ module.animation_name }}">
+                                    <div class="swiper-wrapper">
+                                      {% for item in module.brand_item %}
+                                        <div class="swiper-slide brand">
+                                            <div class="brand-image">
+                                                
+                                              {% if item.brand_logo.src %}
+                                                {% set sizeAttrs = 'width="{{ item.brand_logo.width }}" height="{{ item.brand_logo.height }}"' %}
+                                                {% if item.brand_logo.size_type == 'auto' %}
+                                                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                                                {% elif item.brand_logo.size_type == 'auto_custom_max' %}
+                                                  {% set sizeAttrs = 'width="{{ item.brand_logo.max_width }}" height="{{ item.brand_logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+                                                {% endif %}
+                                                 {% set loadingAttr = item.brand_logo.loading != 'disabled' ? 'loading="{{ item.brand_logo.loading }}"' : '' %}
+                                                <img src="{{ item.brand_logo.src }}" alt="{{ item.brand_logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                                              {% endif %}
+                                            </div>
+                                        </div>
+                                      {% endfor %}
+                                      
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand Section End -->

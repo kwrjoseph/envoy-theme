@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:User%20Check:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 54357151390,
+  "label" : "register-section",
+  "is_available_for_new_content" : true
+}

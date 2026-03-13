@@ -1,0 +1,51 @@
+{# Criteria List Module - from acclaim-pivotal.html #}
+
+{% if module.anchor_id %}
+<div id="{{ module.anchor_id }}">
+{% endif %}
+
+<div class="bg-white rounded-[3rem] p-12 shadow-sm border border-slate-100">
+  {% if module.section_title %}
+  <h3 class="text-3xl font-black text-slate-900 mb-8 font-serif">{{ module.section_title }}</h3>
+  {% endif %}
+
+  <div class="grid md:grid-cols-2 gap-12">
+    {# Inclusion criteria - left column with green checkmarks #}
+    <div>
+      {% if module.inclusion_title %}
+      <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">{{ module.inclusion_title }}</h4>
+      {% endif %}
+      {% if module.inclusion_items %}
+      <ul class="text-lg text-slate-600 font-medium space-y-4">
+        {% for item in module.inclusion_items %}
+        <li class="flex items-start">
+          <i class="fas fa-check text-green-500 mt-1 mr-3 text-sm"></i>
+          <span>{{ item.item_text }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+
+    {# Exclusion criteria - right column with red X marks #}
+    <div>
+      {% if module.exclusion_title %}
+      <h4 class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">{{ module.exclusion_title }}</h4>
+      {% endif %}
+      {% if module.exclusion_items %}
+      <ul class="text-lg text-slate-600 font-medium space-y-4">
+        {% for item in module.exclusion_items %}
+        <li class="flex items-start">
+          <i class="fas fa-times text-red-400 mt-1 mr-3 text-sm"></i>
+          <span>{{ item.item_text }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if module.anchor_id %}
+</div>
+{% endif %}

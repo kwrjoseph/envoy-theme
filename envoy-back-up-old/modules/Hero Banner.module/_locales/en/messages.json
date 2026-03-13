@@ -1,0 +1,2107 @@
+{
+  "intro_five.animation_name.default" : {
+    "message" : "fade-up",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.animation_name.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.animation_name.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.animation_name.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.animation_name.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.animation_name.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_icon.default" : {
+    "message" : "<i class=\"far fa-download mr-3\"></i>",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_icon.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_icon.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_icon.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_icon.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_icon.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_link.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_link.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_link.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_link.label" : {
+    "message" : "Intro Btn Link",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_link.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_text.default" : {
+    "message" : "Download free E-book",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_text.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_btn_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_desc.default" : {
+    "message" : "Learn any coding program in distance and for a reasonable fee. You don't have to struggle alone, you've got our assistance and help.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_desc.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_desc.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_desc.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_desc.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_desc.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_image.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_image.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_image.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_image.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_image.label" : {
+    "message" : "Intro Image",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_image.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_title.default" : {
+    "message" : "Complete Your Dreams in JavaS Programming",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_title.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.intro_title.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.label" : {
+    "message" : "Intro Five",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.name" : {
+    "message" : "intro-one",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_five.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_bg_color.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_bg_color.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_bg_color.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_bg_color.label" : {
+    "message" : "Text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_bg_color.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_bg_color.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_class.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_class.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_class.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_class.label" : {
+    "message" : "Section Class",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_class.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_five.section_class.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_btn_link.no_follow" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_btn_link.open_in_new_tab" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_btn_link.url.content_id" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_btn_link.url.href" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_btn_link.url.type" : {
+    "message" : "EXTERNAL",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_desc" : {
+    "message" : "Reach out to the most competent & passionate mentors",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_title" : {
+    "message" : "Expand Your Possibilities                                <span class=\"ah-words-wrapper\">                                    <b class=\"is-visible\">Positively</b>                                    <b>Intensively</b>                                    <b>Extensively</b>                                </span>",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_video_btn_text" : {
+    "message" : "How we work",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_video_popup.no_follow" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_video_popup.open_in_new_tab" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_video_popup.url.content_id" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_video_popup.url.href" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.intro_video_popup.url.type" : {
+    "message" : "EXTERNAL",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.section_bg_image.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.section_bg_image.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.section_bg_image.size_type" : {
+    "message" : "auto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.default.section_bg_image.src" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_link.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_link.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_link.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_link.label" : {
+    "message" : "Intro Btn Link",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_link.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_text.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_text.label" : {
+    "message" : "Intro Btn Text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_btn_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_desc.default" : {
+    "message" : "Reach out to the most competent & passionate mentors",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_desc.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_desc.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_desc.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_desc.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_desc.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_play_icon.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_play_icon.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_play_icon.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_play_icon.label" : {
+    "message" : "Intro Play Icon",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_play_icon.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_play_icon.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_title.default" : {
+    "message" : "Expand Your Possibilities                                <span class=\"ah-words-wrapper\">                                    <b class=\"is-visible\">Positively</b>                                    <b>Intensively</b>                                    <b>Extensively</b>                                </span>",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_title.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_title.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_btn_text.default" : {
+    "message" : "How we work",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_btn_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_btn_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_btn_text.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_btn_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_btn_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_popup.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_popup.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_popup.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_popup.label" : {
+    "message" : "Intro Video_popup",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.intro_video_popup.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.name" : {
+    "message" : "intro-one",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_four.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_bg_image.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_bg_image.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_bg_image.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_bg_image.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_bg_image.label" : {
+    "message" : "Section BG Image",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_bg_image.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_class.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_class.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_class.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_class.label" : {
+    "message" : "Section Class",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_class.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_class.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_four.section_image.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.animation_name.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.animation_name.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.animation_name.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.animation_name.label" : {
+    "message" : "animation-name",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.animation_name.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.animation_name.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_icon" : {
+    "message" : "<i class=\"far fa-download mr-3\"></i>",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_link.no_follow" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_link.open_in_new_tab" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_link.url.content_id" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_link.url.href" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_link.url.type" : {
+    "message" : "EXTERNAL",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_btn_link_text" : {
+    "message" : "Download free guide",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_date" : {
+    "message" : "Dec 23, 2019",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_desc" : {
+    "message" : "Now more than ever, corporations are investing heavily in IT. The quality of these investments affects the daily …",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_link.no_follow" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_link.open_in_new_tab" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_link.url.content_id" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_link.url.href" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_link.url.type" : {
+    "message" : "EXTERNAL",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_price" : {
+    "message" : "Free",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_thumb.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_thumb.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_thumb.size_type" : {
+    "message" : "auto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_thumb.src" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_course_title" : {
+    "message" : "Customer-centric Info-Tech Strategies",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_desc" : {
+    "message" : "The right mentoring relationship can be a powerful tool for professional growth. Bark up the right tree.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_subtitle" : {
+    "message" : "MaxCoach is the lifebuoy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.intro_title" : {
+    "message" : "In Mentoring <br>2B a Better You.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.popular_course_icon.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.popular_course_icon.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.popular_course_icon.size_type" : {
+    "message" : "auto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.popular_course_icon.src" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.section_image.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.section_image.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.section_image.size_type" : {
+    "message" : "auto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.section_image.src" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.shape_animation_image.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.shape_animation_image.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.shape_animation_image.size_type" : {
+    "message" : "auto",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.default.shape_animation_image.src" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_one_item.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_icon.default" : {
+    "message" : "<i class=\"far fa-download mr-3\"></i>",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_icon.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_icon.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_icon.label" : {
+    "message" : "intro-btn-icon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_icon.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_icon.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link.label" : {
+    "message" : "intro-btn-link",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link_text.default" : {
+    "message" : "Download free guide",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link_text.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link_text.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link_text.label" : {
+    "message" : "intro-btn-link-text",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link_text.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_btn_link_text.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_date.default" : {
+    "message" : "Dec 23, 2019",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_date.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_date.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_date.label" : {
+    "message" : "intro-course-date",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_date.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_date.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_desc.default" : {
+    "message" : "Now more than ever, corporations are investing heavily in IT. The quality of these investments affects the daily …",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_desc.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_desc.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_desc.label" : {
+    "message" : "intro-course-desc",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_desc.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_desc.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_link.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_link.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_link.label" : {
+    "message" : "intro-course-link",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_link.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_price.default" : {
+    "message" : "Free",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_price.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_price.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_price.label" : {
+    "message" : "intro-course-price",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_price.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_price.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_thumb.default.alt" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_thumb.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_thumb.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_thumb.label" : {
+    "message" : "intro-course-thumb",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_thumb.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_title.default" : {
+    "message" : "Customer-centric Info-Tech Strategies",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_title.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_title.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_title.label" : {
+    "message" : "intro-course-title",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_title.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_course_title.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_desc.default" : {
+    "message" : "The right mentoring relationship can be a powerful tool for professional growth. Bark up the right tree.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_desc.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_desc.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_desc.label" : {
+    "message" : "intro-desc",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_desc.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_desc.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_one_class.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_one_class.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_one_class.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_one_class.label" : {
+    "message" : "intro-one-class",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_one_class.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_one_class.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_subtitle.default" : {
+    "message" : "MaxCoach is the lifebuoy",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_subtitle.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_subtitle.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_subtitle.label" : {
+    "message" : "intro-subtitle",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_subtitle.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_subtitle.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_title.default" : {
+    "message" : "In Mentoring <br>2B a Better You.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_title.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_title.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_title.label" : {
+    "message" : "intro-title",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_title.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.intro_title.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.popular_course_icon.default.alt" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.popular_course_icon.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.popular_course_icon.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.popular_course_icon.label" : {
+    "message" : "popular-course-icon",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.popular_course_icon.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_class.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_class.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_class.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_class.label" : {
+    "message" : "section-class",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_class.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_class.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_image.default.alt" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_image.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_image.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_image.label" : {
+    "message" : "section-image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.section_image.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.shape_animation_image.default.alt" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.shape_animation_image.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.shape_animation_image.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.shape_animation_image.label" : {
+    "message" : "shape-animation-image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_one_item.shape_animation_image.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_three.animation_name.default" : {
+    "message" : "fade-up",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.animation_name.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.animation_name.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.animation_name.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.animation_name.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.animation_name.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link.label" : {
+    "message" : "Intro Link",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_icon.default" : {
+    "message" : "<i class=\"far fa-long-arrow-right ms-3\"></i>",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_icon.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_icon.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_icon.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_icon.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_icon.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_text.default" : {
+    "message" : "Download free guidebook",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_text.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_link_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_subtitle.default" : {
+    "message" : "Commence Business",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_subtitle.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_subtitle.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_subtitle.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_subtitle.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_subtitle.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_title.default" : {
+    "message" : "Distant Mentoring Program",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_title.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.intro_title.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.name" : {
+    "message" : "intro-one",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_three.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_bg_image.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_bg_image.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_bg_image.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_bg_image.label" : {
+    "message" : "Image",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_bg_image.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_class.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_class.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_class.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_class.label" : {
+    "message" : "section-class",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_class.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_three.section_class.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.animation_name.default" : {
+    "message" : "fade-up",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.animation_name.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.animation_name.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.animation_name.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.animation_name.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.animation_name.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_icon.default" : {
+    "message" : "<i class=\"far fa-download mr-3\"></i>",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_icon.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_icon.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_icon.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_icon.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_icon.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_link.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_link.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_link.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_link.label" : {
+    "message" : "Intro Btn_link",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_link.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_text.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_text.label" : {
+    "message" : "Intro Btn Text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_btn_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link.label" : {
+    "message" : "Intro Course Link",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link_text.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link_text.label" : {
+    "message" : "Intro Course Link_text",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_course_link_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_desc.default" : {
+    "message" : "Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_desc.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_desc.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_desc.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_desc.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_desc.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_image.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_image.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_image.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_image.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_image.label" : {
+    "message" : "Intro Image",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_image.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_title.default" : {
+    "message" : "Distant learning for further expansion ",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_title.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_title.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_title.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_title.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.intro_title.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.name" : {
+    "message" : "intro-one",
+    "description" : "",
+    "placeholders" : null
+  },
+  "intro_two.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.section_class.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.section_class.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.section_class.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.section_class.label" : {
+    "message" : "Section Class",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.section_class.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.section_class.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_four.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_four.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_four.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_four.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_four.label" : {
+    "message" : "Shape Image_four",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_four.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_one.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_one.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_one.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_one.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_one.label" : {
+    "message" : "Shape Image One",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_one.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_three.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_three.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_three.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_three.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_three.label" : {
+    "message" : "Shape Image Three",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_three.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_two.default.alt" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_two.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_two.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_two.label" : {
+    "message" : "Image",
+    "description" : null,
+    "placeholders" : null
+  },
+  "intro_two.shape_image_two.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "layout.choices.layout-one" : {
+    "message" : "layout-one",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.choices.layout-two" : {
+    "message" : "layout-two",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "layout.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.inline_help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "layout.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Hero Banner",
+    "description" : "",
+    "placeholders" : null
+  }
+}

@@ -1,0 +1,45 @@
+{# Error Page Module — from 404.html and under-construction.html #}
+<div{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %} style="min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;font-family:'Inter',sans-serif;">
+
+  {# Large faded background error code #}
+  {% if module.error_code %}
+  <div class="huge-text"
+       style="font-size:12rem;line-height:1;font-weight:900;color:#f0f7ff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;letter-spacing:-0.05em;">
+    {{ module.error_code }}
+  </div>
+  {% endif %}
+
+  {# Content #}
+  <div class="error-container px-6 max-w-2xl mx-auto" style="text-align:center;position:relative;z-index:10;">
+
+    {# Icon #}
+    {% if module.icon_class %}
+    <div style="margin-bottom:2rem;">
+      <i class="{{ module.icon_class }}" style="font-size:5rem;color:#002d74;display:block;"></i>
+    </div>
+    {% endif %}
+
+    {# Title #}
+    <h1 class="text-4xl lg:text-6xl font-black text-slate-900 mb-8 tracking-tight">{{ module.title }}</h1>
+
+    {# Description #}
+    <div class="text-lg text-slate-500 leading-relaxed mb-6" style="max-width:32rem;margin-left:auto;margin-right:auto;">
+      {{ module.description }}
+    </div>
+
+    {# Decorative divider #}
+    <div style="width:4rem;height:4px;background:#e2e8f0;margin:1.5rem auto;border-radius:9999px;"></div>
+
+    {# CTA Button #}
+    {% if module.button_link.url.href and module.button_text %}
+    <a href="{{ module.button_link.url.href }}"
+       {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+       {% if module.button_link.no_follow %}rel="nofollow"{% endif %}
+       class="btn-primary"
+       style="background-color:#002d74;color:white;padding:1rem 2.5rem;border-radius:9999px;font-weight:700;transition:all 0.3s ease;text-decoration:none;display:inline-block;margin-top:2rem;">
+      {{ module.button_text }}
+    </a>
+    {% endif %}
+  </div>
+
+</div>

@@ -1,0 +1,69 @@
+<!-- Video Section Start -->
+        <div id="video-section-1" class="section position-relative {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+
+            <div class="container">
+
+                <!-- Section Title Start -->
+                <div class="section-title text-center {{ module.section_title_class }}" data-aos="{{ module.animation_name }}">
+                    <span class="sub-title">{{ module.section_subtitle }}</span>
+                    <h2 class="title">{{ module.section_title }}</h2>
+                </div>
+                <!-- Section Title End -->
+
+                <!-- About Me Video Wrapper Start -->
+                <div class="about-me-video-wrapper">
+
+                    <!-- About Me Video Start -->
+                  {% set href = module.video_popup_link.url.href %}
+                  {% if module.video_popup_link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                  {% endif %}
+                  {% set rel = [] %}
+                  {% if module.video_popup_link.no_follow %}
+                    {% do rel.append("nofollow") %}
+                  {% endif %}
+                  {% if module.video_popup_link.open_in_new_tab %}
+                    {% do rel.append("noopener") %}
+                  {% endif %}
+                  <a class="about-me-video success-story-video video-popup" data-aos="fade-up" href="{{ href }}"
+                    {% if module.video_popup_link.open_in_new_tab %}target="_blank"{% endif %}
+                    {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                    >
+                    {% if module.video_banner_image.src %}
+                      {% set sizeAttrs = 'width="{{ module.video_banner_image.width }}" height="{{ module.video_banner_image.height }}"' %}
+                      {% if module.video_banner_image.size_type == 'auto' %}
+                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                      {% elif module.video_banner_image.size_type == 'auto_custom_max' %}
+                        {% set sizeAttrs = 'width="{{ module.video_banner_image.max_width }}" height="{{ module.video_banner_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                      {% endif %}
+                       {% set loadingAttr = module.video_banner_image.loading != 'disabled' ? 'loading="{{ module.video_banner_image.loading }}"' : '' %}
+                      <img class="image" src="{{ module.video_banner_image.src }}" alt="{{ module.video_banner_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                    {% if module.play_icon.src %}
+                      {% set sizeAttrs = 'width="{{ module.play_icon.width }}" height="{{ module.play_icon.height }}"' %}
+                      {% if module.play_icon.size_type == 'auto' %}
+                        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                      {% elif module.play_icon.size_type == 'auto_custom_max' %}
+                        {% set sizeAttrs = 'width="{{ module.play_icon.max_width }}" height="{{ module.play_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                      {% endif %}
+                       {% set loadingAttr = module.play_icon.loading != 'disabled' ? 'loading="{{ module.play_icon.loading }}"' : '' %}
+                      <img class="icon" src="{{ module.play_icon.src }}" alt="{{ module.play_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                    {% endif %}
+                  </a>
+                    <!-- About Me Video End -->
+
+                </div>
+                <!-- About Me Video Wrapper End -->
+
+            </div>
+
+            <!-- Section Bottom Shape Start -->
+            <div class="section-bottom-shape d-md-block d-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" height="100">
+                    <path class="elementor-shape-fill" d="M 0 0 L0 100 L100 100 L100 0 Q 50 200 0 0"></path>
+                </svg>
+            </div>
+            <!-- Section Bottom Shape End -->
+
+        </div>
+        <!-- Video Section End -->

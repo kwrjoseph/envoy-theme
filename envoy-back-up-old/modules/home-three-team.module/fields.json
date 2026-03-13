@@ -1,0 +1,163 @@
+[ {
+  "id" : "7fc776d1-b004-6093-26bc-944a188a5769",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d5f1c450-b74f-ec1b-4992-4a145cfcd538",
+  "name" : "team_image",
+  "display_width" : null,
+  "label" : "team-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "967ebc2b-8338-c72c-a584-76946eeda2c3",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "f125f687-1509-7047-e368-7c81dd2235aa",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "faee7069-b94d-c760-2cbc-8fb3b7e9ec86",
+  "name" : "shape_image_three",
+  "display_width" : null,
+  "label" : "shape-image-three",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "5272348e-87e2-f523-368e-659ff8653c07",
+  "name" : "shape_image_four",
+  "display_width" : null,
+  "label" : "shape-image-four",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "a39e1860-b1ee-1664-0610-ee0b6ada2951",
+  "name" : "team_subtitle",
+  "display_width" : null,
+  "label" : "team-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Everything in <strong>MaxCoach</strong>"
+}, {
+  "id" : "e20a7174-55c1-1049-d31b-43b88427f179",
+  "name" : "team_title",
+  "display_width" : null,
+  "label" : "team-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "dc2a4163-f994-952d-b8f7-44281cfbef2e",
+  "name" : "team_desc",
+  "display_width" : null,
+  "label" : "team-desc",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "As learners, people can enjoy great companionship from MaxCoach mentors and educators. We can help you develop and grow at your best."
+}, {
+  "id" : "71caff2b-d1c9-cebe-eab6-15c7476337c3",
+  "name" : "team_link",
+  "display_width" : null,
+  "label" : "team-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "9d8f9cb2-9c29-0c8c-e50c-66183b69cd34",
+  "name" : "team_link_text",
+  "display_width" : null,
+  "label" : "team-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get Free Guide"
+} ]

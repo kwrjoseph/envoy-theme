@@ -1,0 +1,77 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for this section."
+  },
+  {
+    "name": "sidebar_title",
+    "label": "Sidebar Title",
+    "type": "text",
+    "required": false,
+    "default": "Contents"
+  },
+  {
+    "name": "badge_text",
+    "label": "Badge Text",
+    "type": "text",
+    "required": false,
+    "default": "Legal",
+    "help_text": "Small badge above the page title, e.g. 'Legal'."
+  },
+  {
+    "name": "page_title",
+    "label": "Page Title",
+    "type": "text",
+    "required": false,
+    "default": "Privacy Policy"
+  },
+  {
+    "name": "last_updated",
+    "label": "Last Updated",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "E.g. 'December 2025'."
+  },
+  {
+    "name": "links",
+    "label": "Table of Contents Links",
+    "type": "group",
+    "required": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 0,
+      "sorting_label_field": "link_label"
+    },
+    "children": [
+      {
+        "name": "link_label",
+        "label": "Link Label",
+        "type": "text",
+        "required": false,
+        "default": "Section Title"
+      },
+      {
+        "name": "link_anchor",
+        "label": "Anchor ID",
+        "type": "text",
+        "required": false,
+        "default": "",
+        "inline_help_text": "The section ID to scroll to, e.g. 'info-collect'"
+      }
+    ],
+    "default": []
+  },
+  {
+    "name": "content",
+    "label": "Main Content",
+    "type": "richtext",
+    "required": false,
+    "default": "<p>Page content goes here.</p>"
+  }
+]

@@ -1,0 +1,30 @@
+/* 04.02 Brand CSS */
+.brand-list .brand {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+
+
+
+.brand-list .brand a {
+  display: block;
+}
+
+.brand-list .brand img {
+  transition: all 0.3s ease-in-out;
+  opacity: .5;
+}
+
+.brand-list .brand:hover img {
+  opacity: 1;
+}

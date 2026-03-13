@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Book%20Reader:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 53127294999,
+  "label" : "Home Course",
+  "is_available_for_new_content" : true
+}

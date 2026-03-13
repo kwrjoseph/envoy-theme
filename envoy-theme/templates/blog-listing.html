@@ -1,0 +1,121 @@
+<!--
+  templateType: blog_listing
+  isAvailableForNewContent: true
+  label: Blog Listing
+  screenshotPath: ../images/template-previews/blog-listing.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+
+  {# ── Hero ── #}
+  <section class="relative overflow-hidden py-20 lg:py-28 brand-bg-navy text-white">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 right-20 w-80 h-80 rounded-full border border-white/20"></div>
+      <div class="absolute bottom-10 left-10 w-60 h-60 rounded-full border border-white/10"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <span class="inline-block text-[10px] font-black uppercase tracking-[0.2em] text-blue-300 bg-white/10 px-4 py-2 rounded-full mb-6">{{ group.public_title }}</span>
+      <h1 class="text-4xl lg:text-6xl font-black tracking-tight mb-6">{{ group.public_title }}</h1>
+      {% if group.description %}
+      <p class="text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">{{ group.description }}</p>
+      {% endif %}
+    </div>
+  </section>
+
+  {# ── Topic Filter ── #}
+  {% set defined_topics = blog_topics(group.id, 250) %}
+  {% if defined_topics %}
+  <section class="bg-white border-b border-slate-100 py-6">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="{{ group.absolute_url }}" class="text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full transition-colors {% if not topic %}brand-bg-navy text-white{% else %}bg-slate-100 text-slate-600 hover:bg-slate-200{% endif %}">All</a>
+        {% for t in defined_topics %}
+        <a href="{{ blog_tag_url(group.id, t.slug) }}" class="text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full transition-colors {% if topic and topic == t.slug %}brand-bg-navy text-white{% else %}bg-slate-100 text-slate-600 hover:bg-slate-200{% endif %}">{{ t.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  {# ── Blog Posts Grid ── #}
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+
+      {% if contents %}
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {% for post in contents %}
+        <article class="bg-white border border-slate-100 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[color:var(--brand-navy)] h-full flex flex-col">
+          {% if post.featured_image %}
+          <div class="w-full h-[240px] overflow-hidden">
+            <img src="{{ post.featured_image }}" alt="{{ post.featured_image_alt_text }}" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          {% else %}
+          <div class="w-full h-[240px] bg-slate-100 flex items-center justify-center text-slate-300">
+            <i class="fas fa-image text-4xl"></i>
+          </div>
+          {% endif %}
+
+          <div class="p-8 flex flex-col flex-grow">
+            <div class="mb-4 flex flex-wrap items-center gap-2">
+              {% for t in post.topic_list %}
+              <span class="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-md">{{ t.name }}</span>
+              {% endfor %}
+              <span class="text-xs text-slate-400 font-medium">{{ post.publish_date|datetimeformat('%b %d, %Y') }}</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-900 mb-4 leading-tight">
+              <a href="{{ post.absolute_url }}" class="hover:text-blue-600 transition-colors">{{ post.name }}</a>
+            </h3>
+
+            {% if post.post_summary %}
+            <p class="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{{ post.post_summary|truncatehtml(150) }}</p>
+            {% endif %}
+
+            <a href="{{ post.absolute_url }}" class="inline-flex items-center text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors mt-auto">
+              Read Article <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      {# ── Pagination ── #}
+      {% if contents.total_page_count > 1 %}
+      <div class="mt-16 flex justify-center items-center gap-2">
+        {% if last_page_num %}
+        <a href="{{ blog_page_link(last_page_num) }}" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors">
+          <i class="fas fa-chevron-left text-xs"></i>
+        </a>
+        {% endif %}
+
+        {% for page_num in contents.total_page_count|range(1) %}
+          {% if page_num == current_page_num %}
+          <span class="w-10 h-10 rounded-full brand-bg-navy text-white flex items-center justify-center text-sm font-bold">{{ page_num }}</span>
+          {% else %}
+          <a href="{{ blog_page_link(page_num) }}" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-medium text-slate-600 hover:bg-slate-200 transition-colors">{{ page_num }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if next_page_num %}
+        <a href="{{ blog_page_link(next_page_num) }}" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% else %}
+      <div class="text-center py-20">
+        <i class="fas fa-newspaper text-5xl text-slate-200 mb-6"></i>
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">No posts yet</h3>
+        <p class="text-slate-500">Check back soon for new content.</p>
+      </div>
+      {% endif %}
+
+    </div>
+  </section>
+
+</main>
+{% endblock body %}

@@ -1,0 +1,201 @@
+[ {
+  "id" : "2985c0ff-3074-b70c-604d-e5843ebc3c3a",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ] ],
+  "type" : "choice"
+}, {
+  "id" : "5d16a0c3-738c-f1e7-c093-92f61a7d13f9",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "b1506323-1546-fc30-2e26-e98fcb4257d6",
+  "name" : "course_item",
+  "display_width" : null,
+  "label" : "course-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "9cb35f40-33cd-4c7b-dee5-634cb7cea14e",
+    "name" : "course_animation_name",
+    "display_width" : null,
+    "label" : "course-animation-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "8161dc9c-03ef-6d19-7a03-39c711234606",
+    "name" : "course_link",
+    "display_width" : null,
+    "label" : "course-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "02d673fc-dbfb-4156-dfb5-c17cd57cb654",
+    "name" : "course_image",
+    "display_width" : null,
+    "label" : "course-image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "bdcc1601-8c1c-3fb8-85cb-b1ecfed25a9a",
+    "name" : "course_price",
+    "display_width" : null,
+    "label" : "course-price",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$40<span>.00</span>"
+  }, {
+    "id" : "3f4e5c6c-b3a9-99e3-1b0f-3c9dd35651d4",
+    "name" : "course_badge",
+    "display_width" : null,
+    "label" : "course-badge",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Free"
+  }, {
+    "id" : "512dbd48-3b44-8605-7a78-d034b4c69778",
+    "name" : "course_title",
+    "display_width" : null,
+    "label" : "course-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learning to Write as a Professional Author"
+  }, {
+    "id" : "af1ec36a-d7d0-dbab-cadc-dcba84f0bd16",
+    "name" : "meta_item",
+    "display_width" : null,
+    "label" : "meta-item",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "1729a625-ec22-4e71-1133-9b15cbf49139",
+      "name" : "meta_icon",
+      "display_width" : null,
+      "label" : "meta-icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<i class=\"far fa-file-alt\"></i>"
+    }, {
+      "id" : "6aff2335-64e1-ade6-a40b-e8447eef2674",
+      "name" : "meta_text",
+      "display_width" : null,
+      "label" : "meta-text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "meta_icon" : "<i class=\"far fa-file-alt\"></i>"
+    }
+  }, {
+    "id" : "0097e079-a3d8-6007-71c3-d227083c5a34",
+    "name" : "course_date",
+    "display_width" : null,
+    "label" : "Course Date",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Jan 15, 2020"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "course_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "course_image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "course_price" : "$40<span>.00</span>",
+    "course_badge" : "Free",
+    "course_title" : "Learning to Write as a Professional Author",
+    "meta_item" : {
+      "meta_icon" : "<i class=\"far fa-file-alt\"></i>"
+    },
+    "course_date" : "Jan 15, 2020"
+  }
+} ]

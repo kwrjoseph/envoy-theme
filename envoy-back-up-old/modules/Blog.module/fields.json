@@ -1,0 +1,90 @@
+[ {
+  "id" : "e8a7a51a-5b45-9594-4feb-37faec7551ee",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ] ],
+  "type" : "choice"
+}, {
+  "id" : "f00e99a3-e2a6-d263-2c7d-eb0c21afa4ed",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "b3b5c89f-ca7f-6f8d-681d-ec8572e8bb5f",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "#f5f5f5"
+}, {
+  "id" : "61f55ff9-1db2-7db5-dd8c-1262d7231b1f",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d1477433-a4f7-e096-eec2-f271186f224a",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "dfecb109-7302-ae46-8fe5-ee74f1346207",
+  "name" : "sub_title",
+  "display_width" : null,
+  "label" : "sub-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Consider registering our courses?"
+}, {
+  "id" : "6a7b0a3c-d69c-053f-677b-dded45c7ddb6",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Trending on <span>Our Blogs</span>"
+}, {
+  "id" : "dde6f6e9-0844-90c0-800e-4714e1dc19f1",
+  "name" : "maxcoach_blog",
+  "display_width" : null,
+  "label" : "maxcoach-blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 56030595763
+} ]

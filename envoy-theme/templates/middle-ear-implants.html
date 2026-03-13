@@ -1,0 +1,105 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Middle Ear Implants
+  screenshotPath: ../images/template-previews/middle-ear-implants.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== Hero Section ===== #}
+    {% dnd_section %}
+      {% dnd_module "middle_ear_hero"
+        path='../modules/hero-banner'
+        label='Middle Ear Implants Hero'
+        badge_text='Proven Clinical History'
+        title='Middle Ear Implants'
+        subtitle='<p>A safe and effective alternative to traditional hearing aids for the right patients, with a history spanning decades.</p>'
+        primary_button_text='Explore Technology'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "#types"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Speak with a Specialist'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== How They Work — Two Column Section ===== #}
+    {% dnd_section %}
+      {% dnd_module "how_they_work"
+        path='../modules/two-column-section'
+        label='How They Work'
+        title='How They Work'
+        description='<p>Middle ear implants are surgically implanted devices designed to assist or replace the vibrations of the <strong>ossicular chain</strong>&mdash;the three tiny bones (hammer, anvil, and stirrup) that naturally transmit sound.</p><p>By interacting directly with these structures, they provide a more natural hearing experience for patients who haven&rsquo;t found success with traditional amplification.</p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Types of Middle Ear Implants — Feature Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "types"
+        path='../modules/feature-cards'
+        label='Types of Middle Ear Implants'
+        anchor_id='types'
+        section_title='Types of Middle Ear Implants'
+        columns='2'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-link", "card_title": "Passive (PMEI)", "description": "<p>Designed to bridge or replace parts of the ossicular chain that have been damaged by trauma or disease.</p><ul><li>No external components</li><li>No internal electronics</li><li>Primary for Conductive Hearing Loss</li></ul>"}, {"icon_class": "fas fa-bolt", "card_title": "Active (AMEI)", "description": "<p>Improve hearing by directly stimulating middle ear structures using advanced electronic components.</p><ul><li>Electronic stimulation</li><li>Addressing Mixed/Sensorineural Loss</li><li>Fully or Partially Implanted options</li></ul>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Esteem FI-AMEI — Glass Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem"
+        path='../modules/glass-cards'
+        label='Esteem FI-AMEI'
+        anchor_id='esteem'
+        section_title='Esteem\u00ae FI-AMEI'
+        section_subtitle='The Esteem is the world\u2019s first and only FDA-approved fully implanted active middle ear implant. Designed for adults with moderate to severe sensorineural hearing loss.'
+        columns='2'
+        cards=[{"icon_class": "fas fa-microchip", "title": "Innovative Sensor", "description": "<p>Uses a novel piezoelectric sensor to capture vibrations from the eardrum, allowing the ear canal to remain open and avoiding artificial distortion from external microphones.</p>"}, {"icon_class": "fas fa-battery-full", "title": "No Daily Maintenance", "description": "<p>The battery lasts for years. There are no batteries to change daily, and no device to put on or take off.</p>"}, {"icon_class": "fas fa-water", "title": "Waterproof Design", "description": "<p>Waterproof and always active, supporting an active lifestyle including swimming and showering (up to 33 feet depth).</p>"}, {"icon_class": "fas fa-sliders", "title": "Personal Programmer", "description": "<p>Includes a Personal Programmer to turn the device on/off or adjust volume and settings, though it is not required for daily hearing.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Trending Blog / Education — Feature Cards ===== #}
+    {% dnd_section %}
+      {% dnd_module "blog_section"
+        path='../modules/feature-cards'
+        label='Trending on Our Blogs'
+        section_title='Trending on Our Blogs'
+        section_subtitle='Education & Community'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-newspaper", "card_title": "Safety and Success: Decades of Middle Ear Implants", "description": "<p>A look into the long-term clinical data that supports this proven hearing category.</p>"}, {"icon_class": "fas fa-newspaper", "card_title": "Choosing the Right Path: PMEI vs AMEI", "description": "<p>Which technology is right for your type of hearing loss? We break down the differences.</p>"}, {"icon_class": "fas fa-newspaper", "card_title": "Navigating MRI Compatibility", "description": "<p>Important safety considerations for implant recipients undergoing medical imaging.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA — Contact Section ===== #}
+    {% dnd_section %}
+      {% dnd_module "cta"
+        path='../modules/cta-section'
+        label='Contact CTA'
+        title='Ready to Explore Your Options?'
+        subtitle='Speak with a specialist to learn if a middle ear implant is right for you.'
+        primary_button_text='Contact Us'
+        primary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}
+        secondary_button_text='Safety Information'
+        secondary_button_link={"url": {"type": "EXTERNAL", "href": "/safety-information"}, "open_in_new_tab": false, "no_follow": false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

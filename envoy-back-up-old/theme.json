@@ -1,0 +1,23 @@
+{
+  "label" : "Maxcoach - Education HubSpot Theme",
+  "preview_path" : "./templates/home.html",
+  "screenshot_path" : "./images/template-previews/home.png",
+  "enable_domain_stylesheets" : false,
+  "license": "./license.txt",
+  "responsive_breakpoints" : [ {
+    "name" : "mobile",
+    "previewWidth" : {
+      "value" : 477,
+      "units" : "px"
+    },
+    "mediaQuery" : "@media (max-width: 767px)"
+  } ],
+  "version" : "1",
+  "author" : {
+    "name" : "BootXperts",
+    "email" : "admin@bootexperts.com",
+    "url" : "https://themeforest.net/user/bootxperts/portfolio"
+  },
+  "documentation_url" : "xxxxx",
+  "example_url" : "https://20267820.hs-sites.com/en/maxcoach/home"
+}

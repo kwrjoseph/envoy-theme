@@ -1,0 +1,87 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'cta' for #cta links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "id": "title",
+    "name": "title",
+    "label": "Title",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": "Ready to Learn More?"
+  },
+  {
+    "id": "subtitle",
+    "name": "subtitle",
+    "label": "Subtitle",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": ""
+  },
+  {
+    "id": "primary_button_text",
+    "name": "primary_button_text",
+    "label": "Primary Button Text",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": "Get Started"
+  },
+  {
+    "id": "primary_button_link",
+    "name": "primary_button_link",
+    "label": "Primary Button Link",
+    "type": "link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT"
+    ],
+    "default": {
+      "url": {
+        "type": "EXTERNAL",
+        "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  },
+  {
+    "id": "secondary_button_text",
+    "name": "secondary_button_text",
+    "label": "Secondary Button Text",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": ""
+  },
+  {
+    "id": "secondary_button_link",
+    "name": "secondary_button_link",
+    "label": "Secondary Button Link",
+    "type": "link",
+    "required": false,
+    "locked": false,
+    "supported_types": [
+      "EXTERNAL",
+      "CONTENT"
+    ],
+    "default": {
+      "url": {
+        "type": "EXTERNAL",
+        "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+    }
+  }
+]

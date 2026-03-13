@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:location-arrow:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 54863448170,
+  "label" : "google-map",
+  "is_available_for_new_content" : true
+}

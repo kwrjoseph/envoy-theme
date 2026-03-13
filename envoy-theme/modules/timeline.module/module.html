@@ -1,0 +1,55 @@
+{# Timeline Module — Envoy Medical #}
+
+<style>
+  .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid #e2e8f0;
+    padding-bottom: 2rem;
+  }
+
+  .timeline-item:last-child {
+    border-left: none;
+    padding-bottom: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--brand-navy);
+    border: 4px solid white;
+    box-shadow: 0 0 0 1px #e2e8f0;
+  }
+</style>
+
+<section
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+  class="py-20 bg-slate-50"
+>
+  <div class="max-w-7xl mx-auto px-6">
+
+    {# Section Header #}
+    {% if module.section_title %}
+    <h2 class="text-3xl font-black text-slate-900 mb-10 tracking-tight">
+      {{ module.section_title }}
+    </h2>
+    {% endif %}
+
+    {# Timeline #}
+    <div class="space-y-2">
+      {% for event in module.events %}
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="text-sm font-black text-blue-600 mb-1 uppercase tracking-wider">{{ event.event_year }}</div>
+        <h4 class="font-bold text-slate-900 mb-2">{{ event.event_title }}</h4>
+        <div class="text-slate-500 text-sm">{{ event.event_description }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

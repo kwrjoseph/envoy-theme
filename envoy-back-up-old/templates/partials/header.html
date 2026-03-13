@@ -1,0 +1,110 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+
+
+<!-- Header Section Start -->
+<div class="header-section header-fluid sticky-header section">
+  <div class="header-inner">
+      <div class="container position-relative">
+          <div class="row justify-content-between align-items-center">
+
+              <!-- Header Logo Start -->
+              <div class="col-xl-3 col-auto">
+                  <div class="header-logo">
+                    {% module 'site_logo' path='@hubspot/logo', label='Logo',
+                        img={ 'alt': 'Maxcoach Logo', "size_type": "auto", 'src': get_asset_url('../../images/logo/dark-logo.png') }
+                    %}
+                  </div>
+              </div>
+              <!-- Header Logo End -->
+
+              <!-- Header Main Menu Start -->
+              <div class="col d-none d-xl-block position-static">
+                {% module "module_16289155243643" path="../../modules/menu-section", label="menu-section" %}
+              </div>
+              <!-- Header Main Menu End -->
+
+              <!-- Header Right Start -->
+              <div class="col-xl-3 col-auto">
+                  <div class="header-right">
+                      <div class="inner">
+
+                        <div class="language language-black d-lg-block d-none">
+                            {% if content.translated_content.values()|selectattr('published')|length || is_listing_view && group.translations %}
+                              <div class="header__language-switcher header--element">
+                                  {% module 'language-switcher' path='@hubspot/language_switcher',
+                                    label='Language switcher',
+                                    display_mode='localized'
+                                  %}
+                                  <div class="header__language-switcher--label-current"> {{ locale_name(locale) }}</div>
+                              </div>
+                            {% endif %}
+                       </div>
+
+                          <!-- Header Login Start -->
+                          <div class="header-login">
+                            {% module "module_16304036019014" path="../../modules/ht-login", label="ht-login" 
+                            ht_login_link = { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+                            ht_login_icon = '<i class="far fa-user-circle"></i>',
+                            
+                            %}
+                          </div>
+                          <!-- Header Login End -->
+
+                          <!-- Header Search Start -->
+                          <div class="header-search">
+                              <button class="header-search-toggle"><i class="far fa-search"></i></button>
+                              <div class="header-search-form">
+                                  <form action="#">
+                                        {% module 'site_search' path='@hubspot/search_input',
+                                        label='Search Enter'
+                                    %}
+                                  </form>
+                              </div>
+                          </div>
+                          <!-- Header Search End -->
+
+                          <!-- Header Mobile Menu Toggle Start -->
+                          <div class="header-mobile-menu-toggle d-xl-none ml-sm-2">
+                              <button class="toggle">
+                                  <i class="icon-top"></i>
+                                  <i class="icon-middle"></i>
+                                  <i class="icon-bottom"></i>
+                              </button>
+                          </div>
+                          <!-- Header Mobile Menu Toggle End -->
+                      </div>
+                  </div>
+              </div>
+              <!-- Header Right End -->
+
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Header Section End -->
+
+<div id="site-main-mobile-menu" class="site-main-mobile-menu">
+    <div class="site-main-mobile-menu-inner">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                {% module 'site_logo' path='@hubspot/logo', label='Logo',
+                        img={ 'alt': 'Maxcoach Logo', "size_type": "auto", 'src': get_asset_url('../../images/logo/dark-logo.png') }
+                    %}
+            </div>
+            <div class="mobile-menu-close">
+                <button class="toggle">
+                    <i class="icon-top"></i>
+                    <i class="icon-bottom"></i>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu-content">
+            {% module "module_16289315575805" path="../../modules/mobile-menu", label="mobile-menu" %}
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,185 @@
+[ {
+  "id" : "dd66ff5c-2f54-fa8e-80f8-fa3a570634ca",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "a910330b-cb7b-0fa2-3e09-c45a5603e31c",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "9bc1f09a-2e97-3b5c-a17e-d926c19c7297",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "4de6b0fc-873d-2c66-12eb-e1f1df3b4fe2",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "580951a8-fdfd-8a4b-046a-f41d6a1314a7",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Learn At Your <br> Own <span>Pace</span>"
+}, {
+  "id" : "3097d31c-b8f4-5ce1-d055-cf40a71a0888",
+  "name" : "list_item_group",
+  "display_width" : null,
+  "label" : "list-item-group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "5f4f1a11-d81b-3974-fd03-7ecc7b8f031a",
+    "name" : "list_icon",
+    "display_width" : null,
+    "label" : "list-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fas fa-check\"></i>"
+  }, {
+    "id" : "9c54743e-9407-a5c6-2792-fd63a39f83c2",
+    "name" : "list_text",
+    "display_width" : null,
+    "label" : "list-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Change the tutor and make arrangements"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "list_icon" : "<i class=\"fas fa-check\"></i>",
+    "list_text" : "Change the tutor and make arrangements"
+  }
+}, {
+  "id" : "41eab81e-17bc-7240-695f-08a1bcfe57f2",
+  "name" : "btn_link",
+  "display_width" : null,
+  "label" : "btn-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "ca5800e7-cbaa-8fc2-d5b7-964cb0c8b8be",
+  "name" : "btn_text",
+  "display_width" : null,
+  "label" : "btn-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get started for free"
+}, {
+  "id" : "2afed92a-d383-7eb0-8d1b-8eed41dd2a42",
+  "name" : "register_image",
+  "display_width" : null,
+  "label" : "register-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "b64a608f-9589-1b8e-ec52-6f812d9fd8ba",
+  "name" : "shape_image",
+  "display_width" : null,
+  "label" : "shape-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "46bac2d7-7b21-a376-064d-cfa3791774f5",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+} ]

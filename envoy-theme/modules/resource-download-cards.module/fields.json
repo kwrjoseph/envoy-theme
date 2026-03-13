@@ -1,0 +1,81 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": "Advocacy Resources"
+  },
+  {
+    "name": "resources",
+    "type": "group",
+    "label": "Resources",
+    "occurrence": {
+      "min": 0,
+      "max": 20,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "icon_class",
+        "type": "text",
+        "label": "Icon Class",
+        "default": "fas fa-file-signature"
+      },
+      {
+        "name": "resource_title",
+        "type": "text",
+        "label": "Resource Title",
+        "default": "Sample Advocacy Letter"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "label": "Description",
+        "default": "Use this sample letter to contact your representatives."
+      },
+      {
+        "name": "primary_button_text",
+        "type": "text",
+        "label": "Primary Button Text",
+        "default": "View PDF"
+      },
+      {
+        "name": "primary_button_link",
+        "type": "link",
+        "label": "Primary Button Link",
+        "default": {
+          "url": {
+            "href": "#",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": true
+        }
+      },
+      {
+        "name": "secondary_button_text",
+        "type": "text",
+        "label": "Secondary Button Text",
+        "default": ""
+      },
+      {
+        "name": "secondary_button_link",
+        "type": "link",
+        "label": "Secondary Button Link",
+        "default": {
+          "url": {
+            "href": "",
+            "type": "EXTERNAL"
+          },
+          "open_in_new_tab": true
+        }
+      }
+    ],
+    "default": []
+  }
+]

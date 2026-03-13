@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Star-Struck",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 54074445424,
+  "label" : "most-review",
+  "is_available_for_new_content" : true
+}

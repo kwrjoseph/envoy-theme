@@ -1,0 +1,218 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Event
+  screenshotPath: ../images/template-previews/event.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Breadcrumb section #}
+    {% dnd_section %}
+        {% dnd_module "module_16458540106799" path="../modules/Breadcrumb", label="Breadcrumb"
+        layout = 'layout-two', 
+        section_class = '',
+        section_bg_color = '#fff',
+        page_title = 'Events',
+        breadcrumb_group = [
+            {
+                'breadcrumb_class' : '',
+                'breadcrumb_link' : { 'url': { 'type': 'CONTENT', 'href': './contact'}},
+                'breadcrumb_text' : 'Home'
+            },
+            {
+                'breadcrumb_class' : 'current',
+                'breadcrumb_text' : 'Events'
+            }
+        ]
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Breadcrumb section #}
+
+    {# Event Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_164628441904315" path="../modules/event", label="event"
+        layout = 'layout-one',
+        section_class = '',
+        event_item = [
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event1.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Nov 22, 2020',
+                'event_title' : 'Storytelling Workshop',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Texas, US'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event2.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Oct 10, 2020',
+                'event_title' : 'Painting Art Contest 2020',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'New York, US'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event3.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Nov 23, 2020',
+                'event_title' : 'International Art Fair 2020',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Hamburg, Germany'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event4.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Dec 15, 2020',
+                'event_title' : 'Street Performance: Call for Artist',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Illinois, US'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event5.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Jul 22, 2020',
+                'event_title' : 'Consumer Food Safety Education Conference',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Illinois, US'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event6.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Aug 12, 2020',
+                'event_title' : 'How meditation improve your mental health?',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Dubai'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event7.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Sep 18, 2020',
+                'event_title' : 'Dialogue for Action on Cancer Screening and Prevention',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Washington DC, US'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event8.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Sep 24, 2020',
+                'event_title' : 'Workout routine and Longevity Meetup',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Hamburg, Germany'
+                    }
+                ]
+            },
+            {
+                'event_animation_name' : 'fade-up',
+                'event_link' : { 'url': { 'type': 'CONTENT', 'href': './event-details'}},
+                'event_image' : { 
+                        'alt': 'event image',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/event/370/event9.jpg') 
+                    },
+                'event_btn_text' : 'Get ticket',
+                'event_date' : 'Jul 29, 2023',
+                'event_title' : 'Learning Counsel Digital Transition Discussion Event – Chicago',
+                'meta_item' : [
+                    {
+                        'meta_icon' : '<i class="far fa-map-marker-alt"></i>',
+                        'meta_text' : 'Chicago, US'
+                    }
+                ]
+            }
+        ]
+        
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Event Section End #}
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

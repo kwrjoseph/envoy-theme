@@ -1,0 +1,188 @@
+[ {
+  "id" : "6f28f141-9f7a-1c37-c0f0-0309b56fd7ec",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "3c5003c1-5de3-fbd5-443b-f1de13f5e23d",
+  "name" : "contact_subtitle",
+  "display_width" : null,
+  "label" : "contact-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "bae048d0-a62f-7f62-ab9a-cbe05e4eb07e",
+  "name" : "contact_title",
+  "display_width" : null,
+  "label" : "contact-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Reach me!"
+}, {
+  "id" : "6dbf2186-b9c0-1ad7-3aad-fb60a9316ad7",
+  "name" : "info_item",
+  "display_width" : null,
+  "label" : "info-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "3a85692c-1126-a8bf-0cbd-7132226fbb63",
+    "name" : "info_icon",
+    "display_width" : null,
+    "label" : "info-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"fal fa-map-marker-alt\"></i>"
+  }, {
+    "id" : "62666d72-676a-cc58-940f-b6ea36f1e320",
+    "name" : "info_title",
+    "display_width" : null,
+    "label" : "info-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Address"
+  }, {
+    "id" : "709b16f1-693d-7ee6-a80b-db9b3e83e9f0",
+    "name" : "info_text",
+    "display_width" : null,
+    "label" : "info-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "1800 Abbot Kinney Blvd. Unit D & E Venice"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "info_icon" : "<i class=\"fal fa-map-marker-alt\"></i>",
+    "info_title" : "Address",
+    "info_text" : "1800 Abbot Kinney Blvd. Unit D & E Venice"
+  }
+}, {
+  "id" : "99a6e502-a9b6-b6d9-6c59-d6d17deea9f8",
+  "name" : "contact_image",
+  "display_width" : null,
+  "label" : "contact-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "d992a80e-cae8-92e0-d936-cb4f854f0bc2",
+  "name" : "shape_image_one",
+  "display_width" : null,
+  "label" : "shape-image-one",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "a4be8d33-4c2d-1035-c35c-0f4939558eb1",
+  "name" : "shape_image_two",
+  "display_width" : null,
+  "label" : "shape-image-two",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "c6e8c41e-e0eb-dce1-885e-648a9e8d69f1",
+  "name" : "shape_image_three",
+  "display_width" : null,
+  "label" : "shape-image-three",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "147da829-1696-2c02-4a5f-cf67b334fbcb",
+  "name" : "shape_image",
+  "display_width" : null,
+  "label" : "shape-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "017a82e4-4a3a-a31b-308f-a3049ef543e8",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ] ],
+  "type" : "choice"
+} ]

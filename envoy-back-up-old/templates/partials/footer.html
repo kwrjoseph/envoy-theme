@@ -1,0 +1,149 @@
+<!--
+  templateType: global_partial
+  label: Footer
+-->
+
+<div class="footer-section section" data-bg-color="#171621">
+  <div class="container">
+
+      <!-- Footer Top Widgets Start -->
+      <div class="row">
+
+          <!-- Footer Widget Start -->
+          <div class="col-xl-6 col-md-5 col-12 max-mb-50">
+              <div class="footer-widget light-color">
+                {% module_block module 'footer_title'
+                              label='text',
+                              path='@hubspot/rich_text'
+                            %}
+                            {% module_attribute 'html' %}
+                            <h4 class="footer-widget-title">Address</h4>
+                            
+                          {% end_module_attribute %}
+                        {% end_module_block %} 
+                  <div class="footer-widget-content">
+                      <div class="content">
+                        {% module_block module 'about_text'
+                              label='text',
+                              path='@hubspot/rich_text'
+                            %}
+                              {% module_attribute 'html' %}
+                              <p>382 NE 191st St # 87394 Miami, FL 33179-3899</p>
+                              <p>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday) </p>
+                              <p><a href="#">info@example.com </a></p>
+                              
+                            {% end_module_attribute %}
+                          {% end_module_block %}
+                      </div>
+                      {% module "module_16465469015553" path="../../modules/ht-social", label="ht-social"
+                      layout = 'layout-two',
+                      
+                      social_group = [
+                        {
+                          'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+                          'social_icon' : '<i class="fab fa-facebook-square"></i>'
+                        },
+                        {
+                          'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+                          'social_icon' : '<i class="fab fa-twitter"></i>'
+                        },
+                        {
+                          'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+                          'social_icon' : '<i class="fab fa-instagram"></i>'
+                        },
+                        {
+                          'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+                          'social_icon' : '<i class="fab fa-linkedin"></i>'
+                        }
+                      ]
+
+                      %}
+                  </div>
+              </div>
+          </div>
+          <!-- Footer Widget End -->
+
+          <!-- Footer Widget Start -->
+          <div class="col-xl-3 col-md-4 col-sm-7 col-12 max-mb-50">
+              <div class="footer-widget light-color">
+                {% module_block module 'footer_title'
+                      label='text',
+                      path='@hubspot/rich_text'
+                    %}
+                    {% module_attribute 'html' %}
+                    <h4 class="footer-widget-title">Explore</h4>
+                    
+                  {% end_module_attribute %}
+                {% end_module_block %}
+                  <div class="footer-widget-content">
+                      <ul class="column-2">
+                        {% module_block module 'footer_menu_one'
+                        label='footer menu one',
+                        path='@hubspot/simple_menu',
+                        orientation='vertical'
+                      %}
+                        {% module_attribute 'menu_tree' is_json=True %}
+                          [
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Start here", "linkTarget": null, "linkUrl": "start-here", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Success story", "linkTarget": null, "linkUrl": "success-story", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Blog", "linkTarget": null, "linkUrl": "blog-classic", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Courses", "linkTarget": null, "linkUrl": "course-grid-one", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "About us", "linkTarget": null, "linkUrl": "about", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Contact us", "linkTarget": null, "linkUrl": "contact", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Documentation", "linkTarget": null, "linkUrl": "https://htmldemo.hasthemes.com/maxcoach_hubspot_documentation/", "children": [], "isDeleted": false}
+                          ]
+                        {% end_module_attribute %}
+                      {% end_module_block %}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- Footer Widget End -->
+
+          <!-- Footer Widget Start -->
+          <div class="col-xl-3 col-md-3 col-sm-5 col-12 max-mb-50">
+              <div class="footer-widget light-color">
+                  <h4 class="footer-widget-title">Information</h4>
+                  <div class="footer-widget-content">
+                      <ul>
+                        {% module_block module 'footer_menu_two'
+                        label='footer menu one',
+                        path='@hubspot/simple_menu',
+                        orientation='vertical'
+                      %}
+                        {% module_attribute 'menu_tree' is_json=True %}
+                          [
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Membership", "linkTarget": null, "linkUrl": "contact", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Purchase guide", "linkTarget": null, "linkUrl": "purchase-guide", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Privacy policy", "linkTarget": null, "linkUrl": "privacy-policy", "children": [], "isDeleted": false},
+                            {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Terms of service", "linkTarget": null, "linkUrl": "terms-of-service", "children": [], "isDeleted": false}
+                          ]
+                        {% end_module_attribute %}
+                      {% end_module_block %}
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <!-- Footer Widget End -->
+
+      </div>
+      <!-- Footer Top Widgets End -->
+
+      <!-- Footer Copyright Start -->
+      <div class="row max-mt-20">
+          <div class="col">
+            {% module_block module 'footer_copyright'
+            label='Copyright',
+            path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <p class="copyright">(c)  {{ year }} {{ site_settings.company_name }} All Rights Reserved.  </p>
+            {% end_module_attribute %}
+          {% end_module_block %}
+          </div>
+      </div>
+      <!-- Footer Copyright End -->
+
+  </div>
+</div>
+

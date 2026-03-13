@@ -1,0 +1,70 @@
+{% if module.layout == 'layout-one' %}
+<!-- Page Title Section Start -->
+<div class="page-title-section section section-padding-top-0 {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="page-breadcrumb position-static">
+    <div class="container">
+      <ul class="breadcrumb">
+        {% for item in module.breadcrumb_group %}
+        <li class="{{ item.breadcrumb_class }}">
+          {% set href = item.breadcrumb_link.url.href %}
+          {% if item.breadcrumb_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if item.breadcrumb_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if item.breadcrumb_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if item.breadcrumb_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ item.breadcrumb_text }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Page Title Section End -->
+{% else %}
+<!-- Page Title Section Start -->
+<div class="page-title-section section {{ module.section_class }}" data-bg-color="{{ module.section_bg_color }}">
+  <div class="page-title">
+    <div class="container">
+      <h1 class="title">{{ module.page_title }}</h1>
+    </div>
+  </div>
+  <div class="page-breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb">
+        {% for item in module.breadcrumb_group %}
+        <li>
+          {% set href = item.breadcrumb_link.url.href %}
+          {% if item.breadcrumb_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% set rel = [] %}
+          {% if item.breadcrumb_link.no_follow %}
+          {% do rel.append("nofollow") %}
+          {% endif %}
+          {% if item.breadcrumb_link.open_in_new_tab %}
+          {% do rel.append("noopener") %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if item.breadcrumb_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+             >
+            {{ item.breadcrumb_text }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Page Title Section End -->
+{% endif %}

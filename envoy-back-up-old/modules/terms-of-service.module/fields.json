@@ -1,0 +1,251 @@
+[ {
+  "id" : "378d3785-f91b-38bb-15f0-718aa7228cfb",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "5cb24cfc-e48a-4d74-d29d-005dbf3c1061",
+  "name" : "main_image",
+  "display_width" : null,
+  "label" : "main-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "d159eaa8-2afb-1970-c144-5f794748acae",
+  "name" : "main_content",
+  "display_width" : null,
+  "label" : "main-content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3 class=\"title\">Our website</h3>\n<p>Our website address is: https://hasthemes.com</p>\n<h3 class=\"title\">Definitions of basic terms, rights and restriction:</h3>\n<h4>Basic terms</h4>\n<p>These Terms of Service for MaxCoach Online Course Educational Center constitute a binding contract between you (“Member” or “Customer” or “You”) and ThemeMove company, a corporation registered in California, USA (“Company”), regarding the terms under which the Company will provide You with access to online courses (or parts thereof) purchased by You.</p>\n<h4>Rights &amp; restrictions</h4>\n<ol>\n<li>Members must be at least 18 years of age.</li>\n<li>Members are granted a time-limited, non-exclusive, revocable, nontransferable, and non-sublicenseable right to access that portion of the online course corresponding to the purchase.</li>\n<li>The portion of the online course corresponding to the purchase will be available to the Member as long as the course is maintained by the Company, which will be a minimum of one year after Member’ purchase.</li>\n<li>The videos in the course are provided as a video stream and are not downloadable.</li>\n<li>By agreeing to grant such access, the Company does not obligate itself to maintain the course, or to maintain it in its present form.</li>\n</ol>"
+}, {
+  "id" : "89f1f8b7-c98e-b244-157f-ead33ff57614",
+  "name" : "sidebar_nav_widget",
+  "display_width" : null,
+  "label" : "sidebar-nav-widget",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "dc1a8dbb-10bb-c96a-a1c2-815a2c78288f",
+    "name" : "sidebar_nav_link",
+    "display_width" : null,
+    "label" : "sidebar-nav-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "911a3937-fe89-723f-1854-b356e36c3a43",
+    "name" : "sidebar_nav_text",
+    "display_width" : null,
+    "label" : "sidebar-nav-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "1b392ef6-b529-de18-6d5e-c10ca5d7d453",
+    "name" : "class_name",
+    "display_width" : null,
+    "label" : "class-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "sidebar_nav_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "35514a72-04a3-536b-7301-bea86bbc24ce",
+  "name" : "sidebar_course_widget",
+  "display_width" : null,
+  "label" : "sidebar-course-widget",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "8470c0fc-2e7a-e725-8774-36c63aefdf91",
+    "name" : "course_widget",
+    "display_width" : null,
+    "label" : "course-widget",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "66464e76-a9b8-abf5-7ed6-edba04b05116",
+      "name" : "course_link",
+      "display_width" : null,
+      "label" : "course-link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "77399021-6a2e-c1e4-a345-aa29af87777f",
+      "name" : "course_price",
+      "display_width" : null,
+      "label" : "course-price",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    }, {
+      "id" : "76a0df70-08c8-d62d-4c4b-b2fdea7c8b17",
+      "name" : "course_title",
+      "display_width" : null,
+      "label" : "course-title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Learning to Write as a Professional Author"
+    }, {
+      "id" : "a80ce7c4-c47e-3c3a-e005-284b0ca9b83e",
+      "name" : "course_image",
+      "display_width" : null,
+      "label" : "course-image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "course_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "course_title" : "Learning to Write as a Professional Author",
+      "course_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }
+  }, {
+    "id" : "408f93bb-7b06-b5b8-aa06-448ca7e74958",
+    "name" : "sidebar_title",
+    "display_width" : null,
+    "label" : "sidebar-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Recent Courses"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "course_widget" : {
+      "course_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "course_title" : "Learning to Write as a Professional Author",
+      "course_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    },
+    "sidebar_title" : "Recent Courses"
+  }
+} ]

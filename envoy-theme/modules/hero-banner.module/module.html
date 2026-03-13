@@ -1,0 +1,192 @@
+{# Hero Banner Module — Envoy Medical #}
+
+{% set is_dark = module.theme == "dark" %}
+{% set is_split = module.layout == "split" %}
+{% set is_left = module.layout == "left" %}
+
+<section
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+  class="hero-section{% if is_dark %} hero-dark{% endif %}"
+  {% if not module.show_pattern %}style="background-image: none;"{% endif %}
+>
+  {# Hide pattern overlay when show_pattern is false #}
+  {% if not module.show_pattern %}
+  <style scoped>
+    .hero-section::before { display: none !important; }
+  </style>
+  {% endif %}
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+    {# ============================
+       CENTERED LAYOUT
+       ============================ #}
+    {% if not is_split %}
+    <div class="{% if is_left %}text-left max-w-4xl{% else %}text-center max-w-4xl mx-auto{% endif %}">
+
+      {# Badge #}
+      {% if module.badge_text %}
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-6
+        {% if module.badge_style == 'amber' %}
+          bg-amber-100 text-amber-800 border border-amber-200
+        {% else %}
+          {% if is_dark %}bg-white/10 text-white/90 border border-white/20{% else %}bg-blue-50 text-blue-800 border border-blue-200{% endif %}
+        {% endif %}
+      ">
+        {{ module.badge_text }}
+      </div>
+      {% endif %}
+
+      {# Title #}
+      <h1 class="
+        {% if is_dark %}
+          font-black text-5xl lg:text-7xl xl:text-8xl tracking-tighter text-white
+        {% else %}
+          font-black text-5xl lg:text-7xl xl:text-8xl tracking-tighter brand-text-navy
+        {% endif %}
+        mb-6
+      ">
+        {{ module.title }}
+      </h1>
+
+      {# Subtitle #}
+      {% if module.subtitle %}
+      <div class="text-lg lg:text-xl font-medium mb-10 max-w-2xl {% if not is_left %}mx-auto{% endif %}
+        {% if is_dark %}text-blue-100/80{% else %}text-gray-600{% endif %}
+      ">
+        {{ module.subtitle }}
+      </div>
+      {% endif %}
+
+      {# Buttons #}
+      {% if module.primary_button_text or module.secondary_button_text %}
+      <div class="flex flex-wrap items-center {% if not is_left %}justify-center{% endif %} gap-4 mb-8">
+        {% if module.primary_button_text %}
+          {% set href = module.primary_button_link.url.href %}
+          <a href="{{ href }}" class="btn-primary"
+            {% if module.primary_button_link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+            {% if module.primary_button_link.no_follow %}rel="nofollow"{% endif %}>
+            {{ module.primary_button_text }}
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        {% endif %}
+        {% if module.secondary_button_text %}
+          {% set href2 = module.secondary_button_link.url.href %}
+          <a href="{{ href2 }}" class="{% if is_dark %}btn-secondary border-white/30 text-white hover:bg-white hover:text-blue-900{% else %}btn-secondary{% endif %}"
+            {% if module.secondary_button_link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+            {% if module.secondary_button_link.no_follow %}rel="nofollow"{% endif %}>
+            {{ module.secondary_button_text }}
+          </a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+    </div>
+
+    {# ============================
+       SPLIT LAYOUT (text left, image right)
+       ============================ #}
+    {% else %}
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      {# Left Column — Text #}
+      <div>
+
+        {# Badge #}
+        {% if module.badge_text %}
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-6
+          {% if module.badge_style == 'amber' %}
+            bg-amber-100 text-amber-800 border border-amber-200
+          {% else %}
+            {% if is_dark %}bg-white/10 text-white/90 border border-white/20{% else %}bg-blue-50 text-blue-800 border border-blue-200{% endif %}
+          {% endif %}
+        ">
+          {{ module.badge_text }}
+        </div>
+        {% endif %}
+
+        {# Title #}
+        <h1 class="
+          {% if is_dark %}
+            font-black text-5xl lg:text-7xl xl:text-8xl tracking-tighter text-white
+          {% else %}
+            font-black text-5xl lg:text-7xl xl:text-8xl tracking-tighter brand-text-navy
+          {% endif %}
+          mb-6
+        ">
+          {{ module.title }}
+        </h1>
+
+        {# Subtitle #}
+        {% if module.subtitle %}
+        <div class="text-lg lg:text-xl font-medium mb-10
+          {% if is_dark %}text-blue-100/80{% else %}text-gray-600{% endif %}
+        ">
+          {{ module.subtitle }}
+        </div>
+        {% endif %}
+
+        {# Buttons #}
+        {% if module.primary_button_text or module.secondary_button_text %}
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          {% if module.primary_button_text %}
+            {% set href = module.primary_button_link.url.href %}
+            <a href="{{ href }}" class="btn-primary"
+              {% if module.primary_button_link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+              {% if module.primary_button_link.no_follow %}rel="nofollow"{% endif %}>
+              {{ module.primary_button_text }}
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          {% endif %}
+          {% if module.secondary_button_text %}
+            {% set href2 = module.secondary_button_link.url.href %}
+            <a href="{{ href2 }}" class="{% if is_dark %}btn-secondary border-white/30 text-white hover:bg-white hover:text-blue-900{% else %}btn-secondary{% endif %}"
+              {% if module.secondary_button_link.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}
+              {% if module.secondary_button_link.no_follow %}rel="nofollow"{% endif %}>
+              {{ module.secondary_button_text }}
+            </a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+      </div>
+
+      {# Right Column — Image #}
+      <div class="relative">
+        {% if module.hero_image.src %}
+        <img
+          src="{{ module.hero_image.src }}"
+          alt="{{ module.hero_image.alt }}"
+          {% if module.hero_image.width %}width="{{ module.hero_image.width }}"{% endif %}
+          {% if module.hero_image.height %}height="{{ module.hero_image.height }}"{% endif %}
+          loading="{{ module.hero_image.loading || 'lazy' }}"
+          class="w-full h-auto rounded-2xl shadow-2xl"
+        >
+        {% else %}
+        <div class="w-full aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl shadow-2xl flex items-center justify-center">
+          <svg class="w-20 h-20 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+    {% endif %}
+
+    {# ============================
+       CAUTION / REGULATORY BOX
+       ============================ #}
+    {% if module.caution_text %}
+    <div class="mt-12 max-w-4xl {% if not is_split %}mx-auto{% endif %}">
+      <div class="flex items-start gap-3 p-5 rounded-xl bg-amber-50 border border-amber-200">
+        <i class="fas fa-exclamation-triangle text-amber-600 mt-1 flex-shrink-0"></i>
+        <div class="text-sm text-amber-900 leading-relaxed">
+          {{ module.caution_text }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

@@ -1,0 +1,32 @@
+[ {
+  "id" : "742c022b-f931-0b83-0eda-91fbb3ff3cb6",
+  "name" : "ht_login_link",
+  "display_width" : null,
+  "label" : "ht-login-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "7503f5f7-06a6-e053-8c98-0b242789e44d",
+  "name" : "ht_login_icon",
+  "display_width" : null,
+  "label" : "ht-login-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"far fa-user-circle\"></i>"
+} ]

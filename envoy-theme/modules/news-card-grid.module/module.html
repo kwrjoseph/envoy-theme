@@ -1,0 +1,81 @@
+{# News Card Grid Module #}
+{% require_css %}
+<style>
+  .news-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -5px rgba(0, 45, 116, 0.1);
+    border-color: var(--brand-navy);
+  }
+  .category-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  .cat-blue { background: #dbeafe; color: #1e40af; }
+  .cat-green { background: #dcfce7; color: #166534; }
+  .cat-purple { background: #f3e8ff; color: #6b21a8; }
+  .cat-amber { background: #ffedd5; color: #9a3412; }
+  .news-card .btn-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--brand-navy);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: auto;
+    transition: color 0.2s;
+  }
+  .news-card .btn-link:hover {
+    color: var(--brand-accent);
+  }
+  .news-card .btn-link i {
+    transition: transform 0.2s;
+  }
+  .news-card .btn-link:hover i {
+    transform: translateX(4px);
+  }
+</style>
+{% end_require_css %}
+
+<section{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %} class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    {% if module.section_title %}
+      <div class="flex justify-between items-end mb-12">
+        <h3 class="text-2xl font-black text-slate-900">{{ module.section_title }}</h3>
+      </div>
+    {% endif %}
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for article in module.articles %}
+        <div class="news-card">
+          <div class="flex justify-between items-start">
+            <span class="category-badge cat-{{ article.category_color }}">{{ article.category }}</span>
+            <span class="text-xs text-slate-400 font-medium">{{ article.date_text }}</span>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight font-serif">{{ article.title }}</h4>
+          <p class="text-sm text-slate-500 leading-relaxed mb-6">{{ article.description }}</p>
+          {% if article.link.url.href %}
+            <a href="{{ article.link.url.href }}"{% if article.link.open_in_new_tab %} target="_blank" rel="noopener"{% endif %} class="btn-link">
+              READ MORE <i class="fas fa-arrow-right ml-2 text-xs"></i>
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

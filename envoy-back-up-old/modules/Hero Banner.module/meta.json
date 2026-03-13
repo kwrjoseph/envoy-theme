@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "master_language" : "en",
+  "icon" : "fontawesome-5.14.0:Horizontal%20Sliders:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 52870743421,
+  "label" : "hero banner",
+  "is_available_for_new_content" : true
+}

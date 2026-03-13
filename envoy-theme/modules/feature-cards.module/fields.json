@@ -1,0 +1,182 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Section Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": "",
+    "help_text": "Optional HTML ID for anchor navigation (e.g. 'features' for #features links). Do not include the # symbol.",
+    "inline_help_text": "Used for anchor links like #section-name"
+  },
+  {
+    "id": "section_title_field",
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": ""
+  },
+  {
+    "id": "section_subtitle_field",
+    "name": "section_subtitle",
+    "label": "Section Subtitle",
+    "type": "text",
+    "required": false,
+    "locked": false,
+    "default": ""
+  },
+  {
+    "id": "columns_field",
+    "name": "columns",
+    "label": "Columns",
+    "type": "choice",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "2",
+        "2 Columns"
+      ],
+      [
+        "3",
+        "3 Columns"
+      ],
+      [
+        "4",
+        "4 Columns"
+      ]
+    ],
+    "default": "3"
+  },
+  {
+    "id": "bg_color_field",
+    "name": "bg_color",
+    "label": "Background Color",
+    "type": "choice",
+    "required": false,
+    "locked": false,
+    "display": "select",
+    "choices": [
+      [
+        "white",
+        "White"
+      ],
+      [
+        "light",
+        "Light Gray"
+      ],
+      [
+        "navy",
+        "Navy"
+      ]
+    ],
+    "default": "white"
+  },
+  {
+    "id": "cards_field",
+    "name": "cards",
+    "label": "Cards",
+    "type": "group",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "default": 0,
+      "sorting_label_field": "card_title"
+    },
+    "children": [
+      {
+        "id": "card_icon_class_field",
+        "name": "icon_class",
+        "label": "Icon Class",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "inline_help_text": "Full Font Awesome class string, e.g. fas fa-check-circle",
+        "default": "fas fa-check-circle"
+      },
+      {
+        "id": "card_title_field",
+        "name": "card_title",
+        "label": "Title",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "default": "Feature Title"
+      },
+      {
+        "id": "card_description_field",
+        "name": "description",
+        "label": "Description",
+        "type": "richtext",
+        "required": false,
+        "locked": false,
+        "default": "<p>Feature description.</p>"
+      },
+      {
+        "id": "card_link_field",
+        "name": "link",
+        "label": "Link",
+        "type": "link",
+        "required": false,
+        "locked": false,
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT"
+        ],
+        "default": {
+          "url": {
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "card_link_text_field",
+        "name": "link_text",
+        "label": "Link Button Text",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "inline_help_text": "Custom text for the link button. Leave empty for default 'Learn More' arrow.",
+        "default": ""
+      },
+      {
+        "id": "card_download_link_field",
+        "name": "download_link",
+        "label": "Download Link",
+        "type": "link",
+        "required": false,
+        "locked": false,
+        "inline_help_text": "Optional second link that triggers a file download.",
+        "supported_types": [
+          "EXTERNAL",
+          "CONTENT"
+        ],
+        "default": {
+          "url": {
+            "type": "EXTERNAL",
+            "href": ""
+          },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "card_download_text_field",
+        "name": "download_text",
+        "label": "Download Button Text",
+        "type": "text",
+        "required": false,
+        "locked": false,
+        "default": "Download PDF"
+      }
+    ],
+    "default": []
+  }
+]

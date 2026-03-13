@@ -1,0 +1,12 @@
+{
+  "label": "Envoy Medical",
+  "preview_path": "./templates/about.html",
+  "screenshot_path": "./images/template-previews/theme-preview.png",
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "(max-width: 767px)",
+      "previewWidth": { "value": 520 }
+    }
+  ]
+}

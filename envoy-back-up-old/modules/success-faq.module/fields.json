@@ -1,0 +1,117 @@
+[ {
+  "id" : "611bfcc0-c15e-a578-862b-c8685b257bbe",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "c2b1ecf3-0791-3e0e-2eac-d2171489abfc",
+  "name" : "faq_left_image",
+  "display_width" : null,
+  "label" : "faq-left-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "51340b78-b281-1c87-f236-26fbc4efa724",
+  "name" : "faq_right_image",
+  "display_width" : null,
+  "label" : "faq-right-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "b9af2cd2-0a5f-ce8a-2391-629038d558e9",
+  "name" : "faq_item",
+  "display_width" : null,
+  "label" : "faq-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "641df4f7-08c5-0360-2655-ecd70ba1be2c",
+    "name" : "faq_icon",
+    "display_width" : null,
+    "label" : "faq-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-long-arrow-right\"></i>"
+  }, {
+    "id" : "f55256a0-35b5-3146-e487-1511c9922fc9",
+    "name" : "faq_title",
+    "display_width" : null,
+    "label" : "faq-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "What are the reasons for learners to choose distant learning (e-learning) over the traditional method?"
+  }, {
+    "id" : "603a184e-6c87-5a35-1b71-bf89ca52f04f",
+    "name" : "faq_check_icon",
+    "display_width" : null,
+    "label" : "faq-check-icon",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<i class=\"far fa-check\"></i>"
+  }, {
+    "id" : "18e3dbce-6a77-0c2c-c100-a44351f69e2c",
+    "name" : "faq_content",
+    "display_width" : null,
+    "label" : "faq-content",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<p>FLEXIBILITY – Work, family, degree—it’s all possible.</p>                    <p>Convenience – Study on your time schedule, no commute, stackable programs lead to certificates and degrees.</p>                    <p>Proven Modality – More than 5 million students take one or more distance education courses each year.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "faq_icon" : "<i class=\"far fa-long-arrow-right\"></i>",
+    "faq_title" : "What are the reasons for learners to choose distant learning (e-learning) over the traditional method?",
+    "faq_check_icon" : "<i class=\"far fa-check\"></i>",
+    "faq_content" : "<p>FLEXIBILITY – Work, family, degree—it’s all possible.</p>                    <p>Convenience – Study on your time schedule, no commute, stackable programs lead to certificates and degrees.</p>                    <p>Proven Modality – More than 5 million students take one or more distance education courses each year.</p>"
+  }
+} ]

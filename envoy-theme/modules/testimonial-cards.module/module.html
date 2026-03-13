@@ -1,0 +1,99 @@
+{# Testimonial Cards Module — Envoy Medical #}
+
+<style>
+  .testimonial-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 45, 116, 0.1);
+    border-color: var(--brand-navy);
+  }
+
+  .avatar-placeholder {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--brand-grey);
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+</style>
+
+<section
+  {% if module.anchor_id %}id="{{ module.anchor_id }}"{% endif %}
+  class="py-20 bg-white"
+>
+  <div class="max-w-7xl mx-auto px-6">
+
+    {# Section Header #}
+    {% if module.section_title or module.section_subtitle %}
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      {% if module.section_title %}
+      <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4">
+        {{ module.section_title }}
+      </h2>
+      {% endif %}
+      {% if module.section_subtitle %}
+      <p class="text-lg text-slate-500">
+        {{ module.section_subtitle }}
+      </p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {# Testimonials Grid #}
+    <div class="grid md:grid-cols-2 lg:grid-cols-{{ module.columns }} gap-8">
+      {% for testimonial in module.testimonials %}
+      <div class="testimonial-card">
+
+        {# Quote Icon #}
+        <i class="fas fa-quote-left text-blue-100 text-3xl mb-4"></i>
+
+        {# Quote Text #}
+        <div class="text-slate-600 leading-relaxed mb-6 flex-grow">
+          {{ testimonial.quote_text }}
+        </div>
+
+        {# Divider + Person Info #}
+        <div class="flex items-center mt-auto border-t border-slate-50 pt-4">
+
+          {# Avatar: Image or Initials #}
+          {% if testimonial.person_image.src %}
+          <div class="avatar-placeholder overflow-hidden" style="background: none;">
+            <img
+              src="{{ testimonial.person_image.src }}"
+              alt="{{ testimonial.person_image.alt || testimonial.person_name }}"
+              class="w-full h-full object-cover rounded-full"
+              loading="lazy"
+            >
+          </div>
+          {% else %}
+          <div class="avatar-placeholder">{{ testimonial.person_initials }}</div>
+          {% endif %}
+
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">{{ testimonial.person_name }}</h4>
+            <p class="text-xs text-blue-600 font-bold uppercase tracking-wide">{{ testimonial.person_role }}</p>
+          </div>
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

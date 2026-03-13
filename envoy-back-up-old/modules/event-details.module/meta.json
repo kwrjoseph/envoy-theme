@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Calendar%20Check",
+  "host_template_types" : [ "PAGE", "BLOG_POST" ],
+  "module_id" : 55709734402,
+  "label" : "event_details",
+  "is_available_for_new_content" : true
+}

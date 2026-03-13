@@ -1,0 +1,194 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Event Details
+  screenshotPath: ../images/template-previews/event-details.jpg
+-->
+{% extends './layouts/base-two.html' %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about p-0', label='Main section' %}
+
+    {# Event Page Banner section #}
+    {% dnd_section %}
+        {% dnd_module "module_164620026798663" path="../modules/Page Banner", label="Page Banner" 
+        layout = 'layout-four',
+        section_class = '',
+        section_bg_image = { 
+                'alt': 'section bg image',
+                'size_type': 'auto', 
+                'src': get_asset_url('../images/page-banner/artist-event.jpg') 
+            },
+        event_date = 'November 23',
+        event_title = 'International Art Fair 2020',
+        event_countdown_time = '2022/10/17',
+
+
+        %}
+        
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# End Event Page Banner section #}
+
+    {# Event Details Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_163228934668510" path="../modules/event-details", label="event-details"
+        section_class = '',
+        animation_name = 'fade-up',
+        section_title_class = '',
+        section_title = 'About The Event',
+        event_meta_item = [
+            {
+                'meta_icon' : '<i class="meta-icon fal fa-map-marker-alt"></i>',
+                'meta_text' : 'Hamburg, Germany'
+            },
+            {
+                'meta_icon' : '<i class="meta-icon fal fa-calendar"></i>',
+                'meta_text' : 'Nov 23, 2020'
+            },
+            {
+                'meta_icon' : '<i class="meta-icon fal fa-clock"></i>',
+                'meta_text' : '2:00 pm - 4:00 pm'
+            }
+        ],
+        map_url = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.986005919501!2d-73.9685579655238!3d40.75862446708152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258e4a1c884e5%3A0x24fe1071086b36d5!2sThe%20Atrium!5e0!3m2!1sen!2sbd!4v1585132512970!5m2!1sen!2sbd',
+        location_icon = '<span class="fal fa-map-marker-alt"></span>',
+        location_text = 'Betahaus Hamburg Schanze, Eifflerstraße 43',
+        sidebar_meta_item = [
+            {
+                'meta_class' : 'meta-price',
+                'meta_label_icon' : '<i class="meta-icon far fa-money-bill-wave"></i>',
+                'meta_label_text' : 'Cost:',
+                'meta_value_text' : '<span class="event-price">$19<span class="decimals-separator">.00</span>
+                </span>'
+            },
+            {
+                'meta_class' : 'total',
+                'meta_label_icon' : '<i class="meta-icon far fa-user-friends"></i>',
+                'meta_label_text' : 'Total Slot:',
+                'meta_value_text' : '99'
+            },
+            {
+                'meta_class' : 'booking_slot',
+                'meta_label_icon' : '<i class="meta-icon far fa-lock-alt"></i>',
+                'meta_label_text' : 'Booked Slot:',
+                'meta_value_text' : '0'
+            }
+        ],
+        book_btn = { 'url': { 'type': 'CONTENT', 'href': './contact'},},
+        book_btn_text = 'Book Now',
+        register_message_text = 'You must login before register event.',
+        social_item = [
+            {
+                'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.facebook.com/'}},
+                'social_link_icon' : '<i class="fab fa-facebook-f social-link-icon"></i>'
+            },
+            {
+                'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://twitter.com/'}},
+                'social_link_icon' : '<i class="fab fa-twitter social-link-icon"></i>'
+            },
+            {
+                'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.linkedin.com/'}},
+                'social_link_icon' : '<i class="fab fa-linkedin social-link-icon"></i>'
+            },
+            {
+                'social_link' : { 'url': { 'type': 'EXTERNAL', 'href': 'https://www.tumblr.com/'}},
+                'social_link_icon' : '<i class="fab fa-tumblr-square social-link-icon"></i>'
+            }
+        ]
+        
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Event Details Section End #}
+
+    {# Speaker Section Start #}
+    {% dnd_section %}
+        {% dnd_module "module_163230614628520" path="../modules/speakers", label="speakers" 
+        section_class = '',
+        section_title_class = '',
+        animation_name = 'fade-up',
+        section_title = 'Our Speakers',
+        speaker_item = [
+            {
+                'speaker_thumb' : { 
+                        'alt': 'speaker thumb',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/speaker/speaker-6.jpg') 
+                    },
+                'speaker_name' : 'Solomon',
+                'speaker_position' : '/ Designer'
+            },
+            {
+                'speaker_thumb' : { 
+                        'alt': 'speaker thumb',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/speaker/speaker-1.jpg') 
+                    },
+                'speaker_name' : 'Emerson',
+                'speaker_position' : '/ Developer'
+            },
+            {
+                'speaker_thumb' : { 
+                        'alt': 'speaker thumb',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/speaker/speaker-2.jpg') 
+                    },
+                'speaker_name' : 'Bellezza',
+                'speaker_position' : '/ Content Writer'
+            },
+            {
+                'speaker_thumb' : { 
+                        'alt': 'speaker thumb',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/speaker/speaker-3.jpg') 
+                    },
+                'speaker_name' : 'Lilybelle',
+                'speaker_position' : '/ Office Manager'
+            },
+            {
+                'speaker_thumb' : { 
+                        'alt': 'speaker thumb',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/speaker/speaker-4.jpg') 
+                    },
+                'speaker_name' : 'Lucinda',
+                'speaker_position' : '/ Manager'
+            },
+            {
+                'speaker_thumb' : { 
+                        'alt': 'speaker thumb',
+                        'size_type': 'auto', 
+                        'src': get_asset_url('../images/speaker/speaker-5.jpg') 
+                    },
+                'speaker_name' : 'Orabelle',
+                'speaker_position' : '/ Art Director'
+            }
+        ],
+        speakers_desc = 'Register online, get your ticket, meet up with our inspirational speakers and specialists in the field to share your ideas.'
+        
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Speaker Section End #}
+
+    {# Event Comment Form Start #}
+    {% dnd_section %}
+        {% dnd_module "module_16323734940153" path="../modules/event-comment-form", label="event-comment-form"
+        section_class = '',
+        section_title_class = '',
+        animation_name = 'fade-up',
+        section_title = 'Leave your thought here',
+        
+
+        %}
+        {% end_dnd_module %}
+    {% end_dnd_section %}
+    {# Event Comment Form End #}
+ 
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

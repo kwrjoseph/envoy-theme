@@ -1,0 +1,50 @@
+[
+  {
+    "name": "anchor_id",
+    "type": "text",
+    "label": "Anchor ID",
+    "default": "study-info"
+  },
+  {
+    "name": "section_title",
+    "type": "text",
+    "label": "Section Title",
+    "default": "Study Information"
+  },
+  {
+    "name": "info_items",
+    "type": "group",
+    "label": "Info Items",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "item_title",
+        "type": "text",
+        "label": "Item Title",
+        "default": "Duration"
+      },
+      {
+        "name": "item_value",
+        "type": "text",
+        "label": "Item Value",
+        "default": "Approx. 2 years post-activation follow-up"
+      },
+      {
+        "name": "item_icon",
+        "type": "text",
+        "label": "Item Icon Class",
+        "default": "fas fa-info-circle"
+      }
+    ]
+  },
+  {
+    "name": "description",
+    "type": "richtext",
+    "label": "Description (optional)",
+    "default": ""
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "type": "text",
+    "required": false,
+    "default": "Four Degrees of Hearing Loss"
+  },
+  {
+    "name": "degrees",
+    "label": "Degrees",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": null,
+      "default": 0
+    },
+    "children": [
+      {
+        "name": "degree_number",
+        "label": "Degree Number",
+        "type": "text",
+        "required": false,
+        "default": "01"
+      },
+      {
+        "name": "degree_title",
+        "label": "Degree Title",
+        "type": "text",
+        "required": false,
+        "default": ""
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "type": "richtext",
+        "required": false,
+        "default": ""
+      }
+    ]
+  }
+]

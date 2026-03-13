@@ -1,0 +1,151 @@
+[ {
+  "id" : "a4fcb340-54dc-df74-c50d-8a55740fe905",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "83bba450-60d5-f87b-4876-f2a4f8063c18",
+  "name" : "event_main_image",
+  "display_width" : null,
+  "label" : "event-main-image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "4cd25aaa-15ae-cab0-a23b-f9e8928d9e52",
+  "name" : "event_main_content",
+  "display_width" : null,
+  "label" : "event-main-content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h3 class=\"title\">I. Marketing Budget</h3>\n<ol>\n<li>2013 carry over – 12,000$</li>\n<li>2014 budget – $16,500</li>\n</ol>\n<h3 class=\"title\">II. Marketing Plan</h3>\n<ol>\n<li>Marketing objectives\n<ul>\n<li>Business recruitment – Incentives/Available Land/Assistance</li>\n<li>Community name recognition</li>\n<li>Amenities/Family Recruitment</li>\n</ul>\n</li>\n<li>Community support/matching grants\n<ol>\n<li>Hillsboro Partners in Marketing (PIM) Grant\n<ul>\n<li>Marketing plan grant $2,500 match for $5,500 total project</li>\n<li>Business recruitment grant $2,300 match for $22,000 total project</li>\n</ul>\n</li>\n<li>May-Port PIM Grant\n<ul>\n<li>Marketing plan grant $2,500 match for $5,500 total project</li>\n<li>Business recruitment grant $2,300 match for $22,000 total project</li>\n</ul>\n</li>\n<li>Other communities?</li>\n</ol>\n</li>\n<li>County-wide marketing\n<ul>\n<li>Newman Billboard along I-29 – $19,000 for 1 year contract</li>\n<li>Constructing/Renting/Printing billboard on I-29 for Buxton and Hillsboro commercial property – $15,000 approx.</li>\n</ul>\n</li>\n<li>Organizational marketing\n<ul>\n<li>Local advertising describing our organization – $2,500/yr.</li>\n<li>Quarterly newsletter printed and mailed – $500/yr.</li>\n</ul>\n</li>\n</ol>"
+}, {
+  "id" : "031eb832-a737-b8e8-5e75-b0645d61e8fa",
+  "name" : "sidebar_countdown_time",
+  "display_width" : null,
+  "label" : "sidebar-countdown-time",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "2022/09/17"
+}, {
+  "id" : "da251233-c3a6-36e8-2138-c6788f6b7200",
+  "name" : "sidebar_event_title",
+  "display_width" : null,
+  "label" : "sidebar-event-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Details"
+}, {
+  "id" : "14d49e79-ae25-e5b9-34d7-50e0b7551d37",
+  "name" : "event_list_item",
+  "display_width" : null,
+  "label" : "event-list-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "6a9480dc-9fad-f84c-bcc8-3fe35f9eb545",
+    "name" : "list_name",
+    "display_width" : null,
+    "label" : "list-name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Hosted By"
+  }, {
+    "id" : "7474b927-fd7c-115a-f605-a726db3ecdee",
+    "name" : "list_value",
+    "display_width" : null,
+    "label" : "list-value",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Owen Christ"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "list_name" : "Hosted By",
+    "list_value" : "Owen Christ"
+  }
+}, {
+  "id" : "45216c73-fedd-916e-7b49-9db92af4a722",
+  "name" : "sidebar_message",
+  "display_width" : null,
+  "label" : "sidebar-message",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<strong class=\"heading-color\">Note</strong>: Countdown time is shown based on your local timezone."
+}, {
+  "id" : "8e632d1f-6550-04e7-117a-d0c1d29b2247",
+  "name" : "lp_btn_item",
+  "display_width" : null,
+  "label" : "lp-btn-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "b7ec7972-4702-315f-ca0e-a51b0ae7c933",
+    "name" : "event_btn_text",
+    "display_width" : null,
+    "label" : "event-btn-text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Join Meeting via Zoom App"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "event_btn_text" : "Join Meeting via Zoom App"
+  }
+} ]

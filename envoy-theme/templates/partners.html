@@ -1,0 +1,111 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Partners
+  screenshotPath: ../images/template-previews/partners.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ── Hero: Healthcare Professional Portal ── #}
+    {% dnd_section %}
+      {% dnd_module "partners_hero"
+        path='../modules/hero-banner'
+        label='Partners Hero'
+        badge_text='Healthcare Professional Portal'
+        title='Set Your Practice Apart.'
+        subtitle='<p>Partner with Envoy Medical to disrupt the status quo and provide your patients with innovative, fully implanted hearing solutions.</p>'
+        theme='light'
+        layout='split'
+        show_pattern=true
+        primary_button_text='Partner With Us'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#partner"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='Explore Solutions'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"#solutions"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='partners-hero'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Value Proposition: Expand Your Hearing Solutions ── #}
+    {% dnd_section %}
+      {% dnd_module "expand_solutions"
+        path='../modules/feature-cards'
+        label='Expand Your Hearing Solutions'
+        section_title='Expand Your Hearing Solutions'
+        section_subtitle='We arm our partners with unique resources, tools, and products to help patients while growing their clinical practice.'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class":"fas fa-microscope","card_title":"Evidence-Based","description":"<p>Our technologies are supported by robust clinical data and decades of experience in the hearing health landscape.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}},{"icon_class":"fas fa-project-diagram","card_title":"Seamless Integration","description":"<p>Designed to integrate seamlessly into your existing patient journey, from initial candidacy to long-term follow-up.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}},{"icon_class":"fas fa-smile-beam","card_title":"Patient Satisfaction","description":"<p>Build and maintain high patient satisfaction levels by offering true 24/7 hearing freedom and invisibility.</p>","link":{"url":{"type":"EXTERNAL","href":""},"open_in_new_tab":false,"no_follow":false}}]
+        anchor_id='solutions'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Technology Spotlight (Glass Cards) ── #}
+    {% dnd_section %}
+      {% dnd_module "tech_spotlight"
+        path='../modules/glass-cards'
+        label='Technology Spotlight'
+        section_title='The Gold Standard in Implantable Microphones'
+        section_subtitle='Leaders in both the otology and audiology fields agree that our piezoelectric sensor technology represents the pinnacle of implantable microphone design.'
+        columns='3'
+        cards=[{"icon_class":"fas fa-ear-listen","title":"Leverages Natural Ear Anatomy","description":"<p>Our proprietary technology uses the eardrum as a microphone, preserving the integrity of incoming sound naturally.</p>"},{"icon_class":"fas fa-ban","title":"Eliminates External Distortion","description":"<p>Eliminates external component distortion for cleaner, more natural sound processing.</p>"},{"icon_class":"fas fa-wrench","title":"Minimal Maintenance","description":"<p>Minimal maintenance required for long-term patient satisfaction and convenience.</p>"}]
+        anchor_id='tech-spotlight'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Product Pillars: Esteem & Acclaim ── #}
+    {% dnd_section %}
+      {% dnd_module "product_esteem"
+        path='../modules/two-column-section'
+        label='Esteem FI-AMEI'
+        title='Esteem&reg; FI-AMEI'
+        description='<p>The world&rsquo;s first and only FDA-approved completely internal hearing device for adults with moderate to severe sensorineural hearing loss.</p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='View Clinical Results'
+        button_link={"url":{"type":"EXTERNAL","href":"/esteem"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='esteem-product'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section %}
+      {% dnd_module "product_acclaim"
+        path='../modules/two-column-section'
+        label='Acclaim Cochlear Implant'
+        title='Acclaim&reg; Cochlear Implant'
+        description='<p>Our first-of-its-kind fully implanted cochlear implant is currently undergoing a pivotal clinical study at centers of excellence across the U.S.</p><p><em>Investigational device. Limited by Federal (or US) law to investigational use.</em></p>'
+        layout='image-left'
+        bg_color='light'
+        show_features=false
+        button_text='Pivotal Trial Sites'
+        button_link={"url":{"type":"EXTERNAL","href":"/acclaim-cochlear-implant"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='acclaim-product'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Partnership CTA ── #}
+    {% dnd_section %}
+      {% dnd_module "partner_cta"
+        path='../modules/cta-section'
+        label='Partner CTA'
+        title='Join Our Best-in-Class Provider Network'
+        subtitle='Envoy Medical hand-picks audiologists and surgeons who are dedicated to excellence. If you are a healthcare professional offering hearing products, we would like to explore partnering with you.'
+        primary_button_text='Get Started'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+        anchor_id='partner'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

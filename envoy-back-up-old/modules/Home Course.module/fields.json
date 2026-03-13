@@ -1,0 +1,342 @@
+[ {
+  "id" : "9c8d7197-adba-3db4-88e3-c8e964b04470",
+  "name" : "layout",
+  "display_width" : null,
+  "label" : "Layout",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "layout-one", "layout-one" ], [ "layout-two", "layout-two" ], [ "layout-three", "layout-three" ], [ "layout-four", "layout-four" ], [ "layout-five", "layout-five" ], [ "layout-six", "layout-six" ], [ "layout-seven", "layout-seven" ] ],
+  "type" : "choice"
+}, {
+  "id" : "a91d286d-a837-2462-2d29-b741bd8dbb5f",
+  "name" : "section_class",
+  "display_width" : null,
+  "label" : "section-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "c9113ccb-9748-cc9b-8f77-bc209aa18267",
+  "name" : "section_bg_color",
+  "display_width" : null,
+  "label" : "section-bg-color",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "d5d0fc90-16ae-cb9c-e573-eed7f756fad9",
+  "name" : "section_title_class",
+  "display_width" : null,
+  "label" : "section-title-class",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "f594931f-9d6e-f4b9-4dee-dea0786610d0",
+  "name" : "animation_name",
+  "display_width" : null,
+  "label" : "animation-name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "fade-up"
+}, {
+  "id" : "8364813a-08af-f2a0-45c2-5bc0791a661f",
+  "name" : "section_subtitle",
+  "display_width" : null,
+  "label" : "section-subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Learn at your Pace"
+}, {
+  "id" : "c0f3fbff-0ab4-d248-78fd-9f3d2a28e06d",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "section-title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Current Signature Courses"
+}, {
+  "id" : "7ce86c20-ed21-bc18-9de0-dd9260372614",
+  "name" : "course_item",
+  "display_width" : null,
+  "label" : "course-item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "961a6275-4352-b039-01ef-6c2d96243a35",
+    "name" : "animation_name",
+    "display_width" : null,
+    "label" : "Animation Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "fade-up"
+  }, {
+    "id" : "95d6e9b1-a3d7-5c4e-f3d0-d249f7eaf1ef",
+    "name" : "course_link",
+    "display_width" : null,
+    "label" : "course-link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "136f2587-5f2f-9f74-b212-b687f07447eb",
+    "name" : "course_thumb",
+    "display_width" : null,
+    "label" : "course-thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "36e36035-cf19-c028-73df-aef18f4ffff5",
+    "name" : "course_price",
+    "display_width" : null,
+    "label" : "course-price",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$59"
+  }, {
+    "id" : "4f26214a-88db-ae88-f6ee-c52ceb46b1a4",
+    "name" : "course_date",
+    "display_width" : null,
+    "label" : "course-date",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Mar 20, 2019"
+  }, {
+    "id" : "cc9d730c-6c89-16ed-082c-e9032cfeebeb",
+    "name" : "course_title",
+    "display_width" : null,
+    "label" : "course-title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Introduction to Javascript for Beginners"
+  }, {
+    "id" : "2fef3266-45d7-c4c1-2f3b-cbc4259bb020",
+    "name" : "meta_group",
+    "display_width" : null,
+    "label" : "Meta Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "children" : [ {
+      "id" : "ccc1f58f-70b2-8e06-4267-ba14522861de",
+      "name" : "meta_icon",
+      "display_width" : null,
+      "label" : "Meta Icon",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "<i class=\"far fa-file-alt\"></i>"
+    }, {
+      "id" : "f21be269-f18d-be84-068e-7f5598a607f9",
+      "name" : "meta_text",
+      "display_width" : null,
+      "label" : "Meta Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "20 Lessons"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "meta_icon" : "<i class=\"far fa-file-alt\"></i>",
+      "meta_text" : "20 Lessons"
+    }
+  }, {
+    "id" : "e9e512c0-e96e-7840-c745-01e1a19cda07",
+    "name" : "course_badge",
+    "display_width" : null,
+    "label" : "course-badge",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Free"
+  }, {
+    "id" : "5d4cac48-aec4-332d-2a8c-baa5d0d0f28f",
+    "name" : "author_thumb",
+    "display_width" : null,
+    "label" : "Author Thumb",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  }, {
+    "id" : "307abfa0-2caf-767f-a3dc-42887a380c13",
+    "name" : "instructor_name",
+    "display_width" : null,
+    "label" : "Instructor Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Blanche Fields"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "animation_name" : "fade-up",
+    "course_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "course_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "course_price" : "$59",
+    "course_date" : "Mar 20, 2019",
+    "course_title" : "Introduction to Javascript for Beginners",
+    "meta_group" : {
+      "meta_icon" : "<i class=\"far fa-file-alt\"></i>",
+      "meta_text" : "20 Lessons"
+    },
+    "course_badge" : "Free",
+    "author_thumb" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "instructor_name" : "Blanche Fields"
+  }
+}, {
+  "id" : "c622b339-18ce-6c58-e9a6-b20f1221a305",
+  "name" : "all_course_link",
+  "display_width" : null,
+  "label" : "all-course-link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "ecd8b0cd-b866-aaa9-cc1d-bb22a1b4ff1e",
+  "name" : "all_course_link_text",
+  "display_width" : null,
+  "label" : "all-course-link-text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+}, {
+  "id" : "7297fd9f-7cec-2fbb-a431-66a16d80e529",
+  "name" : "all_course_link_icon",
+  "display_width" : null,
+  "label" : "all-course-link-icon",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "<i class=\"far fa-long-arrow-right ms-3\"></i>"
+} ]

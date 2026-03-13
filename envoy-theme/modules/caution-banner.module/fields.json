@@ -1,0 +1,35 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "required": false,
+    "default": ""
+  },
+  {
+    "name": "icon_class",
+    "label": "Icon Class",
+    "type": "text",
+    "required": false,
+    "default": "fas fa-exclamation-triangle"
+  },
+  {
+    "name": "banner_text",
+    "label": "Banner Text",
+    "type": "richtext",
+    "required": false,
+    "default": "<p><strong>CAUTION: Investigational Device</strong></p><p>Limited by Federal (or United States) law to investigational use.</p>"
+  },
+  {
+    "name": "style",
+    "label": "Banner Style",
+    "type": "choice",
+    "required": false,
+    "default": "amber",
+    "choices": [
+      ["amber", "Amber"],
+      ["red", "Red"],
+      ["blue", "Blue"]
+    ]
+  }
+]
