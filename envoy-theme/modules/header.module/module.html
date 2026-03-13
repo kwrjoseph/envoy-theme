@@ -1,0 +1,185 @@
+<nav class="envoy-nav fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-slate-100 transition-shadow duration-300" id="main-nav">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+
+        {# Logo #}
+        <a href="/" class="font-black text-2xl tracking-tighter brand-text-navy hover:opacity-80 transition-opacity flex-shrink-0" aria-label="Envoy Medical Home">
+            {% if module.logo.src %}
+            <img src="{{ module.logo.src }}" alt="{{ module.logo.alt || 'Envoy Medical' }}" class="h-10 w-auto">
+            {% elif brand_settings.primaryLogo.src %}
+            <img src="{{ brand_settings.primaryLogo.src }}" alt="Envoy Medical" class="h-10 w-auto">
+            {% else %}
+            ENVOY MEDICAL
+            {% endif %}
+        </a>
+
+        {# Desktop Menu #}
+        <ul class="hidden lg:flex items-center h-20" id="desktop-nav">
+            {% for item in module.nav_items %}
+                {% if item.is_cta %}
+                <li class="nav-item ml-6">
+                    <a href="{{ item.nav_url.url.href }}" class="btn-primary text-xs !py-3 !px-6"
+                       {% if item.nav_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                        {{ item.nav_label }}
+                    </a>
+                </li>
+                {% elif item.has_mega_menu %}
+                <li class="nav-item nav-mega h-full relative" data-mega="{{ item.nav_label|lower|replace(' ','-') }}">
+                    <button class="nav-link h-full flex items-center px-5 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-700 hover:text-[color:var(--brand-navy)] border-b-2 border-transparent transition-all gap-1.5" aria-expanded="false">
+                        {{ item.nav_label }} <i class="fas fa-chevron-down text-[7px] transition-transform duration-200"></i>
+                    </button>
+                    <div class="mega-panel fixed top-20 left-0 w-full bg-white shadow-[0_30px_60px_-15px_rgba(0,45,116,0.12)] opacity-0 -translate-y-2 pointer-events-none transition-all duration-300 ease-out z-50 border-t border-slate-100">
+                        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-14">
+                            <div class="grid grid-cols-4 gap-14 text-sm tracking-normal">
+                                {% for column in item.mega_columns %}
+                                <div>
+                                    <h4 class="text-[10px] font-black uppercase tracking-[0.15em] brand-text-navy mb-5 pb-3 border-b-2 border-[color:var(--brand-navy)] inline-block">{{ column.heading }}</h4>
+                                    <ul class="space-y-3.5">
+                                        {% for link in column.links %}
+                                        <li>
+                                            <a href="{{ link.link_url.url.href }}" class="text-slate-500 font-medium hover:text-[color:var(--brand-navy)] hover:pl-1 transition-all"
+                                               {% if link.link_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                                                {{ link.link_text }}{% if link.link_url.open_in_new_tab %} <i class="fas fa-external-link-alt text-[9px] ml-1"></i>{% endif %}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endfor %}
+                                {% if item.featured_card.title %}
+                                <div class="bg-slate-50 rounded-2xl p-6">
+                                    {% if item.featured_card.badge %}
+                                    <span class="text-[10px] font-black uppercase tracking-[0.15em] text-blue-600 mb-3 block">{{ item.featured_card.badge }}</span>
+                                    {% endif %}
+                                    <h5 class="text-lg font-bold text-slate-900 mb-2 leading-snug">{{ item.featured_card.title }}</h5>
+                                    {% if item.featured_card.description %}
+                                    <p class="text-sm text-slate-500 mb-4 leading-relaxed">{{ item.featured_card.description }}</p>
+                                    {% endif %}
+                                    {% if item.featured_card.cta_text %}
+                                    <a href="{{ item.featured_card.cta_url.url.href }}" class="text-sm font-bold brand-text-navy hover:text-blue-600 transition-colors inline-flex items-center gap-2"
+                                       {% if item.featured_card.cta_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                                        {{ item.featured_card.cta_text }} <i class="fas fa-arrow-right text-xs"></i>
+                                    </a>
+                                    {% endif %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {% else %}
+                <li class="nav-item h-full">
+                    <a href="{{ item.nav_url.url.href }}" class="nav-link h-full flex items-center px-5 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-700 hover:text-[color:var(--brand-navy)] border-b-2 border-transparent hover:border-[color:var(--brand-navy)] transition-all"
+                       {% if item.nav_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                        {{ item.nav_label }}
+                    </a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        {# Mobile Toggle #}
+        <button class="lg:hidden flex items-center justify-center w-10 h-10 text-slate-700" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fas fa-bars text-xl" id="mobile-icon"></i>
+        </button>
+    </div>
+
+    {# Mobile Menu #}
+    <div class="lg:hidden hidden fixed top-20 left-0 right-0 bg-white shadow-2xl overflow-y-auto" id="mobile-menu" style="max-height:calc(100vh - 5rem);">
+        <div class="px-6 py-4 space-y-1">
+            {% for item in module.nav_items %}
+                {% if item.is_cta %}
+                <div class="pt-4 pb-2">
+                    <a href="{{ item.nav_url.url.href }}" class="btn-primary w-full text-center text-sm"
+                       {% if item.nav_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                        {{ item.nav_label }}
+                    </a>
+                </div>
+                {% elif item.has_mega_menu %}
+                <div class="mobile-accordion">
+                    <button class="w-full flex items-center justify-between py-3 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-50 rounded-xl transition-colors" aria-expanded="false">
+                        {{ item.nav_label }} <i class="fas fa-chevron-down text-[10px] transition-transform duration-200"></i>
+                    </button>
+                    <div class="accordion-panel hidden pl-4 pb-2 space-y-1">
+                        {% for column in item.mega_columns %}
+                            {% for link in column.links %}
+                            <a href="{{ link.link_url.url.href }}" class="block py-2 px-4 text-sm text-slate-500 hover:text-[color:var(--brand-navy)] rounded-lg transition-colors"
+                               {% if link.link_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                                {{ link.link_text }}
+                            </a>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+                {% else %}
+                <a href="{{ item.nav_url.url.href }}" class="block py-3 px-4 text-sm font-semibold text-slate-700 hover:bg-slate-50 rounded-xl transition-colors"
+                   {% if item.nav_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                    {{ item.nav_label }}
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</nav>
+<div class="h-20"></div>
+
+{# Nav JavaScript #}
+{% require_js position="footer" %}
+<script>
+(function(){
+  var megaItems = document.querySelectorAll('.nav-mega');
+  megaItems.forEach(function(item){
+    var panel = item.querySelector('.mega-panel');
+    var btn = item.querySelector('button');
+    var timer;
+    function show(){
+      clearTimeout(timer);
+      megaItems.forEach(function(o){ if(o!==item){ hide(o); }});
+      panel.classList.remove('opacity-0','-translate-y-2','pointer-events-none');
+      panel.classList.add('opacity-100','translate-y-0','pointer-events-auto');
+      btn.setAttribute('aria-expanded','true');
+      btn.querySelector('i').style.transform='rotate(180deg)';
+      btn.classList.add('border-[color:var(--brand-navy)]','text-[color:var(--brand-navy)]');
+    }
+    function hide(el){
+      var p = (el||item).querySelector('.mega-panel');
+      var b = (el||item).querySelector('button');
+      p.classList.add('opacity-0','-translate-y-2','pointer-events-none');
+      p.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
+      b.setAttribute('aria-expanded','false');
+      b.querySelector('i').style.transform='';
+      b.classList.remove('border-[color:var(--brand-navy)]','text-[color:var(--brand-navy)]');
+    }
+    item.addEventListener('mouseenter', show);
+    item.addEventListener('mouseleave', function(){ timer=setTimeout(function(){ hide(); },150); });
+    panel.addEventListener('mouseenter', function(){ clearTimeout(timer); });
+    panel.addEventListener('mouseleave', function(){ timer=setTimeout(function(){ hide(); },150); });
+    btn.addEventListener('click', function(){ btn.getAttribute('aria-expanded')==='true' ? hide() : show(); });
+  });
+
+  var nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', function(){ nav.classList.toggle('shadow-lg', window.scrollY>30); });
+
+  var toggle = document.getElementById('mobile-toggle');
+  var menu = document.getElementById('mobile-menu');
+  var icon = document.getElementById('mobile-icon');
+  if(toggle && menu){
+    toggle.addEventListener('click', function(){
+      var open = menu.classList.toggle('hidden');
+      icon.classList.toggle('fa-bars', open);
+      icon.classList.toggle('fa-times', !open);
+      toggle.setAttribute('aria-expanded', !open);
+    });
+  }
+
+  document.querySelectorAll('.mobile-accordion button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var panel = btn.nextElementSibling;
+      var expanded = btn.getAttribute('aria-expanded')==='true';
+      btn.setAttribute('aria-expanded', !expanded);
+      panel.classList.toggle('hidden');
+      btn.querySelector('i').style.transform = expanded ? '' : 'rotate(180deg)';
+    });
+  });
+})();
+</script>
+{% end_require_js %}

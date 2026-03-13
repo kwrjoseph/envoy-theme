@@ -1,0 +1,172 @@
+[
+  {
+    "id": "company_name",
+    "name": "company_name",
+    "label": "Company Name",
+    "type": "text",
+    "required": false,
+    "default": "ENVOY MEDICAL"
+  },
+  {
+    "id": "company_info",
+    "name": "company_info",
+    "label": "Company Info (Address, Phone, Email)",
+    "type": "richtext",
+    "required": false,
+    "default": "<p>4875 White Bear Parkway<br>White Bear Lake, MN 55110</p><p>Main: 1-651 361-8000<br>Sales: 1-877-900-EARS (3277)<br>Customer Service: 1-800-460-7531<br>Email: customerservice@envoymedical.com</p>"
+  },
+  {
+    "id": "link_columns",
+    "name": "link_columns",
+    "label": "Link Columns",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 5,
+      "default": 3,
+      "sorting_label_field": "heading"
+    },
+    "children": [
+      {
+        "id": "col_heading",
+        "name": "heading",
+        "label": "Column Heading",
+        "type": "text",
+        "required": true,
+        "default": "Column"
+      },
+      {
+        "id": "col_links",
+        "name": "links",
+        "label": "Links",
+        "type": "group",
+        "occurrence": {
+          "min": 1,
+          "max": 10,
+          "default": 3,
+          "sorting_label_field": "link_text"
+        },
+        "children": [
+          {
+            "id": "link_text",
+            "name": "link_text",
+            "label": "Link Text",
+            "type": "text",
+            "required": true,
+            "default": "Link"
+          },
+          {
+            "id": "link_url",
+            "name": "link_url",
+            "label": "Link URL",
+            "type": "link",
+            "required": false,
+            "supported_types": ["EXTERNAL", "CONTENT"],
+            "default": {
+              "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "heading": "Products Resources",
+        "links": [
+          { "link_text": "Important Safety Information", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/safety-information" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "MRI Compatibility", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "#" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "Help Center", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "#" }, "open_in_new_tab": false, "no_follow": false } }
+        ]
+      },
+      {
+        "heading": "Company",
+        "links": [
+          { "link_text": "About Us", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/about" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "Contact Us", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/contact" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "Careers", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/careers" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "Investor", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "#" }, "open_in_new_tab": false, "no_follow": false } }
+        ]
+      },
+      {
+        "heading": "Legal",
+        "links": [
+          { "link_text": "Privacy Policy", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/privacy-policy" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "Terms of Use", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/terms" }, "open_in_new_tab": false, "no_follow": false } },
+          { "link_text": "Accessibility", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/accessibility" }, "open_in_new_tab": false, "no_follow": false } }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "copyright_text",
+    "name": "copyright_text",
+    "label": "Copyright Company Name",
+    "type": "text",
+    "required": false,
+    "default": "Envoy Medical Corporation",
+    "inline_help_text": "Year is added automatically"
+  },
+  {
+    "id": "social_links",
+    "name": "social_links",
+    "label": "Social Links",
+    "type": "group",
+    "occurrence": {
+      "min": 0,
+      "max": 8,
+      "default": 3,
+      "sorting_label_field": "aria_text"
+    },
+    "children": [
+      {
+        "id": "social_icon_class",
+        "name": "icon_class",
+        "label": "Icon CSS Class",
+        "type": "text",
+        "required": false,
+        "default": "fab fa-linkedin-in",
+        "inline_help_text": "Full Font Awesome class (e.g. fab fa-linkedin-in, fab fa-facebook-f, fab fa-twitter)"
+      },
+      {
+        "id": "social_url",
+        "name": "social_url",
+        "label": "URL",
+        "type": "link",
+        "required": false,
+        "supported_types": ["EXTERNAL"],
+        "default": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "#" },
+          "open_in_new_tab": true,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "aria_text",
+        "name": "aria_text",
+        "label": "Accessible Label",
+        "type": "text",
+        "required": false,
+        "default": "Social"
+      }
+    ],
+    "default": [
+      {
+        "icon_class": "fab fa-facebook-f",
+        "social_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "#" }, "open_in_new_tab": true, "no_follow": false },
+        "aria_text": "Facebook"
+      },
+      {
+        "icon_class": "fab fa-linkedin-in",
+        "social_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "#" }, "open_in_new_tab": true, "no_follow": false },
+        "aria_text": "LinkedIn"
+      },
+      {
+        "icon_class": "fab fa-twitter",
+        "social_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "#" }, "open_in_new_tab": true, "no_follow": false },
+        "aria_text": "Twitter"
+      }
+    ]
+  }
+]

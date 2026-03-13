@@ -1,0 +1,8 @@
+{
+  "global": true,
+  "icon": "fontawesome-5.14.0:Stream:SOLID",
+  "host_template_types": ["PAGE", "BLOG_LISTING", "BLOG_POST"],
+  "label": "Site Footer",
+  "is_available_for_new_content": true,
+  "css_assets": [{ "path": "../../css/main.css" }]
+}

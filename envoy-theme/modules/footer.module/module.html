@@ -1,0 +1,38 @@
+<footer class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-{{ module.link_columns|length + 1 }} gap-16 mb-20 text-sm">
+            <div>
+                <div class="font-black text-xl brand-text-navy mb-8 tracking-tighter">{{ module.company_name }}</div>
+                <div class="text-slate-400 leading-relaxed font-medium">{{ module.company_info }}</div>
+            </div>
+            {% for column in module.link_columns %}
+            <div>
+                <h4 class="font-black text-slate-900 uppercase tracking-widest mb-8 text-[10px]">{{ column.heading }}</h4>
+                <ul class="space-y-4 font-bold text-slate-500">
+                    {% for link in column.links %}
+                    <li>
+                        <a href="{{ link.link_url.url.href }}" class="hover:text-blue-600 transition-colors"
+                           {% if link.link_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                            {{ link.link_text }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">&copy; {{ local_dt|datetimeformat('%Y') }} {{ module.copyright_text }}. All Rights Reserved.</p>
+            {% if module.social_links %}
+            <div class="flex space-x-6">
+                {% for social in module.social_links %}
+                <a href="{{ social.social_url.url.href }}" class="text-slate-400 hover:text-blue-600 transition-colors" aria-label="{{ social.aria_text }}"
+                   {% if social.social_url.open_in_new_tab %}target="_blank" rel="noopener"{% endif %}>
+                    <i class="{{ social.icon_class }} text-lg"></i>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,333 @@
+[
+  {
+    "id": "logo",
+    "name": "logo",
+    "label": "Logo",
+    "type": "image",
+    "required": false,
+    "responsive": true,
+    "resizable": true,
+    "default": {
+      "size_type": "auto",
+      "src": "",
+      "alt": "Envoy Medical",
+      "loading": "eager"
+    }
+  },
+  {
+    "id": "nav_items",
+    "name": "nav_items",
+    "label": "Navigation Items",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 10,
+      "default": 6,
+      "sorting_label_field": "nav_label"
+    },
+    "children": [
+      {
+        "id": "nav_label",
+        "name": "nav_label",
+        "label": "Label",
+        "type": "text",
+        "required": true,
+        "default": "Menu Item"
+      },
+      {
+        "id": "nav_url",
+        "name": "nav_url",
+        "label": "URL",
+        "type": "link",
+        "required": false,
+        "supported_types": ["EXTERNAL", "CONTENT"],
+        "default": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "/" },
+          "open_in_new_tab": false,
+          "no_follow": false
+        }
+      },
+      {
+        "id": "is_cta",
+        "name": "is_cta",
+        "label": "Display as CTA Button",
+        "type": "boolean",
+        "display": "toggle",
+        "required": false,
+        "default": false,
+        "inline_help_text": "Renders this item as the primary CTA button"
+      },
+      {
+        "id": "has_mega_menu",
+        "name": "has_mega_menu",
+        "label": "Has Mega Menu Dropdown",
+        "type": "boolean",
+        "display": "toggle",
+        "required": false,
+        "default": false
+      },
+      {
+        "id": "mega_columns",
+        "name": "mega_columns",
+        "label": "Mega Menu Columns",
+        "type": "group",
+        "visibility": {
+          "controlling_field_path": "nav_items.has_mega_menu",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        },
+        "occurrence": {
+          "min": 1,
+          "max": 4,
+          "default": 3,
+          "sorting_label_field": "heading"
+        },
+        "children": [
+          {
+            "id": "col_heading",
+            "name": "heading",
+            "label": "Column Heading",
+            "type": "text",
+            "required": true,
+            "default": "Column"
+          },
+          {
+            "id": "col_links",
+            "name": "links",
+            "label": "Links",
+            "type": "group",
+            "occurrence": {
+              "min": 1,
+              "max": 10,
+              "default": 4,
+              "sorting_label_field": "link_text"
+            },
+            "children": [
+              {
+                "id": "link_text",
+                "name": "link_text",
+                "label": "Link Text",
+                "type": "text",
+                "required": true,
+                "default": "Link"
+              },
+              {
+                "id": "link_url",
+                "name": "link_url",
+                "label": "Link URL",
+                "type": "link",
+                "required": false,
+                "supported_types": ["EXTERNAL", "CONTENT"],
+                "default": {
+                  "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+                  "open_in_new_tab": false,
+                  "no_follow": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "featured_card",
+        "name": "featured_card",
+        "label": "Featured Card",
+        "type": "group",
+        "visibility": {
+          "controlling_field_path": "nav_items.has_mega_menu",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL"
+        },
+        "children": [
+          {
+            "id": "featured_badge",
+            "name": "badge",
+            "label": "Badge Text",
+            "type": "text",
+            "required": false,
+            "default": "Featured"
+          },
+          {
+            "id": "featured_title",
+            "name": "title",
+            "label": "Title",
+            "type": "text",
+            "required": false,
+            "default": ""
+          },
+          {
+            "id": "featured_description",
+            "name": "description",
+            "label": "Description",
+            "type": "text",
+            "required": false,
+            "default": ""
+          },
+          {
+            "id": "featured_cta_text",
+            "name": "cta_text",
+            "label": "CTA Text",
+            "type": "text",
+            "required": false,
+            "default": "Learn More"
+          },
+          {
+            "id": "featured_cta_url",
+            "name": "cta_url",
+            "label": "CTA URL",
+            "type": "link",
+            "required": false,
+            "supported_types": ["EXTERNAL", "CONTENT"],
+            "default": {
+              "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+              "open_in_new_tab": false,
+              "no_follow": false
+            }
+          }
+        ]
+      }
+    ],
+    "default": [
+      {
+        "nav_label": "Hearing Loss",
+        "nav_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/hearing-loss" }, "open_in_new_tab": false, "no_follow": false },
+        "is_cta": false,
+        "has_mega_menu": false,
+        "mega_columns": [],
+        "featured_card": { "badge": "", "title": "", "description": "", "cta_text": "", "cta_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false } }
+      },
+      {
+        "nav_label": "Implanted Options",
+        "nav_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/implanted-options" }, "open_in_new_tab": false, "no_follow": false },
+        "is_cta": false,
+        "has_mega_menu": true,
+        "mega_columns": [
+          {
+            "heading": "Middle Ear Implants",
+            "links": [
+              { "link_text": "Overview", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/middle-ear-implants" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Esteem\u00ae FI-AMEI", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/esteem" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "How It Works", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/fully-implanted-technology" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Getting the Esteem", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/getting-the-esteem" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          },
+          {
+            "heading": "Cochlear Implants",
+            "links": [
+              { "link_text": "Overview", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/cochlear-implants" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Acclaim\u00ae CI", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/acclaim-cochlear-implant" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Pivotal Study", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/acclaim-pivotal" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          },
+          {
+            "heading": "Compare & Learn",
+            "links": [
+              { "link_text": "All Implanted Options", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/implanted-options" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Safety Information", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/safety-information" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Audiology Training", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/audiology-training" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          }
+        ],
+        "featured_card": {
+          "badge": "Featured",
+          "title": "The Esteem\u00ae FI-AMEI",
+          "description": "World\u2019s first fully implanted active middle ear hearing device.",
+          "cta_text": "Learn More",
+          "cta_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/esteem" }, "open_in_new_tab": false, "no_follow": false }
+        }
+      },
+      {
+        "nav_label": "Patients",
+        "nav_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/patients" }, "open_in_new_tab": false, "no_follow": false },
+        "is_cta": false,
+        "has_mega_menu": true,
+        "mega_columns": [
+          {
+            "heading": "Your Journey",
+            "links": [
+              { "link_text": "Getting the Esteem", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/getting-the-esteem" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Patient Testimonials", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/patients-testimonials" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Forms & Resources", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/forms" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          },
+          {
+            "heading": "Community",
+            "links": [
+              { "link_text": "The Sounding Board (Blog)", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/the-sounding-board" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Advocacy & Legislation", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/advocacy" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          },
+          {
+            "heading": "Support",
+            "links": [
+              { "link_text": "Safety Information", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/safety-information" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Contact Us", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/contact" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          }
+        ],
+        "featured_card": {
+          "badge": "Patient Stories",
+          "title": "Real people. Real results.",
+          "description": "Hear from Esteem recipients about how invisible hearing changed their lives.",
+          "cta_text": "View Stories",
+          "cta_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/patients-testimonials" }, "open_in_new_tab": false, "no_follow": false }
+        }
+      },
+      {
+        "nav_label": "Professionals",
+        "nav_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/professionals" }, "open_in_new_tab": false, "no_follow": false },
+        "is_cta": false,
+        "has_mega_menu": false,
+        "mega_columns": [],
+        "featured_card": { "badge": "", "title": "", "description": "", "cta_text": "", "cta_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false } }
+      },
+      {
+        "nav_label": "Company",
+        "nav_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/about" }, "open_in_new_tab": false, "no_follow": false },
+        "is_cta": false,
+        "has_mega_menu": true,
+        "mega_columns": [
+          {
+            "heading": "About",
+            "links": [
+              { "link_text": "About Envoy Medical", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/about" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Careers", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/careers" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Partners", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/partners" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Contact", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/contact" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          },
+          {
+            "heading": "News & Media",
+            "links": [
+              { "link_text": "Press Releases", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/news" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Media Coverage", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/media" }, "open_in_new_tab": false, "no_follow": false } },
+              { "link_text": "Blog", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/the-sounding-board" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          },
+          {
+            "heading": "Investors",
+            "links": [
+              { "link_text": "Investor Relations", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "https://investors.envoymedical.com" }, "open_in_new_tab": true, "no_follow": false } },
+              { "link_text": "SEC Filings", "link_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/news" }, "open_in_new_tab": false, "no_follow": false } }
+            ]
+          }
+        ],
+        "featured_card": {
+          "badge": "Join Us",
+          "title": "We\u2019re Hiring",
+          "description": "Join the team revolutionizing hearing health.",
+          "cta_text": "View Openings",
+          "cta_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/careers" }, "open_in_new_tab": false, "no_follow": false }
+        }
+      },
+      {
+        "nav_label": "Get Started",
+        "nav_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "/getting-the-esteem" }, "open_in_new_tab": false, "no_follow": false },
+        "is_cta": true,
+        "has_mega_menu": false,
+        "mega_columns": [],
+        "featured_card": { "badge": "", "title": "", "description": "", "cta_text": "", "cta_url": { "url": { "content_id": null, "type": "EXTERNAL", "href": "" }, "open_in_new_tab": false, "no_follow": false } }
+      }
+    ]
+  }
+]
