@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support | Envoy Medical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --brand-navy: #002d74;
+            --brand-grey: #53575a;
+            --brand-light-blue: #f0f7ff;
+            --brand-accent: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--brand-grey);
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .brand-text-navy { color: var(--brand-navy); }
+        .brand-bg-navy { background-color: var(--brand-navy); }
+
+        .btn-primary-cs {
+            background-color: var(--brand-navy);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary-cs:hover {
+            background-color: #001f52;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(0,45,116,0.3);
+        }
+
+        .cs-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0 70px;
+            background: linear-gradient(160deg, var(--brand-navy) 0%, #001d4f 60%, #001240 100%);
+        }
+        .cs-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.04) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
+        .cs-contact-card {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.165,0.84,0.44,1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+        }
+        .cs-contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 40px -15px rgba(0,45,116,0.08);
+            border-color: var(--brand-navy);
+            z-index: 10;
+        }
+
+        .cs-icon-box {
+            width: 56px;
+            height: 56px;
+            background-color: rgba(0,45,116,0.08);
+            color: var(--brand-navy);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ========== HERO ========== -->
+    <section class="cs-hero">
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white/80 text-xs font-bold uppercase tracking-[0.2em]">
+                <i class="fas fa-headset"></i> Customer Support
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] mb-6">
+                How Can We Help Today
+            </h1>
+            <p class="text-lg lg:text-xl text-blue-100/80 font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
+                Quick access to support, resources, and answers &mdash; all in one place.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact-form" class="btn-primary-cs" style="background:white;color:var(--brand-navy);">
+                    <i class="fas fa-headset"></i> Customer Support
+                </a>
+                <a href="https://www.envoymedical.com/help" target="_blank" class="btn-primary-cs" style="background:transparent;border:2px solid rgba(255,255,255,0.4);">
+                    <i class="fas fa-question-circle"></i> Help Center
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CUSTOMER SUPPORT ========== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-black tracking-tight mb-4" style="color:#53575a;">Customer Support</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <!-- Phone -->
+                <div class="cs-contact-card text-center">
+                    <div class="cs-icon-box mx-auto">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="font-black text-lg mb-2 brand-text-navy">Phone</h3>
+                    <p class="text-slate-400 text-sm mb-2">Customer Support</p>
+                    <a href="tel:18004607531" class="text-slate-500 font-semibold hover:text-blue-600 transition-colors text-lg">
+                        1-800-460-7531
+                    </a>
+                </div>
+                <!-- Email -->
+                <div class="cs-contact-card text-center">
+                    <div class="cs-icon-box mx-auto">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="font-black text-lg mb-2 brand-text-navy">Email</h3>
+                    <p class="text-slate-400 text-sm mb-2">&nbsp;</p>
+                    <a href="mailto:customerservice@envoymedical.com" class="text-slate-500 font-semibold hover:text-blue-600 transition-colors text-sm break-all">
+                        customerservice@envoymedical.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEND US A MESSAGE ========== -->
+    <section id="contact-form" class="py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="bg-gradient-to-br from-[#002d74] to-[#001240] rounded-[3rem] p-12 lg:p-16 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 32px 32px;"></div>
+                <div class="relative z-10">
+                    <i class="fas fa-envelope-open-text text-4xl text-blue-300/60 mb-6 block"></i>
+                    <h2 class="text-3xl lg:text-4xl font-black text-white tracking-tight mb-4">Send Us a Message</h2>
+                    <p class="text-blue-100/70 font-medium mb-10 max-w-lg mx-auto leading-relaxed">
+                        Can&rsquo;t find what you need? Fill out our contact form and a member of our team will get back to you.
+                    </p>
+                    <a href="https://2hs3o.share.hsforms.com/2KNI2t_ojSK6Wv47hJ6H7GQ" target="_blank" class="btn-primary-cs" style="background:white;color:var(--brand-navy);padding:1.25rem 2.5rem;font-size:1.125rem;">
+                        <i class="fas fa-headset"></i> Customer Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MEDICAL DISCLAIMER ========== -->
+    <section class="py-12 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-sm text-slate-400 font-medium">
+                <i class="fas fa-exclamation-circle text-red-400 mr-2"></i>
+                For medical emergencies or urgent clinical questions, please contact your healthcare provider.
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
