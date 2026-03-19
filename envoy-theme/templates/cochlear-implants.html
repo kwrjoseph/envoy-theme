@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Cochlear Implants (Acclaim)
+  label: Cochlear Implants
   screenshotPath: ../images/template-previews/cochlear-implants.png
 -->
 {% extends "./layouts/base.html" %}
@@ -12,114 +12,84 @@
 
     {# ===== HERO ===== #}
     {% dnd_section %}
-      {% dnd_module "acclaim_hero"
+      {% dnd_module "ci_hero"
         path='../modules/hero-banner'
-        label='Acclaim Hero'
-        badge_text='Investigational Device'
-        badge_style='amber'
-        title='Acclaim&reg; Cochlear Implant'
-        subtitle='<p>Pioneering the world&rsquo;s first fully implanted cochlear implant*&mdash;designed to function with no external microphone or speech processor.</p>'
-        primary_button_text='How It Works'
-        primary_button_link='#how-it-works'
-        secondary_button_text='Learn About Clinical Trials'
-        secondary_button_link='#clinical-trials'
+        label='Cochlear Implants Hero'
+        title='Are Your Hearing Aids No Longer Helping You Hear?'
+        subtitle='<p>If you answered yes, then a cochlear implant may help improve your ability to hear.</p><p>Cochlear implants are a solution for individuals with significant hearing loss who have difficulty understanding speech even with properly fit hearing aids. A cochlear implant skips over the damaged portions of the inner ear (the cochlea) and electrically stimulates the nerve fibers. These signals are then sent to the brain, where they are processed as sound.</p>'
         theme='light'
         layout='centered'
         show_pattern=true
-        caution_text='<p>*The Acclaim&reg; is an investigational device. Limited by Federal (or US) law to investigational use.</p>'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
     {# ===== STATISTICS ===== #}
     {% dnd_section %}
-      {% dnd_module "acclaim_stats"
+      {% dnd_module "ci_stats"
         path='../modules/stats-grid'
         label='Cochlear Implant Statistics'
         bg_color='white'
-        stats=[{"stat_number": "2.8M", "stat_suffix": "", "stat_description": "Adults in the U.S. may be eligible for cochlear implants because hearing aids are no longer sufficient."}, {"stat_number": "~5-8", "stat_suffix": "%", "stat_description": "Of those eligible actually receive a cochlear implant, leaving millions underserved."}]
+        stats=[{"stat_number": "2.8M", "stat_suffix": "", "stat_description": "Adults in the U.S. who may be eligible for cochlear implants because hearing aids are no longer sufficient."}, {"stat_number": "~5-8", "stat_suffix": "%", "stat_description": "Of those eligible for cochlear implants, actually receive them."}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
     {# ===== WHAT IS A COCHLEAR IMPLANT? ===== #}
     {% dnd_section %}
-      {% dnd_module "acclaim_education"
+      {% dnd_module "ci_education"
         path='../modules/two-column-section'
         label='What Is a Cochlear Implant'
-        badge_text='Education'
+        anchor_id='what-is-ci'
         title='What Is a Cochlear Implant?'
-        content='<p class="text-lg text-slate-500 leading-relaxed mb-6">A cochlear implant is an electronic medical device that replaces the function of the damaged inner ear. Unlike hearing aids, which make sounds louder, cochlear implants do the work of damaged parts of the inner ear (cochlea) to provide sound signals to the brain.</p><div class="p-6 bg-white rounded-3xl border border-slate-100 shadow-sm"><h4 class="font-bold text-slate-900 mb-4">Traditional Components</h4><ul class="space-y-3 text-slate-600 text-sm"><li class="flex items-start"><i class="fas fa-circle text-[6px] mt-2 mr-3 text-blue-500"></i><strong>External:</strong>&nbsp;Microphone, speech processor, and transmitter.</li><li class="flex items-start"><i class="fas fa-circle text-[6px] mt-2 mr-3 text-blue-500"></i><strong>Internal:</strong>&nbsp;Receiver-stimulator and electrode array.</li></ul></div>'
-        bg_color='light'
+        description='<p>A cochlear implant is an inner ear implant designed to restore the ability to understand speech and perceive sounds in individuals with moderate to profound sensorineural hearing loss who are no longer benefiting from traditional amplification.</p><p>The device has two main parts:</p><ul><li><strong>External:</strong> Microphone, speech processor, and transmitter.</li><li><strong>Internal:</strong> Electrode array and receiver-stimulator.</li></ul><p>External components must be removed for sleeping, showering, and swimming.</p><p><em>Cochlear implant candidacy criteria vary slightly by the implant manufacturer.</em></p>'
         layout='image-right'
+        bg_color='light'
+        show_features=false
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== THE INNOVATION GAP ===== #}
+    {# ===== FULLY IMPLANTED ACCLAIM ===== #}
     {% dnd_section %}
-      {% dnd_module "acclaim_innovation"
+      {% dnd_module "ci_acclaim_intro"
         path='../modules/two-column-section'
-        label='The Innovation Gap'
-        badge_text='The Challenge'
-        title='Breaking Free from External Hardware'
-        content='<p class="text-lg text-slate-500 leading-relaxed mb-6">Traditional cochlear implants have restored hearing for thousands, but they come with a compromise: the need to wear external processors and microphones on the ear.</p><p class="text-lg text-slate-500 leading-relaxed mb-8">This external hardware can limit lifestyle activities, create stigma, and restrict hearing to only when the device is worn.</p>'
+        label='Fully Implanted Acclaim'
+        anchor_id='acclaim'
+        title='Fully Implanted Acclaim&reg; Cochlear Implant'
+        description='<p>Envoy Medical is developing and has recently received IDE approval from the FDA to begin a pivotal clinical study for a new first-of-its-kind, fully implanted cochlear implant, the Acclaim&reg; Cochlear Implant.</p><p><strong>FDA Breakthrough Device Designation:</strong> In March 2019, Acclaim received the highly coveted Breakthrough Device Designation status from the FDA.</p><p><em>CAUTION: The fully implanted Acclaim Cochlear Implant is an investigational device. Limited by Federal (or United States) law to investigational use.</em></p>'
+        layout='image-left'
         bg_color='white'
-        layout='text-left'
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== HOW ACCLAIM WORKS (dark) ===== #}
-    {% dnd_section %}
-      {% dnd_module "acclaim_how_it_works"
-        path='../modules/glass-cards'
-        label='How Acclaim Works'
-        anchor_id='how-it-works'
-        section_title='How Acclaim&reg; Works'
-        section_subtitle=''
-        columns='3'
-        cards=[{"icon_class": "fas fa-microphone-alt", "title": "1. Sensor", "description": "<p>The piezoelectric sensor is attached to the ossicles. It picks up vibrations from the eardrum, utilizing the natural acoustics of the outer ear.</p>"}, {"icon_class": "fas fa-microchip", "title": "2. Processor", "description": "<p>An implanted sound processor filters and converts these mechanical vibrations into digital electrical signals, customized to the patient&rsquo;s needs.</p>"}, {"icon_class": "fas fa-bolt", "title": "3. Electrode Array", "description": "<p>The signals are transmitted to the cochlea via an electrode array, directly stimulating the auditory nerve and bypassing damaged hair cells.</p>"}]
+        show_features=false
+        button_text='Learn More About the Acclaim Cochlear Implant'
+        button_link={"url":{"type":"EXTERNAL","href":"/acclaim-cochlear-implant"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
     {# ===== COMPARING SOLUTIONS ===== #}
     {% dnd_section %}
-      {% dnd_module "acclaim_comparison"
+      {% dnd_module "ci_comparison"
         path='../modules/comparison-grid'
         label='Comparing Solutions'
-        section_title='Comparing Solutions'
-        section_subtitle='Understanding the difference between the Esteem&reg; and a Cochlear Implant.'
-        items=[{"category_tag": "Middle Ear Implant", "item_title": "Esteem&reg; FI-AMEI", "description": "<p>Fully implanted active middle ear implant for moderate to severe sensorineural hearing loss.</p>", "is_featured": false, "features": [{"feature_text": "Type: Fully Implanted Active Middle Ear Implant"}, {"feature_text": "Target: Moderate to Severe Sensorineural Hearing Loss"}, {"feature_text": "For when hearing aids do not provide adequate benefit"}], "link": {"url": {"type": "EXTERNAL", "href": "/esteem"}, "open_in_new_tab": false, "no_follow": false}}, {"category_tag": "Cochlear Implant", "item_title": "Acclaim&reg; Cochlear Implant", "description": "<p>Fully implanted cochlear implant (investigational) for severe to profound sensorineural hearing loss.</p>", "is_featured": true, "features": [{"feature_text": "Type: Fully Implanted Cochlear Implant (Investigational)"}, {"feature_text": "Target: Severe to Profound Sensorineural Hearing Loss"}, {"feature_text": "For those who struggle to understand speech with hearing aids"}], "link": {"url": {"type": "EXTERNAL", "href": "/acclaim-cochlear-implant"}, "open_in_new_tab": false, "no_follow": false}}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== CLINICAL TRIALS & ELIGIBILITY ===== #}
-    {% dnd_section %}
-      {% dnd_module "acclaim_clinical"
-        path='../modules/two-column-section'
-        label='Clinical Trials'
-        anchor_id='clinical-trials'
-        title='Advancing the Science'
-        content='<p class="text-lg text-slate-500 leading-relaxed mb-8">The Acclaim Cochlear Implant is currently an investigational device. We are actively conducting clinical studies to validate its safety and efficacy.</p><div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl"><h4 class="font-bold text-amber-900 mb-2">Target Population</h4><p class="text-sm text-amber-800 leading-relaxed">Adults with moderate to profound sensorineural hearing loss who may benefit from cochlear implantation.</p></div>'
-        bg_color='white'
-        layout='text-left'
+        anchor_id='comparison'
+        section_title='What is the Difference Between a Cochlear Implant and the Esteem&reg; FI-AMEI?'
+        items=[{"category_tag": "Middle Ear Implant", "item_title": "Esteem&reg; FI-AMEI", "description": "<p>A fully implanted active middle ear implant for adults with moderate to severe sensorineural hearing loss.*</p>", "is_featured": false, "features": [{"feature_text": "Type: Fully Implanted Active Middle Ear Implant"}, {"feature_text": "Target: Moderate to Severe Sensorineural Hearing Loss"}, {"feature_text": "For adults when hearing aids no longer provide adequate benefit"}], "link": {"url": {"type": "EXTERNAL", "href": "/esteem"}, "open_in_new_tab": false, "no_follow": false}}, {"category_tag": "Cochlear Implant", "item_title": "Acclaim&reg; Cochlear Implant", "description": "<p>A fully implanted cochlear implant (investigational) for severe to profound sensorineural hearing loss.</p>", "is_featured": true, "features": [{"feature_text": "Type: Fully Implanted Cochlear Implant (Investigational)"}, {"feature_text": "Target: Moderate to Profound Sensorineural Hearing Loss"}, {"feature_text": "For those who struggle to understand speech with hearing aids"}], "link": {"url": {"type": "EXTERNAL", "href": "/acclaim-cochlear-implant"}, "open_in_new_tab": false, "no_follow": false}}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
     {# ===== CTA ===== #}
     {% dnd_section %}
-      {% dnd_module "acclaim_cta"
+      {% dnd_module "ci_cta"
         path='../modules/cta-section'
-        label='Clinical Trial CTA'
+        label='Cochlear Implants CTA'
         title='Interested in Learning More?'
-        subtitle='Stay updated on our progress and potential clinical trial opportunities.'
-        primary_button_text='Join Our Interest List'
-        primary_button_link='/contact'
-        disclaimer='CAUTION: The Acclaim&reg; Cochlear Implant is an investigational device. Limited by Federal (or United States) law to investigational use.'
+        subtitle='Explore your implanted hearing options or contact us to discuss which solution may be right for you.'
+        primary_button_text='View All Implanted Options'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/implanted-options"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='Contact Us'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

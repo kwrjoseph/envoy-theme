@@ -10,13 +10,13 @@
 <main id="main-content" class="body-container-wrapper">
   {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
 
-    {# ── Hero: News & Updates ── #}
+    {# ── Hero: News Room ── #}
     {% dnd_section %}
       {% dnd_module "news_hero"
         path='../modules/hero-banner'
         label='News Hero'
         badge_text='Press Room'
-        title='News & Updates'
+        title='News Room'
         subtitle='<p>Stay informed about Envoy Medical&rsquo;s mission to revolutionize hearing health, our latest clinical milestones, and corporate announcements.</p>'
         theme='light'
         layout='centered'
@@ -26,22 +26,26 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ── Featured News (Rich Text for featured article card) ── #}
+    {# ── Featured News ── #}
     {% dnd_section %}
       {% dnd_module "featured_news"
-        path='@hubspot/rich_text'
+        path='../modules/spotlight-section'
         label='Featured News'
-        html='<div class="pb-16 bg-white"><div class="max-w-7xl mx-auto px-6"><div class="bg-[#002d74] text-white rounded-[2rem] overflow-hidden shadow-2xl"><div class="grid lg:grid-cols-2"><div class="p-12 lg:p-16 flex flex-col justify-center"><div class="flex items-center space-x-4 mb-6"><span class="bg-blue-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Featured</span><span class="text-blue-200 text-sm font-medium">December 18, 2025</span></div><h2 class="text-3xl lg:text-4xl font-bold mb-6 leading-tight">Envoy Medical Reaches Enrollment Midpoint in Acclaim&reg; Cochlear Implant Pivotal Study</h2><p class="text-blue-100 leading-relaxed mb-8 text-lg">A major milestone for the fully implanted Acclaim&reg; CI. The company also announced the completion of the first set of device activations in the final stage of the study.</p><a href="#" class="inline-flex items-center text-white font-bold hover:text-blue-200 transition-colors">Read Full Release <i class="fas fa-arrow-right ml-2"></i></a></div><div class="relative min-h-[300px] bg-blue-900"><div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#002d74]"></div></div></div></div></div></div>'
+        section_title='Featured'
+        info_items=[{"item_title": "Date", "item_value": "March 11, 2026", "item_icon": "fas fa-calendar"}, {"item_title": "Category", "item_value": "Press Release", "item_icon": "fas fa-newspaper"}, {"item_title": "Ticker", "item_value": "NASDAQ: COCH", "item_icon": "fas fa-chart-line"}]
+        description='<h2>Envoy Medical Completes Enrollment of Pivotal Clinical Trial Evaluating First-Of-Its-Kind Fully Implanted Cochlear Implant</h2><p>The company became the first cochlear implant manufacturer to finish enrollment in a U.S. pivotal trial for a fully implanted cochlear implant, with all 56 patients successfully implanted.</p>'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ── Latest Press Releases (Blog Listing) ── #}
+    {# ── Recent Press Releases ── #}
     {% dnd_section %}
       {% dnd_module "press_releases"
-        path='@hubspot/rich_text'
-        label='Latest Press Releases'
-        html='<div class="py-24 bg-slate-50"><div class="max-w-7xl mx-auto px-6"><div class="flex justify-between items-end mb-12"><h3 class="text-2xl font-black text-slate-900">Latest Press Releases</h3></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{% for content in contents %}<div class="bg-white border border-slate-200 rounded-3xl p-8 hover:shadow-lg hover:border-[#002d74] transition-all h-full flex flex-col"><span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest mb-3 block">{{ content.publish_date|datetimeformat("%b %d, %Y") }}</span><h4 class="text-xl font-bold text-slate-900 mb-4 leading-tight">{{ content.name }}</h4><p class="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{{ content.post_summary|truncatehtml(120) }}</p><a href="{{ content.absolute_url }}" class="inline-flex items-center text-[#002d74] font-semibold hover:text-blue-700 transition-colors mt-auto">Read More <i class="fas fa-arrow-right ml-2 text-xs"></i></a></div>{% endfor %}</div></div></div>'
+        path='../modules/blog-cards'
+        label='Recent Press Releases'
+        section_title='Recent Press Releases'
+        columns='3'
+        posts=[{"category": "Press Release", "date": "Feb 24, 2026", "title": "Envoy Medical Regains Compliance with Nasdaq Listing Requirement", "description": "<p>Corporate update on Nasdaq compliance status.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Press Release", "date": "Feb 23, 2026", "title": "Envoy Medical Secures Three New Patents Strengthening Competitive Position", "description": "<p>New patents bolster the company&rsquo;s intellectual property portfolio.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Press Release", "date": "Feb 19, 2026", "title": "Envoy Medical Provides Business Update Following Transformative Financing", "description": "<p>Business update on recent financing and strategic direction.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Press Release", "date": "Feb 17, 2026", "title": "Envoy Medical Nears Completion of Enrollment in Pivotal Clinical Trial", "description": "<p>Update on Acclaim&reg; pivotal trial enrollment progress.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Press Release", "date": "Feb 11, 2026", "title": "Envoy Medical Announces Pricing of Up to $78.0 Million Upsized Public Offering", "description": "<p>Announcement of upsized public offering pricing.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Press Release", "date": "Dec 18, 2025", "title": "Envoy Medical Reaches Enrollment Milestone in Pivotal Clinical Study", "description": "<p>A major milestone for the fully implanted Acclaim&reg; Cochlear Implant pivotal study.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/news"}, "open_in_new_tab": false, "no_follow": false}}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -52,9 +56,9 @@
         path='../modules/cta-section'
         label='Media Inquiries'
         title='Media Inquiries'
-        subtitle='For press kits, interview requests, or investor relations questions, please reach out to our corporate communications team at investors@envoymedical.com or call 651-361-8000.'
+        subtitle='For press kits, interview requests, or investor relations questions, please reach out to our corporate communications team.'
         primary_button_text='Contact Media Team'
-        primary_button_link={"url":{"type":"EXTERNAL","href":"mailto:investors@envoymedical.com"},"open_in_new_tab":false,"no_follow":false}
+        primary_button_link={"url":{"type":"EXTERNAL","href":"mailto:Envoy@kcsa.com"},"open_in_new_tab":false,"no_follow":false}
         anchor_id='contact'
       %}
       {% end_dnd_module %}

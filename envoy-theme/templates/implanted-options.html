@@ -27,28 +27,27 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Primary Implant Options — Feature Cards ===== #}
+    {# ===== Primary Implant Options ===== #}
     {% dnd_section %}
       {% dnd_module "primary_options"
         path='../modules/feature-cards'
         label='Primary Implant Options'
         anchor_id='options'
         section_title='Primary Implant Options'
-        section_subtitle='Explore our featured surgical solutions for hearing restoration.'
-        columns='2'
+        columns='3'
         bg_color='white'
-        cards=[{"icon_class": "fas fa-drum", "card_title": "Middle Ear Implants (MEI)", "description": "<p>Directly stimulate the middle ear structures. These have a long history of safety and effectiveness but remain a relatively unknown option for many patients.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/middle-ear-implants"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-bolt", "card_title": "Cochlear Implants (CI)", "description": "<p>Bypass damaged portions of the inner ear and directly stimulate the auditory nerve using electrical signals. Ideal for severe to profound sensorineural loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/cochlear-implants"}, "open_in_new_tab": false, "no_follow": false}}]
+        cards=[{"icon_class": "fas fa-drum", "card_title": "Middle Ear Implants", "description": "<p>Devices surgically implanted in the middle ear that directly stimulate middle ear structures. These have a long history of safety and effectiveness.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/middle-ear-implants"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-bolt", "card_title": "Cochlear Implants", "description": "<p>Devices that bypass damaged portions of the inner ear and directly stimulate the auditory nerve using electrical signals. Ideal for severe to profound sensorineural loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/cochlear-implants"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-bone", "card_title": "Surgical Bone Conduction Implants", "description": "<p>Devices implanted into the skull to transmit sound vibrations directly to the inner ear, bypassing the outer and middle ear. Useful for conductive, mixed, or single-sided deafness.</p>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Other Considerations — Two Column ===== #}
+    {# ===== Bone Conduction Details ===== #}
     {% dnd_section %}
       {% dnd_module "bone_conduction"
         path='../modules/two-column-section'
-        label='Other Considerations: Bone Conduction'
-        title='Other Considerations: Bone Conduction'
-        description='<p>Bone conduction implants transmit sound vibrations directly to the inner ear via the skull. Typical for conductive loss, mixed loss, or single-sided deafness.</p><p><strong>Please note: This option is not currently offered by Envoy Medical.</strong></p>'
+        label='Bone Conduction Details'
+        title='Bone Conduction Hearing Devices'
+        description='<p>Bone-conduction hearing devices rely on a working cochlea to send sound to the brain. They consist of an external sound processor and a surgically implanted abutment anchored to the skull bone.</p><p>They are particularly useful for conductive hearing loss, mixed hearing loss, or single-sided deafness when traditional hearing aids are ineffective.</p><p><strong>Please note: This option is not currently offered by Envoy Medical.</strong></p>'
         layout='image-right'
         bg_color='light'
         show_features=false
@@ -56,13 +55,15 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Why Treatment Cannot Wait — Stats + Quote ===== #}
+    {# ===== Why Treatment Cannot Wait ===== #}
     {% dnd_section %}
       {% dnd_module "health_stats"
         path='../modules/stats-grid'
         label='Health Risk Statistics'
+        anchor_id='health-risks'
+        section_title='What Might Happen If Hearing Loss Goes Untreated'
         bg_color='white'
-        stats=[{"stat_number": "52", "stat_suffix": "%", "stat_description": "Greater Risk of Dementia"}, {"stat_number": "41", "stat_suffix": "%", "stat_description": "Higher Risk of Depression"}, {"stat_number": "30", "stat_suffix": "%", "stat_description": "Increased Risk of Falls"}]
+        stats=[{"stat_number": "52", "stat_suffix": "%", "stat_description": "Greater risk of dementia over 10 years (JAMA study)"}, {"stat_number": "41", "stat_suffix": "%", "stat_description": "Higher risk of depression over 10 years (JAMA study)"}, {"stat_number": "30", "stat_suffix": "%", "stat_description": "Greater risk of falls over 10 years (JAMA study)"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -72,24 +73,10 @@
       {% dnd_module "lin_quote"
         path='../modules/quote-card'
         label='Dr. Frank Lin Quote'
-        quote_text='<p>Hearing loss is not just about missing a few words. It changes how your brain works.</p><p>According to recent JAMA reports, timely intervention with hearing technology is a critical component of healthy aging.</p>'
-        author_name='Frank Lin, MD, PhD'
-        author_title='Johns Hopkins University'
+        quote_text='<p>Hearing loss shouldn&rsquo;t be considered an inconsequential part of aging.</p>'
+        author_name='Dr. Frank Lin, MD, PhD'
+        author_title='Otologist and Epidemiologist, Johns Hopkins University'
         bg_color='light'
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== Related Articles — Feature Cards ===== #}
-    {% dnd_section %}
-      {% dnd_module "articles"
-        path='../modules/feature-cards'
-        label='Related Articles'
-        section_title='Related Articles'
-        section_subtitle='Education'
-        columns='3'
-        bg_color='white'
-        cards=[{"icon_class": "fas fa-newspaper", "card_title": "Look at These Numbers: Hearing Loss, Chronic Disease and Your Choice", "description": "<p>Explore the connection between untreated hearing loss and chronic health conditions.</p>"}, {"icon_class": "fas fa-newspaper", "card_title": "Fall into Hearing Safety: Why Autumn Noise Deserves Your Attention", "description": "<p>Seasonal noise hazards and how to protect your hearing year-round.</p>"}, {"icon_class": "fas fa-newspaper", "card_title": "Facing Hearing Loss: Support, Stigma, and Strength", "description": "<p>Navigating the emotional journey of hearing loss with confidence and community.</p>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -99,7 +86,7 @@
       {% dnd_module "cta"
         path='../modules/cta-section'
         label='Bottom CTA'
-        title='Find the Right Solution for You'
+        title='Take Control of Your Hearing'
         subtitle='Talk with a specialist to explore which implanted hearing option may be best for your situation.'
         primary_button_text='Contact a Specialist'
         primary_button_link={"url": {"type": "EXTERNAL", "href": "/contact"}, "open_in_new_tab": false, "no_follow": false}

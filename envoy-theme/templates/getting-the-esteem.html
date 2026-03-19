@@ -16,8 +16,8 @@
         path='../modules/hero-banner'
         label='Getting the Esteem Hero'
         badge_text='Patient Journey'
-        title='Getting the Esteem&reg;'
-        subtitle='<p>Take the first step towards invisible hearing. Fill out the form below to request more information or check your candidacy.</p>'
+        title='Getting the Esteem&reg; Fully Implanted* Active Middle Ear Implant (FI-AMEI)'
+        subtitle='<p>Surgeons and audiologists undergo extensive training on the Esteem product and then work together to determine candidacy for the Esteem device. Below, you will find the typical process and next steps.</p><p>It&rsquo;s easy to get started and taking the first step will quickly determine whether this technology is a potential option for you to consider with your healthcare professional.</p><p><em>*Once activated, the external Esteem Personal Programmer is not required for daily use.</em></p>'
         theme='light'
         layout='centered'
         show_pattern=true
@@ -26,14 +26,100 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ── HubSpot Form Embed ── #}
+    {# ── Step 1: Is the Esteem product an option for you? ── #}
     {% dnd_section %}
-      {% dnd_module "getting_esteem_form"
-        path='../modules/form-section'
-        label='Getting the Esteem Form'
-        section_title='Request Information'
-        section_subtitle='<p>Fill out the form below and a member of our team will be in touch to discuss your candidacy and next steps.</p>'
+      {% dnd_module "step_1"
+        path='../modules/two-column-section'
+        label='Step 1: Is the Esteem an option?'
+        anchor_id='step-1'
+        section_title='Step 1'
+        title='Is the Esteem product an option for you?'
+        description='<p>Send us a copy of your audiogram**.</p><p><a href="/hearing-loss">Learn more about audiograms.</a></p><p>If you don&rsquo;t have a copy of your audiogram, reach out to your hearing professional and request a copy of your most recent test.</p><p><strong>Email to:</strong> audiograms@envoymedical.com<br><strong>Fax to:</strong> 651-925-5023</p><p><em>** By sending or uploading my audiogram file, I agree to be contacted by Envoy Medical, and hearing health organizations or health care providers, at the email address I have provided. I understand the information I provide will be used and shared according to the Envoy Medical Privacy Policy.</em></p>'
+        layout='image-right'
         bg_color='white'
+        show_features=false
+        button_text='Submit Audiogram'
+        button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Step 2: Choose a location ── #}
+    {% dnd_section %}
+      {% dnd_module "step_2"
+        path='../modules/two-column-section'
+        label='Step 2: Choose a location'
+        anchor_id='step-2'
+        section_title='Step 2'
+        title='Choose an Esteem implant location'
+        description='<p>Envoy Medical can assist in identifying locations that have been trained and facilitate a connection with your preferred site to schedule an evaluation.</p>'
+        layout='image-left'
+        bg_color='light'
+        show_features=false
+        button_text='Contact us to learn more about our sites'
+        button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Step 3: Evaluation Appointment ── #}
+    {% dnd_section %}
+      {% dnd_module "step_3"
+        path='../modules/two-column-section'
+        label='Step 3: Evaluation Appointment'
+        anchor_id='step-3'
+        section_title='Step 3'
+        title='Complete Evaluation Appointment'
+        description='<p>Meet with an audiologist and surgeon who are trained on the Esteem implant. They will ask questions about your hearing loss and help guide you through any questions or concerns and next steps.</p><p>The audiologist will perform additional testing to verify acceptable parameters and appropriateness. The surgeon will perform a medical review and order a CT scan to confirm there is adequate space and proper anatomy and conditions for the implant, go over important risk and safety information, and answer any questions you have about the product or procedure.</p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Step 4: Getting the Esteem implant ── #}
+    {% dnd_section %}
+      {% dnd_module "step_4"
+        path='../modules/two-column-section'
+        label='Step 4: Getting the Esteem'
+        anchor_id='step-4'
+        section_title='Step 4'
+        title='Getting the Esteem implant'
+        description='<p>Once you have been found to be a candidate, you can reserve a surgical time whenever you are ready.</p><p>The Esteem implant is typically an outpatient procedure and usually takes place under general anesthesia.</p><p>Envoy Medical can help answer questions about payment options for the Esteem product. Questions about procedure costs will need to be directed to your healthcare provider.</p>'
+        layout='image-left'
+        bg_color='light'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Step 5: Activation ── #}
+    {% dnd_section %}
+      {% dnd_module "step_5"
+        path='../modules/two-column-section'
+        label='Step 5: Activation'
+        anchor_id='step-5'
+        section_title='Step 5'
+        title='Activation'
+        description='<p>Approximately 8 weeks after surgery, you will return to the surgical center for a follow-up appointment. Your audiologist will activate, or turn on, your Esteem implant and program it to your unique hearing needs, customizing three different programs.</p><p>The Esteem product is controlled by your Personal Programmer which allows you to turn the device on or off, select the volume, and select one of three unique individualized program settings.</p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='View Our Patients page'
+        button_link={"url":{"type":"EXTERNAL","href":"/patients-testimonials"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ── Legal Disclaimers ── #}
+    {% dnd_section %}
+      {% dnd_module "legal_disclaimer"
+        path='../modules/caution-banner'
+        label='Legal Disclaimers'
+        icon_class='fas fa-exclamation-triangle'
+        style='amber'
+        banner_text='<p><strong>Caution:</strong> US Federal Law restricts this device to sale by or on the order of a physician.</p><p>Please be advised that practitioners who implant the Esteem device require specific training on the product and implant procedure. You should confirm with your healthcare professional that they have completed the training requirements.</p><p>Please see complete product instructions for use, including all product indications, contraindications, precautions, warnings, and adverse events. Please view <a href="/safety-information">important safety information</a>.</p><p><em>Risks include those typical for ear surgery. Taste disturbance is possible but is almost always temporary. Side effects related to facial movement are possible, although rare. It is possible that additional surgery may be required to enhance performance or resolve complications. Each person&rsquo;s situation is unique and risks, outcomes, experience and results may vary.</em></p><p><em>The content is for educational purposes only and is in no way intended to be a substitute for professional medical advice or diagnosis and should not be interpreted to contain treatment recommendations.</em></p>'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

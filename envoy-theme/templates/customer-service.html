@@ -1,0 +1,73 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Customer Service
+  screenshotPath: ../images/template-previews/customer-service.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "cs_hero"
+        path='../modules/hero-banner'
+        label='Customer Service Hero'
+        badge_text='Customer Support'
+        title='How Can We Help Today'
+        subtitle='<p>Quick access to support, resources, and answers &mdash; all in one place.</p>'
+        primary_button_text='Customer Support'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#contact-methods"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='Help Center'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"/help"},"open_in_new_tab":true,"no_follow":false}
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CONTACT METHODS ===== #}
+    {% dnd_section %}
+      {% dnd_module "cs_contact_methods"
+        path='../modules/feature-cards'
+        label='Contact Methods'
+        anchor_id='contact-methods'
+        section_title='Customer Support'
+        columns='2'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-headset", "card_title": "Phone", "description": "<p><strong>Customer Support</strong><br>1-800-460-7531</p>"}, {"icon_class": "fas fa-envelope", "card_title": "Email", "description": "<p>customerservice@envoymedical.com</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== SEND US A MESSAGE CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "cs_message_cta"
+        path='../modules/cta-section'
+        label='Send a Message CTA'
+        title='Send Us a Message'
+        subtitle='Can&rsquo;t find what you need? Fill out our contact form and a member of our team will get back to you.'
+        primary_button_text='Customer Support'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== MEDICAL DISCLAIMER ===== #}
+    {% dnd_section %}
+      {% dnd_module "cs_disclaimer"
+        path='../modules/caution-banner'
+        label='Medical Disclaimer'
+        icon_class='fas fa-exclamation-circle'
+        style='amber'
+        banner_text='<p>For medical emergencies or urgent clinical questions, please contact your healthcare provider.</p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

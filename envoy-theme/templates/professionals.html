@@ -15,11 +15,11 @@
       {% dnd_module "pro_hero"
         path='../modules/hero-banner'
         label='Professional Portal Hero'
-        badge_text='Healthcare Professional Portal'
-        title='Advancing Care with Invisible Hearing\u00ae'
-        subtitle='<p>Partner with Envoy Medical to offer the Esteem\u00ae\u2014the world&rsquo;s first fully implanted hearing solution designed for total freedom.</p>'
-        primary_button_text='Partner With Us'
-        secondary_button_text='Explore Technology'
+        badge_text='Healthcare Professionals'
+        title='Advancing Patient Care with Invisible Hearing'
+        subtitle='<p>The Esteem Fully Implanted Active Middle Ear Implant (FI-AMEI) is the first and only FDA-approved, fully implanted hearing solution for adults with moderate to severe sensorineural hearing loss &mdash; providing 24/7 hearing with no external components.</p>'
+        primary_button_text='Become a Provider'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#partner"},"open_in_new_tab":false,"no_follow":false}
         theme='light'
         layout='centered'
         show_pattern=true
@@ -27,63 +27,59 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== NATURE'S MICROPHONE / TECHNOLOGY SPOTLIGHT ===== #}
+    {# ===== REVOLUTIONARY FEATURES ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_revolutionary"
+        path='../modules/feature-cards'
+        label='Revolutionary Features'
+        anchor_id='revolutionary'
+        section_title='What Makes the Esteem Implant&rsquo;s Invisible Hearing Experience Revolutionary?'
+        columns='2'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-wave-square", "card_title": "Proprietary Piezoelectric Sensor", "description": "<p>Positioned in the middle ear, it captures sound vibrations directly from the eardrum, preserving authentic sound quality.</p>"}, {"icon_class": "fas fa-ear-listen", "card_title": "Nature&rsquo;s Microphone&trade; Technology", "description": "<p>Uses the eardrum as a natural microphone, minimizing distortion and delivering authentic sound.</p>"}, {"icon_class": "fas fa-eye-slash", "card_title": "Invisible Hearing&reg; Experience", "description": "<p>Provides continuous, 24/7 hearing with no devices worn in or around the ear.</p>"}, {"icon_class": "fas fa-shield-alt", "card_title": "FDA-Approved Solution", "description": "<p>The first and only fully implanted solution for adults with moderate to severe sensorineural hearing loss.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TECHNOLOGY OVERVIEW ===== #}
     {% dnd_section %}
       {% dnd_module "pro_technology"
         path='../modules/two-column-section'
-        label='Technology Spotlight'
+        label='Technology Overview'
         anchor_id='tech'
-        section_title='Revolutionary Engineering'
-        title='Nature&rsquo;s Microphone\u2122'
-        description='<p>The Esteem&reg; implant uses your patient&rsquo;s own eardrum as a microphone. By leveraging natural ear anatomy, it preserves the natural resonances of the pinna and ear canal.</p><p>Unlike traditional hearing aids or partially implanted devices, the Esteem FI-AMEI technology eliminates the need for external microphones, connectors, and daily maintenance.</p><ul><li><strong>No external components</strong></li><li><strong>24/7 hearing access</strong></li><li><strong>Natural sound localization</strong></li></ul>'
+        section_title='Technology Overview'
+        title='Nature&rsquo;s Microphone&trade;'
+        description='<p>The Esteem FI-AMEI leverages Nature&rsquo;s Microphone technology to work with the ear&rsquo;s natural anatomy, preserving sound integrity and minimizing distortion.</p><p><strong>Three Implanted Components:</strong></p><ul><li><strong>Sensor:</strong> Positioned on the incus bone, converts eardrum vibrations into electrical signals.</li><li><strong>Sound Processor:</strong> Embedded in the temporal bone, customizes signals based on the patient&rsquo;s hearing profile.</li><li><strong>Driver:</strong> Translates signals into amplified vibrations that stimulate the cochlea.</li></ul>'
         layout='image-left'
-        bg_color='white'
+        bg_color='light'
         show_features=false
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== RECIPIENT BENEFITS GRID ===== #}
+    {# ===== SYSTEM FEATURES & DESIGN CONSIDERATIONS ===== #}
+    {% dnd_section %}
+      {% dnd_module "pro_system_features"
+        path='../modules/feature-cards'
+        label='System Features'
+        anchor_id='system-features'
+        section_title='System Features &amp; Design Considerations'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-ear-listen", "card_title": "Natural Acoustic Input", "description": "<p>Powered by Nature&rsquo;s Microphone&trade; captures eardrum vibrations directly, preserving the natural resonances of the pinna and ear canal.</p>"}, {"icon_class": "fas fa-microphone-slash", "card_title": "Elimination of External Microphones", "description": "<p>By replacing traditional microphones with Nature&rsquo;s Microphone, the system eliminates distortion and feedback commonly associated with conventional hearing aids.</p>"}, {"icon_class": "fas fa-eye-slash", "card_title": "Fully Implanted Architecture", "description": "<p>No external components worn on or in the ear providing stable auditory input and uninterrupted use.</p>"}, {"icon_class": "fas fa-hand-holding-heart", "card_title": "Reduced Daily Burden", "description": "<p>No daily cleaning, insertion, removal, or battery replacement required &mdash; improving adherence and reducing care complexity for patients with dexterity or cognitive limitations.</p>"}, {"icon_class": "fas fa-volume-off", "card_title": "No Acoustic Feedback", "description": "<p>A fully implanted design eliminates audible feedback or &ldquo;whistling&rdquo; occasionally produced by traditional hearing aids. Intended to be backwards compatible with further Esteem system upgrades.</p>"}, {"icon_class": "fas fa-battery-full", "card_title": "Long-Life Implant Battery", "description": "<p>A multi-year battery life without charging, reducing patient burden.</p>"}, {"icon_class": "fas fa-headphones", "card_title": "Mainstream Electronics Compatibility", "description": "<p>Use headphones and standard earbuds as intended.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== PATIENT BENEFITS FOR COUNSELING ===== #}
     {% dnd_section %}
       {% dnd_module "pro_benefits"
-        path='../modules/feature-cards'
-        label='Recipient Benefits'
-        section_title='Recipient Benefits'
-        section_subtitle=''
+        path='../modules/glass-cards'
+        label='Patient Benefits for Counseling'
+        anchor_id='patient-benefits'
+        section_title='Patient Benefits for Counseling'
         columns='3'
-        bg_color='light'
-        cards=[{"icon_class": "fas fa-clock", "card_title": "24/7 Hearing Access", "description": "<p>Continuous auditory input enhances safety and situational awareness\u2014critical for patients living alone or in caregiving roles.</p>"}, {"icon_class": "fas fa-water", "card_title": "Waterproof", "description": "<p>Continue to hear worry-free while swimming, showering, and sweating. Submersion capability up to 33 feet supports active lifestyles.</p>"}, {"icon_class": "fas fa-headphones", "card_title": "Expanded Audio Access", "description": "<p>Preserve personal audio habits. Use headphones, earbuds, and Bluetooth accessories without any interference.</p>"}, {"icon_class": "fas fa-universal-access", "card_title": "Enhanced Accessibility", "description": "<p>Ideal for individuals with dexterity, vision, or cognitive challenges\u2014no handling, insertion, or adjustment required.</p>"}, {"icon_class": "fas fa-check-double", "card_title": "Daily Convenience", "description": "<p>No risk of misplacement, no cleaning, no recharging, and no battery changes\u2014reduces patient burden and improves adherence.</p>"}, {"icon_class": "fas fa-shield-alt", "card_title": "No Daily Maintenance", "description": "<p>Requires no cleaning or insertion/removal, ensuring a seamless experience for every patient.</p>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== HOW THE ESTEEM WORKS ===== #}
-    {% dnd_section %}
-      {% dnd_module "pro_how_it_works"
-        path='../modules/feature-cards'
-        label='How the Esteem Works'
-        anchor_id='how-it-works'
-        section_title='How the Esteem works'
-        section_subtitle='Three core implanted components working in harmony with human anatomy.'
-        columns='3'
-        bg_color='light'
-        cards=[{"icon_class": "fas fa-wave-square", "card_title": "Piezoelectric Sensor", "description": "<p>Positioned on the incus bone. When the eardrum vibrates, the sensor captures these movements and converts them into electrical signals.</p>"}, {"icon_class": "fas fa-microchip", "card_title": "Sound Processor", "description": "<p>Subcutaneously implanted behind the ear. It processes signals based on the patient&rsquo;s unique hearing profile and transmits them to the driver.</p>"}, {"icon_class": "fas fa-volume-high", "card_title": "Piezoelectric Driver", "description": "<p>Converts processed signals back into mechanical vibrations, directly stimulating the stapes bone for natural hearing perception.</p>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== ELIGIBILITY CRITERIA ===== #}
-    {% dnd_section %}
-      {% dnd_module "pro_eligibility"
-        path='../modules/two-column-section'
-        label='Eligibility Criteria'
-        anchor_id='eligibility'
-        title='Who is a Candidate?'
-        description='<p>The Esteem is designed for adults with moderate to severe sensorineural hearing loss. Use our clinical criteria to identify potential candidates in your clinic.</p><ul><li>18 years of age or older</li><li>Stable bilateral sensorineural hearing loss</li><li>Moderate to severe SNHL (defined by PTA)</li><li>Unaided SDS Score &ge; 40%</li><li>Normally functioning Eustachian tube</li><li>Normal middle ear anatomy &amp; membrane</li><li>Adequate space (determined via CT scan)</li><li>Min. 30 days hearing aid experience</li></ul>'
-        layout='image-right'
-        bg_color='white'
-        show_features=false
-        button_text='Become a Provider'
+        cards=[{"icon_class": "fas fa-eye-slash", "title": "Fully Implanted", "description": "<p>No external components worn in or on the ear &mdash; eliminates stigma and ensures uninterrupted use.</p>"}, {"icon_class": "fas fa-clock", "title": "24/7 Hearing Access", "description": "<p>Continuous auditory input enhances situational awareness &mdash; especially critical for patients living alone or in caregiving roles.</p>"}, {"icon_class": "fas fa-water", "title": "Waterproof", "description": "<p>Swim, shower, and sweat worry-free. Submersion capability up to 33 feet supports active lifestyles.</p>"}, {"icon_class": "fas fa-headphones", "title": "Compatible with Standard Earbuds", "description": "<p>Patients can use headphones and earbuds, preserving personal audio habits.</p>"}, {"icon_class": "fas fa-universal-access", "title": "Enhanced Accessibility", "description": "<p>Ideal for patients with dexterity, vision, or cognitive challenges &mdash; no handling, insertion, or adjustment required.</p>"}, {"icon_class": "fas fa-check-double", "title": "Daily Convenience", "description": "<p>No risk of misplacement, no cleaning, no recharging, and no daily battery changes &mdash; reduces patient burden and improves adherence.</p>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -93,9 +89,9 @@
       {% dnd_module "pro_testimonial_1"
         path='../modules/quote-card'
         label='Provider Testimonial - Dr. Li'
-        quote_text='<p>The technology [of the Esteem hearing implant] is just amazing. This implant is actually the Cadillac or Lamborghini of all hearing options out there... It&rsquo;s for people who really care about the carefree lifestyle.</p>'
+        quote_text='<p>The technology [of the Esteem hearing implant] is just amazing. This implant is actually the Cadillac or Lamborghini of all hearing options out there. It&rsquo;s for people who really care about the carefree lifestyle and the fact that they don&rsquo;t have to put on something.</p>'
         author_name='John Li, MD'
-        author_title='Otolaryngology Specialist, Jupiter, FL'
+        author_title='Otolaryngology (Ear, Nose &amp; Throat) Specialist, Jupiter, FL'
         bg_color='light'
       %}
       {% end_dnd_module %}
@@ -105,7 +101,7 @@
       {% dnd_module "pro_testimonial_2"
         path='../modules/quote-card'
         label='Provider Testimonial - Dr. Shohet'
-        quote_text='<p>The Esteem has enabled us to provide a new treatment modality for a population of patients we previously could not help. This is a group of people who simply have not been satisfied with hearing aids...</p>'
+        quote_text='<p>The Esteem has enabled us to provide a new treatment modality for a population of patients we previously could not help. This is a group of people who simply have not been satisfied with hearing aids and may not be candidates for other devices or procedures.</p>'
         author_name='Jack Shohet, MD'
         author_title='Neurotologist/Otologist, Orange County, CA'
         bg_color='white'
@@ -117,35 +113,42 @@
       {% dnd_module "pro_testimonial_3"
         path='../modules/quote-card'
         label='Provider Testimonial - Nancy Cohen'
-        quote_text='<p>It takes close collaboration and synchronicity with the surgeon, an understanding of the uniqueness of each case, as well as a total commitment to the needs and best interests of each individual patient.</p>'
-        author_name='Nancy Cohen, AUD'
-        author_title='CSA at Envoy Medical'
+        quote_text='<p>I found that patient understanding and realistic expectations are perhaps the most important criteria for successful outcomes. It takes close collaboration and synchronicity with the surgeon, an understanding of the uniqueness of each case, as well as a total commitment to the needs and best interests of each individual patient.</p>'
+        author_name='Nancy Cohen, AuD'
+        author_title='CSA at Envoy Medical, Previously Clinical Director of Audiology, Lahey Hospital and Medical Center, Burlington, MA'
         bg_color='light'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== PROFESSIONAL RESOURCES ===== #}
+    {# ===== INDICATIONS ===== #}
     {% dnd_section %}
-      {% dnd_module "pro_resources"
-        path='../modules/blog-cards'
-        label='Professional Resources'
-        section_title='Professional Resources'
-        columns='3'
-        posts=[{"category": "Clinical", "date": "", "title": "Esteem&reg; Surgical Training Guide", "description": "<p>Comprehensive guide for surgeons performing the Esteem implantation procedure.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Research", "date": "", "title": "Published Clinical Data", "description": "<p>Access peer-reviewed research and clinical trial results for the Esteem FI-AMEI.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Education", "date": "", "title": "Patient Candidacy Assessment Tool", "description": "<p>Tools and checklists to help evaluate patient eligibility for the Esteem implant.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#"}, "open_in_new_tab": false, "no_follow": false}}]
+      {% dnd_module "pro_indications"
+        path='../modules/two-column-section'
+        label='Indications for the Esteem'
+        anchor_id='indications'
+        section_title='Clinical Criteria'
+        title='Indications for the Esteem Implant'
+        description='<p>The Esteem implant is indicated for patients who meet the following criteria:</p><ul><li>18 years and older (adults)</li><li>Stable, bilateral sensorineural hearing loss</li><li>Moderate to severe sensorineural hearing loss as defined by PTA (0.5, 1, 2 kHz)</li><li>Unaided speech discrimination (WRS) scores &gt; 40%</li><li>No post-adolescent middle ear dysfunction</li><li>No conductive or mixed hearing losses</li><li>No history of major ear surgery</li><li>Minimum 30 days of appropriately fit hearing aid amplification device(s)</li></ul><p><a href="/safety-information">View Full Indications and Contraindications</a></p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='Become a Provider'
+        button_link={"url":{"type":"EXTERNAL","href":"#partner"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== PARTNERSHIP CTA ===== #}
+    {# ===== NEXT STEPS / JOIN US CTA ===== #}
     {% dnd_section %}
       {% dnd_module "pro_cta"
         path='../modules/cta-section'
-        label='Partnership CTA'
+        label='Next Steps CTA'
         anchor_id='partner'
-        title='Ready to Expand Your Practice?'
-        subtitle='Join an elite network of providers dedicated to delivering the most advanced hearing technology in the world.'
-        primary_button_text='Apply to Become a Provider'
+        title='Next Steps'
+        subtitle='At Envoy Medical, we provide specialized technical support exclusively for our medical devices. Our team partners with healthcare professionals &mdash; including surgeons, audiologists, and clinic staff &mdash; to ensure seamless integration and reliable performance in your clinical setting.'
+        primary_button_text='Become a Provider'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

@@ -17,7 +17,7 @@
         label='Safety Information Hero'
         badge_text='Important Information'
         title='Safety Information'
-        subtitle='<p>Important safety considerations, indications, and MRI guidelines for the Envoy Medical Esteem&reg; System.</p>'
+        subtitle='<p>The health and safety information contained herein is provided for informational purposes only and is not intended to replace discussions with a healthcare provider.</p>'
         theme='light'
         layout='centered'
         show_pattern=true
@@ -26,71 +26,47 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Quick Links — Feature Cards ===== #}
+    {# ===== Indications for Esteem ===== #}
     {% dnd_section %}
-      {% dnd_module "quick_links"
-        path='../modules/feature-cards'
-        label='Safety Quick Links'
-        columns='3'
-        bg_color='white'
-        cards=[{"icon_class": "fas fa-ban", "card_title": "Contraindications", "description": "<p>Who should not receive the implant.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#contraindications"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-shield-halved", "card_title": "General Safety", "description": "<p>Daily living &amp; precautions.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#general-safety"}, "open_in_new_tab": false, "no_follow": false}}, {"icon_class": "fas fa-magnet", "card_title": "MRI Compatibility", "description": "<p>Scanning guidelines.</p>", "link": {"url": {"type": "EXTERNAL", "href": "#mri-safety"}, "open_in_new_tab": false, "no_follow": false}}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== Contraindications — Ear Health ===== #}
-    {% dnd_section %}
-      {% dnd_module "contraindications_ear"
-        path='../modules/feature-cards'
-        label='Contraindications'
-        anchor_id='contraindications'
-        section_title='Contraindications'
-        section_subtitle='The Esteem\u00ae System is not suitable for everyone. The following conditions are contraindicated for this device.'
-        columns='2'
-        bg_color='light'
-        cards=[{"icon_class": "fas fa-ear-deaf", "card_title": "Ear Health History", "description": "<p>Contraindicated conditions include:</p><ul><li>History of post-adolescent chronic middle ear infections</li><li>Inner ear disorders (e.g., Meniere&rsquo;s, Hydrops)</li><li>Recurring vertigo requiring treatment</li><li>History of cholesteatoma or destructive middle ear disease</li><li>Retrocochlear or central auditory disorders</li></ul>"}, {"icon_class": "fas fa-user-xmark", "card_title": "General Health & Anatomy", "description": "<p>Contraindicated conditions include:</p><ul><li>Pregnancy</li><li>History of keloid formation</li><li>Hypersensitivity to silicone, polyurethane, stainless steel, gold, or titanium</li><li>Pre-existing conditions affecting healing</li><li>Disabling tinnitus requiring treatment</li></ul>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== General Safety — Device Care ===== #}
-    {% dnd_section %}
-      {% dnd_module "general_safety"
-        path='../modules/feature-cards'
-        label='General Safety Information'
-        anchor_id='general-safety'
-        section_title='General Safety Information'
-        columns='3'
-        bg_color='white'
-        cards=[{"icon_class": "fas fa-hand-holding-medical", "card_title": "Device Care & Handling", "description": "<p>Patients should avoid pushing or twisting the implanted parts (Sensor and Driver leads) located under the skin. Excessive manipulation can lead to skin erosion or damage to the Esteem system components, potentially requiring surgical correction.</p>"}, {"icon_class": "fas fa-plane-departure", "card_title": "Travel & Security", "description": "<p><strong>Airport Security:</strong> The Esteem may activate metal detectors. Carry your Envoy Medical identification card at all times.</p><p><strong>Interference:</strong> Metal detectors may temporarily interrupt hearing. Moving away from the source should restore normal function.</p><p><strong>Pressure Changes:</strong> You may experience temporary &ldquo;plugged&rdquo; sensations during flight.</p>"}, {"icon_class": "fas fa-user-doctor", "card_title": "Medical Procedures", "description": "<p>The Esteem device should always be turned OFF during medical therapies to prevent interference noises or damage.</p><p><strong>Electrocautery:</strong> Must be bipolar only and never used directly over the implant.</p><p><strong>Defibrillation:</strong> Turn device OFF during emergency use.</p><p><strong>Radiation/X-Ray:</strong> Image quality near the implant may be compromised.</p>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== MRI Conditional Safety — Glass Cards ===== #}
-    {% dnd_section %}
-      {% dnd_module "mri_safety"
-        path='../modules/glass-cards'
-        label='MRI Conditional Safety'
-        anchor_id='mri-safety'
-        section_title='MRI Conditional Safety'
-        section_subtitle='The implanted components of the Esteem\u00ae System are MR Conditional. A patient with this device can be safely scanned in an MR system meeting specific conditions.'
-        columns='2'
-        cards=[{"icon_class": "fas fa-magnet", "title": "1.5 Tesla Systems", "description": "<p>Max field gradient: 1900 G/cm (19.0 T/m). Sound processor can be present during the scan.</p>"}, {"icon_class": "fas fa-magnet", "title": "3.0 Tesla Systems", "description": "<p>Max field gradient: 1100 G/cm (with processor). Max field gradient: 1900 G/cm (processor removed).</p>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== MRI Warnings — Two Column ===== #}
-    {% dnd_section %}
-      {% dnd_module "mri_warnings"
+      {% dnd_module "indications"
         path='../modules/two-column-section'
-        label='MRI Warnings'
-        title='MRI Warnings'
-        description='<p>The Personal Programmer and other external accessories are <strong>MR Unsafe</strong> and must never enter the MRI room. Exposure to MRI scanning may reset the Sound Processor to factory settings.</p><p><em>The health and safety information provided here is for general informational purposes only and is not intended to replace professional medical advice. Please consult with your physician for detailed safety information relevant to your specific condition.</em></p>'
+        label='Indications for Esteem'
+        anchor_id='indications'
+        title='Indications for Esteem'
+        description='<p>The Esteem&reg; addresses hearing loss by replicating the ossicular chain and providing additional gain. Patients must meet these criteria:</p><ul><li>18 years of age or older</li><li>Stable bilateral sensorineural hearing loss</li><li>Moderate to severe sensorineural hearing loss defined by Pure Tone Average (PTA)</li><li>Unaided speech discrimination tests score greater than or equal to 40%</li><li>Normally functioning Eustachian tube</li><li>Normal middle ear anatomy</li><li>Normal tympanic membrane</li><li>Adequate space for the Esteem implant determined via a high-resolution CT scan</li><li>Minimum 30 days of experience with appropriately fit hearing aids</li></ul>'
         layout='image-right'
         bg_color='white'
         show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Contraindications for Esteem ===== #}
+    {% dnd_section %}
+      {% dnd_module "contraindications"
+        path='../modules/two-column-section'
+        label='Contraindications for Esteem'
+        anchor_id='contraindications'
+        title='Contraindications for Esteem'
+        description='<p>Esteem is contraindicated under these conditions:</p><ul><li>History of post-adolescent chronic middle ear infections, inner ear disorders, or recurring vertigo requiring treatment, disorders such as mastoiditis, Hydrops or Meniere&rsquo;s syndrome or disease</li><li>Known history of fluctuating air conduction and/or bone conduction hearing loss over the past one year period of 15 dB in either direction at 2 or more frequencies (from 500 to 4000 Hz)</li><li>History of otitis externa or eczema for the outer ear canal</li><li>Cholesteatoma or destructive middle ear disease</li><li>Retrocochlear or central auditory disorders</li><li>Disabling tinnitus, defined as tinnitus which requires treatment</li><li>History of keloid formation</li><li>Hypersensitivity to silicone rubber, polyurethane, stainless steel, titanium, and/or gold</li><li>A pre-existing medical condition or undergoing a treatment that may affect the healing process</li><li>During pregnancy</li></ul>'
+        layout='image-left'
+        bg_color='light'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Risks and Potential Adverse Events ===== #}
+    {% dnd_section %}
+      {% dnd_module "risks"
+        path='../modules/sidebar-toc'
+        label='Risks and Adverse Events'
+        anchor_id='risks'
+        badge_text='Safety'
+        page_title='Risks and Potential Adverse Events'
+        sidebar_title='Sections'
+        links=[{"link_label": "Implant Risks", "link_anchor": "implant-risks"}, {"link_label": "Surgical Risks", "link_anchor": "surgical-risks"}, {"link_label": "Warnings", "link_anchor": "warnings"}, {"link_label": "Precautions", "link_anchor": "precautions"}]
+        content='<section id="implant-risks"><h2>Implant-Related Risks</h2><p>Potential adverse events with the Esteem include:</p><ul><li>Erosion of the Sound Processor through the skin or infection to the Sound Processor pocket</li><li>During the surgical implant procedure, your surgeon may determine that your anatomy does not allow enough space for the proper implant of the Esteem. Instances occur in approximately 3% of implant procedures where Esteem will not be implanted.</li><li>Intraoperative injury to the malleus, incus, stapes or cochlea</li><li>Cold, sinus or upper respiratory congestion may result in temporary reduced benefit</li><li>Esteem may offer limited or no benefit, requiring an additional surgery to revise, enhance, replace or remove any or all of the components. During the most recent clinical trial, 5% revision replacement surgery and 2% explant rate were reported.</li><li>Esteem may produce mechanical feedback requiring additional surgery</li><li>Loss of attachment of leads from Sound Processor, and/or transducers from mastoid, and/or ossicular chain bones</li><li>Loss or worsening of hearing after reconstruction of the ossicular chain in the event of device explant</li><li>Damage to the stapes or cochlea as a result of removal of the Sensor or Driver connection</li><li>Dislocation of any of the middle ear bones</li><li>Bleeding and postoperative infection</li></ul></section><div class="my-12 h-px bg-slate-100"></div><section id="surgical-risks"><h2>Additional Surgical Procedure Risks</h2><ul><li>Bodily soreness associated with intraoperative positioning and prolonged implant procedure</li><li>Temporary loss of skin sensation in and about the ear</li><li>Temporary dizziness, light-headedness or vertigo</li><li>Severing of the chorda tympani nerve, which may cause taste disturbance. Taste disturbance reported as mild in intensity and typically temporary in nature.</li><li>Formation of fibrous tissue in the middle ear subsequent to surgical intervention</li><li>Infection and/or wound infection following surgery</li><li>Intraoral discomfort, jaw soreness or stiffness</li><li>Temporary facial paresis/paralysis or numbness was reported by up to 7% of the subjects in the clinical trial</li><li>Eardrum perforation (temporary rupturing) and/or drainage from ear canal</li><li>Hematoma/blood clot</li><li>Neurological complications associated with general anesthesia for an extended period</li><li>Physical dislocation or fracturing of the malleus, incus, and/or stapes bones</li><li>Partial or total loss of remaining hearing in the implanted ear</li><li>Widening or thickening of the scar behind the ear</li><li>Complications related to anesthesia</li><li>Cerebral spinal fluid leak and meningitis</li><li>The occurrence or changes in existing tinnitus</li></ul></section><div class="my-12 h-px bg-slate-100"></div><section id="warnings"><h2>Warnings</h2><h3>Avoiding Head Injury</h3><p>After the Esteem is implanted, the recipient should avoid contact sports or other activities that could result in a head injury. Participation in contact sports may result in damage to the patient&rsquo;s hearing or implanted components.</p><h3>Electroconvulsive Therapy</h3><p>Electroconvulsive Therapy (ECT) must never be used on a patient who has an implanted Esteem because it may damage the patient&rsquo;s hearing or the Esteem.</p><h3>Electrosurgery</h3><p>If electrocautery is used, ensure that the Esteem is turned off. Never allow current from an electrosurgical instrument to be applied directly to an Esteem component. Use only a bipolar electrocautery system and never over or near the Esteem implant.</p><h3>MRI Conditional Safety Information</h3><p>The implanted components of the Esteem System are MR Conditional and are safe for MRI scans under certain conditions. A separate document entitled &ldquo;MRI Conditional Safety Information&rdquo; provides more details.</p><h3>Avoiding High Pressure</h3><p>After the Esteem is implanted, the patient should avoid diving to depths more than 10 meters (30 feet) of water as this may result in damage to the Esteem.</p><h3>Cell Phone Use / Cell Phone Compatibility</h3><p>Because there are a wide range of cellular telephones and other wireless devices on the market, it is not possible to ensure Esteem compatibility with all products. In a clinical study with 70 subjects, seven subjects (10%) reported experiencing noise or feedback when using cellular or wireless devices. The noise or feedback only occurred during usage and had no long-term effects.</p><p>Discontinue use of cellular or wireless devices with the ear containing the Esteem if unpleasant noise or feedback occurs.</p></section><div class="my-12 h-px bg-slate-100"></div><section id="precautions"><h2>Precautions</h2><h3>Physical Activities and Sports</h3><p>Return to most activities only when your Health Care Professional approves. Avoid contact sports and activities that could result in a hard blow to your head. Avoid diving deeper than 10 m (30 ft) of water.</p><h3>Pushing or Twisting the Implanted Parts</h3><p>Avoid pushing or twisting the implanted parts of your Esteem, such as the Sensor and Driver leads. Either action can cause skin erosion or damage to various parts.</p><h3>Travel</h3><p>Esteem may set off security devices in airports. Show your identification card (provided by Envoy Medical after implantation) to security guards. Security systems and metal detectors could temporarily interrupt hearing. Move away from the source of interference to restore normal hearing.</p><p>All people while traveling experience pressure changes of the middle ear during flight. Esteem recipients should expect to experience the same subtle changes in hearing and periods of temporary plugged sensations during air travel.</p><h3>Electrical Devices</h3><p>Your Esteem is designed to be resistant to interference from household appliances. You may safely operate all common household appliances and office equipment. Moving away from the source will mitigate potential interference.</p><h3>Clothing and Protective Equipment</h3><p>Helmets and hats do not present a problem as long as they do not put significant pressure on the side of the head behind the ear where the Sound Processor is implanted. Earplugs are recommended as customary in loud environments.</p><h3>Additional Precautions</h3><p>If you are undergoing medical treatment or diagnostic procedures, notify your physician that you have the Esteem.</p><p>The effects on the Esteem of PET scans, ultrasound, diathermy, radiation, lithotripsy, radio frequency ablation, TENS, and other electronic therapies have not been tested. During these therapies the Esteem should be turned off.</p><p>X-Ray image quality directly around the implant could be compromised.</p><p>Avoid electroconvulsive therapy on or near the Sound Processor implant.</p><p>During emergency defibrillator use, switch the Esteem off to avoid interference. If left on during these procedures, you may hear interference and performance could change temporarily, however long-term performance should not change.</p><p>If your profession requires you to be in the vicinity of a high electrical current, consult your physician before engaging in such activities.</p><p>Smoking can affect healing after surgical procedures, including Esteem implantation.</p><p>People with uncontrolled diabetes should discuss post-operative healing issues with their surgeon.</p><p>The Esteem Implant has an approximate revision/enhancement rate of 5%, requiring patients to have an additional surgical procedure to increase benefit. A 2% explant rate was reported during the most recent trial.</p><p>Air-bone gap indicating conductive or mixed hearing loss has not been studied with Esteem.</p><p>Implanting surgeons should consider psychological, developmental, physical, or emotional disorders before implanting this device.</p></section>'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

@@ -16,8 +16,8 @@
         path='../modules/hero-banner'
         label='About Hero'
         badge_text='Who We Are'
-        title='About Envoy Medical'
-        subtitle='<p>We are dedicated to developing innovative hearing solutions that empower individuals to reclaim their hearing health, independence, and sense of adventure.</p>'
+        title='Our Vision'
+        subtitle='<p>Our vision originated from a desire to create life-changing hearing technologies for those in need. We understand that each person has a unique motivation for living a meaningful life. Our commitment lies in developing innovative hearing solutions that enable people to live fully and actively while addressing their hearing loss.</p>'
         theme='light'
         layout='centered'
         show_pattern=true
@@ -25,16 +25,17 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== MISSION & VISION ===== #}
+    {# ===== MISSION ===== #}
     {% dnd_section %}
-      {% dnd_module "about_mission_vision"
-        path='../modules/feature-cards'
-        label='Mission and Vision'
-        section_title=''
-        section_subtitle=''
-        columns='2'
+      {% dnd_module "about_mission"
+        path='../modules/two-column-section'
+        label='Our Mission'
+        anchor_id='mission'
+        title='Our Mission'
+        description='<p>Our mission is to empower individuals to reclaim their hearing health, independence, and sense of adventure through innovative technologies. We aim to assist patients, friends, family, and health professionals in navigating the full spectrum of hearing loss treatment options, striving to identify and provide best-in-class hearing health solutions.</p>'
+        layout='image-right'
         bg_color='white'
-        cards=[{"icon_class": "fas fa-bullseye", "card_title": "Our Mission", "description": "<p>Our mission is to empower individuals to reclaim their hearing health, independence, and sense of adventure through innovative technologies. We aim to assist patients, friends, family, and health professionals in navigating the full spectrum of hearing loss treatment options, striving to identify and provide best-in-class hearing health solutions.</p>"}, {"icon_class": "fas fa-eye", "card_title": "Our Vision", "description": "<p>Our vision originated from a desire to create life-changing hearing technologies for those in need. We understand that each person has a unique motivation for living a meaningful life. Our commitment lies in developing innovative hearing solutions that enable people to live fully and actively while addressing their hearing loss.</p>"}]
+        show_features=false
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -42,13 +43,11 @@
     {# ===== COMPANY HISTORY ===== #}
     {% dnd_section %}
       {% dnd_module "about_history"
-        path='../modules/feature-cards'
+        path='../modules/timeline'
         label='Company History'
-        section_title='Our History'
-        section_subtitle=''
-        columns='4'
-        bg_color='light'
-        cards=[{"icon_class": "fas fa-calendar", "card_title": "1995 - Company Founded", "description": "<p>Envoy Medical Corporation was established to focus on innovative technologies across the hearing health spectrum.</p>"}, {"icon_class": "fas fa-calendar", "card_title": "2010 - Esteem\u00ae Launch", "description": "<p>The Esteem\u00ae active middle ear implant became commercially available in the U.S.</p>"}, {"icon_class": "fas fa-calendar", "card_title": "2019 - FDA Recognition", "description": "<p>The Acclaim\u00ae cochlear implant received Breakthrough Device Designation from the FDA.</p>"}, {"icon_class": "fas fa-calendar", "card_title": "2023 - Public Company", "description": "<p>Envoy Medical began trading on the Nasdaq Capital Market (Ticker: COCH) on October 2, 2023.</p>"}]
+        anchor_id='history'
+        section_title='Our History &mdash; America&rsquo;s Hearing Implant Company'
+        events=[{"event_year": "1995", "event_title": "Company Founded", "event_description": "<p>Envoy Medical Corporation was established as a privately-held hearing health company, focused on innovative technologies across the hearing health spectrum.</p>"}, {"event_year": "2010", "event_title": "Esteem&reg; Launch", "event_description": "<p>The Esteem&reg; active middle ear implant became commercially available in the United States &mdash; the first and only FDA-approved fully implanted active middle ear implant.</p>"}, {"event_year": "2019", "event_title": "FDA Breakthrough Designation", "event_description": "<p>The Acclaim&reg; cochlear implant received the highly coveted Breakthrough Device Designation status from the FDA.</p>"}, {"event_year": "2023", "event_title": "Public Company", "event_description": "<p>Envoy Medical began trading on the Nasdaq Capital Market (Ticker: COCH) on October 2, 2023.</p>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -56,13 +55,12 @@
     {# ===== LEADERSHIP TEAM ===== #}
     {% dnd_section %}
       {% dnd_module "about_leadership"
-        path='../modules/feature-cards'
+        path='../modules/team-member-cards'
         label='Leadership Team'
         section_title='Leadership Team'
-        section_subtitle=''
         columns='3'
-        bg_color='white'
-        cards=[{"icon_class": "fas fa-user-tie", "card_title": "Brent T. Lucas", "description": "<p><strong>Chief Executive Officer &amp; Director</strong></p><p>Nearly two decades of experience with implanted medical devices in the hearing industry.</p>"}, {"icon_class": "fas fa-user-tie", "card_title": "Karin Simonson", "description": "<p><strong>VP, General Counsel &amp; Corp Secretary</strong></p><p>Heading legal and corporate governance efforts since December 2023.</p>"}, {"icon_class": "fas fa-user-tie", "card_title": "Tom Hoegh", "description": "<p><strong>VP of Research &amp; Development</strong></p><p>Leading innovation and development of breakthrough hearing technologies.</p>"}]
+        members=[{"member_name": "Brent T. Lucas", "member_title": "Chief Executive Officer &amp; Director", "member_bio": "<p>Nearly two decades of experience with implanted medical devices in the hearing industry.</p>", "member_initials": "BL"}, {"member_name": "Karin Simonson", "member_title": "VP, General Counsel &amp; Corp Secretary", "member_bio": "<p>Heading legal and corporate governance efforts since December 2023.</p>", "member_initials": "KS"}, {"member_name": "Tom Hoegh", "member_title": "VP of Research &amp; Development", "member_bio": "<p>Leading innovation and development of breakthrough hearing technologies.</p>", "member_initials": "TH"}]
+        anchor_id='leadership'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -70,13 +68,27 @@
     {# ===== BOARD OF DIRECTORS ===== #}
     {% dnd_section %}
       {% dnd_module "about_board"
-        path='../modules/feature-cards'
+        path='../modules/team-member-cards'
         label='Board of Directors'
         section_title='Board of Directors'
-        section_subtitle=''
         columns='3'
-        bg_color='light'
-        cards=[{"icon_class": "fas fa-user", "card_title": "Brent T. Lucas", "description": "<p>Director &amp; CEO</p>"}, {"icon_class": "fas fa-user", "card_title": "Chuck Brynelsen", "description": "<p>Chairman &amp; Independent Director</p>"}, {"icon_class": "fas fa-user", "card_title": "Susan Kantor", "description": "<p>Independent Director</p>"}, {"icon_class": "fas fa-user", "card_title": "Mona Patel", "description": "<p>Independent Director</p>"}, {"icon_class": "fas fa-user", "card_title": "Janis Smith-Gomez", "description": "<p>Independent Director</p>"}, {"icon_class": "fas fa-user", "card_title": "Michael Crowe", "description": "<p>Independent Director</p>"}]
+        members=[{"member_name": "Brent T. Lucas", "member_title": "Director &amp; CEO", "member_bio": "", "member_initials": "BL"}, {"member_name": "Chuck Brynelsen", "member_title": "Chairman &amp; Independent Director", "member_bio": "", "member_initials": "CB"}, {"member_name": "Susan Kantor", "member_title": "Independent Director", "member_bio": "", "member_initials": "SK"}, {"member_name": "Mona Patel", "member_title": "Independent Director", "member_bio": "", "member_initials": "MP"}, {"member_name": "Janis Smith-Gomez", "member_title": "Independent Director", "member_bio": "", "member_initials": "JS"}, {"member_name": "Michael Crowe", "member_title": "Independent Director", "member_bio": "", "member_initials": "MC"}]
+        anchor_id='board'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "about_cta"
+        path='../modules/cta-section'
+        label='About CTA'
+        title='Join Our Team'
+        subtitle='We are always looking for talented individuals who share our passion for improving lives through hearing technology.'
+        primary_button_text='View Careers'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/careers"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='Contact Us'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

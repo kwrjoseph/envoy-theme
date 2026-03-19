@@ -10,79 +10,142 @@
 <main id="main-content" class="body-container-wrapper">
   {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
 
-    {# ===== Hero Section — Split Layout ===== #}
+    {# ===== IRB Status Banner ===== #}
+    {% dnd_section %}
+      {% dnd_module "irb_banner"
+        path='../modules/caution-banner'
+        label='IRB Approved Banner'
+        icon_class='fas fa-check-circle'
+        style='amber'
+        banner_text='<p><strong>IRB Approved at the Protocol Level Feb 04, 2025</strong></p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Hero Section ===== #}
     {% dnd_section %}
       {% dnd_module "acclaim_pivotal_hero"
         path='../modules/hero-banner'
         label='Acclaim Pivotal Study Hero'
-        badge_text='Clinical Trial \u2014 NCT06699797'
-        title='The Acclaim\u00ae Pivotal Study'
-        subtitle='<p>Envoy Medical recently received FDA review to begin a pivotal clinical study for the first-of-its-kind, fully implanted cochlear implant.</p>'
+        badge_text='Clinical Trial'
+        title='Acclaim&reg; Pivotal Trial'
+        subtitle='<p>Envoy Medical recently received FDA review to begin a pivotal clinical study for a new first-of-its-kind, fully implanted cochlear implant, the Acclaim&reg; Cochlear Implant.</p>'
         primary_button_text='Study Overview'
         primary_button_link={"url": {"type": "EXTERNAL", "href": "#study-details"}, "open_in_new_tab": false, "no_follow": false}
         secondary_button_text='Check Eligibility'
         secondary_button_link={"url": {"type": "EXTERNAL", "href": "#eligibility"}, "open_in_new_tab": false, "no_follow": false}
         theme='light'
-        layout='split'
+        layout='centered'
         show_pattern=true
+        caution_text='<p>CAUTION: Investigational device. Limited by federal (or United States) law to investigational use.</p>'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Fully Implanted. Naturally Designed. — Two Column ===== #}
+    {# ===== What are cochlear implants? ===== #}
     {% dnd_section %}
-      {% dnd_module "innovation"
+      {% dnd_module "what_are_ci"
         path='../modules/two-column-section'
-        label='Fully Implanted. Naturally Designed.'
-        title='Fully Implanted. Naturally Designed.'
-        description='<p>The Acclaim&reg; Cochlear Implant is an investigational device designed to be the first-of-its-kind <strong>fully implanted</strong> cochlear implant. Unlike traditional cochlear implants that rely on external microphones and processors, the Acclaim&reg; CI is designed to leverage the unique anatomy of the ear.</p><p>It uses an implanted sensor to capture sound vibrations directly from the ear structure, eliminating the need for any external components on the head or ear during daily use.</p><ul><li><strong>Internal Sensor:</strong> Implanted piezoelectric sensor captures natural sound vibrations.</li><li><strong>No External Gear:</strong> Designed to be invisible and unencumbered for 24/7 hearing.</li></ul>'
-        layout='image-left'
+        label='What are cochlear implants?'
+        anchor_id='what-are-ci'
+        title='What are cochlear implants?'
+        description='<p>Cochlear implants provide a surgical solution for individuals with moderate to profound sensorineural hearing loss who have difficulty understanding speech even when using properly adjusted traditional hearing aids.</p><p>The cochlea is a small, snail-shaped organ in the inner ear, containing thousands of tiny hair cells that convert sound into electrical signals. These signals are sent to the brain, enabling us to perceive and understand sound.</p><p>In individuals with moderate to profound sensorineural hearing loss, many hair cells are damaged, and there is currently no way to regenerate or repair them.</p><p>Cochlear implants are designed to bypass damaged hair cells in the cochlea by creating a new route for sound to travel from your outer ear to your inner ear.</p>'
+        layout='image-right'
         bg_color='white'
         show_features=false
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Study Details — Stats Grid ===== #}
+    {# ===== What Makes Acclaim Different ===== #}
     {% dnd_section %}
-      {% dnd_module "study_stats"
-        path='../modules/stats-grid'
-        label='Study Information'
-        anchor_id='study-details'
-        bg_color='light'
-        stats=[{"stat_number": "2", "stat_suffix": " yrs", "stat_description": "Post-activation follow-up duration"}, {"stat_number": "7", "stat_suffix": "", "stat_description": "Recruiting Centers across AZ, CA, FL, MN, OH, OK, SC"}, {"stat_number": "$0", "stat_suffix": "", "stat_description": "Cost for qualified participants (device and procedure at no cost)"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== Clinical Trial Participation — Eligibility ===== #}
-    {% dnd_section %}
-      {% dnd_module "eligibility"
-        path='../modules/feature-cards'
-        label='Clinical Trial Participation'
-        anchor_id='eligibility'
-        section_title='Clinical Trial Participation'
-        section_subtitle='We are currently enrolling participants to evaluate the safety and performance of the Acclaim CI.'
-        columns='2'
-        bg_color='white'
-        cards=[{"icon_class": "fas fa-check-circle", "card_title": "Inclusion Criteria", "description": "<ul><li>18 years of age or older</li><li>Became deaf after learning to speak (post-lingual)</li><li>Bilaterally symmetric moderate to profound hearing loss</li><li>Used hearing aids in both ears for at least 30 days</li><li>Limited benefit from appropriately fitted hearing aids</li><li>English speaking and able to follow study rules</li></ul>"}, {"icon_class": "fas fa-times-circle", "card_title": "Exclusion Criteria", "description": "<ul><li>Prior cochlear implant in either ear</li><li>Ear bone abnormalities or middle ear disease</li><li>Hearing loss for 20 or more years</li><li>Need for MRI or radiation treatment during study</li><li>Pregnancy</li></ul>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== Study Information — Glass Cards ===== #}
-    {% dnd_section %}
-      {% dnd_module "study_info"
+      {% dnd_module "acclaim_difference"
         path='../modules/glass-cards'
-        label='Study Details'
-        section_title='Study Information'
-        columns='3'
-        cards=[{"icon_class": "fas fa-clock", "title": "Duration", "description": "<p>Approximately 2 years post-activation follow-up period.</p>"}, {"icon_class": "fas fa-map-marker-alt", "title": "Locations", "description": "<p>7 Recruiting Centers across AZ, CA, FL, MN, OH, OK, SC.</p>"}, {"icon_class": "fas fa-shield-check", "title": "IRB Approved", "description": "<p>IRB Approved February 04, 2025. Breakthrough Device Designation received in 2019.</p>"}]
+        label='What Makes Acclaim Different'
+        anchor_id='study-details'
+        section_title='What makes the Acclaim&reg; Cochlear Implant Different?'
+        columns='2'
+        cards=[{"icon_class": "fas fa-headphones", "title": "Traditional Cochlear Implant", "description": "<p><strong>Partially implanted</strong></p><ul><li>External components that must be worn on or behind the head for the device to work</li><li>External microphone</li><li>External battery</li><li>A magnet under the skin holds the external sound processor to the head</li></ul>"}, {"icon_class": "fas fa-star", "title": "Investigational Acclaim Cochlear Implant", "description": "<p><strong>Fully implanted</strong></p><ul><li>No external components are required for you to hear</li><li>No microphone, ear canal is open</li><li>The Acclaim battery is implanted under the skin</li><li>Uses piezoelectric sensor technology</li></ul>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== CTA — Take the Next Step ===== #}
+    {# ===== How the Acclaim Works ===== #}
+    {% dnd_section %}
+      {% dnd_module "how_acclaim_works"
+        path='../modules/two-column-section'
+        label='How the Acclaim Works'
+        anchor_id='how-it-works'
+        title='How the Acclaim Works'
+        description='<p>The Acclaim doesn&rsquo;t use a microphone like other hearing devices, it uses a special sensor called a piezoelectric sensor.</p><p><strong>Here&rsquo;s how it is designed to work:</strong></p><ol><li><strong>Sound Enters the Ear:</strong> Sound comes into your ear the normal way, through the outer ear and ear canal.</li><li><strong>Vibrations:</strong> The sound makes tiny vibrations in a small bone in your ear called the incus.</li><li><strong>Sensor Detects Vibrations:</strong> The piezoelectric sensor feels these vibrations.</li><li><strong>Converts to Signals:</strong> The sensor changes the vibrations into electronic signals.</li><li><strong>Stimulates Hearing:</strong> These signals are sent to your inner ear and hearing nerve, helping you hear sounds.</li></ol><p>The Acclaim cochlear implant uses external accessories to control and charge the internal components, but these are not required for you to hear.</p>'
+        layout='image-left'
+        bg_color='light'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== The Acclaim Charger ===== #}
+    {% dnd_section %}
+      {% dnd_module "acclaim_charger"
+        path='../modules/two-column-section'
+        label='The Acclaim Charger'
+        anchor_id='charger'
+        title='The Acclaim Charger &mdash; External Battery Charger'
+        description='<p>The Acclaim Charger has an external charger coil that is placed over the implanted Acclaim battery in the chest to recharge it.</p><p>The Acclaim charger holder enables hands-free charging by positioning the external charger coil over the implanted Acclaim battery and securing it in place once a connection is made.</p><p><em>For illustrative purposes only. Actual placement, experience and results may vary.</em></p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Study Eligibility Intro ===== #}
+    {% dnd_section %}
+      {% dnd_module "eligibility_intro"
+        path='../modules/two-column-section'
+        label='Study Eligibility Intro'
+        anchor_id='eligibility'
+        title='Who Can Join the Study?'
+        description='<p>The device is still being tested to make sure it works well and is safe. Right now, it&rsquo;s only being used in a special study to learn more about it and this study has some rules for who can join.</p><p>These rules are typically stricter than they will be once the device is proven to be safe and helpful and approved by the FDA. After that, more people should be able to use it.</p><p>Researchers look for people who match certain rules, called eligibility criteria. These rules can include things like a person&rsquo;s health or past treatments.</p>'
+        layout='image-left'
+        bg_color='light'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Inclusion / Exclusion Criteria ===== #}
+    {% dnd_section %}
+      {% dnd_module "eligibility_criteria"
+        path='../modules/criteria-list'
+        label='Eligibility Criteria'
+        anchor_id='criteria'
+        section_title='Eligibility Criteria'
+        inclusion_title='Inclusion Criteria'
+        inclusion_items=[{"item_text": "Signed and dated consent form"}, {"item_text": "Can understand and follow the study rules, including surgery and recovery"}, {"item_text": "Can read, write, understand, and speak English well"}, {"item_text": "Became deaf after learning to speak"}, {"item_text": "18 years old or older"}, {"item_text": "In good health with no major health problems, according to the main researcher"}, {"item_text": "Used hearing aids in both ears for at least 30 days"}, {"item_text": "The ear to be implanted has very bad hearing loss (average hearing level of 70 dB or more at certain frequencies)"}, {"item_text": "The other ear has moderately bad to very bad hearing loss (average hearing level of 60 dB or more at certain frequencies)"}, {"item_text": "Limited help from hearing aids (word recognition of 40% or less in the ear to be implanted and 60% or less in the other ear, with hearing aids)"}, {"item_text": "Normal middle ear function based on ear exams"}, {"item_text": "The ear to be implanted has a clear cochlear space and healthy cochlear nerve, confirmed by MRI or CT scan"}]
+        exclusion_title='Exclusion Criteria'
+        exclusion_items=[{"item_text": "People who have had very bad hearing loss for 20 or more years"}, {"item_text": "People who have had a cochlear implant in either ear before"}, {"item_text": "People with problems in their ear bones that might stop the device from working"}, {"item_text": "People with ear infections or other ear problems in the last 6 months"}, {"item_text": "People with a history of eustachian tube problems"}, {"item_text": "People who have had surgery in their ear, neck, or chest that might stop the device from working"}, {"item_text": "People with hearing loss caused by nerve problems"}, {"item_text": "People diagnosed with auditory neuropathy"}, {"item_text": "People using other implants that might interfere with the device"}, {"item_text": "People allergic to materials like silicone, rubber, stainless steel, titanium, platinum, or gold"}, {"item_text": "People who can't take certain medicines needed for the procedure"}, {"item_text": "Pregnant people"}, {"item_text": "People who need an MRI or radiation treatment during the study"}, {"item_text": "People who have unrealistic expectations about what the device can do"}, {"item_text": "People who can't follow all the study rules"}, {"item_text": "People with other conditions that might stop them from completing the study"}, {"item_text": "People who were in another study in the last 3 months"}, {"item_text": "People who had meningitis before"}, {"item_text": "People who are deaf in the ear to be implanted because of: a damaged or missing eardrum, a damaged or missing middle ear, a missing cochlea, problems with the hearing nerve, or problems with the brain's hearing pathway"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== Study Locations ===== #}
+    {% dnd_section %}
+      {% dnd_module "study_locations"
+        path='../modules/feature-cards'
+        label='Study Locations'
+        anchor_id='locations'
+        section_title='Study Locations'
+        section_subtitle='This Study has 7 Locations. For more detailed information, go to www.clinicaltrials.gov'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-map-marker-alt", "card_title": "Arizona", "description": "<p><strong>Center for Neurosciences</strong><br>Tucson, AZ 85718</p><p>Gwendolyn: 520-795-0229<br>Crystal: 520-529-5234</p><p><strong>PI:</strong> Dr. Abraham Jacob, MD</p><p><em>Active, not recruiting</em></p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "California", "description": "<p><strong>Shohet Ear Associates</strong><br>Seal Beach, CA 90740</p><p>Clinical Research: 949-641-4327<br>study@eardoctor.org</p><p><strong>PI:</strong> Dr. Jack Shohet, MD</p><p><em>Active, not recruiting</em></p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Florida", "description": "<p><strong>University of Florida Health</strong><br>Gainesville, FL 32607</p><p>D&rsquo;Lonna Adams: 352-273-5199<br>dlonna.adams@ent.ufl.edu</p><p><strong>PI:</strong> Dr. Patrick Antonelli, MD</p><p><em>Active, not recruiting</em></p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Minnesota", "description": "<p><strong>Mayo Clinic</strong><br>Rochester, MN 55902</p><p>Nicole Tombers, RN: 507-293-2445<br>Tombers.Nicole@mayo.edu</p><p><strong>PI:</strong> Dr. Colin Driscoll, MD</p><p><em>Active, not recruiting</em></p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Ohio", "description": "<p><strong>Cleveland Clinic</strong><br>Cleveland, OH 44195</p><p>John O&rsquo;Neill: (216) 445-8175<br>ONEILLJ2@ccf.org</p><p><strong>PI:</strong> Dr. Mark Bassim, MD</p><p><em>Active, not recruiting</em></p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Oklahoma", "description": "<p><strong>Hearts for Hearing</strong><br>Oklahoma City, OK 73114</p><p>Sabrina Calise: 405-548-4300<br>sabrina.calise@heartsforhearing.org</p><p><strong>PI:</strong> Dr. Wayne Berryhill, MD</p><p><em>Active, not recruiting</em></p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "South Carolina", "description": "<p><strong>MUSC Health</strong><br>Charleston, SC 29425</p><p>CI Coordinator: 843-792-4611<br>CIProgram@musc.edu</p><p><strong>PI:</strong> Dr. Theodore McRackan, MD</p><p><em>Active, not recruiting</em></p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CTA ===== #}
     {% dnd_section %}
       {% dnd_module "cta"
         path='../modules/cta-section'
@@ -97,15 +160,14 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== Caution Notice — Hero as footer note ===== #}
+    {# ===== Caution Notice ===== #}
     {% dnd_section %}
       {% dnd_module "caution_note"
-        path='../modules/hero-banner'
+        path='../modules/caution-banner'
         label='Investigational Device Caution'
-        theme='light'
-        layout='centered'
-        show_pattern=false
-        caution_text='<p>*Caution: Investigational Device. Limited by Federal (United States) law to investigational use. The Acclaim&reg; Cochlear Implant is not commercially available in the United States or elsewhere.</p>'
+        icon_class='fas fa-exclamation-triangle'
+        style='amber'
+        banner_text='<p>CAUTION: Investigational Device. Limited by Federal (United States) law to investigational use. The Acclaim&reg; Cochlear Implant is not commercially available in the United States or elsewhere.</p><p><em>The content is not intended to be a substitute for professional medical advice or diagnosis. You should talk to your healthcare professional about what may be right for you.</em></p>'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

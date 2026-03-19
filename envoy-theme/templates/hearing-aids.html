@@ -1,0 +1,74 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Hearing Aids
+  screenshotPath: ../images/template-previews/hearing-aids.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "ha_hero"
+        path='../modules/hero-banner'
+        label='Hearing Aids Hero'
+        title='Hearing Aids'
+        subtitle='<p>Hearing aids are devices that amplify sound for those with mild to moderate hearing loss. There are a wide range of options available to choose from, so making an informed decision can be confusing.</p>'
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TYPES OF HEARING AIDS ===== #}
+    {% dnd_section %}
+      {% dnd_module "ha_types"
+        path='../modules/feature-cards'
+        label='Types of Hearing Aids'
+        anchor_id='types'
+        section_title='Different Types of Hearing Aids'
+        section_subtitle='There are several available designs and types of hearing aids to fit the various types of hearing loss. They vary in size, placement, and sound amplification.'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-compress-alt", "card_title": "Completely In the Canal (CIC)", "description": "<p>People with mild hearing loss are candidates for a CIC hearing aid. They&rsquo;re small and less visible, molded to fit inside the ear canal. CIC hearing aids are the least likely to pick up excess noise like wind, but they do not contain extra features such as volume control or a directional microphone due to their small size.</p>"}, {"icon_class": "fas fa-assistive-listening-systems", "card_title": "In The Canal (ITC)", "description": "<p>This type is molded and fits partly in the ear canal, specifically the outer ear bowl. The larger size enables batteries for longer battery life, helping people with wider ranges of hearing loss. This style includes features such as directional microphones and manual volume controls.</p>"}, {"icon_class": "fas fa-ear-listen", "card_title": "In The Ear (ITE)", "description": "<p>In-the-ear hearing aids can be tailored into two styles, full shell and half shell, and are a great option for people with moderate to severe hearing loss. The larger size makes them easier to handle and enables larger battery, longer battery life, and volume control features.</p>"}, {"icon_class": "fas fa-headphones", "card_title": "Behind The Ear (BTE)", "description": "<p>BTE aids are reportedly best for children and people with more severe hearing loss. The hearing aid rests behind your ear and connects to a custom fit earmold with clear tubing. BTE are the largest option, making them the easiest to handle. They are capable of more amplification than other styles.</p>"}, {"icon_class": "fas fa-headphones-alt", "card_title": "Behind The Ear - Open Fit", "description": "<p>Open-fit BTE hearing aids keep the ear canal open, allowing low-frequency sounds to enter naturally while amplifying high-frequency sounds. This results in a more natural listening experience for those with mild to moderate high-frequency hearing loss.</p>"}, {"icon_class": "fas fa-broadcast-tower", "card_title": "Receiver In The Ear (RITE)", "description": "<p>RITE hearing aids are similar to BTE hearing aids. The external component remains behind the ear, but a tiny wire connects to the speaker instead of a tube, with the speaker inside the ear. This makes RITE hearing aids less visible than BTE. They are best for people with mild to severe hearing loss.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TRIAL INFO ===== #}
+    {% dnd_section %}
+      {% dnd_module "ha_trial"
+        path='../modules/quote-card'
+        label='Hearing Aid Trial'
+        quote_text='<p>If you are new to hearing aids and don&rsquo;t know where to start, you can ask about a hearing aid trial to experience what hearing amplification is like.</p>'
+        author_name=''
+        author_title=''
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== ESTEEM CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "ha_esteem_cta"
+        path='../modules/two-column-section'
+        label='Esteem Alternative'
+        anchor_id='esteem-alternative'
+        title='Tired of managing an external hearing device?'
+        description='<p><strong>If you identify with any of the frustrations below it may be worth exploring implanted options.</strong></p><p>Envoy Medical&rsquo;s fully-implanted Esteem active middle ear implant is the world&rsquo;s first and only FDA-approved completely internal hearing device designed to improve hearing of adults diagnosed with moderate to severe sensorineural hearing loss. The Esteem hearing implant is invisible and offers true 24/7 hearing, removing many limitations of hearing aids.</p>'
+        layout='image-right'
+        bg_color='white'
+        show_features=false
+        button_text='Learn More About Esteem'
+        button_link={"url":{"type":"EXTERNAL","href":"/esteem"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

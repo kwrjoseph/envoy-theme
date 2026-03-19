@@ -1,0 +1,162 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Esteem Landing Page
+  screenshotPath: ../images/template-previews/esteem-landing-page.png
+-->
+{% extends "./layouts/landing.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container p-0', label='Main section' %}
+
+    {# ===== HERO ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_hero"
+        path='../modules/hero-banner'
+        label='Landing Page Hero'
+        badge_text='Fully Implanted Active Middle Ear Implant'
+        title='Invisible Hearing Starts Here'
+        subtitle='<p>The Esteem Fully Implanted* Active Middle Ear Implant (FI-AMEI)</p><p>Experience 24/7 hearing without external devices &mdash; no daily hassle, no visible components. The first and only FDA-approved solution of its kind for adults with moderate to severe sensorineural hearing loss.</p><p>Learn how Invisible Hearing works and find out if you&rsquo;re a candidate.</p><p><em>*Once activated, the external Esteem Personal Programmer is not required for daily use.</em></p>'
+        primary_button_text='Download Your Free eBook'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#candidacy"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='View Safety Information'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"/safety-information"},"open_in_new_tab":false,"no_follow":false}
+        theme='light'
+        layout='centered'
+        show_pattern=true
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== UNDERSTANDING THE ESTEEM DIFFERENCE ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_differentiators"
+        path='../modules/feature-cards'
+        label='Esteem Implant Difference'
+        anchor_id='why-unique'
+        section_title='Understanding the Esteem Implant Difference'
+        section_subtitle='The Esteem fully implanted* active middle ear implant is unlike any other hearing solution. Here&rsquo;s what makes it truly unique:'
+        columns='3'
+        bg_color='white'
+        cards=[{"icon_class": "fas fa-eye-slash", "card_title": "No External Components", "description": "<p>Nothing worn in or on the ear &mdash; just pure, uninterrupted sound.</p>"}, {"icon_class": "fas fa-wave-square", "card_title": "Innovative Sensor", "description": "<p>Uses your ear&rsquo;s natural anatomy to capture sound, avoiding microphone distortion.</p>"}, {"icon_class": "fas fa-clock", "card_title": "Continuous Hearing 24/7", "description": "<p>Hear day and night without interruption for cleaning, charging, or inserting.</p>"}, {"icon_class": "fas fa-check-double", "card_title": "No Daily Maintenance", "description": "<p>Live your life without the daily hassle of traditional hearing aids.</p>"}, {"icon_class": "fas fa-water", "card_title": "Waterproof Design", "description": "<p>Functional up to 33 feet, making it ideal for swimmers and active lifestyles.</p>"}, {"icon_class": "fas fa-battery-full", "card_title": "Long-Lasting Battery", "description": "<p>Designed to last for years before requiring a simple replacement procedure.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== CANDIDACY ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_candidacy"
+        path='../modules/two-column-section'
+        label='Candidacy Section'
+        anchor_id='candidacy'
+        title='Is the Esteem Implant an Option For You?'
+        description='<p>The Esteem fully implanted active middle ear implant* is designed for adults with moderate to severe sensorineural hearing loss who want a discreet, maintenance-free alternative to traditional hearing aids.</p><p><strong>You may be a candidate if you:</strong></p><ul><li>Are 18 years or older</li><li>Have stable, moderate to severe sensorineural hearing loss</li><li>Have healthy middle ear anatomy</li><li>Are seeking a fully implanted, 24/7 hearing solution</li><li>Prefer not to wear external hearing devices</li></ul><p>If you&rsquo;re ready to explore whether the Esteem implant is right for you, here&rsquo;s how to begin the candidacy review process.</p>'
+        layout='image-right'
+        bg_color='light'
+        show_features=false
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== AUDIOGRAM UPLOAD ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_audiogram"
+        path='../modules/cta-section'
+        label='Audiogram Upload'
+        anchor_id='am-i-eligible'
+        title='Step 1: Submit Your Hearing Test'
+        subtitle='To start your candidacy review, please send us a copy of your audiogram. If you don&rsquo;t have a copy, simply contact your hearing professional and request your most recent hearing test.'
+        primary_button_text='Upload Your Audiogram'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== LOCATIONS ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_locations"
+        path='../modules/two-column-section'
+        label='Explore Locations'
+        anchor_id='location'
+        title='Explore Esteem Implant Locations'
+        description='<p>The Esteem implant is available at select surgical centers across the United States, each with specialized training and experience in this unique technology.</p><p>Travel is typically required for both evaluation and surgery, so planning ahead is important.</p><p>We&rsquo;ve compiled a list of locations with experience using the Esteem implant to help you explore your options.</p><p><em>Note: Envoy Medical does not refer patients to specific providers, but we&rsquo;re happy to share general information to support your decision-making and will facilitate contact once you have chosen a site.</em></p>'
+        layout='image-left'
+        bg_color='white'
+        show_features=false
+        button_text='View Site List'
+        button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== LOCATION CARDS ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_location_cards"
+        path='../modules/feature-cards'
+        label='Esteem Implant Locations'
+        section_title='Esteem Implant Experience Locations'
+        columns='4'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-map-marker-alt", "card_title": "Huntsville, AL", "description": "<p>Dr. Eleanor Vance<br>Huntsville, Alabama 35801</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Tucson, AZ", "description": "<p>Dr. Miles Kincaid<br>Tucson, Arizona 85701</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Seal Beach, CA", "description": "<p>Dr. Sarah Chen<br>Seal Beach, California 90740</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Jupiter, FL", "description": "<p>Dr. Robert Greene<br>Jupiter, Florida 33458</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Celebration, FL", "description": "<p>Dr. Linda O&rsquo;Connell<br>Celebration, Florida 34747</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Burlington, MA", "description": "<p>Dr. David Singh<br>Burlington, Massachusetts 01803</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Norman, OK", "description": "<p>Dr. Emily Hayes<br>Norman, Oklahoma 73069</p>"}, {"icon_class": "fas fa-map-marker-alt", "card_title": "Rochester, MN", "description": "<p>Dr. Samira Khan<br>Rochester, Minnesota 55901</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== FAQ ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_faq"
+        path='../modules/sidebar-toc'
+        label='FAQ'
+        anchor_id='faq'
+        badge_text='FAQ'
+        page_title='Frequently Asked Questions'
+        sidebar_title='Questions'
+        links=[{"link_label": "Procedure", "link_anchor": "faq-procedure"}, {"link_label": "Lifespan", "link_anchor": "faq-lifespan"}, {"link_label": "Battery", "link_anchor": "faq-battery"}, {"link_label": "Upgrades", "link_anchor": "faq-upgrades"}]
+        content='<p>Here are answers to some of the most common questions about the Esteem fully implanted active middle ear implant* and the Invisible Hearing experience:</p><section id="faq-procedure"><h2>What should I expect from the procedure?</h2><p>The Esteem implant is placed entirely inside the body. It is performed under general anesthesia, typically takes 2&ndash;3 hours, and most patients return home the same day.</p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-lifespan"><h2>How long does the Esteem implant last?</h2><p>The implant is built for long-term durability, with benchtop testing confirming a lifespan of at least 30 years. Many patients have had their implants for over 15 years.</p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-battery"><h2>Does the Esteem implant have a battery?</h2><p>Yes. The battery and software are housed within the Sound Processor. Average battery life is approximately 5 years and replacement is a simple outpatient procedure (about 1 hour).</p><p><em>Battery life may be reduced to 2.8 years if continually exposed to very loud sound levels using the highest gain settings.</em></p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-upgrades"><h2>What if improvements are made to the implant?</h2><p>The Esteem system is designed with backward compatibility. This means software or battery upgrades may be available during routine component replacements without a full system overhaul.</p></section>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== PROS & CONS ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_pros_cons"
+        path='../modules/glass-cards'
+        label='Pros and Cons'
+        anchor_id='what-to-know'
+        section_title='Is the Esteem Implant Right for You?'
+        section_subtitle='Weigh the benefits and practical considerations to support your decision-making process.'
+        columns='2'
+        cards=[{"icon_class": "fas fa-check-circle", "title": "Advantages", "description": "<ul><li>Invisible &amp; Hassle-Free</li><li>Innovative Sensor Technology</li><li>No Daily Maintenance</li><li>Continuous Hearing 24/7</li><li>Long-Lasting Battery</li><li>Waterproof Design</li></ul>"}, {"icon_class": "fas fa-exclamation-circle", "title": "Key Considerations", "description": "<ul><li>Surgical Procedure Required</li><li>Battery Replacement Involves Surgery</li><li>Not Suitable for All Hearing Loss</li><li>Cost &amp; Limited Insurance Coverage</li></ul>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== TESTIMONIALS CTA ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_testimonials_cta"
+        path='../modules/cta-section'
+        label='Testimonials CTA'
+        title='Want to Know What Life Is Like with Esteem?'
+        subtitle='Hear directly from individuals who&rsquo;ve experienced the Esteem implant firsthand.'
+        primary_button_text='View Patient Testimonials'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/patients-testimonials"},"open_in_new_tab":false,"no_follow":false}
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== DISCLAIMERS ===== #}
+    {% dnd_section %}
+      {% dnd_module "lp_disclaimers"
+        path='../modules/caution-banner'
+        label='Disclaimers'
+        icon_class='fas fa-info-circle'
+        style='blue'
+        banner_text='<p>*Once activated, the external Esteem Personal Programmer is not required for daily use.</p><p>**Battery life may be reduced to 2.8 years if continually exposed to very loud sound levels using the highest gain settings.</p><p>***The Esteem implant is waterproof to a depth of 33 feet. The External Personal Programmer is not waterproof.</p><p>For comprehensive product information &mdash; including indications, contraindications, precautions, warnings, and potential adverse events &mdash; please visit: <a href="/safety-information">Envoy Medical Safety Information</a></p>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

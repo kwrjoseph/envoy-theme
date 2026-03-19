@@ -18,7 +18,6 @@
         badge_text='Hearing Alternatives'
         title='The Remarkable Ear'
         subtitle='<p>The ear is remarkable. Its parts work together in perfect harmony to convert sound waves to mechanical signals and then to electrical signals that your brain perceives as sound.</p><p>Unfortunately, some individuals have ears that don&rsquo;t function optimally. Hearing loss can affect one ear or both ears and can stem from various causes.</p>'
-        primary_button_text='Learn More'
         theme='light'
         layout='centered'
         show_pattern=true
@@ -80,19 +79,7 @@
         section_subtitle='Four types of hearing loss have been identified, and in most cases, each type is treatable.'
         columns='2'
         bg_color='white'
-        cards=[{"icon_class": "fas fa-brain", "card_title": "Sensorineural Hearing Loss", "description": "<p>Nerve-related (sensorineural) hearing loss is the most common type of hearing loss. It is caused when tiny hair cells in the cochlea are damaged or degraded, and don&rsquo;t effectively transmit sound impulses to the brain. Envoy Medical&rsquo;s Esteem&reg; is specifically designed for people with moderate-to-severe sensorineural hearing loss.</p>"}, {"icon_class": "fas fa-ear-listen", "card_title": "Conductive Hearing Loss", "description": "<p>When the outer or middle ear malfunctions, limiting sound transmission, it results in conductive hearing loss. Common solutions for this condition include bone-anchored devices, surgically implanted osseointegrated devices or bone conduction surgery.</p>"}, {"icon_class": "fas fa-compress", "card_title": "Mixed Hearing Loss", "description": "<p>Mixed hearing loss is a combination of both sensorineural and conductive hearing loss. It&rsquo;s caused by malfunctions in both the inner and the outer or middle ear. Audiologists typically recommend taking care of the conductive component first.</p>"}, {"icon_class": "fas fa-question-circle", "card_title": "Unique Diagnoses", "description": "<p>In rare cases, none of the typical diagnoses apply, such as: Missing or severed hearing nerve, or Auditory Neuropathy Spectrum Disorder, where sound enters the ear normally but damage to the inner ear or hearing nerve prevents the brain from organizing it in a way that can be understood.</p>"}]
-      %}
-      {% end_dnd_module %}
-    {% end_dnd_section %}
-
-    {# ===== TRENDING ON OUR BLOG ===== #}
-    {% dnd_section %}
-      {% dnd_module "hearing_blog"
-        path='../modules/blog-cards'
-        label='Trending Blog Posts'
-        section_title='Trending on Our Blog'
-        columns='3'
-        posts=[{"category": "Hearing Health", "date": "Dec 12, 2024", "title": "Navigating the Holidays with Hearing Loss", "description": "<p>Tips and strategies for enjoying holiday gatherings when you have hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/the-sounding-board"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Patient Stories", "date": "Nov 28, 2024", "title": "Sarah&rsquo;s Journey to Better Hearing", "description": "<p>One patient&rsquo;s inspiring journey from hearing loss to restored hearing confidence.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/the-sounding-board"}, "open_in_new_tab": false, "no_follow": false}}, {"category": "Innovation", "date": "Nov 15, 2024", "title": "The Future of Middle Ear Implants", "description": "<p>Exploring emerging technologies and what they mean for patients with hearing loss.</p>", "link": {"url": {"type": "EXTERNAL", "href": "/the-sounding-board"}, "open_in_new_tab": false, "no_follow": false}}]
+        cards=[{"icon_class": "fas fa-brain", "card_title": "Sensorineural Hearing Loss", "description": "<p>Nerve-related (sensorineural) hearing loss is the most common type of hearing loss. It occurs when tiny hair cells in the cochlea are damaged or degraded, preventing effective sound impulse transmission to the brain. Sensorineural hearing loss often occurs in aging adults, but can also result from genetics, head trauma or loud noise exposure. Previously, patients with this type only had two options: hearing aids or cochlear implants.</p>"}, {"icon_class": "fas fa-ear-listen", "card_title": "Conductive Hearing Loss", "description": "<p>When the outer or middle ear malfunctions, limiting sound transmission, it results in conductive hearing loss. Common solutions include bone-anchored devices, surgically implanted osseointegrated devices or bone conduction surgery.</p>"}, {"icon_class": "fas fa-compress", "card_title": "Mixed Hearing Loss", "description": "<p>Mixed hearing loss is a combination of both sensorineural and conductive hearing loss. It is caused by malfunctions in both the inner and the outer or middle ear. Audiologists typically recommend addressing the conductive component first. However, consulting with a hearing professional for accurate diagnosis and treatment plan is recommended.</p>"}, {"icon_class": "fas fa-question-circle", "card_title": "Unique Diagnoses", "description": "<p>In rare cases, none of the typical diagnoses apply, such as: Missing or severed hearing nerve, or Auditory Neuropathy Spectrum Disorder, where sound enters the ear normally but damage to the inner ear or hearing nerve prevents the brain from organizing it in a way that can be understood.</p>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
@@ -104,8 +91,10 @@
         label='Hearing Loss CTA'
         title='Take Control of Your Hearing'
         subtitle='Not sure what type of hearing loss you have? Consult with a hearing professional to explore your options.'
-        primary_button_text='Find a Specialist'
-        secondary_button_text='Contact Us'
+        primary_button_text='Contact Us'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='View Implanted Options'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"/implanted-options"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}

@@ -16,9 +16,10 @@
         path='../modules/hero-banner'
         label='Esteem Hero'
         badge_text='Fully Implanted Active Middle Ear Implant (FI-AMEI)'
-        title='The Esteem\u00ae Implant'
-        subtitle='<p>The first and only FDA-approved, fully implanted, active middle ear implant. Invisible hearing without external components.</p><p>Designed for adults with moderate to severe sensorineural hearing loss who desire a unique, 24/7 hearing solution that uses the ear&rsquo;s natural anatomy.</p>'
-        primary_button_text='How It Works'
+        title='Full-time Hearing Using Your Own Ear'
+        subtitle='<p>The Esteem fully implanted active middle ear implant (FI-AMEI) is the first and only FDA-approved, completely internal hearing device for adults diagnosed with moderate to severe sensorineural hearing loss.</p><p><em>*Once activated, the external Esteem Personal Programmer is not required for daily use.</em></p>'
+        primary_button_text='Are you a candidate?'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"#candidacy"},"open_in_new_tab":false,"no_follow":false}
         theme='light'
         layout='centered'
         show_pattern=true
@@ -26,13 +27,28 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== TOTALLY INVISIBLE. FULLY INTERNAL. ===== #}
+    {# ===== KEY DIFFERENTIATORS ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_differentiators"
+        path='../modules/feature-cards'
+        label='Key Differentiators'
+        anchor_id='differentiators'
+        section_title='What sets the Esteem implant apart from other hearing solutions?'
+        columns='3'
+        bg_color='light'
+        cards=[{"icon_class": "fas fa-eye-slash", "card_title": "No External Components", "description": "<p>Nothing to wear on or around the ear. Fully implanted under the skin for a truly invisible solution.</p>"}, {"icon_class": "fas fa-wave-square", "card_title": "Innovative Sensor Technology", "description": "<p>Uses a proprietary piezoelectric sensor to capture sound vibrations directly from the eardrum.</p>"}, {"icon_class": "fas fa-check-double", "card_title": "No Daily Maintenance", "description": "<p>No cleaning, insertion, removal, or battery changes required in daily life.</p>"}, {"icon_class": "fas fa-clock", "card_title": "Continuous Hearing 24/7", "description": "<p>Hear around the clock &mdash; your alarm clock, your children at night, and everything in between.</p>"}, {"icon_class": "fas fa-battery-full", "card_title": "Multi-Year Battery", "description": "<p>Multi-year battery use without charging. Battery lasts an average of five years depending on usage.</p>"}, {"icon_class": "fas fa-water", "card_title": "Waterproof Design", "description": "<p>Swim, shower, and exercise freely. Functional up to 33 feet depth.</p>"}]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== ESTEEM OVERVIEW ===== #}
     {% dnd_section %}
       {% dnd_module "esteem_intro"
         path='../modules/two-column-section'
         label='Esteem Introduction'
-        title='Totally Invisible. Fully Internal.'
-        description='<p>The Esteem device is different. It is invisible. You don&rsquo;t wear it; you live with it.</p><p>Unlike hearing aids or cochlear implants, the Esteem is fully implanted under the skin. It eliminates the artificial microphone found in other devices, instead using your own eardrum to capture sound naturally. This innovative design reduces the background noise and acoustic feedback often associated with traditional hearing aids.</p><ul><li><strong>No external components</strong> to put on or take off.</li><li><strong>Maintenance-free daily life</strong>&mdash;no cleaning or battery changing.</li><li><strong>Waterproof:</strong> Swim, shower, and exercise freely.</li><li><strong>Natural Sound:</strong> Uses the ear canal and eardrum.</li></ul>'
+        anchor_id='overview'
+        title='The Esteem&reg; Implant'
+        description='<p>The Esteem implant is the world&rsquo;s first and only completely internal hearing device that works with your ear&rsquo;s anatomy to let sound in similar to the way nature intended.</p><p>The Esteem system consists of three fully implanted components:</p><ul><li><strong>Esteem Sensor</strong> &mdash; Captures vibrations from the eardrum</li><li><strong>Esteem Sound Processor</strong> &mdash; Receives, adjusts, and intensifies electrical signals</li><li><strong>Esteem Driver</strong> &mdash; Translates signals into intensified vibrations delivered to the inner ear</li></ul>'
         layout='image-left'
         bg_color='white'
         show_features=false
@@ -40,56 +56,84 @@
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== HOW IT WORKS ===== #}
+    {# ===== HOW NATURAL HEARING WORKS WITH ESTEEM ===== #}
     {% dnd_section %}
-      {% dnd_module "esteem_how_it_works"
+      {% dnd_module "esteem_natural_hearing"
         path='../modules/feature-cards'
-        label='How Esteem Works'
+        label='Natural Hearing Process'
         anchor_id='how-it-works'
-        section_title='How it Works'
-        section_subtitle='The Esteem system uses three fully implanted components to mechanically stimulate the middle ear, bypassing the damaged parts of the cochlea.'
+        section_title='How the Esteem Works with Your Natural Hearing'
         columns='3'
         bg_color='light'
-        cards=[{"icon_class": "fas fa-wave-square", "card_title": "1. The Sensor", "description": "<p>The piezoelectric sensor is attached to the incus (anvil) bone. It picks up the physical vibrations from the eardrum. By using the eardrum as a microphone, it preserves the ear&rsquo;s natural ability to localize sound and filter noise.</p>"}, {"icon_class": "fas fa-microchip", "card_title": "2. The Sound Processor", "description": "<p>Implanted behind the ear, this device filters, processes, and amplifies the electrical signals from the sensor. It houses the battery, which lasts approximately 4.5 to 9 years depending on usage.</p>"}, {"icon_class": "fas fa-volume-high", "card_title": "3. The Driver", "description": "<p>Attached to the stapes (stirrup) bone, the piezoelectric driver converts the confirmed electrical signals back into mechanical vibrations. These intensified vibrations are delivered directly to the inner ear, allowing for clear, natural sound perception.</p>"}]
+        cards=[{"icon_class": "fas fa-volume-up", "card_title": "1. Sound Enters Your Ear", "description": "<p>Sound enters the outer ear, travels through the canal, and causes the eardrum to vibrate.</p>"}, {"icon_class": "fas fa-wave-square", "card_title": "2. Sensor Captures Vibrations", "description": "<p>The Esteem Sensor converts the eardrum vibrations into electrical signals.</p>"}, {"icon_class": "fas fa-microchip", "card_title": "3. Sound Processor Adjusts", "description": "<p>The Esteem Sound Processor receives, adjusts, and intensifies the electrical signals.</p>"}, {"icon_class": "fas fa-bolt", "card_title": "4. Driver Delivers Sound", "description": "<p>The Esteem Driver translates signals into intensified vibrations delivered to the inner ear.</p>"}, {"icon_class": "fas fa-brain", "card_title": "5. Cochlea Stimulated", "description": "<p>Vibrations are transferred to the inner ear where cochlea cells are stimulated, sending signals to the brain.</p>"}, {"icon_class": "fas fa-sliders-h", "card_title": "6. Personal Programmer", "description": "<p>The external Personal Programmer allows you to adjust volume, switch settings, or turn the device off as needed.</p>"}]
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== LIVE LIFE UNINTERRUPTED ===== #}
+    {# ===== FAQ ===== #}
     {% dnd_section %}
-      {% dnd_module "esteem_lifestyle"
-        path='../modules/two-column-section'
-        label='Esteem Lifestyle Benefits'
-        title='Live Life Uninterrupted'
-        description='<p>Because the Esteem is fully implanted, it offers freedoms that traditional hearing aids cannot.</p><ul><li><strong>Waterproof</strong> &mdash; Go swimming, take a shower, or enjoy water sports without worrying about your hearing device.</li><li><strong>Hearing 24/7</strong> &mdash; Hear your children at night, your alarm clock in the morning, and everything in between. It&rsquo;s always on.</li><li><strong>Personal Programmer</strong> &mdash; You receive a Personal Programmer to adjust volume, switch between settings, or turn the device off.</li></ul>'
-        layout='image-right'
+      {% dnd_module "esteem_faq"
+        path='../modules/sidebar-toc'
+        label='Esteem FAQ'
+        anchor_id='faq'
+        badge_text='FAQ'
+        page_title='Frequently Asked Questions'
+        sidebar_title='Questions'
+        links=[{"link_label": "Surgery", "link_anchor": "faq-surgery"}, {"link_label": "Battery", "link_anchor": "faq-battery"}, {"link_label": "Activation", "link_anchor": "faq-activation"}, {"link_label": "Battery Depletion", "link_anchor": "faq-depletion"}, {"link_label": "Battery Replacement", "link_anchor": "faq-replacement"}]
+        content='<section id="faq-surgery"><h2>What happens during surgery?</h2><p>The Esteem device is implanted during surgery that takes, on average, 3&ndash;4 hours. The two transducers are implanted in the middle ear under general anesthesia and is typically outpatient.</p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-battery"><h2>Does the Esteem implant have a battery?</h2><p>Yes. The Esteem battery and software are housed together in the Sound Processor piece which sits in the temporal bone. The battery lasts an average of five years.</p><p><em>Note: Battery life may reduce to 2.8 years with continuous loud sound exposure at highest gain settings.</em></p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-activation"><h2>When will I be able to hear with the Esteem implant?</h2><p>After a healing period determined by your surgeon, typically eight weeks, you will return to the surgical center for a follow-up appointment. Your audiologist will activate, or turn on, your Esteem implant and program it to your preferences, customizing three different programs.</p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-depletion"><h2>How will I know the battery is depleting?</h2><p>Battery depletion indicators include the confirmation tone changing from a single tone to a dual tone and the low battery LED light illumination on the programmer.</p></section><div class="my-12 h-px bg-slate-100"></div><section id="faq-replacement"><h2>How is the Esteem battery replaced?</h2><p>A battery replacement requires removing the Sound Processor piece and replacing it with a new one. The procedure is typically outpatient, takes place under local or general anesthesia, and typically takes about an hour.</p></section>'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {# ===== PATIENT TESTIMONIALS ===== #}
+    {% dnd_section %}
+      {% dnd_module "esteem_testimonial_andrea"
+        path='../modules/quote-card'
+        label='Testimonial - Andrea'
+        quote_text='<p>After I got the [Esteem] implant, my life completely changed. I was finding myself going out in public more often, becoming much more social.</p>'
+        author_name='Andrea'
+        author_title='Implantee for 18 years &mdash; From Mom to Mrs. Nebraska'
+        bg_color='light'
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+
+    {% dnd_section %}
+      {% dnd_module "esteem_testimonial_bryan"
+        path='../modules/quote-card'
+        label='Testimonial - Bryan'
+        quote_text='<p>It&rsquo;s very difficult to swim with 5,000 other people and not be able to hear!</p>'
+        author_name='Bryan'
+        author_title='Implantee for 18 years &mdash; Business Director, Tri-athlete, Father of Two, California'
         bg_color='white'
-        show_features=false
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== CANDIDACY CRITERIA ===== #}
     {% dnd_section %}
-      {% dnd_module "esteem_candidacy"
-        path='../modules/glass-cards'
-        label='Esteem Candidacy Criteria'
-        section_title='Is Esteem Right for You?'
-        section_subtitle='The Esteem implant is a prescription device. Candidacy is determined by a certified hearing specialist, but generalized criteria include:'
-        columns='3'
-        cards=[{"icon_class": "fas fa-check-circle", "title": "Adults 18+", "description": "<p>Adults 18 years of age or older.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Bilateral SNHL", "description": "<p>Stable moderate to severe sensorineural hearing loss in both ears.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Word Recognition", "description": "<p>Unaided word recognition score of 40% or better.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Hearing Aid Experience", "description": "<p>At least 30 days of experience with appropriately fit hearing aids.</p>"}, {"icon_class": "fas fa-check-circle", "title": "Normal Anatomy", "description": "<p>Normally functioning Eustachian tube and middle ear anatomy.</p>"}]
+      {% dnd_module "esteem_testimonial_amy"
+        path='../modules/quote-card'
+        label='Testimonial - Amy'
+        quote_text='<p>It&rsquo;s changed how I interact with my kids, my community and really how I feel about myself, immensely. I feel like I have a new lease on life with this device and I really, truly feel like I can do anything I want to do.</p>'
+        author_name='Amy'
+        author_title='Bilateral implanted (Left: 18 years, Right: 14 years) &mdash; Mother of Two; Envoy Medical Employee'
+        bg_color='light'
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
 
-    {# ===== CTA ===== #}
+    {# ===== CANDIDACY CTA ===== #}
     {% dnd_section %}
       {% dnd_module "esteem_cta"
         path='../modules/cta-section'
-        label='Esteem CTA'
-        title='Take the Next Step'
-        subtitle='The best way to know if you are a candidate is to schedule a consultation with an Envoy Medical Certified Center.'
-        primary_button_text='Find a Professional'
+        label='Candidacy CTA'
+        anchor_id='candidacy'
+        title='Are you a candidate for the Esteem implant?'
+        subtitle='The Esteem is designed for adults diagnosed with moderate to severe sensorineural hearing loss. The best way to know if you are a candidate is to schedule a consultation.'
+        primary_button_text='Getting the Esteem'
+        primary_button_link={"url":{"type":"EXTERNAL","href":"/getting-the-esteem"},"open_in_new_tab":false,"no_follow":false}
+        secondary_button_text='Contact a Specialist'
+        secondary_button_link={"url":{"type":"EXTERNAL","href":"/contact"},"open_in_new_tab":false,"no_follow":false}
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
